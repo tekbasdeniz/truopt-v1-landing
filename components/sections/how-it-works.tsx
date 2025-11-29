@@ -203,7 +203,6 @@ const HowItWorks = () => {
                                                 />
                                             ))}
                                         </div>
-                                        <span className="text-xs text-muted-foreground/60">AI Processing</span>
                                     </div>
                                 </div>
 
