@@ -140,44 +140,120 @@ export function Hero() {
                     </motion.p>
                 </div>
 
-                {/* Visual Placeholder for "Glowing AI multi-agent network" */}
+                {/* Dashboard Preview - Live Metrics & AI Agents */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="mt-20 relative mx-auto max-w-5xl aspect-[16/9] rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm overflow-hidden shadow-2xl"
+                    className="mt-20 relative mx-auto max-w-5xl"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        {/* Abstract Node Network Visualization (CSS/SVG) */}
-                        <div className="relative w-full h-full">
-                            {/* Central Node */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-pulse" />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_var(--color-primary)]" />
-
-                            {/* Orbiting Nodes */}
-                            {[...Array(6)].map((_, i) => (
-                                <div key={i} className="absolute top-1/2 left-1/2 w-[300px] h-[300px] border border-primary/10 rounded-full -translate-x-1/2 -translate-y-1/2"
-                                    style={{ transform: `translate(-50%, -50%) rotate(${i * 60}deg)` }}>
-                                    <div className="absolute top-0 left-1/2 w-2 h-2 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2 shadow-[0_0_10px_var(--color-accent)] animate-ping" style={{ animationDuration: '3s', animationDelay: `${i * 0.5}s` }} />
+                    <div className="relative rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm overflow-hidden shadow-2xl">
+                        {/* Dashboard Header */}
+                        <div className="border-b border-border/50 p-4 flex items-center justify-between bg-secondary/20">
+                            <div className="flex items-center space-x-2">
+                                <div className="flex space-x-1">
+                                    <div className="w-2 h-2 rounded-full bg-red-500/50" />
+                                    <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
+                                    <div className="w-2 h-2 rounded-full bg-green-500/50" />
                                 </div>
-                            ))}
+                                <span className="text-xs text-muted-foreground ml-4">TruOpt.ai Dashboard</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                                <span className="text-xs text-muted-foreground">Live</span>
+                            </div>
+                        </div>
 
-                            {/* Connecting Lines */}
-                            <svg className="absolute inset-0 w-full h-full opacity-20">
-                                <defs>
-                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="var(--color-primary)" stopOpacity="0" />
-                                        <stop offset="50%" stopColor="var(--color-primary)" stopOpacity="1" />
-                                        <stop offset="100%" stopColor="var(--color-primary)" stopOpacity="0" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M100,200 Q400,100 700,300 T1000,200" fill="none" stroke="url(#grad1)" strokeWidth="2" />
-                                <path d="M100,400 Q400,500 700,300 T1000,400" fill="none" stroke="url(#grad1)" strokeWidth="2" />
-                            </svg>
+                        {/* Dashboard Content */}
+                        <div className="p-6 space-y-6">
+                            {/* Key Metrics Row */}
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                {[
+                                    { label: "ROAS", value: "+42%", trend: "up", color: "text-green-400" },
+                                    { label: "CPA", value: "-28%", trend: "down", color: "text-green-400" },
+                                    { label: "Active Audits", value: "12", trend: "neutral", color: "text-primary" },
+                                    { label: "Alerts", value: "3", trend: "alert", color: "text-yellow-400" },
+                                ].map((metric, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.8 + i * 0.1 }}
+                                        className="bg-background/50 rounded-lg p-4 border border-border/30"
+                                    >
+                                        <div className="text-xs text-muted-foreground mb-1">{metric.label}</div>
+                                        <div className={`text-2xl font-bold ${metric.color}`}>{metric.value}</div>
+                                    </motion.div>
+                                ))}
+                            </div>
+
+                            {/* AI Agents Activity */}
+                            <div className="bg-background/50 rounded-lg p-4 border border-border/30">
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-sm font-semibold text-foreground">AI Agents Activity</h3>
+                                    <span className="text-xs text-muted-foreground">Last 5 minutes</span>
+                                </div>
+                                <div className="space-y-3">
+                                    {[
+                                        {
+                                            agent: "Optimization Agent",
+                                            action: "Found 3 negative keywords to exclude",
+                                            time: "2m ago",
+                                            icon: "🎯",
+                                        },
+                                        {
+                                            agent: "Guardian Agent",
+                                            action: "CPA spike detected in Campaign A",
+                                            time: "4m ago",
+                                            icon: "🛡️",
+                                        },
+                                        {
+                                            agent: "Onboarding Agent",
+                                            action: "Baseline audit completed",
+                                            time: "5m ago",
+                                            icon: "📊",
+                                        },
+                                    ].map((activity, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 1.0 + i * 0.15 }}
+                                            className="flex items-start space-x-3 p-3 rounded-lg bg-secondary/20 hover:bg-secondary/30 transition-colors"
+                                        >
+                                            <span className="text-lg shrink-0">{activity.icon}</span>
+                                            <div className="flex-1 min-w-0">
+                                                <div className="text-xs font-medium text-foreground">{activity.agent}</div>
+                                                <div className="text-xs text-muted-foreground truncate">{activity.action}</div>
+                                            </div>
+                                            <span className="text-xs text-muted-foreground/50 shrink-0">{activity.time}</span>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Quick Action Suggestion */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 1.5 }}
+                                className="bg-primary/5 border border-primary/20 rounded-lg p-4 flex items-start space-x-3"
+                            >
+                                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                                    <Zap className="w-4 h-4 text-primary" />
+                                </div>
+                                <div className="flex-1">
+                                    <div className="text-sm font-medium text-foreground mb-1">Recommended Action</div>
+                                    <div className="text-xs text-muted-foreground">
+                                        Pause 2 underperforming ad groups to save $340/day
+                                    </div>
+                                </div>
+                                <button className="px-3 py-1.5 text-xs font-medium bg-primary/10 hover:bg-primary/20 text-primary rounded transition-colors shrink-0">
+                                    Review
+                                </button>
+                            </motion.div>
                         </div>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
                 </motion.div>
             </Container>
         </section>
