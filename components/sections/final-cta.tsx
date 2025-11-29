@@ -1,13 +1,12 @@
 "use client"
 
 import { Container } from "@/components/ui/container"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 
-export function FinalCTA() {
+const FinalCTA = () => {
     const t = useTranslations('finalCta')
 
     return (
@@ -33,3 +32,5 @@ export function FinalCTA() {
         </section>
     )
 }
+
+export default FinalCTA

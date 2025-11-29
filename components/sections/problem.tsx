@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 import { useTranslations } from "next-intl"
 
-export function Problem() {
+const Problem = () => {
     const t = useTranslations('problem')
 
     const problems = [
@@ -64,3 +64,5 @@ export function Problem() {
         </section>
     )
 }
+
+export default Problem

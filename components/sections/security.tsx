@@ -5,7 +5,7 @@ import { ShieldCheck, Lock, FileText, Database } from "lucide-react"
 
 import { useTranslations } from "next-intl"
 
-export function Security() {
+const Security = () => {
     const t = useTranslations('security')
 
     const features = [
@@ -59,3 +59,5 @@ export function Security() {
         </section>
     )
 }
+
+export default Security

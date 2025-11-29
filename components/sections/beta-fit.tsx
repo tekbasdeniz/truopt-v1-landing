@@ -7,7 +7,7 @@ import { Users, LayoutGrid, TrendingUp } from "lucide-react"
 import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 
-export function BetaFit() {
+const BetaFit = () => {
     const t = useTranslations('betaFit')
 
     const audiences = [
@@ -41,7 +41,7 @@ export function BetaFit() {
                                 {t('cta')}
                             </WaitlistButton>
                             <p className="text-xs text-muted-foreground mt-2">
-                                Rolling invites. Small batch onboarding.
+                                {t('small-description')}
                             </p>
                         </div>
                     </div>
@@ -63,3 +63,5 @@ export function BetaFit() {
         </section>
     )
 }
+
+export default BetaFit

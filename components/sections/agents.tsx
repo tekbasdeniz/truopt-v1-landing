@@ -1,7 +1,6 @@
 "use client"
 
 import { Container } from "@/components/ui/container"
-import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Shield, Zap, Rocket, LayoutDashboard } from "lucide-react"
 import { motion } from "framer-motion"
@@ -9,7 +8,7 @@ import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 
-export function Agents() {
+const Agents = () => {
     const t = useTranslations('agents')
     const tNav = useTranslations('nav')
 
@@ -90,3 +89,5 @@ export function Agents() {
         </section>
     )
 }
+
+export default Agents

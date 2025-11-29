@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl"
 import { useState, useMemo } from "react"
 import { toast } from "sonner"
 
-export function WaitlistForm() {
+const WaitlistForm = () => {
     const t = useTranslations('waitlist')
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
@@ -233,3 +233,5 @@ export function WaitlistForm() {
         </section>
     )
 }
+
+export default WaitlistForm

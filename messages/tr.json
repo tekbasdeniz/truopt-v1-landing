@@ -127,7 +127,8 @@
         "cta": "Erken Erişim İste",
         "audience1": "Performans ekipleri",
         "audience2": "Çok hesaplı operatörler",
-        "audience3": "Büyüme odaklı işletmeler"
+        "audience3": "Büyüme odaklı işletmeler",
+        "small-description": "Davetler kademeli olarak gönderiliyor. Kullanıcılar küçük gruplar halinde sisteme alınıyor."
     },
     "insights": {
         "title": "İçgörüler ve En İyi Uygulamalar",

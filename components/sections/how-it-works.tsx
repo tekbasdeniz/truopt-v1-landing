@@ -6,7 +6,7 @@ import { Link2, Stethoscope, Lightbulb, Play } from "lucide-react"
 
 import { useTranslations } from "next-intl"
 
-export function HowItWorks() {
+const HowItWorks = () => {
     const t = useTranslations('howItWorks')
 
     const steps = [
@@ -87,3 +87,5 @@ export function HowItWorks() {
         </section>
     )
 }
+
+export default HowItWorks

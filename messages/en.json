@@ -127,7 +127,8 @@
         "cta": "Request Early Access",
         "audience1": "Performance teams",
         "audience2": "Multi-account operators",
-        "audience3": "Growth-led businesses"
+        "audience3": "Growth-led businesses",
+        "small-description": "Rolling invites. Small batch onboarding."
     },
     "insights": {
         "title": "Insights & Best Practices",

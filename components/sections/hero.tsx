@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 
 import { useTranslations } from "next-intl"
 
-export function Hero() {
+const Hero = () => {
     const t = useTranslations('hero')
     const tDash = useTranslations('dashboard')
     const [mounted, setMounted] = useState(false)
@@ -269,3 +269,5 @@ export function Hero() {
         </section>
     )
 }
+
+export default Hero

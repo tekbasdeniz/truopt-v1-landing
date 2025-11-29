@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/container"
 import { CheckCircle2 } from "lucide-react"
 import { useTranslations } from "next-intl"
 
-export function Credibility() {
+const Credibility = () => {
     const t = useTranslations('credibility')
 
     return (
@@ -24,3 +24,5 @@ export function Credibility() {
         </section>
     )
 }
+
+export default Credibility

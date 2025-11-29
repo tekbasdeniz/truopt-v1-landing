@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { useTranslations } from "next-intl"
 
-export function Footer() {
+const Footer = () => {
     const t = useTranslations('footer')
 
     const footerLinks = [
@@ -82,3 +82,5 @@ export function Footer() {
         </footer>
     )
 }
+
+export default Footer

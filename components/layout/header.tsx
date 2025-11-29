@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl"
 import LanguageSelector from "@/components/language-selector"
 import WaitlistButton from "../ui/waitlist-button"
 
-export function Header() {
+const Header = () => {
     const t = useTranslations('nav')
     const [isOpen, setIsOpen] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
@@ -119,3 +119,5 @@ export function Header() {
         </header>
     )
 }
+
+export default Header
