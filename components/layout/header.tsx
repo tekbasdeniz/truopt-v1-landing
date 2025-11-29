@@ -10,8 +10,6 @@ import { useTranslations } from "next-intl"
 import LanguageSelector from "@/components/language-selector"
 import WaitlistButton from "../ui/waitlist-button"
 
-// navItems moved inside component to use translations
-
 export function Header() {
     const t = useTranslations('nav')
     const [isOpen, setIsOpen] = React.useState(false)

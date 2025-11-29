@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import { useEffect, useState, useMemo } from "react"
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Badge } from "@/components/ui/badge"
@@ -12,8 +12,8 @@ import { useTranslations } from "next-intl"
 export function Hero() {
     const t = useTranslations('hero')
     const tDash = useTranslations('dashboard')
-    const [mounted, setMounted] = React.useState(false)
-    const particles = React.useMemo(
+    const [mounted, setMounted] = useState(false)
+    const particles = useMemo(
         () =>
             Array.from({ length: 20 }, () => ({
                 initialX: Math.random() * 1000,
@@ -27,7 +27,7 @@ export function Hero() {
         []
     )
 
-    React.useEffect(() => {
+    useEffect(() => {
         setMounted(true)
     }, [])
 
