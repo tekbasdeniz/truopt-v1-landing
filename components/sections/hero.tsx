@@ -156,6 +156,7 @@ const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-20 relative mx-auto max-w-5xl"
+                    id="product"
                 >
                     <div className="relative rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm overflow-hidden shadow-2xl">
                         {/* Dashboard Header */}

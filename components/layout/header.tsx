@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Container } from "@/components/ui/container"
@@ -12,10 +12,10 @@ import WaitlistButton from "../ui/waitlist-button"
 
 const Header = () => {
     const t = useTranslations('nav')
-    const [isOpen, setIsOpen] = React.useState(false)
-    const [isScrolled, setIsScrolled] = React.useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10)
         }
@@ -25,10 +25,9 @@ const Header = () => {
 
     const navItems = [
         { name: t('product'), href: "#product" },
+        { name: t('waitlist'), href: "#waitlist" },
         { name: t('howItWorks'), href: "#how-it-works" },
         { name: t('agents'), href: "#agents" },
-        { name: t('waitlist'), href: "#waitlist" },
-        { name: t('insights'), href: "#insights" },
         { name: t('security'), href: "#security" },
         { name: t('faq'), href: "#faq" },
     ]
