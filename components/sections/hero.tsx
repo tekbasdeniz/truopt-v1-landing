@@ -86,7 +86,7 @@ export function Hero() {
                         <span className="relative inline-block">
                             {t('title')}
                             {/* Subtle Glitch Effect */}
-                            <span className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-primary to-accent">
+                            <span className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-accent to-primary">
                                 {t('title')}
                             </span>
                         </span>
