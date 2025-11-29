@@ -37,11 +37,33 @@ export function WaitlistForm() {
 
     async function onSubmit(data: FormValues) {
         setIsSubmitting(true)
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500))
-        console.log(data)
-        setIsSubmitting(false)
-        setIsSuccess(true)
+
+        try {
+            console.log('Submitting to API:', JSON.stringify(data))
+
+            const response = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+
+            const result = await response.json()
+
+            console.log(result)
+
+            if (!result.success) {
+                throw new Error(result.message || 'Submission failed')
+            }
+
+            setIsSuccess(true)
+        } catch (error) {
+            console.error('Waitlist submission error:', error)
+            alert('Oops! Something went wrong. Please try again or email us at hello@truopt.ai')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     if (isSuccess) {
