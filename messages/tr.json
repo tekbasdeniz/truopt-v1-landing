@@ -109,17 +109,36 @@
         "step4Badge": "sadece davetlilerle"
     },
     "agents": {
-        "title": "Temel Modüller",
-        "flowLine": "Temel bulur → Koruyucu doğrular → Premium uygular → Entegrasyon standartlaştırır",
-        "optimization": "Optimizasyon Ajanı (Temel)",
-        "optimizationDesc": "Denetimler ve öneriler",
-        "guardian": "Koruyucu Ajan",
-        "guardianDesc": "Anormallik tespiti",
-        "premium": "Optimizasyon Ajanı (Premium)",
-        "premiumDesc": "Otomatik eylemler",
-        "premiumBadge": "Faz 1",
-        "onboarding": "Entegrasyon Ajanı",
-        "onboardingDesc": "Kurulum ve temel"
+        "title": "AI Ajanlarınızla Tanışın",
+        "subtitle": "Reklam kampanyalarınızı optimize etmek, korumak ve ölçeklendirmek için birlikte çalışan dört özel AI ajanı.",
+        "guardian": {
+            "title": "Koruyucu Ajan",
+            "description": "Gerçek zamanlı anormallik tespiti ve kampanya koruması",
+            "feature1": "7/24 performans izleme ve uyarılar",
+            "feature2": "CPA artışı tespiti ve bütçe koruması",
+            "feature3": "Hasar oluşmadan önce otomatik risk işaretleme"
+        },
+        "optimization": {
+            "title": "Optimizasyon Ajanı",
+            "description": "Kampanya iyileştirme için AI destekli öneriler",
+            "feature1": "Akıllı teklif ayarlamaları ve bütçe tahsisi",
+            "feature2": "Negatif anahtar kelime keşfi ve yönetimi",
+            "feature3": "Reklam metni ve kreatif performans analizi"
+        },
+        "scaling": {
+            "title": "Ölçeklendirme Ajanı",
+            "description": "Akıllı kampanya ölçeklendirme ve büyüme stratejileri",
+            "feature1": "Performansa dayalı otomatik bütçe ölçeklendirme",
+            "feature2": "Yeni kitle keşfi ve genişletme",
+            "feature3": "Platformlar arası optimizasyon fırsatları"
+        },
+        "onboarding": {
+            "title": "Entegrasyon Ajanı",
+            "description": "Kolaylaştırılmış kurulum ve temel yapılandırma",
+            "feature1": "Otomatik hesap yapısı analizi",
+            "feature2": "Kurulum için en iyi uygulama önerileri",
+            "feature3": "Geçmiş performans temel oluşturma"
+        }
     },
     "betaFit": {
         "title": "Faz 1 kimler için tasarlandı",
