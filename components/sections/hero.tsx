@@ -8,6 +8,7 @@ import { ArrowRight, CheckCircle2, ShieldAlert, Zap } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { useTranslations } from "next-intl"
+import WaitlistButton from "../ui/waitlist-button"
 
 const Hero = () => {
     const t = useTranslations('hero')
@@ -125,12 +126,9 @@ const Hero = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8"
                     >
-                        <Link
-                            href="#waitlist"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_-10px_var(--color-primary)] h-12 px-8"
-                        >
+                        <WaitlistButton>
                             {t('cta')}
-                        </Link>
+                        </WaitlistButton>
                         <Link
                             href="#how-it-works"
                             className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 group"

@@ -70,7 +70,7 @@ const Header = () => {
                         <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
                             {t('howItWorks')}
                         </Link>
-                        <WaitlistButton>
+                        <WaitlistButton wrapperClassName="!min-w-0 !h-10">
                             {t('joinWaitlist')}
                         </WaitlistButton>
                     </div>
@@ -109,7 +109,7 @@ const Header = () => {
                         >
                             {t('howItWorks')}
                         </Link>
-                        <WaitlistButton onClick={() => setIsOpen(false)}>
+                        <WaitlistButton wrapperClassName="!w-full sm:w-fit" onClick={() => setIsOpen(false)}>
                             {t('joinWaitlist')}
                         </WaitlistButton>
                     </div>
