@@ -15,10 +15,9 @@ export const metadata: Metadata = {
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import { Toaster } from 'sonner';
 
-
-export const locales = ['en', 'tr'] as const;
-export const defaultLocale = 'en' as const;
 
 export default async function RootLayout({
   children,
@@ -29,7 +28,7 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
+  if (!routing.locales.includes(locale as any)) notFound();
 
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -42,6 +41,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           {children}
+          <Toaster position="top-center" richColors />
         </NextIntlClientProvider>
       </body>
     </html>
