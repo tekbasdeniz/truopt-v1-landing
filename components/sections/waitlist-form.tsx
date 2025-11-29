@@ -9,9 +9,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Container } from "@/components/ui/container"
 import { Check, Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-
-
 import { useTranslations } from "next-intl"
 
 export function WaitlistForm() {

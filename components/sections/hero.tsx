@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle2, ShieldAlert, Zap } from "lucide-react"
@@ -125,13 +125,19 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8"
                     >
-                        <Button size="lg" className="h-12 px-8 text-base shadow-[0_0_30px_-10px_var(--color-primary)]">
+                        <Link
+                            href="#waitlist"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_-10px_var(--color-primary)] h-12 px-8"
+                        >
                             {t('cta')}
-                        </Button>
-                        <Button variant="outline" size="lg" className="h-12 px-8 text-base group">
+                        </Link>
+                        <Link
+                            href="#how-it-works"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 group"
+                        >
                             {t('secondaryCta')}
                             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </Button>
+                        </Link>
                     </motion.div>
 
                     <motion.p

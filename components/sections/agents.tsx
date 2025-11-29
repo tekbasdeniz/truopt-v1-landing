@@ -7,9 +7,12 @@ import { Shield, Zap, Rocket, LayoutDashboard } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { useTranslations } from "next-intl"
+import WaitlistButton from "../ui/waitlist-button"
 
 export function Agents() {
     const t = useTranslations('agents')
+    const tNav = useTranslations('nav')
+
 
     const agents = [
         {
@@ -79,9 +82,9 @@ export function Agents() {
                 </div>
 
                 <div className="flex justify-center">
-                    <Button size="lg" className="shadow-[0_0_20px_-5px_var(--color-primary)]">
-                        Join Waitlist
-                    </Button>
+                    <WaitlistButton>
+                        {tNav('joinWaitlist')}
+                    </WaitlistButton>
                 </div>
             </Container>
         </section>

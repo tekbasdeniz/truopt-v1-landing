@@ -3,12 +3,12 @@
 import * as React from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
 
 import { useTranslations } from "next-intl"
 import LanguageSelector from "@/components/language-selector"
+import WaitlistButton from "../ui/waitlist-button"
 
 // navItems moved inside component to use translations
 
@@ -73,7 +73,9 @@ export function Header() {
                         <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
                             {t('howItWorks')}
                         </Link>
-                        <Button className="shadow-[0_0_20px_-5px_var(--color-primary)]">{t('joinWaitlist')}</Button>
+                        <WaitlistButton>
+                            {t('joinWaitlist')}
+                        </WaitlistButton>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -103,12 +105,16 @@ export function Header() {
                         </Link>
                     ))}
                     <div className="pt-4 flex flex-col space-y-3">
-                        <Button variant="outline" className="w-full justify-center" onClick={() => setIsOpen(false)}>
+                        <Link
+                            href="#how-it-works"
+                            onClick={() => setIsOpen(false)}
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full"
+                        >
                             {t('howItWorks')}
-                        </Button>
-                        <Button className="w-full justify-center shadow-[0_0_20px_-5px_var(--color-primary)]" onClick={() => setIsOpen(false)}>
+                        </Link>
+                        <WaitlistButton onClick={() => setIsOpen(false)}>
                             {t('joinWaitlist')}
-                        </Button>
+                        </WaitlistButton>
                     </div>
                 </div>
             )}

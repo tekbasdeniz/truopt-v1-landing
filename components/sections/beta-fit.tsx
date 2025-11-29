@@ -1,11 +1,11 @@
 "use client"
 
 import { Container } from "@/components/ui/container"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, LayoutGrid, TrendingUp } from "lucide-react"
 
 import { useTranslations } from "next-intl"
+import WaitlistButton from "../ui/waitlist-button"
 
 export function BetaFit() {
     const t = useTranslations('betaFit')
@@ -37,9 +37,9 @@ export function BetaFit() {
                             {t('description')}
                         </p>
                         <div className="pt-4">
-                            <Button size="lg" className="shadow-[0_0_20px_-5px_var(--color-primary)]">
+                            <WaitlistButton>
                                 {t('cta')}
-                            </Button>
+                            </WaitlistButton>
                             <p className="text-xs text-muted-foreground mt-2">
                                 Rolling invites. Small batch onboarding.
                             </p>
