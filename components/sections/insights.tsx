@@ -5,29 +5,33 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-const articles = [
-    {
-        title: "Google Ads Optimization Checklist: 21 High-Impact Fixes (2025)",
-        category: "Guide",
-    },
-    {
-        title: "Meta Ads ROAS Optimization: Guardrails That Prevent Budget Waste",
-        category: "Strategy",
-    },
-    {
-        title: "Approval-Based Automation: Why Teams Trust Human-in-the-Loop Systems",
-        category: "Thought Leadership",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function Insights() {
+    const t = useTranslations('insights')
+
+    const articles = [
+        {
+            title: t('article1Title'),
+            category: "Guide",
+        },
+        {
+            title: t('article2Title'),
+            category: "Strategy",
+        },
+        {
+            title: t('article3Title'),
+            category: "Thought Leadership",
+        },
+    ]
+
     return (
         <section id="insights" className="py-20 md:py-32">
             <Container>
                 <div className="flex items-center justify-between mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight">Insights</h2>
+                    <h2 className="text-3xl font-bold tracking-tight">{t('title')}</h2>
                     <Link href="/blog" className="text-sm font-medium text-primary hover:underline flex items-center">
-                        View all articles <ArrowRight className="ml-1 w-4 h-4" />
+                        {t('viewAll')} <ArrowRight className="ml-1 w-4 h-4" />
                     </Link>
                 </div>
 

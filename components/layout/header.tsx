@@ -7,17 +7,13 @@ import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
 
-const navItems = [
-    { name: "Product", href: "#product" },
-    { name: "How it Works", href: "#how-it-works" },
-    { name: "Agents", href: "#agents" },
-    { name: "Waitlist", href: "#waitlist" },
-    { name: "Insights", href: "#insights" },
-    { name: "Security", href: "#security" },
-    { name: "FAQ", href: "#faq" },
-]
+import { useTranslations } from "next-intl"
+import LanguageSelector from "@/components/language-selector"
+
+// navItems moved inside component to use translations
 
 export function Header() {
+    const t = useTranslations('nav')
     const [isOpen, setIsOpen] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
 
@@ -28,6 +24,16 @@ export function Header() {
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
+
+    const navItems = [
+        { name: t('product'), href: "#product" },
+        { name: t('howItWorks'), href: "#how-it-works" },
+        { name: t('agents'), href: "#agents" },
+        { name: t('waitlist'), href: "#waitlist" },
+        { name: t('insights'), href: "#insights" },
+        { name: t('security'), href: "#security" },
+        { name: t('faq'), href: "#faq" },
+    ]
 
     return (
         <header
@@ -63,19 +69,23 @@ export function Header() {
 
                     {/* Desktop CTAs */}
                     <div className="hidden md:flex items-center space-x-4">
+                        <LanguageSelector />
                         <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
-                            How it Works
+                            {t('howItWorks')}
                         </Link>
-                        <Button className="shadow-[0_0_20px_-5px_var(--color-primary)]">Join Waitlist</Button>
+                        <Button className="shadow-[0_0_20px_-5px_var(--color-primary)]">{t('joinWaitlist')}</Button>
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden p-2 text-muted-foreground hover:text-foreground"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                    </button>
+                    <div className="flex items-center space-x-4 md:hidden">
+                        <LanguageSelector />
+                        <button
+                            className="p-2 text-muted-foreground hover:text-foreground"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        </button>
+                    </div>
                 </div>
             </Container>
 
@@ -94,10 +104,10 @@ export function Header() {
                     ))}
                     <div className="pt-4 flex flex-col space-y-3">
                         <Button variant="outline" className="w-full justify-center" onClick={() => setIsOpen(false)}>
-                            How it Works
+                            {t('howItWorks')}
                         </Button>
                         <Button className="w-full justify-center shadow-[0_0_20px_-5px_var(--color-primary)]" onClick={() => setIsOpen(false)}>
-                            Join Waitlist
+                            {t('joinWaitlist')}
                         </Button>
                     </div>
                 </div>

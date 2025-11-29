@@ -10,19 +10,24 @@ import { Container } from "@/components/ui/container"
 import { Check, Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-const formSchema = z.object({
-    email: z.string().email({ message: "Please enter a valid work email." }),
-    company: z.string().min(2, { message: "Company name is required." }),
-    spend: z.string().min(1, { message: "Please select your monthly ad spend." }),
-    platforms: z.array(z.string()).min(1, { message: "Please select at least one platform." }),
-    role: z.string().min(1, { message: "Please select your role." }),
-})
 
-type FormValues = z.infer<typeof formSchema>
+
+import { useTranslations } from "next-intl"
 
 export function WaitlistForm() {
+    const t = useTranslations('waitlist')
     const [isSubmitting, setIsSubmitting] = React.useState(false)
     const [isSuccess, setIsSuccess] = React.useState(false)
+
+    const formSchema = React.useMemo(() => z.object({
+        email: z.string().email({ message: t('errors.email') }),
+        company: z.string().min(2, { message: t('errors.company') }),
+        spend: z.string().min(1, { message: t('errors.spend') }),
+        platforms: z.array(z.string()).min(1, { message: t('errors.platforms') }),
+        role: z.string().min(1, { message: t('errors.role') }),
+    }), [t])
+
+    type FormValues = z.infer<typeof formSchema>
 
     const form = useForm<FormValues>({
         resolver: zodResolver(formSchema),
@@ -60,7 +65,7 @@ export function WaitlistForm() {
             setIsSuccess(true)
         } catch (error) {
             console.error('Waitlist submission error:', error)
-            alert('Oops! Something went wrong. Please try again or email us at hello@truopt.ai')
+            alert(t('errors.submissionFailed'))
         } finally {
             setIsSubmitting(false)
         }
@@ -75,9 +80,9 @@ export function WaitlistForm() {
                             <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
                                 <Check className="w-8 h-8 text-primary" />
                             </div>
-                            <h3 className="text-2xl font-bold text-foreground">You’re on the list.</h3>
+                            <h3 className="text-2xl font-bold text-foreground">{t('successTitle')}</h3>
                             <p className="text-muted-foreground">
-                                We’ll reach out when your invite is ready.
+                                {t('successMessage')}
                             </p>
                         </CardContent>
                     </Card>
@@ -94,9 +99,9 @@ export function WaitlistForm() {
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
 
                         <CardHeader>
-                            <CardTitle className="text-2xl text-center">Get early access to Phase 1</CardTitle>
+                            <CardTitle className="text-2xl text-center">{t('title')}</CardTitle>
                             <CardDescription className="text-center">
-                                Join the waitlist for approval-based AI optimization.
+                                {t('description')}
                             </CardDescription>
                         </CardHeader>
 
@@ -104,7 +109,7 @@ export function WaitlistForm() {
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                                 <div className="space-y-2">
                                     <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                                        Work Email <span className="text-destructive">*</span>
+                                        {t('email')} <span className="text-destructive">*</span>
                                     </label>
                                     <input
                                         id="email"
@@ -123,7 +128,7 @@ export function WaitlistForm() {
 
                                 <div className="space-y-2">
                                     <label htmlFor="company" className="text-sm font-medium leading-none">
-                                        Company <span className="text-destructive">*</span>
+                                        {t('company')} <span className="text-destructive">*</span>
                                     </label>
                                     <input
                                         id="company"
@@ -143,7 +148,7 @@ export function WaitlistForm() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="spend" className="text-sm font-medium leading-none">
-                                            Monthly Ad Spend <span className="text-destructive">*</span>
+                                            {t('spend')} <span className="text-destructive">*</span>
                                         </label>
                                         <select
                                             id="spend"
@@ -153,11 +158,11 @@ export function WaitlistForm() {
                                             )}
                                             {...form.register("spend")}
                                         >
-                                            <option value="" disabled>Select range</option>
-                                            <option value="<$5k">&lt;$5k</option>
-                                            <option value="$5–25k">$5–25k</option>
-                                            <option value="$25–100k">$25–100k</option>
-                                            <option value="$100k+">$100k+</option>
+                                            <option value="" disabled>{t('spendOptions.select')}</option>
+                                            <option value="<$5k">{t('spendOptions.lessThan5k')}</option>
+                                            <option value="$5–25k">{t('spendOptions.5to25k')}</option>
+                                            <option value="$25–100k">{t('spendOptions.25to100k')}</option>
+                                            <option value="$100k+">{t('spendOptions.100kPlus')}</option>
                                         </select>
                                         {form.formState.errors.spend && (
                                             <p className="text-sm text-destructive">{form.formState.errors.spend.message}</p>
@@ -166,7 +171,7 @@ export function WaitlistForm() {
 
                                     <div className="space-y-2">
                                         <label htmlFor="role" className="text-sm font-medium leading-none">
-                                            Role <span className="text-destructive">*</span>
+                                            {t('role')} <span className="text-destructive">*</span>
                                         </label>
                                         <select
                                             id="role"
@@ -176,12 +181,12 @@ export function WaitlistForm() {
                                             )}
                                             {...form.register("role")}
                                         >
-                                            <option value="" disabled>Select role</option>
-                                            <option value="Founder">Founder</option>
-                                            <option value="Performance Marketer">Performance Marketer</option>
-                                            <option value="Agency">Agency</option>
-                                            <option value="Growth">Growth</option>
-                                            <option value="Other">Other</option>
+                                            <option value="" disabled>{t('roleOptions.select')}</option>
+                                            <option value="Founder">{t('roleOptions.founder')}</option>
+                                            <option value="Performance Marketer">{t('roleOptions.marketer')}</option>
+                                            <option value="Agency">{t('roleOptions.agency')}</option>
+                                            <option value="Growth">{t('roleOptions.growth')}</option>
+                                            <option value="Other">{t('roleOptions.other')}</option>
                                         </select>
                                         {form.formState.errors.role && (
                                             <p className="text-sm text-destructive">{form.formState.errors.role.message}</p>
@@ -191,18 +196,21 @@ export function WaitlistForm() {
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium leading-none">
-                                        Platforms <span className="text-destructive">*</span>
+                                        {t('platforms')} <span className="text-destructive">*</span>
                                     </label>
                                     <div className="flex space-x-4">
-                                        {["Google Ads", "Meta Ads"].map((platform) => (
-                                            <label key={platform} className="flex items-center space-x-2 cursor-pointer">
+                                        {[
+                                            { value: "Google Ads", label: t('platformOptions.googleAds') },
+                                            { value: "Meta Ads", label: t('platformOptions.metaAds') }
+                                        ].map((platform) => (
+                                            <label key={platform.value} className="flex items-center space-x-2 cursor-pointer">
                                                 <input
                                                     type="checkbox"
-                                                    value={platform}
+                                                    value={platform.value}
                                                     className="w-4 h-4 rounded border-input bg-background text-primary focus:ring-primary"
                                                     {...form.register("platforms")}
                                                 />
-                                                <span className="text-sm text-muted-foreground">{platform}</span>
+                                                <span className="text-sm text-muted-foreground">{platform.label}</span>
                                             </label>
                                         ))}
                                     </div>
@@ -215,14 +223,14 @@ export function WaitlistForm() {
                                     {isSubmitting ? (
                                         <>
                                             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                            Joining...
+                                            {t('submitting')}
                                         </>
                                     ) : (
-                                        "Join Waitlist"
+                                        t('submit')
                                     )}
                                 </Button>
                                 <p className="text-xs text-center text-muted-foreground">
-                                    No spam. We’ll email you when your invite is ready.
+                                    {t('microcopy')}
                                 </p>
                             </form>
                         </CardContent>

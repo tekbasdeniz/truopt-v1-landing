@@ -5,31 +5,35 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Clock, RefreshCw } from "lucide-react"
 import { motion } from "framer-motion"
 
-const problems = [
-    {
-        icon: AlertTriangle,
-        title: "Silent performance decay",
-        description: "Search terms drift, placements waste spend, budgets mis-pace—quietly.",
-    },
-    {
-        icon: Clock,
-        title: "Late reactions get expensive",
-        description: "Weekly audits can’t keep up with always-on campaigns and changing auctions.",
-    },
-    {
-        icon: RefreshCw,
-        title: "A repeatable system",
-        description: "TruOpt.ai continuously monitors accounts, prioritizes fixes, and enables safe execution.",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function Problem() {
+    const t = useTranslations('problem')
+
+    const problems = [
+        {
+            icon: AlertTriangle,
+            title: t('card1Title'),
+            description: t('card1Desc'),
+        },
+        {
+            icon: Clock,
+            title: t('card2Title'),
+            description: t('card2Desc'),
+        },
+        {
+            icon: RefreshCw,
+            title: t('card3Title'),
+            description: t('card3Desc'),
+        },
+    ]
+
     return (
         <section className="py-20 md:py-32">
             <Container>
                 <div className="mb-12 md:mb-20 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-                        Performance shouldn’t rely on manual checks.
+                        {t('title')}
                     </h2>
                 </div>
 

@@ -1,0 +1,188 @@
+{
+    "nav": {
+        "product": "Product",
+        "howItWorks": "How it Works",
+        "agents": "Agents",
+        "waitlist": "Waitlist",
+        "insights": "Insights",
+        "security": "Security",
+        "faq": "FAQ",
+        "joinWaitlist": "Join Waitlist"
+    },
+    "hero": {
+        "badge": "Rolling invites for Phase 1",
+        "title": "A multi-agent system—built to optimize, protect, and onboard.",
+        "subtitle": "Approval-based AI optimization for Google Ads and Meta Ads—designed for performance marketers who need control.",
+        "proof1": "Always-on audits",
+        "proof2": "Guardian alerts",
+        "proof3": "Approval-based actions",
+        "cta": "Join Waitlist",
+        "secondaryCta": "See how it works",
+        "trustLine": "Limited onboarding capacity for Phase 1"
+    },
+    "dashboard": {
+        "title": "TruOpt.ai Dashboard",
+        "live": "Live",
+        "roas": "ROAS",
+        "cpa": "CPA",
+        "activeAudits": "Active Audits",
+        "alerts": "Alerts",
+        "agentsActivity": "AI Agents Activity",
+        "lastMinutes": "Last 5 minutes",
+        "optimizationAgent": "Optimization Agent",
+        "guardianAgent": "Guardian Agent",
+        "onboardingAgent": "Onboarding Agent",
+        "action1": "Found 3 negative keywords to exclude",
+        "action2": "CPA spike detected in Campaign A",
+        "action3": "Baseline audit completed",
+        "recommendedAction": "Recommended Action",
+        "actionDesc": "Pause 2 underperforming ad groups to save $340/day",
+        "review": "Review"
+    },
+    "waitlist": {
+        "title": "Get early access to Phase 1",
+        "description": "Join the waitlist for approval-based AI optimization.",
+        "email": "Work Email",
+        "company": "Company",
+        "spend": "Monthly Ad Spend",
+        "platforms": "Platforms",
+        "role": "Role",
+        "required": "*",
+        "spendOptions": {
+            "select": "Select range",
+            "lessThan5k": "<$5k",
+            "5to25k": "$5–25k",
+            "25to100k": "$25–100k",
+            "100kPlus": "$100k+"
+        },
+        "roleOptions": {
+            "select": "Select role",
+            "founder": "Founder",
+            "marketer": "Performance Marketer",
+            "agency": "Agency",
+            "growth": "Growth",
+            "other": "Other"
+        },
+        "platformOptions": {
+            "googleAds": "Google Ads",
+            "metaAds": "Meta Ads"
+        },
+        "submit": "Join Waitlist",
+        "submitting": "Joining...",
+        "microcopy": "No spam. We'll email you when your invite is ready.",
+        "successTitle": "You're on the list.",
+        "successMessage": "We'll reach out when your invite is ready.",
+        "errors": {
+            "email": "Please enter a valid work email.",
+            "company": "Company name is required.",
+            "spend": "Please select your monthly ad spend.",
+            "platforms": "Please select at least one platform.",
+            "role": "Please select your role.",
+            "submissionFailed": "Oops! Something went wrong. Please try again or email us at hello@truopt.ai"
+        }
+    },
+    "credibility": {
+        "trust1": "Built with performance marketers",
+        "trust2": "Designed for multi-account teams",
+        "trust3": "Audit-ready by design"
+    },
+    "problem": {
+        "title": "The problem with manual optimization",
+        "card1Title": "Silent performance decay",
+        "card1Desc": "Campaigns drift. Budgets bleed. You catch it too late.",
+        "card2Title": "Late reactions get expensive",
+        "card2Desc": "Manual checks can't scale. By the time you see the issue, you've overspent.",
+        "card3Title": "A repeatable system",
+        "card3Desc": "TruOpt.ai audits continuously, flags risks early, and recommends actions—before damage is done."
+    },
+    "howItWorks": {
+        "title": "How it works",
+        "subtitle": "A 4-step system designed to keep your campaigns healthy—without manual monitoring.",
+        "step1Title": "Connect",
+        "step1Desc": "Google Ads and Meta Ads integration",
+        "step2Title": "Diagnose",
+        "step2Desc": "Health score + structural risks",
+        "step3Title": "Recommend",
+        "step3Desc": "Ranked recommendations with rationale",
+        "step4Title": "Apply",
+        "step4Desc": "Approval-based actions",
+        "step4Badge": "invite-only"
+    },
+    "agents": {
+        "title": "Core Modules",
+        "flowLine": "Basic finds → Guardian validates → Premium executes → Onboarding standardizes",
+        "optimization": "Optimization Agent (Basic)",
+        "optimizationDesc": "Audits & recommendations",
+        "guardian": "Guardian Agent",
+        "guardianDesc": "Anomaly detection",
+        "premium": "Optimization Agent (Premium)",
+        "premiumDesc": "Automated actions",
+        "premiumBadge": "Phase 1",
+        "onboarding": "Onboarding Agent",
+        "onboardingDesc": "Setup & baseline"
+    },
+    "betaFit": {
+        "title": "Who Phase 1 is built for",
+        "description": "We're onboarding teams who need continuous audits, want full approval control, and are managing $25k+ in monthly ad spend.",
+        "cta": "Request Early Access",
+        "audience1": "Performance teams",
+        "audience2": "Multi-account operators",
+        "audience3": "Growth-led businesses"
+    },
+    "insights": {
+        "title": "Insights & Best Practices",
+        "viewAll": "View all articles",
+        "article1Title": "Google Ads Optimization Checklist",
+        "article1Desc": "A comprehensive guide to auditing campaign structure",
+        "article2Title": "Meta Ads ROAS Optimization",
+        "article2Desc": "Strategies to improve return on ad spend",
+        "article3Title": "Approval-Based Automation",
+        "article3Desc": "Why human oversight matters in AI optimization"
+    },
+    "security": {
+        "title": "Security & Control",
+        "subtitle": "Full security documentation available on request",
+        "feature1": "Approval-first workflows",
+        "feature2": "Role-based access",
+        "feature3": "Audit logs",
+        "feature4": "Data minimization"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "How does the approval system work?",
+        "a1": "Every action requires your explicit approval. You review recommendations, then choose to apply or dismiss.",
+        "q2": "What platforms do you support?",
+        "a2": "Currently Google Ads and Meta Ads. More platforms coming soon.",
+        "q3": "Is my data secure?",
+        "a3": "Yes. We use read-only API access where possible, and all data is encrypted in transit and at rest.",
+        "q4": "How do I get access?",
+        "a4": "Join the waitlist. We're onboarding teams in phases based on ad spend and account complexity."
+    },
+    "finalCta": {
+        "title": "Join the Phase 1 waitlist",
+        "cta": "Join Waitlist",
+        "secondaryCta": "See how it works",
+        "trustLine": "Limited onboarding capacity"
+    },
+    "footer": {
+        "tagline": "Approval-based AI optimization for performance marketers.",
+        "product": "Product",
+        "howItWorks": "How it Works",
+        "agents": "Agents",
+        "security": "Security",
+        "faq": "FAQ",
+        "company": "Company",
+        "about": "About",
+        "blog": "Blog",
+        "careers": "Careers",
+        "contact": "Contact",
+        "legal": "Legal",
+        "terms": "Terms",
+        "privacy": "Privacy",
+        "cookie": "Cookie Notice",
+        "subscription": "Subscription Terms",
+        "refund": "Refund Policy",
+        "brandNote": "TruOpt.ai is a product of ThumbsAd®",
+        "copyright": "© 2025 TruOpt.ai. All rights reserved."
+    }
+}

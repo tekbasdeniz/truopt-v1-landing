@@ -3,35 +3,39 @@
 import { Container } from "@/components/ui/container"
 import { ShieldCheck, Lock, FileText, Database } from "lucide-react"
 
-const features = [
-    {
-        icon: ShieldCheck,
-        title: "Approval-first workflows",
-        description: "No changes are made without explicit user approval.",
-    },
-    {
-        icon: Lock,
-        title: "Role-based access",
-        description: "Granular permissions for team members and clients.",
-    },
-    {
-        icon: FileText,
-        title: "Audit logs",
-        description: "Complete history of every recommendation and action.",
-    },
-    {
-        icon: Database,
-        title: "Data minimization",
-        description: "We only access what’s needed to optimize performance.",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function Security() {
+    const t = useTranslations('security')
+
+    const features = [
+        {
+            icon: ShieldCheck,
+            title: t('feature1'),
+            description: "No changes are made without explicit user approval.",
+        },
+        {
+            icon: Lock,
+            title: t('feature2'),
+            description: "Granular permissions for team members and clients.",
+        },
+        {
+            icon: FileText,
+            title: t('feature3'),
+            description: "Complete history of every recommendation and action.",
+        },
+        {
+            icon: Database,
+            title: t('feature4'),
+            description: "We only access what’s needed to optimize performance.",
+        },
+    ]
+
     return (
         <section id="security" className="py-20 bg-secondary/5 border-y border-border/50">
             <Container>
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight mb-4">Automation you can actually trust.</h2>
+                    <h2 className="text-3xl font-bold tracking-tight mb-4">{t('title')}</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -48,7 +52,7 @@ export function Security() {
 
                 <div className="text-center mt-12">
                     <p className="text-sm text-muted-foreground">
-                        Full security documentation available on request.
+                        {t('subtitle')}
                     </p>
                 </div>
             </Container>

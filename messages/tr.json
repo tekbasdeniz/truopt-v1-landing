@@ -1,0 +1,188 @@
+{
+    "nav": {
+        "product": "Ürün",
+        "howItWorks": "Nasıl Çalışır",
+        "agents": "Ajanlar",
+        "waitlist": "Bekleme Listesi",
+        "insights": "İçgörüler",
+        "security": "Güvenlik",
+        "faq": "SSS",
+        "joinWaitlist": "Bekleme Listesine Katıl"
+    },
+    "hero": {
+        "badge": "Faz 1 için aşamalı davetler",
+        "title": "Optimize etmek, korumak ve entegre etmek için tasarlanmış çok-ajanlı bir sistem.",
+        "subtitle": "Google Ads ve Meta Ads için onay tabanlı yapay zeka optimizasyonu—kontrol gerektiren performans pazarlamacıları için tasarlandı.",
+        "proof1": "Kesintisiz denetimler",
+        "proof2": "Koruyucu uyarılar",
+        "proof3": "Onay tabanlı eylemler",
+        "cta": "Bekleme Listesine Katıl",
+        "secondaryCta": "Nasıl çalıştığını gör",
+        "trustLine": "Faz 1 için sınırlı entegrasyon kapasitesi"
+    },
+    "dashboard": {
+        "title": "TruOpt.ai Kontrol Paneli",
+        "live": "Canlı",
+        "roas": "ROAS",
+        "cpa": "CPA",
+        "activeAudits": "Aktif Denetimler",
+        "alerts": "Uyarılar",
+        "agentsActivity": "AI Ajanları Aktivitesi",
+        "lastMinutes": "Son 5 dakika",
+        "optimizationAgent": "Optimizasyon Ajanı",
+        "guardianAgent": "Koruyucu Ajan",
+        "onboardingAgent": "Entegrasyon Ajanı",
+        "action1": "Hariç tutulacak 3 negatif anahtar kelime bulundu",
+        "action2": "Kampanya A'da CPA artışı tespit edildi",
+        "action3": "Temel denetim tamamlandı",
+        "recommendedAction": "Önerilen Eylem",
+        "actionDesc": "Günde 340$ tasarruf etmek için 2 düşük performanslı reklam grubunu duraklat",
+        "review": "İncele"
+    },
+    "waitlist": {
+        "title": "Faz 1'e erken erişim sağlayın",
+        "description": "Onay tabanlı yapay zeka optimizasyonu için bekleme listesine katılın.",
+        "email": "İş E-postası",
+        "company": "Şirket",
+        "spend": "Aylık Reklam Harcaması",
+        "platforms": "Platformlar",
+        "role": "Rol",
+        "required": "*",
+        "spendOptions": {
+            "select": "Aralık seçin",
+            "lessThan5k": "<$5k",
+            "5to25k": "$5–25k",
+            "25to100k": "$25–100k",
+            "100kPlus": "$100k+"
+        },
+        "roleOptions": {
+            "select": "Rol seçin",
+            "founder": "Kurucu",
+            "marketer": "Performans Pazarlamacısı",
+            "agency": "Ajans",
+            "growth": "Büyüme",
+            "other": "Diğer"
+        },
+        "platformOptions": {
+            "googleAds": "Google Ads",
+            "metaAds": "Meta Ads"
+        },
+        "submit": "Bekleme Listesine Katıl",
+        "submitting": "Katılıyor...",
+        "microcopy": "Spam yok. Davetiniz hazır olduğunda size e-posta göndereceğiz.",
+        "successTitle": "Listedesiniz.",
+        "successMessage": "Davetiniz hazır olduğunda size ulaşacağız.",
+        "errors": {
+            "email": "Lütfen geçerli bir iş e-postası girin.",
+            "company": "Şirket adı gereklidir.",
+            "spend": "Lütfen aylık reklam harcamanızı seçin.",
+            "platforms": "Lütfen en az bir platform seçin.",
+            "role": "Lütfen rolünüzü seçin.",
+            "submissionFailed": "Hata! Bir şeyler ters gitti. Lütfen tekrar deneyin veya bize hello@truopt.ai adresinden e-posta gönderin"
+        }
+    },
+    "credibility": {
+        "trust1": "Performans pazarlamacılarıyla geliştirildi",
+        "trust2": "Çok hesaplı ekipler için tasarlandı",
+        "trust3": "Denetim için hazır tasarım"
+    },
+    "problem": {
+        "title": "Manuel optimizasyon sorunu",
+        "card1Title": "Sessiz performans düşüşü",
+        "card1Desc": "Kampanyalar sapıyor. Bütçeler eriyor. Çok geç fark ediyorsunuz.",
+        "card2Title": "Geç tepkiler pahalıya mal oluyor",
+        "card2Desc": "Manuel kontroller ölçeklenemiyor. Sorunu gördüğünüzde, fazla harcama yapmış oluyorsunuz.",
+        "card3Title": "Tekrarlanabilir bir sistem",
+        "card3Desc": "TruOpt.ai sürekli denetler, riskleri erken işaretler ve hasar oluşmadan önce eylemleri önerir."
+    },
+    "howItWorks": {
+        "title": "Nasıl çalışır",
+        "subtitle": "Kampanyalarınızı manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
+        "step1Title": "Bağlan",
+        "step1Desc": "Google Ads ve Meta Ads entegrasyonu",
+        "step2Title": "Teşhis Et",
+        "step2Desc": "Sağlık skoru + yapısal riskler",
+        "step3Title": "Öner",
+        "step3Desc": "Gerekçeli sıralı öneriler",
+        "step4Title": "Uygula",
+        "step4Desc": "Onay tabanlı eylemler",
+        "step4Badge": "sadece davetlilerle"
+    },
+    "agents": {
+        "title": "Temel Modüller",
+        "flowLine": "Temel bulur → Koruyucu doğrular → Premium uygular → Entegrasyon standartlaştırır",
+        "optimization": "Optimizasyon Ajanı (Temel)",
+        "optimizationDesc": "Denetimler ve öneriler",
+        "guardian": "Koruyucu Ajan",
+        "guardianDesc": "Anormallik tespiti",
+        "premium": "Optimizasyon Ajanı (Premium)",
+        "premiumDesc": "Otomatik eylemler",
+        "premiumBadge": "Faz 1",
+        "onboarding": "Entegrasyon Ajanı",
+        "onboardingDesc": "Kurulum ve temel"
+    },
+    "betaFit": {
+        "title": "Faz 1 kimler için tasarlandı",
+        "description": "Sürekli denetimlere ihtiyaç duyan, tam onay kontrolü isteyen ve aylık 25.000$+ reklam harcaması yöneten ekipleri entegre ediyoruz.",
+        "cta": "Erken Erişim İste",
+        "audience1": "Performans ekipleri",
+        "audience2": "Çok hesaplı operatörler",
+        "audience3": "Büyüme odaklı işletmeler"
+    },
+    "insights": {
+        "title": "İçgörüler ve En İyi Uygulamalar",
+        "viewAll": "Tüm makaleleri görüntüle",
+        "article1Title": "Google Ads Optimizasyon Kontrol Listesi",
+        "article1Desc": "Kampanya yapısını denetlemek için kapsamlı bir kılavuz",
+        "article2Title": "Meta Ads ROAS Optimizasyonu",
+        "article2Desc": "Reklam harcamasından geri dönüşü artırmak için stratejiler",
+        "article3Title": "Onay Tabanlı Otomasyon",
+        "article3Desc": "AI optimizasyonunda insan gözetiminin önemi"
+    },
+    "security": {
+        "title": "Güvenlik ve Kontrol",
+        "subtitle": "Tam güvenlik dokümantasyonu talep üzerine mevcuttur",
+        "feature1": "Onay öncelikli iş akışları",
+        "feature2": "Rol tabanlı erişim",
+        "feature3": "Denetim kayıtları",
+        "feature4": "Veri minimizasyonu"
+    },
+    "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "q1": "Onay sistemi nasıl çalışır?",
+        "a1": "Her eylem açık onayınızı gerektirir. Önerileri incelersiniz, ardından uygulamayı veya reddetmeyi seçersiniz.",
+        "q2": "Hangi platformları destekliyorsunuz?",
+        "a2": "Şu anda Google Ads ve Meta Ads. Daha fazla platform yakında geliyor.",
+        "q3": "Verilerim güvende mi?",
+        "a3": "Evet. Mümkün olduğunda salt okunur API erişimi kullanıyoruz ve tüm veriler aktarım sırasında ve depolamada şifrelenir.",
+        "q4": "Erişimi nasıl alabilirim?",
+        "a4": "Bekleme listesine katılın. Reklam harcaması ve hesap karmaşıklığına göre ekipleri aşamalı olarak entegre ediyoruz."
+    },
+    "finalCta": {
+        "title": "Faz 1 bekleme listesine katılın",
+        "cta": "Bekleme Listesine Katıl",
+        "secondaryCta": "Nasıl çalıştığını gör",
+        "trustLine": "Sınırlı entegrasyon kapasitesi"
+    },
+    "footer": {
+        "tagline": "Performans pazarlamacıları için onay tabanlı yapay zeka optimizasyonu.",
+        "product": "Ürün",
+        "howItWorks": "Nasıl Çalışır",
+        "agents": "Ajanlar",
+        "security": "Güvenlik",
+        "faq": "SSS",
+        "company": "Şirket",
+        "about": "Hakkında",
+        "blog": "Blog",
+        "careers": "Kariyer",
+        "contact": "İletişim",
+        "legal": "Yasal",
+        "terms": "Şartlar",
+        "privacy": "Gizlilik",
+        "cookie": "Çerez Bildirimi",
+        "subscription": "Abonelik Şartları",
+        "refund": "İade Politikası",
+        "brandNote": "TruOpt.ai, ThumbsAd®'in bir ürünüdür",
+        "copyright": "© 2025 TruOpt.ai. Tüm hakları saklıdır."
+    }
+}

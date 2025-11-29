@@ -4,35 +4,39 @@ import { Container } from "@/components/ui/container"
 import { motion } from "framer-motion"
 import { Link2, Stethoscope, Lightbulb, Play } from "lucide-react"
 
-const steps = [
-    {
-        id: "01",
-        icon: Link2,
-        title: "Connect",
-        description: "Connect Google Ads and Meta Ads in minutes.",
-    },
-    {
-        id: "02",
-        icon: Stethoscope,
-        title: "Diagnose",
-        description: "Health score + structural risks across pacing, targeting, conversions, and tracking.",
-    },
-    {
-        id: "03",
-        icon: Lightbulb,
-        title: "Recommend",
-        description: "Ranked recommendations with rationale and expected impact.",
-    },
-    {
-        id: "04",
-        icon: Play,
-        title: "Apply",
-        description: "Approval-based actions via API + audit logs.",
-        badge: "Invite-only",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function HowItWorks() {
+    const t = useTranslations('howItWorks')
+
+    const steps = [
+        {
+            id: "01",
+            icon: Link2,
+            title: t('step1Title'),
+            description: t('step1Desc'),
+        },
+        {
+            id: "02",
+            icon: Stethoscope,
+            title: t('step2Title'),
+            description: t('step2Desc'),
+        },
+        {
+            id: "03",
+            icon: Lightbulb,
+            title: t('step3Title'),
+            description: t('step3Desc'),
+        },
+        {
+            id: "04",
+            icon: Play,
+            title: t('step4Title'),
+            description: t('step4Desc'),
+            badge: t('step4Badge'),
+        },
+    ]
+
     return (
         <section id="how-it-works" className="py-20 md:py-32 bg-secondary/20 relative overflow-hidden">
             {/* Background Line Animation */}
@@ -41,10 +45,10 @@ export function HowItWorks() {
             <Container>
                 <div className="mb-16 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-                        From signals → decisions → actions (with guardrails).
+                        {t('title')}
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        You stay in control—nothing changes without approval.
+                        {t('subtitle')}
                     </p>
                 </div>
 

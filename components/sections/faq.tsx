@@ -6,33 +6,36 @@ import { Plus, Minus } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
-const faqs = [
-    {
-        question: "How does the approval system work?",
-        answer: "Our agents analyze your accounts and generate recommendations. You receive a notification, review the proposed changes (with predicted impact), and approve or reject them. No changes are made without your explicit consent in Phase 1.",
-    },
-    {
-        question: "What platforms do you support?",
-        answer: "Currently, we support Google Ads and Meta Ads. We are actively working on adding support for TikTok Ads and LinkedIn Ads in future phases.",
-    },
-    {
-        question: "Is my data secure?",
-        answer: "Yes. We use industry-standard encryption and adhere to strict data privacy protocols. We only access the data necessary for optimization and never share your data with third parties.",
-    },
-    {
-        question: "How do I get access?",
-        answer: "We are currently in a closed beta (Phase 1) with rolling invites. Join the waitlist to be notified when a spot opens up for your team.",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function FAQ() {
+    const t = useTranslations('faq')
     const [openIndex, setOpenIndex] = React.useState<number | null>(null)
+
+    const faqs = [
+        {
+            question: t('q1'),
+            answer: t('a1'),
+        },
+        {
+            question: t('q2'),
+            answer: t('a2'),
+        },
+        {
+            question: t('q3'),
+            answer: t('a3'),
+        },
+        {
+            question: t('q4'),
+            answer: t('a4'),
+        },
+    ]
 
     return (
         <section id="faq" className="py-20 md:py-32">
             <Container>
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl font-bold tracking-tight">Frequently asked questions</h2>
+                    <h2 className="text-3xl font-bold tracking-tight">{t('title')}</h2>
                 </div>
 
                 <div className="max-w-3xl mx-auto space-y-4">

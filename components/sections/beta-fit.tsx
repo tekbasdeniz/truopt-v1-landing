@@ -5,36 +5,40 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, LayoutGrid, TrendingUp } from "lucide-react"
 
-const audiences = [
-    {
-        icon: Users,
-        title: "Performance teams managing weekly optimization cycles",
-    },
-    {
-        icon: LayoutGrid,
-        title: "Multi-account operators needing consistency and audit logs",
-    },
-    {
-        icon: TrendingUp,
-        title: "Growth-led businesses optimizing ROAS, CPA, and pacing",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function BetaFit() {
+    const t = useTranslations('betaFit')
+
+    const audiences = [
+        {
+            icon: Users,
+            title: t('audience1'),
+        },
+        {
+            icon: LayoutGrid,
+            title: t('audience2'),
+        },
+        {
+            icon: TrendingUp,
+            title: t('audience3'),
+        },
+    ]
+
     return (
         <section className="py-20 md:py-32 bg-secondary/10">
             <Container>
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="md:w-1/2 space-y-6">
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-                            Who Phase 1 is built for
+                            {t('title')}
                         </h2>
                         <p className="text-lg text-muted-foreground">
-                            TruOpt.ai Phase 1 is designed for teams running always-on Google Ads and/or Meta Ads who want a repeatable optimization workflow—without giving up control.
+                            {t('description')}
                         </p>
                         <div className="pt-4">
                             <Button size="lg" className="shadow-[0_0_20px_-5px_var(--color-primary)]">
-                                Join Waitlist
+                                {t('cta')}
                             </Button>
                             <p className="text-xs text-muted-foreground mt-2">
                                 Rolling invites. Small batch onboarding.

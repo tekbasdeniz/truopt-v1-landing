@@ -6,50 +6,48 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Shield, Zap, Rocket, LayoutDashboard } from "lucide-react"
 import { motion } from "framer-motion"
 
-const agents = [
-    {
-        icon: Zap,
-        title: "Optimization Agent",
-        subtitle: "Basic",
-        description: "Spot leaks and prioritize fixes with always-on audits & ranked recs.",
-    },
-    {
-        icon: Shield,
-        title: "Guardian Agent",
-        subtitle: "Security",
-        description: "Catch anomalies before they get expensive (CPA spikes, ROAS drops, pacing risk).",
-    },
-    {
-        icon: Rocket,
-        title: "Optimization Agent",
-        subtitle: "Premium Actions",
-        description: "Move from recommendations to applied changes—with approvals and logging.",
-        highlight: true,
-    },
-    {
-        icon: LayoutDashboard,
-        title: "Onboarding Agent",
-        subtitle: "Setup",
-        description: "Start clean with a baseline score, quick wins, and a week-one plan.",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function Agents() {
+    const t = useTranslations('agents')
+
+    const agents = [
+        {
+            icon: Zap,
+            title: t('optimization'),
+            subtitle: "Basic",
+            description: t('optimizationDesc'),
+        },
+        {
+            icon: Shield,
+            title: t('guardian'),
+            subtitle: "Security",
+            description: t('guardianDesc'),
+        },
+        {
+            icon: Rocket,
+            title: t('premium'),
+            subtitle: "Premium Actions",
+            description: t('premiumDesc'),
+            highlight: true,
+        },
+        {
+            icon: LayoutDashboard,
+            title: t('onboarding'),
+            subtitle: "Setup",
+            description: t('onboardingDesc'),
+        },
+    ]
+
     return (
         <section id="agents" className="py-20 md:py-32">
             <Container>
                 <div className="mb-16 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-                        A multi-agent system—designed in four core modules.
+                        {t('title')}
                     </h2>
                     <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground font-mono mt-6">
-                        <span>Basic finds</span>
-                        <span className="text-primary">→</span>
-                        <span>Guardian validates</span>
-                        <span className="text-primary">→</span>
-                        <span>Premium executes</span>
-                        <span className="text-primary">→</span>
-                        <span>Onboarding standardizes</span>
+                        <span>{t('flowLine')}</span>
                     </div>
                 </div>
 

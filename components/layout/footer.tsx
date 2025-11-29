@@ -1,38 +1,42 @@
 import { Container } from "@/components/ui/container"
 import Link from "next/link"
 
-const footerLinks = [
-    {
-        title: "Product",
-        links: [
-            { name: "How it Works", href: "#how-it-works" },
-            { name: "Agents", href: "#agents" },
-            { name: "Security", href: "#security" },
-            { name: "FAQ", href: "#faq" },
-        ],
-    },
-    {
-        title: "Company",
-        links: [
-            { name: "About", href: "#" },
-            { name: "Blog", href: "#" },
-            { name: "Careers", href: "#" },
-            { name: "Contact", href: "#" },
-        ],
-    },
-    {
-        title: "Legal",
-        links: [
-            { name: "Terms of Use", href: "#" },
-            { name: "Privacy Notice (KVKK)", href: "#" },
-            { name: "Cookie Notice", href: "#" },
-            { name: "Subscription Terms", href: "#" },
-            { name: "Refund Policy", href: "#" },
-        ],
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+    const t = useTranslations('footer')
+
+    const footerLinks = [
+        {
+            title: t('product'),
+            links: [
+                { name: t('howItWorks'), href: "#how-it-works" },
+                { name: t('agents'), href: "#agents" },
+                { name: t('security'), href: "#security" },
+                { name: t('faq'), href: "#faq" },
+            ],
+        },
+        {
+            title: t('company'),
+            links: [
+                { name: t('about'), href: "#" },
+                { name: t('blog'), href: "#" },
+                { name: t('careers'), href: "#" },
+                { name: t('contact'), href: "#" },
+            ],
+        },
+        {
+            title: t('legal'),
+            links: [
+                { name: t('terms'), href: "#" },
+                { name: t('privacy'), href: "#" },
+                { name: t('cookie'), href: "#" },
+                { name: t('subscription'), href: "#" },
+                { name: t('refund'), href: "#" },
+            ],
+        },
+    ]
+
     return (
         <footer className="border-t border-border/50 bg-background pt-16 pb-8">
             <Container>
@@ -45,10 +49,10 @@ export function Footer() {
                             <span className="text-xl font-bold tracking-tight">TruOpt.ai</span>
                         </Link>
                         <p className="text-sm text-muted-foreground">
-                            A multi-agent system built to optimize, protect, and onboard performance marketing accounts.
+                            {t('tagline')}
                         </p>
                         <div className="text-sm text-muted-foreground pt-4">
-                            <p>TruOpt.ai is a product of ThumbsAd®</p>
+                            <p>{t('brandNote')}</p>
                         </div>
                     </div>
 
@@ -69,7 +73,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} TruOpt.ai. All rights reserved.</p>
+                    <p>{t('copyright')}</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         {/* Social icons could go here */}
                     </div>

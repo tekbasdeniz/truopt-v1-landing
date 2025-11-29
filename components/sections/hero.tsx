@@ -7,7 +7,11 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle2, ShieldAlert, Zap } from "lucide-react"
 import { motion } from "framer-motion"
 
+import { useTranslations } from "next-intl"
+
 export function Hero() {
+    const t = useTranslations('hero')
+    const tDash = useTranslations('dashboard')
     const [mounted, setMounted] = React.useState(false)
     const particles = React.useMemo(
         () =>
@@ -69,7 +73,7 @@ export function Hero() {
                         transition={{ duration: 0.5 }}
                     >
                         <Badge variant="secondary" className="mb-6 px-4 py-1.5 text-sm border-primary/20 bg-primary/10 text-primary">
-                            Pre-launch • Rolling invites for Phase 1
+                            {t('badge')}
                         </Badge>
                     </motion.div>
 
@@ -80,10 +84,10 @@ export function Hero() {
                         className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 relative"
                     >
                         <span className="relative inline-block">
-                            A multi-agent system—built to optimize, protect, and onboard.
+                            {t('title')}
                             {/* Subtle Glitch Effect */}
                             <span className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-primary to-accent">
-                                A multi-agent system—built to optimize, protect, and onboard.
+                                {t('title')}
                             </span>
                         </span>
                     </motion.h1>
@@ -94,7 +98,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl"
                     >
-                        TruOpt.ai helps performance teams improve Google Ads and Meta Ads with always-on audits, anomaly detection, and approval-based execution—so results become repeatable.
+                        {t('subtitle')}
                     </motion.p>
 
                     <motion.div
@@ -104,9 +108,9 @@ export function Hero() {
                         className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 text-left w-full max-w-3xl"
                     >
                         {[
-                            { icon: Zap, text: "Always-on audits that surface waste, quick wins, and structural issues" },
-                            { icon: ShieldAlert, text: "Guardian alerts when CPA/ROAS shifts, pacing breaks, or tracking fails" },
-                            { icon: CheckCircle2, text: "Approval-based actions (invite-only in Phase 1) with full logs" },
+                            { icon: Zap, text: t('proof1') },
+                            { icon: ShieldAlert, text: t('proof2') },
+                            { icon: CheckCircle2, text: t('proof3') },
                         ].map((item, i) => (
                             <div key={i} className="flex items-start space-x-3 p-4 rounded-lg bg-card/50 border border-border/50 backdrop-blur-sm">
                                 <item.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -122,10 +126,10 @@ export function Hero() {
                         className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8"
                     >
                         <Button size="lg" className="h-12 px-8 text-base shadow-[0_0_30px_-10px_var(--color-primary)]">
-                            Join Waitlist
+                            {t('cta')}
                         </Button>
                         <Button variant="outline" size="lg" className="h-12 px-8 text-base group">
-                            See how it works
+                            {t('secondaryCta')}
                             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </motion.div>
@@ -136,7 +140,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.5 }}
                         className="text-sm text-muted-foreground/60"
                     >
-                        Limited onboarding capacity. We invite teams in small batches to ensure quality support.
+                        {t('trustLine')}
                     </motion.p>
                 </div>
 
@@ -156,11 +160,11 @@ export function Hero() {
                                     <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
                                     <div className="w-2 h-2 rounded-full bg-green-500/50" />
                                 </div>
-                                <span className="text-xs text-muted-foreground ml-4">TruOpt.ai Dashboard</span>
+                                <span className="text-xs text-muted-foreground ml-4">{tDash('title')}</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                <span className="text-xs text-muted-foreground">Live</span>
+                                <span className="text-xs text-muted-foreground">{tDash('live')}</span>
                             </div>
                         </div>
 
@@ -169,10 +173,10 @@ export function Hero() {
                             {/* Key Metrics Row */}
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                 {[
-                                    { label: "ROAS", value: "+42%", trend: "up", color: "text-green-400" },
-                                    { label: "CPA", value: "-28%", trend: "down", color: "text-green-400" },
-                                    { label: "Active Audits", value: "12", trend: "neutral", color: "text-primary" },
-                                    { label: "Alerts", value: "3", trend: "alert", color: "text-yellow-400" },
+                                    { label: tDash('roas'), value: "+42%", trend: "up", color: "text-green-400" },
+                                    { label: tDash('cpa'), value: "-28%", trend: "down", color: "text-green-400" },
+                                    { label: tDash('activeAudits'), value: "12", trend: "neutral", color: "text-primary" },
+                                    { label: tDash('alerts'), value: "3", trend: "alert", color: "text-yellow-400" },
                                 ].map((metric, i) => (
                                     <motion.div
                                         key={i}
@@ -190,26 +194,26 @@ export function Hero() {
                             {/* AI Agents Activity */}
                             <div className="bg-background/50 rounded-lg p-4 border border-border/30">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-sm font-semibold text-foreground">AI Agents Activity</h3>
-                                    <span className="text-xs text-muted-foreground">Last 5 minutes</span>
+                                    <h3 className="text-sm font-semibold text-foreground">{tDash('agentsActivity')}</h3>
+                                    <span className="text-xs text-muted-foreground">{tDash('lastMinutes')}</span>
                                 </div>
                                 <div className="space-y-3">
                                     {[
                                         {
-                                            agent: "Optimization Agent",
-                                            action: "Found 3 negative keywords to exclude",
+                                            agent: tDash('optimizationAgent'),
+                                            action: tDash('action1'),
                                             time: "2m ago",
                                             icon: "🎯",
                                         },
                                         {
-                                            agent: "Guardian Agent",
-                                            action: "CPA spike detected in Campaign A",
+                                            agent: tDash('guardianAgent'),
+                                            action: tDash('action2'),
                                             time: "4m ago",
                                             icon: "🛡️",
                                         },
                                         {
-                                            agent: "Onboarding Agent",
-                                            action: "Baseline audit completed",
+                                            agent: tDash('onboardingAgent'),
+                                            action: tDash('action3'),
                                             time: "5m ago",
                                             icon: "📊",
                                         },
@@ -243,13 +247,13 @@ export function Hero() {
                                     <Zap className="w-4 h-4 text-primary" />
                                 </div>
                                 <div className="flex-1">
-                                    <div className="text-sm font-medium text-foreground mb-1">Recommended Action</div>
+                                    <div className="text-sm font-medium text-foreground mb-1">{tDash('recommendedAction')}</div>
                                     <div className="text-xs text-muted-foreground">
-                                        Pause 2 underperforming ad groups to save $340/day
+                                        {tDash('actionDesc')}
                                     </div>
                                 </div>
                                 <button className="px-3 py-1.5 text-xs font-medium bg-primary/10 hover:bg-primary/20 text-primary rounded transition-colors shrink-0">
-                                    Review
+                                    {tDash('review')}
                                 </button>
                             </motion.div>
                         </div>
