@@ -160,12 +160,16 @@
         "article3Desc": "Why human oversight matters in AI optimization"
     },
     "security": {
-        "title": "Security & Control",
-        "subtitle": "Full security documentation available on request",
-        "feature1": "Approval-first workflows",
-        "feature2": "Role-based access",
-        "feature3": "Audit logs",
-        "feature4": "Data minimization"
+        "title": "AI Security & Control",
+        "subtitle": "Enterprise-grade protection with intelligent oversight",
+        "feature1": "Autonomous Approval",
+        "feature1Desc": "AI-assisted workflows require explicit authorization before execution.",
+        "feature2": "Smart Permissioning",
+        "feature2Desc": "Intelligent role-based access with granular team controls.",
+        "feature3": "Complete Traceability",
+        "feature3Desc": "Machine-logged audit trail of every AI recommendation and action.",
+        "feature4": "Privacy-First Access",
+        "feature4Desc": "Zero-trust architecture with minimal data exposure by design."
     },
     "faq": {
         "title": "Frequently Asked Questions",

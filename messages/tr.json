@@ -160,12 +160,16 @@
         "article3Desc": "AI optimizasyonunda insan gözetiminin önemi"
     },
     "security": {
-        "title": "Güvenlik ve Kontrol",
-        "subtitle": "Tam güvenlik dokümantasyonu talep üzerine mevcuttur",
-        "feature1": "Onay öncelikli iş akışları",
-        "feature2": "Rol tabanlı erişim",
-        "feature3": "Denetim kayıtları",
-        "feature4": "Veri minimizasyonu"
+        "title": "AI Güvenlik ve Kontrol",
+        "subtitle": "Akıllı gözetim ile kurumsal düzeyde koruma",
+        "feature1": "Otonom Onay",
+        "feature1Desc": "AI destekli iş akışları yürütülmeden önce açık yetkilendirme gerektirir.",
+        "feature2": "Akıllı İzinlendirme",
+        "feature2Desc": "Ayrıntılı ekip kontrolleri ile akıllı rol tabanlı erişim.",
+        "feature3": "Tam İzlenebilirlik",
+        "feature3Desc": "Her AI önerisi ve eylemin makine kaydıyla denetim izi.",
+        "feature4": "Gizlilik Öncelikli Erişim",
+        "feature4Desc": "Tasarım gereği minimal veri maruziyeti ile sıfır güven mimarisi."
     },
     "faq": {
         "title": "Sıkça Sorulan Sorular",
