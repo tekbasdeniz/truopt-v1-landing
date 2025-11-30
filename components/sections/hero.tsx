@@ -323,9 +323,9 @@ const Hero = () => {
                             { icon: ShieldAlert, text: t('proof2') },
                             { icon: CheckCircle2, text: t('proof3') },
                         ].map((item, i) => (
-                            <div key={i} className="flex items-start space-x-3 p-4 rounded-lg bg-card/50 border border-border/50 backdrop-blur-sm">
+                            <div key={i} className="flex items-start space-x-3 p-4 bg-card/50 border border-border/50 backdrop-blur-md rounded-full">
                                 <item.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                <span className="text-sm text-muted-foreground">{item.text}</span>
+                                <span className="text-sm text-white/60">{item.text}</span>
                             </div>
                         ))}
                     </motion.div>
