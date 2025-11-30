@@ -9,6 +9,7 @@ import { motion } from "framer-motion"
 
 import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
+import HowItWorksButton from "../ui/how-it-works-button"
 
 const Hero = () => {
     const t = useTranslations('hero')
@@ -339,13 +340,8 @@ const Hero = () => {
                         <WaitlistButton>
                             {t('cta')}
                         </WaitlistButton>
-                        <Link
-                            href="#how-it-works"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 group"
-                        >
-                            {t('secondaryCta')}
-                            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
+                        <HowItWorksButton />
+
                     </motion.div>
 
                     <motion.p

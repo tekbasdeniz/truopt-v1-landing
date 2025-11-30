@@ -106,7 +106,9 @@
         "step3Desc": "Ranked recommendations with rationale",
         "step4Title": "Apply",
         "step4Desc": "Approval-based actions",
-        "step4Badge": "invite-only"
+        "step4Badge": "invite-only",
+        "cta-title": "Ready to experience the AI magic?",
+        "cta-description": "Join thousands of marketers already using AI-powered optimization"
     },
     "agents": {
         "title": "Meet Your AI Agents",

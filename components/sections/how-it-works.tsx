@@ -224,6 +224,44 @@ const HowItWorks = () => {
                         ))}
                     </div>
                 </div>
+                {/* CTA Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    className="text-center mt-20"
+                >
+                    <div className="inline-flex flex-col items-center gap-6 p-8 rounded-3xl bg-card/20 backdrop-blur-2xl border border-primary/20 shadow-xl relative overflow-hidden">
+                        {/* Glass Reflection Layer */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent rounded-3xl" />
+
+                        {/* Ambient Glow Background */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl" />
+
+                        <div className="flex items-center gap-3 relative z-10">
+                            <motion.div
+                                animate={{
+                                    rotate: [0, 360],
+                                }}
+                                transition={{
+                                    duration: 20,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                }}
+                            >
+                                <Sparkles className="w-6 h-6 text-primary" />
+                            </motion.div>
+                            <h3 className="text-2xl font-bold">{t('cta-title')}</h3>
+                        </div>
+                        <WaitlistButton wrapperClassName="!min-w-[240px] !h-14 text-base relative z-10">
+                            {tNav('joinWaitlist')}
+                        </WaitlistButton>
+                        <p className="text-sm text-muted-foreground relative z-10">
+                            {t('cta-description')}
+                        </p>
+                    </div>
+                </motion.div>
             </Container>
         </section>
     )

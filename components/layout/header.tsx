@@ -67,7 +67,7 @@ const Header = () => {
                     {/* Desktop CTAs */}
                     <div className="hidden md:flex items-center space-x-4">
                         <LanguageSelector />
-                        <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+                        <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors hover:!text-white">
                             {t('howItWorks')}
                         </Link>
                         <WaitlistButton wrapperClassName="!min-w-0 !h-10">

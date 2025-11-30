@@ -106,7 +106,9 @@
         "step3Desc": "Gerekçeli sıralı öneriler",
         "step4Title": "Uygula",
         "step4Desc": "Onay tabanlı eylemler",
-        "step4Badge": "sadece davetlilerle"
+        "step4Badge": "sadece davetlilerle",
+        "cta-title": "Yapay zekanın büyüsünü deneyimlemeye hazır mısınız?",
+        "cta-description": "Yapay zeka destekli optimizasyonu kullanan binlerce pazarlamacıya katılın"
     },
     "agents": {
         "title": "AI Ajanlarınızla Tanışın",
