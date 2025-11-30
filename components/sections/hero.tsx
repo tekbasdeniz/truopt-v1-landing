@@ -33,7 +33,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <section className="relative pt-32 md:pt-40 overflow-hidden">
             {/* Background Effects */}
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/10 rounded-full blur-[120px] opacity-50 animate-pulse" />
