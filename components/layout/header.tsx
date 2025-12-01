@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
 import LanguageSelector from "@/components/language-selector"
 import WaitlistButton from "../ui/waitlist-button"
+import HowItWorksButton from "../ui/how-it-works-button"
 
 const Header = () => {
     const t = useTranslations('nav')
@@ -102,13 +103,8 @@ const Header = () => {
                         </Link>
                     ))}
                     <div className="pt-4 flex flex-col space-y-3">
-                        <Link
-                            href="#how-it-works"
-                            onClick={() => setIsOpen(false)}
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full"
-                        >
-                            {t('howItWorks')}
-                        </Link>
+
+                        <HowItWorksButton onClick={() => setIsOpen(false)} />
                         <WaitlistButton wrapperClassName="!w-full sm:w-fit" onClick={() => setIsOpen(false)}>
                             {t('joinWaitlist')}
                         </WaitlistButton>

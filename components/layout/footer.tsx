@@ -16,15 +16,15 @@ const Footer = () => {
                 { name: t('faq'), href: "#faq" },
             ],
         },
-        {
-            title: t('company'),
-            links: [
-                { name: t('about'), href: "#" },
-                { name: t('blog'), href: "#" },
-                { name: t('careers'), href: "#" },
-                { name: t('contact'), href: "#" },
-            ],
-        },
+        // {
+        //     title: t('company'),
+        //     links: [
+        //         { name: t('about'), href: "#" },
+        //         { name: t('blog'), href: "#" },
+        //         { name: t('careers'), href: "#" },
+        //         { name: t('contact'), href: "#" },
+        //     ],
+        // },
         {
             title: t('legal'),
             links: [
