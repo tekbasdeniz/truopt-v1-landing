@@ -106,20 +106,41 @@
         "step3Desc": "Ranked recommendations with rationale",
         "step4Title": "Apply",
         "step4Desc": "Approval-based actions",
-        "step4Badge": "invite-only"
+        "step4Badge": "invite-only",
+        "cta-title": "Ready to experience the AI magic?",
+        "cta-description": "Join thousands of marketers already using AI-powered optimization"
     },
     "agents": {
-        "title": "Core Modules",
-        "flowLine": "Basic finds → Guardian validates → Premium executes → Onboarding standardizes",
-        "optimization": "Optimization Agent (Basic)",
-        "optimizationDesc": "Audits & recommendations",
-        "guardian": "Guardian Agent",
-        "guardianDesc": "Anomaly detection",
-        "premium": "Optimization Agent (Premium)",
-        "premiumDesc": "Automated actions",
-        "premiumBadge": "Phase 1",
-        "onboarding": "Onboarding Agent",
-        "onboardingDesc": "Setup & baseline"
+        "title": "Meet Your AI Agents",
+        "subtitle": "Four specialized AI agents working together to optimize, protect, and scale your ad campaigns.",
+        "guardian": {
+            "title": "Guardian Agent",
+            "description": "Real-time anomaly detection and campaign protection",
+            "feature1": "24/7 performance monitoring and alerts",
+            "feature2": "CPA spike detection and budget protection",
+            "feature3": "Automatic risk flagging before damage occurs"
+        },
+        "optimization": {
+            "title": "Optimization Agent",
+            "description": "AI-powered recommendations for campaign improvement",
+            "feature1": "Smart bid adjustments and budget allocation",
+            "feature2": "Negative keyword discovery and management",
+            "feature3": "Ad copy and creative performance analysis"
+        },
+        "scaling": {
+            "title": "Scaling Agent",
+            "description": "Intelligent campaign scaling and growth strategies",
+            "feature1": "Automated budget scaling based on performance",
+            "feature2": "New audience discovery and expansion",
+            "feature3": "Cross-platform optimization opportunities"
+        },
+        "onboarding": {
+            "title": "Onboarding Agent",
+            "description": "Streamlined setup and baseline configuration",
+            "feature1": "Automated account structure analysis",
+            "feature2": "Best practice recommendations for setup",
+            "feature3": "Historical performance baseline creation"
+        }
     },
     "betaFit": {
         "title": "Who Phase 1 is built for",
@@ -127,7 +148,8 @@
         "cta": "Request Early Access",
         "audience1": "Performance teams",
         "audience2": "Multi-account operators",
-        "audience3": "Growth-led businesses"
+        "audience3": "Growth-led businesses",
+        "small-description": "Rolling invites. Small batch onboarding."
     },
     "insights": {
         "title": "Insights & Best Practices",
@@ -140,12 +162,16 @@
         "article3Desc": "Why human oversight matters in AI optimization"
     },
     "security": {
-        "title": "Security & Control",
-        "subtitle": "Full security documentation available on request",
-        "feature1": "Approval-first workflows",
-        "feature2": "Role-based access",
-        "feature3": "Audit logs",
-        "feature4": "Data minimization"
+        "title": "AI Security & Control",
+        "subtitle": "Enterprise-grade protection with intelligent oversight",
+        "feature1": "Autonomous Approval",
+        "feature1Desc": "AI-assisted workflows require explicit authorization before execution.",
+        "feature2": "Smart Permissioning",
+        "feature2Desc": "Intelligent role-based access with granular team controls.",
+        "feature3": "Complete Traceability",
+        "feature3Desc": "Machine-logged audit trail of every AI recommendation and action.",
+        "feature4": "Privacy-First Access",
+        "feature4Desc": "Zero-trust architecture with minimal data exposure by design."
     },
     "faq": {
         "title": "Frequently Asked Questions",

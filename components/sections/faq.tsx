@@ -1,16 +1,14 @@
 "use client"
 
-import * as React from "react"
 import { Container } from "@/components/ui/container"
 import { Plus, Minus } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { cn } from "@/lib/utils"
-
 import { useTranslations } from "next-intl"
+import { useState } from "react"
 
-export function FAQ() {
+const FAQ = () => {
     const t = useTranslations('faq')
-    const [openIndex, setOpenIndex] = React.useState<number | null>(null)
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     const faqs = [
         {
@@ -76,3 +74,5 @@ export function FAQ() {
         </section>
     )
 }
+
+export default FAQ

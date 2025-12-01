@@ -39,7 +39,6 @@ const LanguageSelector = () => {
                     disabled={isPending}
                 >
                     <Globe className="h-4 w-4" />
-                    <span className="sr-only">Switch language</span>
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

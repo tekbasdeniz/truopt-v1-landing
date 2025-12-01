@@ -1,6 +1,5 @@
 "use client"
 
-import * as React from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -9,17 +8,16 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Container } from "@/components/ui/container"
 import { Check, Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-
-
 import { useTranslations } from "next-intl"
+import { useState, useMemo } from "react"
+import { toast } from "sonner"
 
-export function WaitlistForm() {
+const WaitlistForm = () => {
     const t = useTranslations('waitlist')
-    const [isSubmitting, setIsSubmitting] = React.useState(false)
-    const [isSuccess, setIsSuccess] = React.useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [isSuccess, setIsSuccess] = useState(false)
 
-    const formSchema = React.useMemo(() => z.object({
+    const formSchema = useMemo(() => z.object({
         email: z.string().email({ message: t('errors.email') }),
         company: z.string().min(2, { message: t('errors.company') }),
         spend: z.string().min(1, { message: t('errors.spend') }),
@@ -44,8 +42,6 @@ export function WaitlistForm() {
         setIsSubmitting(true)
 
         try {
-            console.log('Submitting to API:', JSON.stringify(data))
-
             const response = await fetch('/api/waitlist', {
                 method: 'POST',
                 headers: {
@@ -56,16 +52,13 @@ export function WaitlistForm() {
 
             const result = await response.json()
 
-            console.log(result)
-
             if (!result.success) {
                 throw new Error(result.message || 'Submission failed')
             }
 
             setIsSuccess(true)
         } catch (error) {
-            console.error('Waitlist submission error:', error)
-            alert(t('errors.submissionFailed'))
+            toast.error(t('errors.submissionFailed'))
         } finally {
             setIsSubmitting(false)
         }
@@ -240,3 +233,5 @@ export function WaitlistForm() {
         </section>
     )
 }
+
+export default WaitlistForm

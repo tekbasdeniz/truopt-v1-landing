@@ -1,12 +1,12 @@
 "use client"
 
 import { Container } from "@/components/ui/container"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
 
 import { useTranslations } from "next-intl"
+import WaitlistButton from "../ui/waitlist-button"
+import HowItWorksButton from "../ui/how-it-works-button"
 
-export function FinalCTA() {
+const FinalCTA = () => {
     const t = useTranslations('finalCta')
 
     return (
@@ -19,18 +19,16 @@ export function FinalCTA() {
                     <p className="text-lg text-muted-foreground">
                         {t('trustLine')}
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-                        <Button size="lg" className="h-12 px-8 text-base shadow-[0_0_30px_-10px_var(--color-primary)]">
+                    <div className="flex flex-col sm:flex-row items-center gap-4">
+                        <WaitlistButton wrapperClassName="h-12 px-8">
                             {t('cta')}
-                        </Button>
-                        <Link href="#how-it-works">
-                            <Button variant="outline" size="lg" className="h-12 px-8 text-base">
-                                {t('secondaryCta')}
-                            </Button>
-                        </Link>
+                        </WaitlistButton>
+                        <HowItWorksButton />
                     </div>
                 </div>
             </Container>
         </section>
     )
 }
+
+export default FinalCTA

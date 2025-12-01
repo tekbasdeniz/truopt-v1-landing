@@ -1,23 +1,22 @@
 "use client"
 
-import * as React from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
 
 import { useTranslations } from "next-intl"
 import LanguageSelector from "@/components/language-selector"
+import WaitlistButton from "../ui/waitlist-button"
+import HowItWorksButton from "../ui/how-it-works-button"
 
-// navItems moved inside component to use translations
-
-export function Header() {
+const Header = () => {
     const t = useTranslations('nav')
-    const [isOpen, setIsOpen] = React.useState(false)
-    const [isScrolled, setIsScrolled] = React.useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10)
         }
@@ -27,10 +26,9 @@ export function Header() {
 
     const navItems = [
         { name: t('product'), href: "#product" },
+        { name: t('waitlist'), href: "#waitlist" },
         { name: t('howItWorks'), href: "#how-it-works" },
         { name: t('agents'), href: "#agents" },
-        { name: t('waitlist'), href: "#waitlist" },
-        { name: t('insights'), href: "#insights" },
         { name: t('security'), href: "#security" },
         { name: t('faq'), href: "#faq" },
     ]
@@ -70,10 +68,12 @@ export function Header() {
                     {/* Desktop CTAs */}
                     <div className="hidden md:flex items-center space-x-4">
                         <LanguageSelector />
-                        <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+                        <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors hover:!text-white">
                             {t('howItWorks')}
                         </Link>
-                        <Button className="shadow-[0_0_20px_-5px_var(--color-primary)]">{t('joinWaitlist')}</Button>
+                        <WaitlistButton wrapperClassName="!min-w-0 !h-10">
+                            {t('joinWaitlist')}
+                        </WaitlistButton>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -103,15 +103,16 @@ export function Header() {
                         </Link>
                     ))}
                     <div className="pt-4 flex flex-col space-y-3">
-                        <Button variant="outline" className="w-full justify-center" onClick={() => setIsOpen(false)}>
-                            {t('howItWorks')}
-                        </Button>
-                        <Button className="w-full justify-center shadow-[0_0_20px_-5px_var(--color-primary)]" onClick={() => setIsOpen(false)}>
+
+                        <HowItWorksButton onClick={() => setIsOpen(false)} />
+                        <WaitlistButton wrapperClassName="!w-full sm:w-fit" onClick={() => setIsOpen(false)}>
                             {t('joinWaitlist')}
-                        </Button>
+                        </WaitlistButton>
                     </div>
                 </div>
             )}
         </header>
     )
 }
+
+export default Header

@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { useTranslations } from "next-intl"
 
-export function Footer() {
+const Footer = () => {
     const t = useTranslations('footer')
 
     const footerLinks = [
@@ -16,15 +16,15 @@ export function Footer() {
                 { name: t('faq'), href: "#faq" },
             ],
         },
-        {
-            title: t('company'),
-            links: [
-                { name: t('about'), href: "#" },
-                { name: t('blog'), href: "#" },
-                { name: t('careers'), href: "#" },
-                { name: t('contact'), href: "#" },
-            ],
-        },
+        // {
+        //     title: t('company'),
+        //     links: [
+        //         { name: t('about'), href: "#" },
+        //         { name: t('blog'), href: "#" },
+        //         { name: t('careers'), href: "#" },
+        //         { name: t('contact'), href: "#" },
+        //     ],
+        // },
         {
             title: t('legal'),
             links: [
@@ -82,3 +82,5 @@ export function Footer() {
         </footer>
     )
 }
+
+export default Footer
