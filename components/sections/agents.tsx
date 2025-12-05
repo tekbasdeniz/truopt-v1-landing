@@ -138,7 +138,7 @@ const Agents = () => {
                         />
                         <span className="text-sm font-medium text-primary tracking-wider">AI AGENTS</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/40 tracking-tight">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/40 tracking-tight h-18">
                         {t('title')}
                     </h2>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

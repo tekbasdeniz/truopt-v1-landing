@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/container"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 import { useTranslations } from "next-intl"
 
@@ -10,10 +10,10 @@ const Footer = () => {
         {
             title: t('product'),
             links: [
-                { name: t('howItWorks'), href: "#how-it-works" },
-                { name: t('agents'), href: "#agents" },
-                { name: t('security'), href: "#security" },
-                { name: t('faq'), href: "#faq" },
+                { name: t('howItWorks'), href: "/#how-it-works" },
+                { name: t('agents'), href: "/#agents" },
+                { name: t('security'), href: "/#security" },
+                { name: t('faq'), href: "/#faq" },
             ],
         },
         // {
@@ -30,7 +30,7 @@ const Footer = () => {
             links: [
                 { name: t('terms'), href: "#" },
                 { name: t('privacy'), href: "#" },
-                { name: t('cookie'), href: "#" },
+                { name: t('cookie'), href: "/cookie-policy" },
                 { name: t('subscription'), href: "#" },
                 { name: t('refund'), href: "#" },
             ],
@@ -62,7 +62,7 @@ const Footer = () => {
                             <ul className="space-y-2">
                                 {column.links.map((link) => (
                                     <li key={link.name}>
-                                        <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                        <Link href={link.href as any} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                             {link.name}
                                         </Link>
                                     </li>

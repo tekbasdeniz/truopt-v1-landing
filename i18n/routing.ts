@@ -20,5 +20,9 @@ export const routing = defineRouting({
             tr: '/hakkimizda',
         },
         '/tr': '/tr',
+        '/cookie-policy': {
+            en: '/cookie-policy',
+            tr: '/cerez-politikasi'
+        }
     },
 });

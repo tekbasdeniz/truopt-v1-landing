@@ -193,19 +193,17 @@ const WaitlistForm = () => {
                                     </label>
                                     <div className="flex space-x-4">
                                         {[
-                                            { value: "Google Ads", label: t('platformOptions.googleAds') },
-                                            { value: "Meta Ads", label: t('platformOptions.metaAds') }
-                                        ].map((platform) => (
-                                            <label key={platform.value} className="flex items-center space-x-2 cursor-pointer">
-                                                <input
-                                                    type="checkbox"
-                                                    value={platform.value}
-                                                    className="w-4 h-4 rounded border-input bg-background text-primary focus:ring-primary"
-                                                    {...form.register("platforms")}
-                                                />
-                                                <span className="text-sm text-muted-foreground">{platform.label}</span>
-                                            </label>
-                                        ))}
+                                            { value: "Google Ads", label: t('platformOptions.googleAds') }].map((platform) => (
+                                                <label key={platform.value} className="flex items-center space-x-2 cursor-pointer">
+                                                    <input
+                                                        type="checkbox"
+                                                        value={platform.value}
+                                                        className="w-4 h-4 rounded border-input bg-background text-primary focus:ring-primary"
+                                                        {...form.register("platforms")}
+                                                    />
+                                                    <span className="text-sm text-muted-foreground">{platform.label}</span>
+                                                </label>
+                                            ))}
                                     </div>
                                     {form.formState.errors.platforms && (
                                         <p className="text-sm text-destructive">{form.formState.errors.platforms.message}</p>

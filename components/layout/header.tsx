@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Menu, X } from "lucide-react"
 import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
@@ -25,12 +25,12 @@ const Header = () => {
     }, [])
 
     const navItems = [
-        { name: t('product'), href: "#product" },
-        { name: t('waitlist'), href: "#waitlist" },
-        { name: t('howItWorks'), href: "#how-it-works" },
-        { name: t('agents'), href: "#agents" },
-        { name: t('security'), href: "#security" },
-        { name: t('faq'), href: "#faq" },
+        { name: t('product'), href: "/#product" },
+        { name: t('waitlist'), href: "/#waitlist" },
+        { name: t('howItWorks'), href: "/#how-it-works" },
+        { name: t('agents'), href: "/#agents" },
+        { name: t('security'), href: "/#security" },
+        { name: t('faq'), href: "/#faq" },
     ]
 
     return (
@@ -57,7 +57,7 @@ const Header = () => {
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
-                                href={item.href}
+                                href={item.href as any}
                                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                             >
                                 {item.name}
@@ -68,7 +68,7 @@ const Header = () => {
                     {/* Desktop CTAs */}
                     <div className="hidden md:flex items-center space-x-4">
                         <LanguageSelector />
-                        <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors hover:!text-white">
+                        <Link href={"/#how-it-works" as any} className="text-sm font-medium hover:text-primary transition-colors hover:!text-white">
                             {t('howItWorks')}
                         </Link>
                         <WaitlistButton wrapperClassName="!min-w-0 !h-10">
@@ -95,7 +95,7 @@ const Header = () => {
                     {navItems.map((item) => (
                         <Link
                             key={item.name}
-                            href={item.href}
+                            href={item.href as any}
                             className="text-base font-medium text-foreground/80 hover:text-primary py-2"
                             onClick={() => setIsOpen(false)}
                         >
