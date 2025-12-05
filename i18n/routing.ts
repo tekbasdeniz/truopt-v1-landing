@@ -23,6 +23,22 @@ export const routing = defineRouting({
         '/cookie-policy': {
             en: '/cookie-policy',
             tr: '/cerez-politikasi'
+        },
+        '/copyright-notice': {
+            en: '/copyright-notice',
+            tr: '/telif-hakki-bildirimi'
+        },
+        '/disclaimer': {
+            en: '/disclaimer',
+            tr: '/sorumluluk-reddi'
+        },
+        '/kvkk': {
+            en: '/kvkk',
+            tr: '/kvkk'
+        },
+        '/terms-of-use': {
+            en: '/terms-of-use',
+            tr: '/kullanim-kosullari'
         }
     },
 });
