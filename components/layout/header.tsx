@@ -7,7 +7,6 @@ import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
 
 import { useTranslations } from "next-intl"
-import LanguageSelector from "@/components/language-selector"
 import WaitlistButton from "../ui/waitlist-button"
 import HowItWorksButton from "../ui/how-it-works-button"
 
@@ -67,7 +66,7 @@ const Header = () => {
 
                     {/* Desktop CTAs */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <LanguageSelector />
+                        {/* <LanguageSelector /> */}
                         <Link href={"/#how-it-works" as any} className="text-sm font-medium hover:text-primary transition-colors hover:!text-white">
                             {t('howItWorks')}
                         </Link>
@@ -78,7 +77,7 @@ const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <div className="flex items-center space-x-4 md:hidden">
-                        <LanguageSelector />
+                        {/* <LanguageSelector /> */}
                         <button
                             className="p-2 text-muted-foreground hover:text-foreground"
                             onClick={() => setIsOpen(!isOpen)}
