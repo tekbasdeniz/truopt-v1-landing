@@ -11,7 +11,12 @@ import Security from "@/components/sections/security"
 import FAQ from "@/components/sections/faq"
 import FinalCTA from "@/components/sections/final-cta"
 
-const Home = () => {
+import { setRequestLocale } from 'next-intl/server';
+
+const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />

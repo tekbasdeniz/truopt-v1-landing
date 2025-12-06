@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
         const data = await request.json()
 
         // Google Apps Script endpoint
-        const endpoint = process.env.GOOGLE_SHEETS_ENDPOINT
+        const endpoint = 'https://script.google.com/macros/s/AKfycbzQnFaiMsr-d4VK-zlKaFNJfTmmyeJwIjgAmRvzdRBItIQj1B679j0F7KYa2cwMi_-R/exec'
 
         if (!endpoint) {
             return NextResponse.json(

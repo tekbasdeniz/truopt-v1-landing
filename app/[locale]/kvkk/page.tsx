@@ -4,7 +4,12 @@ import Footer from "@/components/layout/footer"
 import { Container } from "@/components/ui/container"
 import { KvkkContent } from "@/components/legal/kvkk-content"
 
-export default function KvkkPage() {
+import { setRequestLocale } from 'next-intl/server';
+
+export default async function KvkkPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+
     return (
         <div className="min-h-screen flex flex-col">
             <Header />

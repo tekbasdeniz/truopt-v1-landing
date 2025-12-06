@@ -19,6 +19,13 @@ import { routing } from '@/i18n/routing';
 import { Toaster } from 'sonner';
 
 
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+import { setRequestLocale } from 'next-intl/server';
+
 export default async function RootLayout({
   children,
   params
@@ -27,6 +34,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  setRequestLocale(locale);
   // Validate that the incoming `locale` parameter is valid
   if (!routing.locales.includes(locale as any)) notFound();
 

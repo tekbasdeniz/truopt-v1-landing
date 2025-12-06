@@ -3,7 +3,12 @@ import Footer from "@/components/layout/footer"
 import { Container } from "@/components/ui/container"
 import { CopyrightNoticeContent } from "@/components/legal/copyright-notice-content"
 
-export default function CopyrightNoticePage() {
+import { setRequestLocale } from 'next-intl/server';
+
+export default async function CopyrightNoticePage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+
     return (
         <div className="min-h-screen flex flex-col">
             <Header />

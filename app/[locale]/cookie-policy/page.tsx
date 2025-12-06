@@ -4,7 +4,12 @@ import Footer from "@/components/layout/footer"
 import { Container } from "@/components/ui/container"
 import { CookiePolicyContent } from "@/components/legal/cookie-policy-content"
 
-export default function CookiePolicyPage() {
+import { setRequestLocale } from 'next-intl/server';
+
+export default async function CookiePolicyPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+
     return (
         <div className="min-h-screen flex flex-col">
             <Header />
