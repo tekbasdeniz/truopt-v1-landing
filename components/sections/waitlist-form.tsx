@@ -42,13 +42,16 @@ const WaitlistForm = () => {
         setIsSubmitting(true)
 
         try {
-            const response = await fetch('/api/waitlist', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            })
+            const response = await fetch(
+                '/api/waitlist',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                }
+            )
 
             const result = await response.json()
 
@@ -63,6 +66,7 @@ const WaitlistForm = () => {
             setIsSubmitting(false)
         }
     }
+
 
     if (isSuccess) {
         return (
