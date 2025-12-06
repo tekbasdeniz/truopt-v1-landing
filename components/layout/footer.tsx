@@ -29,14 +29,11 @@ const Footer = () => {
             title: t('legal'),
             links: [
                 { name: t('termsOfUse'), href: "/terms-of-use" },
-                { name: t('terms'), href: "#" },
-                { name: t('privacy'), href: "#" },
                 { name: t('cookie'), href: "/cookie-policy" },
                 { name: t('copyrightNotice'), href: "/copyright-notice" },
                 { name: t('disclaimer'), href: "/disclaimer" },
                 { name: t('kvkk'), href: "/kvkk" },
-                { name: t('subscription'), href: "#" },
-                { name: t('refund'), href: "#" },
+
             ],
         },
     ]
