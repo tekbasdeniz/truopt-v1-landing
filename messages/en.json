@@ -47,6 +47,7 @@
         "spend": "Monthly Ad Spend",
         "platforms": "Platforms",
         "role": "Role",
+        "otherRole": "Please specify your role",
         "required": "*",
         "spendOptions": {
             "select": "Select range",

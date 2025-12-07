@@ -23,6 +23,15 @@ const WaitlistForm = () => {
         spend: z.string().min(1, { message: t('errors.spend') }),
         platforms: z.array(z.string()).min(1, { message: t('errors.platforms') }),
         role: z.string().min(1, { message: t('errors.role') }),
+        otherRole: z.string().optional(),
+    }).superRefine((data, ctx) => {
+        if (data.role === "Other" && !data.otherRole) {
+            ctx.addIssue({
+                code: "custom",
+                message: t('errors.role'),
+                path: ["otherRole"],
+            });
+        }
     }), [t])
 
     type FormValues = z.infer<typeof formSchema>
@@ -35,8 +44,11 @@ const WaitlistForm = () => {
             spend: "",
             platforms: [],
             role: "",
+            otherRole: "",
         },
     })
+
+    const role = form.watch("role")
 
     async function onSubmit(data: FormValues) {
         setIsSubmitting(true)
@@ -189,6 +201,26 @@ const WaitlistForm = () => {
                                             <p className="text-sm text-destructive">{form.formState.errors.role.message}</p>
                                         )}
                                     </div>
+
+                                    {role === "Other" && (
+                                        <div className="space-y-2">
+                                            <label htmlFor="otherRole" className="text-sm font-medium leading-none">
+                                                {t('otherRole')} <span className="text-destructive">*</span>
+                                            </label>
+                                            <input
+                                                id="otherRole"
+                                                type="text"
+                                                className={cn(
+                                                    "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                                                    form.formState.errors.otherRole && "border-destructive focus-visible:ring-destructive"
+                                                )}
+                                                {...form.register("otherRole")}
+                                            />
+                                            {form.formState.errors.otherRole && (
+                                                <p className="text-sm text-destructive">{form.formState.errors.otherRole.message}</p>
+                                            )}
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="space-y-2">

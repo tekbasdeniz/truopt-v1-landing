@@ -47,6 +47,7 @@
         "spend": "Aylık Reklam Harcaması",
         "platforms": "Platformlar",
         "role": "Rol",
+        "otherRole": "Lütfen rolünüzü belirtin",
         "required": "*",
         "spendOptions": {
             "select": "Aralık seçin",
