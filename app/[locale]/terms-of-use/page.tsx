@@ -5,6 +5,11 @@ import { Container } from "@/components/ui/container"
 import { TermsOfUseContent } from "@/components/legal/terms-of-use-content"
 
 import { setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function TermsOfUsePage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

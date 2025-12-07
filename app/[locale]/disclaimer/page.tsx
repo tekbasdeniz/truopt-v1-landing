@@ -5,6 +5,11 @@ import { Container } from "@/components/ui/container"
 import { DisclaimerContent } from "@/components/legal/disclaimer-content"
 
 import { setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function DisclaimerPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
