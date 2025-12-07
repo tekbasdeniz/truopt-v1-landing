@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 import HowItWorksButton from "../ui/how-it-works-button"
+import Image from "next/image"
+import Logo from "@/app/assets/images/logo.webp"
 
 const Header = () => {
     const t = useTranslations('nav')
@@ -45,10 +47,7 @@ const Header = () => {
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center border border-primary/50">
-                            <div className="w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_var(--color-primary)]" />
-                        </div>
-                        <span className="text-xl font-bold tracking-tight">TruOpt.ai</span>
+                        <Image src={Logo} alt="TruOpt.ai" width={100} height={100} className="mt-2" />
                     </Link>
 
                     {/* Desktop Nav */}

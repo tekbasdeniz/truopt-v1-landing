@@ -15,10 +15,10 @@
         "subtitle": "AI-Based Advertisement Optimization for Google Ads - The Best automatization AI Platform",
         "proof1": "Always-on audits",
         "proof2": "Guardian alerts",
-        "proof3": "approval-based AI actions",
+        "proof3": "Approval-based AI actions",
         "cta": "Join Waitlist",
         "secondaryCta": "See how it works",
-        "trustLine": "Limited onboarding capacity for Phase 1"
+        "trustLine": "Limited onboarding capacity"
     },
     "dashboard": {
         "title": "TruOpt.ai Dashboard",
@@ -60,7 +60,7 @@
             "founder": "Founder",
             "marketer": "Performance Marketer",
             "agency": "Agency",
-            "growth": "Growth",
+            "growth": "Corprate Company",
             "other": "Other"
         },
         "platformOptions": {
@@ -77,11 +77,11 @@
             "spend": "Please select your monthly ad spend.",
             "platforms": "Please select at least one platform.",
             "role": "Please select your role.",
-            "submissionFailed": "Oops! Something went wrong. Please try again or email us at hello@truopt.ai"
+            "submissionFailed": "Oops! Something went wrong. Please try again or email us at info@thumbsad.com "
         }
     },
     "credibility": {
-        "trust1": "Built with performance marketers",
+        "trust1": "Built by performance marketers",
         "trust2": "Designed for multi-account teams",
         "trust3": "Audit-ready by design"
     },
@@ -107,7 +107,7 @@
         "step4Desc": "approval-based AI actions",
         "step4Badge": "invite-only",
         "cta-title": "Ready to experience the AI magic?",
-        "cta-description": "Thousands of marketers already using AI-powered optimization"
+        "cta-description": "110+ marketers already using AI-powered optimization"
     },
     "agents": {
         "title": "Meet Your AI Agents",
@@ -142,7 +142,7 @@
         }
     },
     "betaFit": {
-        "title": "Who Phase 1 is built for",
+        "title": "Private Launch",
         "description": "We're onboarding teams who need continuous audits, want full approval control, and are managing $25k+ in monthly ad spend.",
         "cta": "Request Early Access",
         "audience1": "Performance teams",
