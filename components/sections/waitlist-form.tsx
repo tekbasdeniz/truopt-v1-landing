@@ -9,7 +9,7 @@ import { Container } from "@/components/ui/container"
 import { Check, Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { toast } from "sonner"
 
 const WaitlistForm = () => {
@@ -81,6 +81,25 @@ const WaitlistForm = () => {
 
 
     if (isSuccess) {
+        useEffect(() => {
+            // Google Ads Conversion Tracking
+            if (typeof window !== 'undefined') {
+                // Ensure dataLayer exists
+                (window as any).dataLayer = (window as any).dataLayer || [];
+                // Define gtag if necessary
+                function gtag(...args: any[]) {
+                    (window as any).dataLayer.push(arguments);
+                }
+
+                // Fire event
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17872653028/4MWECN6UpOIbEOSVrMpC',
+                    'value': 1.0,
+                    'currency': 'TRY'
+                });
+            }
+        }, []);
+
         return (
             <section id="waitlist" className="py-20 bg-background/50">
                 <Container>
