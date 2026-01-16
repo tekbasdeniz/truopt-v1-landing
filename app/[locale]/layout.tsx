@@ -57,6 +57,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NGXTB7D6');`,
           }}
         />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17872653028"
+        />
+        <Script
+          id="google-ads-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-17872653028');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${outfit.variable} antialiased bg-background text-foreground`}
