@@ -29,7 +29,7 @@ export function PricingSection() {
                 { name: "SLA, Custom Policies, API Access", value: false },
             ],
             cta: "Get Started",
-            href: "https://buy.paddle.com/product/basic", // Placeholder
+            href: "#", // Placeholder
             popular: false,
         },
         {
@@ -49,7 +49,7 @@ export function PricingSection() {
                 { name: "SLA, Custom Policies, API Access", value: false },
             ],
             cta: "Get Started",
-            href: "https://buy.paddle.com/product/pro", // Placeholder
+            href: "#", // Placeholder
             popular: true,
             badge: "Best Value",
         },
