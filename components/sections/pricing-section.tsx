@@ -149,21 +149,34 @@ export function PricingSection() {
                                 <p className="text-sm text-muted-foreground mt-2 min-h-[40px]">{plan.description}</p>
                             </div>
 
-                            <div className="mb-8">
-                                <div className="flex items-baseline">
-                                    <span className="text-4xl font-bold">
-                                        {typeof plan.price.monthly === "string"
-                                            ? plan.price.monthly
-                                            : `$${isAnnual ? Math.round((plan.price.annual as number) / 12) : plan.price.monthly}`}
-                                    </span>
+                            <div className="mb-8 h-[60px] flex items-end">
+                                <div className="flex items-baseline overflow-hidden">
+                                    <AnimatePresence mode="wait">
+                                        <motion.span
+                                            key={isAnnual ? "annual" : "monthly"}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -20 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="text-4xl font-bold block"
+                                        >
+                                            {typeof plan.price.monthly === "string"
+                                                ? plan.price.monthly
+                                                : `$${isAnnual ? Math.round((plan.price.annual as number) / 12) : plan.price.monthly}`}
+                                        </motion.span>
+                                    </AnimatePresence>
                                     {typeof plan.price.monthly !== "string" && (
                                         <span className="text-muted-foreground ml-2">/ month</span>
                                     )}
                                 </div>
                                 {isAnnual && typeof plan.price.annual === "number" && (
-                                    <p className="text-sm text-muted-foreground mt-1">
+                                    <motion.p
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        className="text-sm text-muted-foreground ml-2 mb-1"
+                                    >
                                         Billed ${plan.price.annual} yearly
-                                    </p>
+                                    </motion.p>
                                 )}
                             </div>
 
