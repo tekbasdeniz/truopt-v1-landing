@@ -3,89 +3,96 @@ import React from 'react'
 export const CookiePolicyContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
-            <h1 className="text-3xl font-bold text-foreground mb-8">Cookie Policy</h1>
+            <h1 className="text-3xl font-bold text-foreground mb-2">Cookie Policy – TruOpt.ai</h1>
+            <p className="mb-8 font-medium text-foreground">Last updated: January 2026</p>
 
             <p className="mb-6">
-                This Cookie Policy explains how TruOpt.ai, a digital product developed and operated by ThumbsAd – Deniz Tekbaş (“TruOpt.ai”, “we”, “us”, or “our”), uses cookies and similar technologies when you visit our website at <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a> (“Website”). It outlines what these technologies are, why we use them, and how you can control your preferences.
+                This Cookie Policy explains how TruOpt.ai, a subscription-based digital platform developed and operated by ThumbsAd – Deniz Tekbaş (“we”, “us”, “our”), uses cookies and similar tracking technologies on <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a>.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">What Are Cookies?</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">1. What Are Cookies?</h2>
             <p className="mb-4">
-                Cookies are small text files placed on your device when you access a website. They are commonly used to enable website functionality, enhance performance, and collect analytical insights.
+                Cookies are small data files stored on your device when you visit a website.
+                <br />
+                They are used to enable secure operation, personalization, analytics, and marketing measurement.
             </p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li><strong className="text-foreground">First-party cookies:</strong> Set by TruOpt.ai directly.</li>
-                <li><strong className="text-foreground">Third-party cookies:</strong> Set by external services (e.g., analytics, ad networks) that may track user behavior across websites.</li>
+
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. Legal Basis for Cookie Usage</h2>
+            <p className="mb-4">Cookies are processed based on:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Your explicit consent (for analytics & marketing cookies)</li>
+                <li>Legitimate interest (for strictly necessary cookies)</li>
+                <li>Contractual necessity (for platform functionality)</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Why We Use Cookies</h2>
-            <p className="mb-4">We use cookies for several purposes, including:</p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li><strong className="text-foreground">Necessary Cookies:</strong> To ensure the Website functions properly and securely (e.g., session management, login access).</li>
-                <li><strong className="text-foreground">Analytical Cookies:</strong> To gather usage data such as page visits and error tracking. These cookies help us improve the platform but do not personally identify you.</li>
-                <li><strong className="text-foreground">Advertising/Marketing Cookies:</strong> To serve relevant ads, limit repetition, and measure the performance of ad campaigns. These may be placed by authorized third-party partners.</li>
-            </ul>
-
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Types of Cookies We Use</h2>
-            <div className="overflow-x-auto mb-8">
-                <table className="w-full text-left border-collapse">
-                    <thead>
-                        <tr className="border-b border-border">
-                            <th className="py-3 pr-4 font-semibold text-foreground">Type</th>
-                            <th className="py-3 pl-4 font-semibold text-foreground">Purpose</th>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">3. Categories of Cookies</h2>
+            <div className="overflow-x-auto">
+                <table className="min-w-full text-left text-sm mb-6">
+                    <thead className="border-b border-border">
+                        <tr>
+                            <th className="py-2 px-4 font-semibold text-foreground">Category</th>
+                            <th className="py-2 px-4 font-semibold text-foreground">Purpose</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr className="border-b border-border/50">
-                            <td className="py-3 pr-4 align-top font-medium text-foreground">Necessary Cookies</td>
-                            <td className="py-3 pl-4 align-top">Essential for core website functionality.</td>
+                    <tbody className="divide-y divide-border/50">
+                        <tr>
+                            <td className="py-2 px-4 font-medium text-foreground">Strictly Necessary Cookies</td>
+                            <td className="py-2 px-4">Authentication, session security, system stability</td>
                         </tr>
-                        <tr className="border-b border-border/50">
-                            <td className="py-3 pr-4 align-top font-medium text-foreground">Analytics Cookies</td>
-                            <td className="py-3 pl-4 align-top">Measure traffic and user behavior for service improvement.</td>
+                        <tr>
+                            <td className="py-2 px-4 font-medium text-foreground">Performance & Analytics Cookies</td>
+                            <td className="py-2 px-4">Measure usage, improve service quality</td>
                         </tr>
-                        <tr className="border-b border-border/50">
-                            <td className="py-3 pr-4 align-top font-medium text-foreground">Marketing Cookies</td>
-                            <td className="py-3 pl-4 align-top">Personalize content and manage advertising effectiveness.</td>
+                        <tr>
+                            <td className="py-2 px-4 font-medium text-foreground">Marketing & Advertising Cookies</td>
+                            <td className="py-2 px-4">Measure campaign performance, retargeting</td>
+                        </tr>
+                        <tr>
+                            <td className="py-2 px-4 font-medium text-foreground">Preference Cookies</td>
+                            <td className="py-2 px-4">Store user choices and UI settings</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Managing Cookie Preferences</h2>
-            <p className="mb-4">You may choose to accept or reject cookies at any time:</p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Use the cookie banner or settings panel when you first visit the Website.</li>
-                <li>Adjust your browser settings to block or delete cookies.</li>
-                <li>Visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.allaboutcookies.org</a> for detailed instructions on cookie management.</li>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Third-Party Cookies</h2>
+            <p className="mb-4">TruOpt.ai uses third-party tools such as:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Google Analytics</li>
+                <li>Meta Pixel</li>
+                <li>Other authorized analytics & advertising platforms</li>
             </ul>
-            <p className="mb-6 italic">
-                Please note that disabling some cookies may impact the functionality of the Website.
+            <p className="mb-6">
+                These providers may place cookies subject to their own privacy policies.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Third-Party Cookies</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Cookie Consent Management</h2>
+            <p className="mb-4">You can manage your cookie preferences via:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Our cookie consent banner</li>
+                <li>Browser-level cookie settings</li>
+            </ul>
             <p className="mb-6">
-                TruOpt.ai leverages third-party services (e.g., Google Analytics, Meta Pixel) to improve performance and understand user behavior. These tools do not collect personally identifiable information unless explicitly shared by you.
+                You may withdraw your consent at any time.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Policy Updates</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">6. Impact of Disabling Cookies</h2>
             <p className="mb-6">
-                We may update this Cookie Policy from time to time to reflect changes in law, technology, or our operations. Changes will be posted on this page with an updated effective date.
+                Disabling certain cookies may prevent parts of the platform from functioning properly.
             </p>
-            <p className="mb-6 font-medium text-foreground">
-                Last updated: June 17, 2025
+
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">7. Updates</h2>
+            <p className="mb-6">
+                We may update this policy to reflect legal or technical changes.
             </p>
 
             <div className="border-t border-border pt-8 mt-12">
-                <h2 className="text-xl font-semibold text-foreground mb-4">Legal Ownership</h2>
-                <p className="mb-2">TruOpt.ai is a digital platform legally owned and operated by:</p>
-                <p className="font-semibold text-foreground mb-1">ThumbsAd Sole Proprietorship – Deniz Tekbaş</p>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Legal Ownership & Contact</h2>
+                <p className="mb-6">TruOpt.ai is operated by:</p>
+                <p className="font-semibold text-foreground mb-1">ThumbsAd – Deniz Tekbaş</p>
+                <p className="mb-1">Address: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201 / 40 Şişli, İstanbul, Türkiye</p>
                 <p className="mb-1">Email: <a href="mailto:info@thumbsad.com" className="text-primary hover:underline">info@thumbsad.com</a></p>
-                <p className="mb-4">Address: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201, Unit 40, Şişli / İstanbul, Turkey</p>
-
-                <p className="mt-6">
-                    For any questions about cookies or data use, feel free to reach out to us.
-                </p>
+                <p className="mb-4">Phone: <a href="tel:+908503035772" className="text-primary hover:underline">+90 850 303 57 72</a></p>
             </div>
         </div>
     )
