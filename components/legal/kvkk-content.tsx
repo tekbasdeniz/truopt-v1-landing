@@ -1,88 +1,84 @@
+import React from 'react'
 
 export const KvkkContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
-            <h1 className="text-3xl font-bold text-foreground mb-2">KVKK/GDPR Illumination Text</h1>
-            <p className="text-xl text-foreground mb-8">(Personal Data Protection Law Illumination Text)</p>
+            <h1 className="text-3xl font-bold text-foreground mb-2">KVKK / GDPR Privacy Notice – TruOpt.ai</h1>
+            <p className="mb-8 font-medium text-foreground">Last Updated: January 2026</p>
 
             <p className="mb-6">
-                As ThumbsAd – Deniz Tekbaş (“Company”), we process your personal data in accordance with the Turkish Personal Data Protection Law No. 6698 (“KVKK”) and the EU General Data Protection Regulation (“GDPR”). This Illumination Text explains how your personal data is collected, processed, and transferred when using our services and platforms, including the TruOpt.ai digital product.
+                This Privacy Notice has been prepared by ThumbsAd – Deniz Tekbaş (“Data Controller”) in accordance with the Turkish Personal Data Protection Law No. 6698 (“KVKK”) and the EU General Data Protection Regulation (“GDPR”) to inform you about the processing of your personal data on ThumbsAd.com and TruOpt.ai platforms.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">1. Processed Personal Data and Purposes of Processing</h2>
-            <p className="mb-4">
-                We may process the following personal data: your name, surname, email address, phone number, IP address, session information, and traffic data. These data are processed for the following purposes:
-            </p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li><strong className="text-foreground">Access and Use of Services:</strong> To provide access to our digital platforms, including the TruOpt.ai dashboard and related services.</li>
-                <li><strong className="text-foreground">Marketing Communications:</strong> To send information about campaigns, promotions, and platform updates (only if you have given your explicit consent).</li>
-                <li><strong className="text-foreground">Customer Support:</strong> To respond to user requests and provide post-service assistance.</li>
-                <li><strong className="text-foreground">Billing and Invoicing:</strong> To generate and manage invoices related to our agency or platform services.</li>
-                <li><strong className="text-foreground">Legal Obligations:</strong> To comply with applicable legal obligations and fulfill official authority requests.</li>
-                <li><strong className="text-foreground">Platform Improvement:</strong> To evaluate usage data and enhance the usability and functionality of ThumbsAd.com and TruOpt.ai.</li>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">1. Personal Data We Process</h2>
+            <p className="mb-4">The following categories of personal data may be processed:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Identity and contact information (name, surname, email, phone number)</li>
+                <li>Account, subscription and billing information</li>
+                <li>Payment and invoice data (processed via Paddle)</li>
+                <li>IP address, logs and transaction records</li>
+                <li>Device, browser and traffic data</li>
+                <li>Advertising, campaign and platform usage data</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. Method of Collection and Legal Basis</h2>
-            <p className="mb-4">Your personal data is collected electronically through:</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. Purposes of Processing</h2>
+            <p className="mb-4">Your personal data are processed for:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>Our websites (thumbsad.com and truopt.ai),</li>
-                <li>Contact forms and waitlist forms,</li>
-                <li>Email communications or marketing opt-in flows.</li>
-            </ul>
-            <p className="mb-4">The legal basis for processing includes:</p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Your explicit consent,</li>
-                <li>Performance of a contract to which you are a party,</li>
-                <li>Legal obligations we are subject to,</li>
-                <li>Our legitimate interests, provided that your fundamental rights are not overridden.</li>
+                <li>Providing access to TruOpt.ai platform and services</li>
+                <li>Managing subscriptions, billing and customer relationships</li>
+                <li>Operating AI automation and optimization services</li>
+                <li>Fulfilling legal obligations</li>
+                <li>Ensuring system security and audit logs</li>
+                <li>Improving products and services</li>
+                <li>Sending marketing communications (with explicit consent)</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">3. Sharing of Personal Data</h2>
-            <p className="mb-4">We may share your personal data with the following parties:</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">3. Legal Bases</h2>
+            <p className="mb-4">Personal data are processed based on:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>Cloud and server providers (for platform and website hosting),</li>
-                <li>Email and CRM providers (to send notifications or onboarding messages),</li>
-                <li>Legal authorities, if required by applicable laws or court orders.</li>
+                <li>Performance of a contract</li>
+                <li>Legal obligations</li>
+                <li>Explicit consent</li>
+                <li>Legitimate interests of the Data Controller</li>
+            </ul>
+
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Transfer of Personal Data</h2>
+            <p className="mb-4">Your personal data may be transferred to:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Paddle (payment and billing services)</li>
+                <li>Cloud hosting and infrastructure providers</li>
+                <li>Email, CRM and customer support providers</li>
+                <li>Authorized public institutions and authorities</li>
             </ul>
             <p className="mb-6">
-                Your data will never be sold or shared for commercial purposes without your consent.
+                Your data may be transferred abroad in accordance with GDPR and KVKK.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Your Rights Under KVKK / GDPR</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Your Rights</h2>
+            <p className="mb-4">Under KVKK Article 11 and GDPR Articles 12–22, you have the right to:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Learn whether your data are processed</li>
+                <li>Request access to your data</li>
+                <li>Request correction, deletion or restriction</li>
+                <li>Object to automated decision-making</li>
+                <li>Request compensation for damages</li>
+            </ul>
+
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">6. Exercising Your Rights</h2>
             <p className="mb-4">
-                You have the following rights under Article 11 of the KVKK and Articles 12–22 of the GDPR:
+                You may submit your requests by:
+                <br />
+                Email: <a href="mailto:info@thumbsad.com" className="text-primary hover:underline">info@thumbsad.com</a>
+                <br />
+                or in writing to the address below.
             </p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>To learn whether your data is processed and for what purpose,</li>
-                <li>To request a copy of your processed data,</li>
-                <li>To request correction of inaccurate or incomplete data,</li>
-                <li>To request the deletion or anonymization of your data,</li>
-                <li>To be informed about any third parties to whom your data has been transferred,</li>
-                <li>To object to decisions made solely through automated processing,</li>
-                <li>To request compensation if your rights are violated due to unlawful data processing.</li>
-            </ul>
-            <p className="mb-4">To exercise your rights, you may send a request:</p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>To our physical address in writing,</li>
-                <li>Or via email with a secure electronic signature.</li>
-            </ul>
 
             <div className="border-t border-border pt-8 mt-12">
-                <h2 className="text-xl font-semibold text-foreground mb-4">Contact Information</h2>
-                <p className="font-semibold text-foreground mb-1">Deniz Tekbaş | ThumbsAd Sole Proprietorship</p>
-                <p className="mb-1">Address: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201 İç Kapı No: 40 Şişli/İstanbul, Turkey</p>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Data Controller Contact</h2>
+                <p className="font-semibold text-foreground mb-1">ThumbsAd – Deniz Tekbaş</p>
+                <p className="mb-1">Address: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201 / 40 Şişli, İstanbul, Türkiye</p>
                 <p className="mb-1">Email: <a href="mailto:info@thumbsad.com" className="text-primary hover:underline">info@thumbsad.com</a></p>
-                <p className="mb-4">Phone (WhatsApp): <a href="https://wa.me/905314081338" className="text-primary hover:underline">+90 531 408 13 38</a></p>
-
-                <p className="mb-4">
-                    You can also use the contact form under the “Bize Ulaşın” (Contact Us) section on our websites:<br />
-                    <a href="https://thumbsad.com" className="text-primary hover:underline">https://thumbsad.com</a> and <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a>
-                </p>
-
-                <p className="mb-2">This KVKK/GDPR Illumination Text was last updated on June 17, 2025.</p>
-                <p className="font-medium text-foreground">
-                    ThumbsAd is the legal owner and operator of the TruOpt.ai platform.
-                </p>
+                <p className="mb-4">Phone: <a href="tel:+908503035772" className="text-primary hover:underline">+90 850 303 57 72</a></p>
             </div>
         </div>
     )
