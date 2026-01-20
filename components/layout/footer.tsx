@@ -33,6 +33,7 @@ const Footer = () => {
                 { name: t('copyrightNotice'), href: "/copyright-notice" },
                 { name: t('disclaimer'), href: "/disclaimer" },
                 { name: t('kvkk'), href: "/kvkk" },
+                { name: t('refund'), href: "/refund-policy" },
 
             ],
         },
