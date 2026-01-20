@@ -29,6 +29,7 @@ const Header = () => {
         { name: t('product'), href: "/#product" },
         { name: t('waitlist'), href: "/#waitlist" },
         { name: t('howItWorks'), href: "/#how-it-works" },
+        { name: "Pricing", href: "/pricing" },
         { name: t('agents'), href: "/#agents" },
         { name: t('security'), href: "/#security" },
         { name: t('faq'), href: "/#faq" },
