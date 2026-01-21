@@ -18,7 +18,6 @@ export function PricingSection() {
             description: "Essential tools for small teams.",
             features: [
                 { name: "Google Ads Accounts", value: "Up to 3" },
-                { name: "Managed Ad Spend", value: "Up to $5,000 / mo" },
                 { name: "AI Campaign Optimization", value: true },
                 { name: "Smart Recommendations & Alerts", value: true },
                 { name: "Auto-Executed Optimization Actions", value: false },
@@ -38,7 +37,6 @@ export function PricingSection() {
             description: "Advanced AI for growing agencies.",
             features: [
                 { name: "Google Ads Accounts", value: "Up to 10" },
-                { name: "Managed Ad Spend", value: "Up to $25,000 / mo" },
                 { name: "AI Campaign Optimization", value: true },
                 { name: "Smart Recommendations & Alerts", value: true },
                 { name: "Auto-Executed Optimization Actions", value: true },
@@ -59,7 +57,6 @@ export function PricingSection() {
             description: "Full control for large scale operations.",
             features: [
                 { name: "Google Ads Accounts", value: "Unlimited" },
-                { name: "Managed Ad Spend", value: "Unlimited" },
                 { name: "AI Campaign Optimization", value: true },
                 { name: "Smart Recommendations & Alerts", value: true },
                 { name: "Auto-Executed Optimization Actions", value: true },
