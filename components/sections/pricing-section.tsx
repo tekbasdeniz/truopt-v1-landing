@@ -16,6 +16,7 @@ export function PricingSection() {
             name: "Basic",
             price: { monthly: 29, annual: 278 },
             description: "Essential tools for small teams.",
+            bonusSeats: true,
             features: [
                 { name: "Google Ads Accounts", value: "Up to 3" },
                 { name: "AI Campaign Optimization", value: true },
@@ -35,6 +36,7 @@ export function PricingSection() {
             name: "Pro",
             price: { monthly: 69, annual: 662 },
             description: "Advanced AI for growing agencies.",
+            bonusSeats: true,
             features: [
                 { name: "Google Ads Accounts", value: "Up to 10" },
                 { name: "AI Campaign Optimization", value: true },
@@ -55,6 +57,7 @@ export function PricingSection() {
             name: "Enterprise",
             price: { monthly: "Custom", annual: "Custom" },
             description: "Full control for large scale operations.",
+            bonusSeats: true,
             features: [
                 { name: "Google Ads Accounts", value: "Unlimited" },
                 { name: "AI Campaign Optimization", value: true },
@@ -124,93 +127,128 @@ export function PricingSection() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    {plans.map((plan) => (
-                        <div
-                            key={plan.name}
-                            className={cn(
-                                "relative rounded-2xl border bg-card p-8 shadow-sm flex flex-col transition-all duration-200 hover:shadow-md",
-                                plan.popular ? "border-primary shadow-lg scale-105 z-10" : "border-border"
-                            )}
-                        >
-                            {plan.popular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                                    <Badge className="bg-primary text-primary-foreground px-4 py-1 text-sm shadow-sm">
-                                        {plan.badge}
-                                    </Badge>
-                                </div>
-                            )}
-
-                            <div className="mb-8">
-                                <h3 className="text-2xl font-bold">{plan.name}</h3>
-                                <p className="text-sm text-muted-foreground mt-2 min-h-[40px]">{plan.description}</p>
-                            </div>
-
-                            <div className="mb-8 h-[60px] flex items-end">
-                                <div className="flex items-baseline overflow-hidden">
-                                    <AnimatePresence mode="wait">
-                                        <motion.span
-                                            key={isAnnual ? "annual" : "monthly"}
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: -20 }}
-                                            transition={{ duration: 0.2 }}
-                                            className="text-4xl font-bold block"
-                                        >
-                                            {typeof plan.price.monthly === "string"
-                                                ? plan.price.monthly
-                                                : `$${isAnnual ? Math.round((plan.price.annual as number) / 12) : plan.price.monthly}`}
-                                        </motion.span>
-                                    </AnimatePresence>
-                                    {typeof plan.price.monthly !== "string" && (
-                                        <span className="text-muted-foreground ml-2">/ month</span>
-                                    )}
-                                </div>
-                                {isAnnual && typeof plan.price.annual === "number" && (
-                                    <motion.p
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        className="text-sm text-muted-foreground ml-2 mb-1"
-                                    >
-                                        Billed ${plan.price.annual} yearly
-                                    </motion.p>
-                                )}
-                            </div>
-
-                            <div className="flex-1 space-y-4 mb-8">
-                                {plan.features.map((feature, index) => (
-                                    <div key={index} className="flex items-start text-sm">
-                                        {feature.value === false ? (
-                                            <X className="h-4 w-4 text-muted-foreground/50 mr-3 mt-0.5 shrink-0" />
-                                        ) : (
-                                            <Check className="h-4 w-4 text-primary mr-3 mt-0.5 shrink-0" />
-                                        )}
-                                        <span className={cn(feature.value === false ? "text-muted-foreground/50" : "text-foreground")}>
-                                            <span className="font-medium">{feature.name}</span>
-                                            {typeof feature.value === "string" && (
-                                                <span className="block text-xs text-muted-foreground mt-0.5">
-                                                    {feature.value}
-                                                </span>
-                                            )}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <a
-                                href={plan.href}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={isAnnual ? "annual-pricing" : "monthly-pricing"}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"
+                    >
+                        {plans.map((plan, index) => (
+                            <motion.div
+                                key={plan.name}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.4,
+                                    delay: index * 0.1,
+                                    ease: "easeOut"
+                                }}
                                 className={cn(
-                                    "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer h-10 px-4 py-2 w-full",
-                                    plan.popular
-                                        ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_-5px_var(--color-primary)]"
-                                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                                    "relative rounded-2xl border bg-card p-8 shadow-sm flex flex-col transition-all duration-200 hover:shadow-md",
+                                    plan.popular ? "border-primary shadow-lg scale-105 z-10" : "border-border"
                                 )}
                             >
-                                {plan.cta}
-                            </a>
-                        </div>
-                    ))}
-                </div>
+                                {plan.popular && (
+                                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                                        <Badge className="bg-primary text-primary-foreground px-4 py-1 text-sm shadow-sm">
+                                            {plan.badge}
+                                        </Badge>
+                                    </div>
+                                )}
+
+                                <div className="mb-8">
+                                    <h3 className="text-2xl font-bold">{plan.name}</h3>
+                                    <AnimatePresence mode="wait">
+                                        {isAnnual && plan.bonusSeats && (
+                                            <motion.p
+                                                key="bonus-seats"
+                                                initial={{ opacity: 0, y: -5 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: -5 }}
+                                                transition={{ duration: 0.2 }}
+                                                className="text-xs text-green-600 mt-1 font-medium"
+                                            >
+                                                +2 bonus seats included
+                                            </motion.p>
+                                        )}
+                                    </AnimatePresence>
+                                    <p className="text-sm text-muted-foreground mt-2 min-h-[40px]">{plan.description}</p>
+                                    <AnimatePresence mode="wait">
+                                        {isAnnual && typeof plan.price.annual === "number" && (
+                                            <motion.p
+                                                key="billed-yearly"
+                                                initial={{ opacity: 0, y: 5 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: 5 }}
+                                                transition={{ duration: 0.2 }}
+                                                className="text-xs text-muted-foreground/60 mt-1"
+                                            >
+                                                Billed ${plan.price.annual} yearly
+                                            </motion.p>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+
+                                <div className="mb-8 h-[60px] flex items-end">
+                                    <div className="flex items-baseline overflow-hidden">
+                                        <AnimatePresence mode="wait">
+                                            <motion.span
+                                                key={isAnnual ? "annual" : "monthly"}
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: -20 }}
+                                                transition={{ duration: 0.2 }}
+                                                className="text-4xl font-bold block"
+                                            >
+                                                {typeof plan.price.monthly === "string"
+                                                    ? plan.price.monthly
+                                                    : `$${isAnnual ? Math.round((plan.price.annual as number) / 12) : plan.price.monthly}`}
+                                            </motion.span>
+                                        </AnimatePresence>
+                                        {typeof plan.price.monthly !== "string" && (
+                                            <span className="text-muted-foreground ml-2">/ month</span>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="flex-1 space-y-4 mb-8">
+                                    {plan.features.map((feature, index) => (
+                                        <div key={index} className="flex items-start text-sm">
+                                            {feature.value === false ? (
+                                                <X className="h-4 w-4 text-muted-foreground/50 mr-3 mt-0.5 shrink-0" />
+                                            ) : (
+                                                <Check className="h-4 w-4 text-primary mr-3 mt-0.5 shrink-0" />
+                                            )}
+                                            <span className={cn(feature.value === false ? "text-muted-foreground/50" : "text-foreground")}>
+                                                <span className="font-medium">{feature.name}</span>
+                                                {typeof feature.value === "string" && (
+                                                    <span className="block text-xs text-muted-foreground mt-0.5">
+                                                        {feature.value}
+                                                    </span>
+                                                )}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <a
+                                    href={plan.href}
+                                    className={cn(
+                                        "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer h-10 px-4 py-2 w-full",
+                                        plan.popular
+                                            ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_-5px_var(--color-primary)]"
+                                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                                    )}
+                                >
+                                    {plan.cta}
+                                </a>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </AnimatePresence>
 
                 <div className="mt-20 max-w-5xl mx-auto border-t border-border pt-16">
                     <h3 className="text-2xl font-semibold mb-8 text-center">Billing Terms</h3>
