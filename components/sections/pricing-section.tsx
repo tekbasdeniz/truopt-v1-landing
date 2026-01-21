@@ -70,7 +70,7 @@ export function PricingSection() {
                 { name: "SLA, Custom Policies, API Access", value: true },
             ],
             cta: "Contact Sales",
-            href: "mailto:info@thumbsad.com",
+            href: "mailto:info@thumbsad.com?subject=Enterprise%20Paketi%20Hakkında%20Toplantı%20Talebi&body=Merhaba%2C%0D%0A%0D%0AEnterprise%20paketi%20ile%20ilgileniyorum%20ve%20detaylı%20bilgi%20almak%20için%20bir%20toplantı%20talep%20ediyorum.%0D%0A%0D%0ATeşekkürler.",
             popular: false,
         },
     ]
