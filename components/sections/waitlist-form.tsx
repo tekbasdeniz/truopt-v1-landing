@@ -80,8 +80,8 @@ const WaitlistForm = () => {
     }
 
 
-    if (isSuccess) {
-        useEffect(() => {
+    useEffect(() => {
+        if (isSuccess) {
             // Google Ads Conversion Tracking
             if (typeof window !== 'undefined') {
                 // Ensure dataLayer exists
@@ -98,7 +98,10 @@ const WaitlistForm = () => {
                     'currency': 'TRY'
                 });
             }
-        }, []);
+        }
+    }, [isSuccess]);
+
+    if (isSuccess) {
 
         return (
             <section id="waitlist" className="py-20 bg-background/50">
