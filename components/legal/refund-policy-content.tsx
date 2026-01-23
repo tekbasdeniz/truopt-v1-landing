@@ -11,49 +11,53 @@ export const RefundPolicyContent = () => {
                 <strong>Effective Date:</strong> January 2026
             </p>
 
-            <p className="mb-6">
-                TruOpt.ai is sold via Paddle, which acts as the Merchant of Record.
-            </p>
-
-            <p className="mb-8">
-                All refunds and cancellations are handled exclusively by Paddle and are subject to Paddle's Buyer Terms.
-            </p>
-
-            <hr className="border-muted-foreground/20 my-8" />
-
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Refund Window</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Merchant of Record</h2>
             <p className="mb-4">
-                If you are a consumer, you may request a refund within 14 days of your initial purchase by contacting Paddle via paddle.net.
-            </p>
-            <p className="mb-8">
-                This refund right applies only to the first-time purchase of a subscription.
+                Merchant of Record Our order process is conducted by our online reseller
+                <a
+                    href="https://www.paddle.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                >
+                    paddle.com
+                </a>.
+                <a
+                    href="https://www.paddle.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                >
+                    paddle.com
+                </a> is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns.
+
             </p>
 
             <hr className="border-muted-foreground/20 my-8" />
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Subscription Renewals</h2>
-            <p className="mb-8">
-                Automatic subscription renewals and unused subscription periods are non-refundable.
-            </p>
-
-            <hr className="border-muted-foreground/20 my-8" />
-
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Annual Subscriptions</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Refunds</h2>
             <p className="mb-4">
-                Annual subscriptions are billed upfront.
+                Refunds Refunds are processed in accordance with Paddle’s Buyer Terms. As a consumer, you have the right to request a refund within 14 days of your purchase, subject to applicable local laws and Paddle's policies.
             </p>
             <p className="mb-8">
-                If a refund is requested within the 14-day refund window, access to the service will be revoked.
+                We do not impose additional restrictions or qualifiers on refunds beyond what is outlined in Paddle’s terms.
             </p>
 
             <hr className="border-muted-foreground/20 my-8" />
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">How to Request a Refund</h2>
             <p className="mb-4">
-                All refund and cancellation requests must be submitted directly through Paddle.
+                Since Paddle is the merchant of record, all refund and cancellation requests must be submitted directly through them. You can contact Paddle via  <a
+                    href="https://www.paddle.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                >
+                    paddle.net
+                </a> or follow the instructions in your purchase confirmation email.
             </p>
             <p className="mb-8">
-                Please refer to Paddle's Buyer Terms for full details:{' '}
+                For full details on the refund policy that applies to your purchase, please refer to Paddle’s Buyer Terms:{' '}
                 <a
                     href="https://www.paddle.com/legal/checkout-buyer-terms"
                     target="_blank"
@@ -66,12 +70,9 @@ export const RefundPolicyContent = () => {
 
             <hr className="border-muted-foreground/20 my-8" />
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Legal Entity</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Cancellation</h2>
             <p className="mb-4">
-                TruOpt.ai is a product of ThumbsAd.
-            </p>
-            <p className="mb-4">
-                All billing, invoicing, tax handling, and refunds are managed by Paddle on behalf of ThumbsAd.
+                You may cancel your subscription at any time. Cancellation will take effect at the end of the current billing period.
             </p>
         </div>
     )
