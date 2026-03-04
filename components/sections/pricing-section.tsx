@@ -29,7 +29,7 @@ export function PricingSection() {
                 { name: "SLA, Custom Policies, API Access", value: false },
             ],
             cta: "Get Started",
-            href: "#", // Placeholder
+            href: "https://app.truopt.ai",
             popular: false,
         },
         {
@@ -49,7 +49,7 @@ export function PricingSection() {
                 { name: "SLA, Custom Policies, API Access", value: false },
             ],
             cta: "Get Started",
-            href: "#", // Placeholder
+            href: "https://app.truopt.ai",
             popular: true,
             badge: "Best Value",
         },

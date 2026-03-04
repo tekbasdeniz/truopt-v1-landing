@@ -292,7 +292,7 @@ const Agents = () => {
                             }}
                         />
                         <WaitlistButton wrapperClassName="relative z-10">
-                            {tNav('joinWaitlist')}
+                            {tNav('login')}
                         </WaitlistButton>
                     </div>
                 </motion.div>

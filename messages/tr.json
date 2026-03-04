@@ -3,22 +3,21 @@
         "product": "Ürün",
         "howItWorks": "Nasıl Çalışır",
         "agents": "Ajanlar",
-        "waitlist": "Bekleme Listesi",
         "insights": "İçgörüler",
         "security": "Güvenlik",
         "faq": "SSS",
-        "joinWaitlist": "Bekleme Listesine Katıl"
+        "login": "Ücretsiz Denemeye Başla"
     },
     "hero": {
-        "badge": "Faz 1 için aşamalı davetler",
+        "badge": "Şimdi Yayında",
         "title": "Optimize etmek, korumak ve entegre etmek için tasarlanmış çok-ajanlı bir sistem.",
         "subtitle": "Google Ads ve Meta Ads için onay tabanlı yapay zeka optimizasyonu—kontrol gerektiren performans pazarlamacıları için tasarlandı.",
         "proof1": "Kesintisiz denetimler",
         "proof2": "Koruyucu uyarılar",
         "proof3": "Onay tabanlı eylemler",
-        "cta": "Bekleme Listesine Katıl",
+        "cta": "Ücretsiz Denemeye Başla",
         "secondaryCta": "Nasıl çalıştığını gör",
-        "trustLine": "Faz 1 için sınırlı entegrasyon kapasitesi"
+        "trustLine": "Google Ads hesabınızı bağlayın"
     },
     "dashboard": {
         "title": "TruOpt.ai Kontrol Paneli",
@@ -100,14 +99,14 @@
         "title": "Nasıl çalışır",
         "subtitle": "Kampanyalarınızı manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
         "step1Title": "Bağlan",
-        "step1Desc": "Google Ads ve Meta Ads entegrasyonu",
-        "step2Title": "Teşhis Et",
-        "step2Desc": "Sağlık skoru + yapısal riskler",
-        "step3Title": "Öner",
-        "step3Desc": "Gerekçeli sıralı öneriler",
+        "step1Desc": "Google Hesabınızı bağlayın ve Reklam Hesabınızı seçin",
+        "step2Title": "Panel",
+        "step2Desc": "Sağlık skorunu ve geçmiş ölçümleri görün",
+        "step3Title": "Öneri",
+        "step3Desc": "Aksiyon alınabilir önerileri inceleyin",
         "step4Title": "Uygula",
-        "step4Desc": "Onay tabanlı eylemler",
-        "step4Badge": "sadece davetlilerle",
+        "step4Desc": "Anında optimizasyon için yapay zeka önerilerini onaylayın",
+        "step4Badge": "yayında",
         "cta-title": "Yapay zekanın büyüsünü deneyimlemeye hazır mısınız?",
         "cta-description": "Yapay zeka destekli optimizasyonu kullanan binlerce pazarlamacıya katılın"
     },
@@ -143,14 +142,14 @@
             "feature3": "Geçmiş performans temel oluşturma"
         }
     },
-    "betaFit": {
-        "title": "Faz 1 kimler için tasarlandı",
-        "description": "Sürekli denetimlere ihtiyaç duyan, tam onay kontrolü isteyen ve aylık 25.000$+ reklam harcaması yöneten ekipleri entegre ediyoruz.",
-        "cta": "Erken Erişim İste",
-        "audience1": "Performans ekipleri",
-        "audience2": "Çok hesaplı operatörler",
-        "audience3": "Büyüme odaklı işletmeler",
-        "small-description": "Davetler kademeli olarak gönderiliyor. Kullanıcılar küçük gruplar halinde sisteme alınıyor."
+    "team": {
+        "title": "Ekip Çalışması",
+        "description": "Ekip arkadaşlarınızı davet edin ve Google Ads kampanyalarınızı birlikte yönetin.",
+        "cta": "Ücretsiz Denemeye Başla",
+        "audience1": "Üyeleri davet et",
+        "audience2": "Aktivite kayıtları",
+        "audience3": "Rol bazlı erişim",
+        "small-description": "Kampanyalarınızda kimin hangi eylemi aldığını izleyin."
     },
     "insights": {
         "title": "İçgörüler ve En İyi Uygulamalar",
@@ -182,14 +181,14 @@
         "a2": "Şu anda Google Ads ve Meta Ads. Daha fazla platform yakında geliyor.",
         "q3": "Verilerim güvende mi?",
         "a3": "Evet. Mümkün olduğunda salt okunur API erişimi kullanıyoruz ve tüm veriler aktarım sırasında ve depolamada şifrelenir.",
-        "q4": "Erişimi nasıl alabilirim?",
-        "a4": "Bekleme listesine katılın. Reklam harcaması ve hesap karmaşıklığına göre ekipleri aşamalı olarak entegre ediyoruz."
+        "q4": "Nasıl kullanmaya başlayabilirim?",
+        "a4": "Hemen app.truopt.ai üzerinden kayıt olup kullanmaya başlayabilirsiniz. Sistem Google Ads hesabınızı bağladığınız anda çalışmaya başlar."
     },
     "finalCta": {
-        "title": "Faz 1 bekleme listesine katılın",
-        "cta": "Bekleme Listesine Katıl",
+        "title": "Optimizasyona Bugün Başlayın",
+        "cta": "Ücretsiz Denemeye Başla",
         "secondaryCta": "Nasıl çalıştığını gör",
-        "trustLine": "Sınırlı entegrasyon kapasitesi"
+        "trustLine": ""
     },
     "footer": {
         "tagline": "Performans pazarlamacıları için onay tabanlı yapay zeka optimizasyonu.",

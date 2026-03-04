@@ -27,7 +27,6 @@ const Header = () => {
 
     const navItems = [
         { name: t('product'), href: "/#product" },
-        { name: t('waitlist'), href: "/#waitlist" },
         { name: t('howItWorks'), href: "/#how-it-works" },
         { name: "Pricing", href: "/pricing" },
         { name: t('agents'), href: "/#agents" },
@@ -71,7 +70,7 @@ const Header = () => {
                             {t('howItWorks')}
                         </Link>
                         <WaitlistButton wrapperClassName="!min-w-0 !h-10">
-                            {t('joinWaitlist')}
+                            {t('login')}
                         </WaitlistButton>
                     </div>
 
@@ -105,7 +104,7 @@ const Header = () => {
 
                         <HowItWorksButton onClick={() => setIsOpen(false)} />
                         <WaitlistButton wrapperClassName="!w-full sm:w-fit" onClick={() => setIsOpen(false)}>
-                            {t('joinWaitlist')}
+                            {t('login')}
                         </WaitlistButton>
                     </div>
                 </div>

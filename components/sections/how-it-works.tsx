@@ -255,7 +255,7 @@ const HowItWorks = () => {
                             <h3 className="text-2xl font-bold">{t('cta-title')}</h3>
                         </div>
                         <WaitlistButton wrapperClassName="!min-w-[240px] !h-14 text-base relative z-10">
-                            {tNav('joinWaitlist')}
+                            {tNav('login')}
                         </WaitlistButton>
                         <p className="text-sm text-muted-foreground relative z-10">
                             {t('cta-description')}

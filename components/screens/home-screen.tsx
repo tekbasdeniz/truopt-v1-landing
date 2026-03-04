@@ -2,12 +2,11 @@ import React from 'react'
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import Hero from "@/components/sections/hero"
-import WaitlistForm from "@/components/sections/waitlist-form"
 import Credibility from "@/components/sections/credibility"
 import Problem from "@/components/sections/problem"
 import HowItWorks from "@/components/sections/how-it-works"
 import Agents from "@/components/sections/agents"
-import BetaFit from "@/components/sections/beta-fit"
+import Team from "@/components/sections/team"
 import Security from "@/components/sections/security"
 import FAQ from "@/components/sections/faq"
 import FinalCTA from "@/components/sections/final-cta"
@@ -18,12 +17,11 @@ const HomeScreen = () => {
             <Header />
             <main className="flex-grow">
                 <Hero />
-                <WaitlistForm />
                 <Credibility />
                 <Problem />
                 <HowItWorks />
                 <Agents />
-                <BetaFit />
+                <Team />
                 <Security />
                 <FAQ />
                 <FinalCTA />

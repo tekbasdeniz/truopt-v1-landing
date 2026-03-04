@@ -7,8 +7,8 @@ import { Users, LayoutGrid, TrendingUp } from "lucide-react"
 import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 
-const BetaFit = () => {
-    const t = useTranslations('betaFit')
+const Team = () => {
+    const t = useTranslations('team')
 
     const audiences = [
         {
@@ -64,4 +64,4 @@ const BetaFit = () => {
     )
 }
 
-export default BetaFit
+export default Team
