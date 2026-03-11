@@ -32,6 +32,7 @@ const Footer = () => {
             title: t('legal'),
             links: [
                 { name: t('termsOfUse'), href: "/terms-of-use" },
+                { name: t('privacy'), href: "/privacy-policy" },
                 { name: t('cookie'), href: "/cookie-policy" },
                 { name: t('copyrightNotice'), href: "/copyright-notice" },
                 { name: t('disclaimer'), href: "/disclaimer" },
