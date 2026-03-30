@@ -68,7 +68,15 @@ export const PrivacyPolicyContent = () => {
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">9. Contact</h2>
             <p className="mb-4">For privacy-related questions, please contact:</p>
-            <p className="mb-6"><a href="mailto:support@truopt.ai" className="text-primary hover:underline">support@truopt.ai</a></p>
+            <p className="mb-8"><a href="mailto:support@truopt.ai" className="text-primary hover:underline">support@truopt.ai</a></p>
+
+            <div className="border-t border-border/20 pt-8 mt-8">
+                <p className="font-semibold text-foreground mb-1">ThumbsAd</p>
+                <p className="mb-4 mt-2">
+                    TruOpt.ai is operated by ThumbsAd.<br />
+                    ThumbsAd is a sole proprietorship owned by Deniz Tekbaş and registered in Turkey.
+                </p>
+            </div>
         </div>
     )
 }

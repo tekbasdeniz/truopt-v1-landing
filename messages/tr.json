@@ -6,7 +6,8 @@
         "insights": "İçgörüler",
         "security": "Güvenlik",
         "faq": "SSS",
-        "login": "Ücretsiz Denemeye Başla"
+        "login": "Ücretsiz Denemeye Başla",
+        "contact": "İletişim"
     },
     "hero": {
         "badge": "Şimdi Yayında",
@@ -190,6 +191,27 @@
         "secondaryCta": "Nasıl çalıştığını gör",
         "trustLine": ""
     },
+    "contactForm": {
+        "title": "İletişime Geçin",
+        "subtitle": "Bir sorunuz mu var veya daha fazlasını öğrenmek mi istiyorsunuz? Bize mesaj gönderin.",
+        "name": "Ad Soyad",
+        "email": "İş E-postası",
+        "subject": "Konu",
+        "message": "Mesajınız",
+        "submit": "Mesaj Gönder",
+        "submitting": "E-posta İstemcisi Açılıyor...",
+        "success": "E-posta istemcisi başarıyla açıldı!",
+        "errors": {
+            "nameRequired": "Ad soyad gereklidir",
+            "nameMin": "Ad soyad en az 2 karakter olmalıdır",
+            "emailRequired": "E-posta adresi gereklidir",
+            "emailInvalid": "Geçerli bir e-posta girin",
+            "subjectRequired": "Konu gereklidir",
+            "subjectMin": "Konu en az 2 karakter olmalıdır",
+            "messageRequired": "Mesaj gereklidir",
+            "messageMin": "Mesaj en az 10 karakter olmalıdır"
+        }
+    },
     "footer": {
         "tagline": "Performans pazarlamacıları için onay tabanlı yapay zeka optimizasyonu.",
         "product": "Ürün",
@@ -212,7 +234,7 @@
         "kvkk": "KVKK/GDPR",
         "subscription": "Abonelik Şartları",
         "refund": "İade Politikası",
-        "brandNote": "TruOpt.ai, ThumbsAd®'in bir ürünüdür",
+        "brandNote": "TruOpt.ai, ThumbsAd tarafından geliştirilen ve işletilen bir üründür.",
         "copyright": "© 2025 TruOpt.ai. Tüm hakları saklıdır."
     }
 }

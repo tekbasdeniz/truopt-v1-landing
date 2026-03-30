@@ -91,6 +91,10 @@ export const TermsOfUseContent = () => {
             <div className="border-t border-border pt-8 mt-12">
                 <h2 className="text-xl font-semibold text-foreground mb-4">Contact Information</h2>
                 <p className="font-semibold text-foreground mb-1">ThumbsAd – Deniz Tekbaş</p>
+                <p className="mb-4 mt-2">
+                    TruOpt.ai is operated by ThumbsAd.<br />
+                    ThumbsAd is a sole proprietorship owned by Deniz Tekbaş and registered in Turkey.
+                </p>
                 <p className="mb-1">Address: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201 / 40 Şişli, İstanbul, Türkiye</p>
                 <p className="mb-1">Email: <a href="mailto:info@thumbsad.com" className="text-primary hover:underline">info@thumbsad.com</a></p>
                 <p className="mb-4">Phone: <a href="tel:+908503035772" className="text-primary hover:underline">+90 850 303 57 72</a></p>

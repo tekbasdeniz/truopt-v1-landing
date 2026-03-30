@@ -32,6 +32,7 @@ const Header = () => {
         { name: t('agents'), href: "/#agents" },
         { name: t('security'), href: "/#security" },
         { name: t('faq'), href: "/#faq" },
+        { name: t('contact'), href: "/contact" },
     ]
 
     return (

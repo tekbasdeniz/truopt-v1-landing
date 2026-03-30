@@ -19,15 +19,12 @@ const Footer = () => {
                 { name: t('faq'), href: "/#faq" },
             ],
         },
-        // {
-        //     title: t('company'),
-        //     links: [
-        //         { name: t('about'), href: "#" },
-        //         { name: t('blog'), href: "#" },
-        //         { name: t('careers'), href: "#" },
-        //         { name: t('contact'), href: "#" },
-        //     ],
-        // },
+        {
+            title: t('company'),
+            links: [
+                { name: t('contact'), href: "/contact" },
+            ],
+        },
         {
             title: t('legal'),
             links: [
@@ -75,11 +72,8 @@ const Footer = () => {
                     ))}
                 </div>
 
-                <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
+                <div className="border-t border-border/50 pt-8 flex flex-col items-center justify-center text-sm text-muted-foreground text-center">
                     <p>{t('copyright')}</p>
-                    <div className="flex space-x-6 mt-4 md:mt-0">
-                        {/* Social icons could go here */}
-                    </div>
                 </div>
             </Container>
         </footer>

@@ -6,7 +6,8 @@
         "insights": "Insights",
         "security": "Security",
         "faq": "FAQ",
-        "login": "Start Free Trial"
+        "login": "Start Free Trial",
+        "contact": "Contact"
     },
     "hero": {
         "badge": "Live Now",
@@ -189,6 +190,27 @@
         "secondaryCta": "See how it works",
         "trustLine": ""
     },
+    "contactForm": {
+        "title": "Let's Talk",
+        "subtitle": "Have a question or want to learn more? Send us a message.",
+        "name": "Full Name",
+        "email": "Business Email",
+        "subject": "Subject",
+        "message": "Your Message",
+        "submit": "Send Message",
+        "submitting": "Opening Mail Client...",
+        "success": "Mail client opened successfully!",
+        "errors": {
+            "nameRequired": "Full name is required",
+            "nameMin": "Name must be at least 2 characters",
+            "emailRequired": "Email address is required",
+            "emailInvalid": "Please enter a valid email",
+            "subjectRequired": "Subject is required",
+            "subjectMin": "Subject must be at least 2 characters",
+            "messageRequired": "Message is required",
+            "messageMin": "Message must be at least 10 characters"
+        }
+    },
     "footer": {
         "tagline": "Approval-based AI optimization for performance marketers.",
         "product": "Product",
@@ -211,7 +233,7 @@
         "kvkk": "KVKK/GDPR",
         "subscription": "Subscription Terms",
         "refund": "Refund Policy",
-        "brandNote": "TruOpt.ai is a product of ThumbsAd®",
+        "brandNote": "TruOpt.ai is a product developed and operated by ThumbsAd.",
         "copyright": "© 2025 TruOpt.ai. All rights reserved."
     }
 }
