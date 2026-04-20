@@ -4,10 +4,10 @@ export async function POST(request: NextRequest) {
     try {
         const data = await request.json()
 
-        const endpoint = process.env.GOOGLE_SHEETS_ENDPOINT // ✅ FIX
+        const endpoint = process.env.GOOGLE_SHEETS_ENDPOINT
 
         if (!endpoint) {
-            console.error('NO ENDPOINT')
+            console.error("NO ENDPOINT")
             return NextResponse.json({ success: false }, { status: 500 })
         }
 
@@ -23,15 +23,14 @@ export async function POST(request: NextRequest) {
             body: JSON.stringify(payload),
         })
 
-        if (!response.ok) {
-            console.error('GOOGLE ERROR')
-            return NextResponse.json({ success: false }, { status: 500 })
-        }
+        const text = await response.text()
+
+        console.log("GOOGLE RESPONSE:", text)
 
         return NextResponse.json({ success: true })
 
     } catch (error) {
-        console.error('API ERROR', error)
+        console.error("API ERROR:", error)
         return NextResponse.json({ success: false }, { status: 500 })
     }
 }
