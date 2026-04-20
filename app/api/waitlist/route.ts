@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(request: NextRequest) {
     try {
         const data = await request.json()
-        const endpoint = process.env.GOOGLE_SHEETS_ENDPOINT_2
+        const endpoint = process.env.GOOGLE_SHEETS_ENDPOINT
 
         if (!endpoint) {
             return NextResponse.json({ success: false }, { status: 500 })
