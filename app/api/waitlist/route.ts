@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
     try {
         const data = await request.json()
 
-        const endpoint = process.env.GOOGLE_SHEETS_ENDPOINT
+        const endpoint = process.env.GOOGLE_SHEETS_ENDPOINT_2
 
         // 🔴 ENV CHECK
         if (!endpoint) {
