@@ -87,12 +87,15 @@
     },
     "problem": {
         "title": "The problem with manual optimization",
-        "card1Title": "Silent performance decay",
-        "card1Desc": "Campaigns drift. Budgets bleed. You catch it too late.",
-        "card2Title": "Late reactions get expensive",
-        "card2Desc": "Manual checks can't scale. By the time you see the issue, you've overspent.",
-        "card3Title": "A repeatable system",
-        "card3Desc": "TruOpt.ai audits continuously, flags risks early, and recommends actions—before damage is done."
+        "card1Title": "Static Decisions",
+        "card1Desc": "Ad budgets are growing, but decision quality is not.",
+        "card2Title": "Manual Dependency",
+        "card2Desc": "Optimization still depends heavily on manual specialist work.",
+        "card3Title": "Costly Delays",
+        "card3Desc": "Teams lose money because actions happen too late."
+        "card4Title": "The Black-Box Barrier",
+        "card4Desc": "Enterprises avoid full automation because they do not trust black-box AI systems.",
+        "solution": "At TruOpt.ai, we solve this by creating a controlled AI decision environment where recommendations are transparent, explainable, and executable."
     },
     "howItWorks": {
         "title": "How it works",
