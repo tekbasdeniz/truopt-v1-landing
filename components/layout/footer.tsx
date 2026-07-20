@@ -16,12 +16,7 @@ const Footer = () => {
                 { name: "Pricing", href: "/pricing" },
                 { name: t('security'), href: "/#security" },
                 { name: t('faq'), href: "/#faq" },
-            ],
-        },
-        {
-            title: t('company'),
-            links: [
-                { name: t('contact'), href: "/contact" },
+                { name: t('contact'), href: "/contact" }, // İletişim buraya taşındı
             ],
         },
         {
@@ -34,7 +29,6 @@ const Footer = () => {
                 { name: t('disclaimer'), href: "/disclaimer" },
                 { name: t('kvkk'), href: "/kvkk" },
                 { name: t('refund'), href: "/refund-policy" },
-
             ],
         },
     ]
@@ -43,11 +37,12 @@ const Footer = () => {
         <footer className="border-t border-border/50 bg-background pt-16 pb-8">
             <Container>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                    <div className="space-y-4">
+                    {/* Boşluğu dengelemek için md:col-span-2 alanını verdik */}
+                    <div className="space-y-4 md:col-span-2">
                         <Link href="/" className="flex items-center space-x-2">
                             <Image src={Logo} alt="TruOpt.ai" width={100} height={100} className="mt-2" />
                         </Link>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground max-w-sm">
                             {t('tagline')}
                         </p>
                         <div className="text-sm text-muted-foreground pt-4">
