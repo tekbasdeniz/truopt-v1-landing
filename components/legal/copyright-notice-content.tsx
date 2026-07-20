@@ -4,7 +4,7 @@ export const CopyrightNoticeContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
             <h1 className="text-3xl font-bold text-foreground mb-2">Copyright & Trademark Notice – TruOpt.ai</h1>
-            <p className="mb-8 font-medium text-foreground">Last updated: January 2026</p>
+            <p className="mb-8 font-medium text-foreground">Last updated: July 2026</p>
 
             <p className="mb-6">
                 All intellectual property rights related to the websites <a href="https://thumbsad.com" className="text-primary hover:underline">https://thumbsad.com</a> and <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a> and their affiliated digital products are owned by ThumbsAd – Deniz Tekbaş, a sole proprietorship legally established in the Republic of Türkiye.
