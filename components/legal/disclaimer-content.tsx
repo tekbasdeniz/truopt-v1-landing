@@ -4,7 +4,7 @@ export const DisclaimerContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
             <h1 className="text-3xl font-bold text-foreground mb-2">Disclaimer – TruOpt.ai</h1>
-            <p className="mb-8 font-medium text-foreground">Last updated: January 2026</p>
+            <p className="mb-8 font-medium text-foreground">Last updated: July 2026</p>
 
             <p className="mb-6">
                 The content, software, dashboards, AI engines, reports and automation systems provided through ThumbsAd and TruOpt.ai platforms are provided for general informational and automation assistance purposes only.
