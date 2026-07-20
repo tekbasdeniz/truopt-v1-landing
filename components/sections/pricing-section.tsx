@@ -14,19 +14,19 @@ export function PricingSection() {
     const plans = [
         {
             name: "Basic",
-            price: { monthly: 29, annual: 278 },
+            price: { monthly: 23, annual: 220 }, // Fiyat $23 olarak güncellendi (Yıllık %20 indirimle ~220)
             description: "Essential tools for small teams.",
-            bonusSeats: true,
+            bonusSeats: false, // Bonus koltuk ibaresi kaldırıldı
             features: [
-                { name: "Google Ads Accounts", value: "Up to 3" },
-                { name: "AI Campaign Optimization", value: true },
-                { name: "Smart Recommendations & Alerts", value: true },
-                { name: "Auto-Executed Optimization Actions", value: false },
-                { name: "Neural Decision Logs (AI Transparency)", value: false },
-                { name: "Change History & Audit Logs", value: true },
-                { name: "Team Roles & Permissions", value: false },
-                { name: "Priority / Dedicated Support", value: "Email" },
-                { name: "SLA, Custom Policies, API Access", value: false },
+                { name: "Google Ads Account Capacity", value: "Up to 3 Accounts" },
+                { name: "AI-Powered Optimization Engine", value: true },
+                { name: "Smart Recommendation & Health Score", value: true },
+                { name: "Budget Protection & Performance Diagnostics", value: true },
+                { name: "Rule-Based Automation & Alerts", value: false },
+                { name: "Data-Secured AI Logs (Transparency)", value: false },
+                { name: "Advanced Team & Role Management", value: false },
+                { name: "Customer Support Level", value: "Email Support" },
+                { name: "Enterprise Scaling (SLA & API)", value: false },
             ],
             cta: "Get Started",
             href: "https://app.truopt.ai",
@@ -34,19 +34,19 @@ export function PricingSection() {
         },
         {
             name: "Pro",
-            price: { monthly: 69, annual: 662 },
-            description: "Advanced AI for growing agencies.",
-            bonusSeats: true,
+            price: { monthly: 55, annual: 528 }, // Fiyat $55 olarak güncellendi (Yıllık %20 indirimle 528)
+            description: "Advanced AI designed for growing agencies and brands.",
+            bonusSeats: false, // Bonus koltuk ibaresi kaldırıldı
             features: [
-                { name: "Google Ads Accounts", value: "Up to 10" },
-                { name: "AI Campaign Optimization", value: true },
-                { name: "Smart Recommendations & Alerts", value: true },
-                { name: "Auto-Executed Optimization Actions", value: true },
-                { name: "Neural Decision Logs (AI Transparency)", value: true },
-                { name: "Change History & Audit Logs", value: true },
-                { name: "Team Roles & Permissions", value: "✓ (Up to 3 users)" },
-                { name: "Priority / Dedicated Support", value: "Priority" },
-                { name: "SLA, Custom Policies, API Access", value: false },
+                { name: "Google Ads Account Capacity", value: "Up to 10 Accounts" },
+                { name: "AI-Powered Optimization Engine", value: true },
+                { name: "Smart Recommendation & Health Score", value: true },
+                { name: "Budget Protection & Performance Diagnostics", value: true },
+                { name: "Rule-Based Automation & Alerts", value: true },
+                { name: "Data-Secured AI Logs (Transparency)", value: true },
+                { name: "Advanced Team & Role Management", value: "Up to 3 Users" },
+                { name: "Customer Support Level", value: "Priority Support" },
+                { name: "Enterprise Scaling (SLA & API)", value: false },
             ],
             cta: "Get Started",
             href: "https://app.truopt.ai",
@@ -57,17 +57,17 @@ export function PricingSection() {
             name: "Enterprise",
             price: { monthly: "Custom", annual: "Custom" },
             description: "Full control for large scale operations.",
-            bonusSeats: true,
+            bonusSeats: false, // Bonus koltuk ibaresi kaldırıldı
             features: [
-                { name: "Google Ads Accounts", value: "Unlimited" },
-                { name: "AI Campaign Optimization", value: true },
-                { name: "Smart Recommendations & Alerts", value: true },
-                { name: "Auto-Executed Optimization Actions", value: true },
-                { name: "Neural Decision Logs (AI Transparency)", value: true },
-                { name: "Change History & Audit Logs", value: true },
-                { name: "Team Roles & Permissions", value: "✓ (Unlimited)" },
-                { name: "Priority / Dedicated Support", value: "Dedicated Manager" },
-                { name: "SLA, Custom Policies, API Access", value: true },
+                { name: "Google Ads Account Capacity", value: "Unlimited" },
+                { name: "AI-Powered Optimization Engine", value: true },
+                { name: "Smart Recommendation & Health Score", value: true },
+                { name: "Budget Protection & Performance Diagnostics", value: true },
+                { name: "Rule-Based Automation & Alerts", value: true },
+                { name: "Data-Secured AI Logs (Transparency)", value: true },
+                { name: "Advanced Team & Role Management", value: "Unlimited" },
+                { name: "Customer Support Level", value: "Dedicated Account Manager" },
+                { name: "Enterprise Scaling (SLA & API)", value: true },
             ],
             cta: "Contact Sales",
             href: "mailto:info@thumbsad.com?subject=Enterprise%20Paketi%20Hakkında%20Toplantı%20Talebi&body=Merhaba%2C%0D%0A%0D%0AEnterprise%20paketi%20ile%20ilgileniyorum%20ve%20detaylı%20bilgi%20almak%20için%20bir%20toplantı%20talep%20ediyorum.%0D%0A%0D%0ATeşekkürler.",
@@ -117,8 +117,9 @@ export function PricingSection() {
                                         exit={{ opacity: 0, y: -10 }}
                                         transition={{ duration: 0.2 }}
                                     >
+                                        {/* Üstteki yeşil badge alanından "+ 2 Bonus Seats" kaldırıldı */}
                                         <Badge variant="secondary" className="bg-green-500/10 text-green-600 border-green-200">
-                                            Save 20% + 2 Bonus Seats
+                                            Save 20%
                                         </Badge>
                                     </motion.div>
                                 )}
@@ -161,20 +162,7 @@ export function PricingSection() {
 
                                 <div className="mb-8">
                                     <h3 className="text-2xl font-bold">{plan.name}</h3>
-                                    <AnimatePresence mode="wait">
-                                        {isAnnual && plan.bonusSeats && (
-                                            <motion.p
-                                                key="bonus-seats"
-                                                initial={{ opacity: 0, y: -5 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -5 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="text-xs text-green-600 mt-1 font-medium"
-                                            >
-                                                +2 bonus seats included
-                                            </motion.p>
-                                        )}
-                                    </AnimatePresence>
+                                    {/* Kartların içindeki "+2 bonus seats included" yazısı tamamen temizlendi */}
                                     <p className="text-sm text-muted-foreground mt-2 min-h-[40px]">{plan.description}</p>
                                     <AnimatePresence mode="wait">
                                         {isAnnual && typeof plan.price.annual === "number" && (
