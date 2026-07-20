@@ -4,7 +4,7 @@ export const CookiePolicyContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
             <h1 className="text-3xl font-bold text-foreground mb-2">Cookie Policy – TruOpt.ai</h1>
-            <p className="mb-8 font-medium text-foreground">Last updated: January 2026</p>
+            <p className="mb-8 font-medium text-foreground">Last updated: July 2026</p>
 
             <p className="mb-6">
                 This Cookie Policy explains how TruOpt.ai, a subscription-based digital platform developed and operated by ThumbsAd – Deniz Tekbaş (“we”, “us”, “our”), uses cookies and similar tracking technologies on <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a>.
