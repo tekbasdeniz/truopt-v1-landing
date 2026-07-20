@@ -5,7 +5,6 @@ import Hero from "@/components/sections/hero"
 import Credibility from "@/components/sections/credibility"
 import Problem from "@/components/sections/problem"
 import HowItWorks from "@/components/sections/how-it-works"
-import Agents from "@/components/sections/agents"
 import Team from "@/components/sections/team"
 import Security from "@/components/sections/security"
 import FAQ from "@/components/sections/faq"
@@ -20,7 +19,6 @@ const HomeScreen = () => {
                 <Credibility />
                 <Problem />
                 <HowItWorks />
-                <Agents />
                 <Team />
                 <Security />
                 <FAQ />
