@@ -6,17 +6,17 @@
         "insights": "Insights",
         "security": "Security",
         "faq": "FAQ",
-        "login": "Start Free Trial",
+        "login": "Start Now",
         "contact": "Contact"
     },
     "hero": {
         "badge": "Live Now",
-        "title": "A multi-agent system—built to optimize, protect, and onboard.",
-        "subtitle": "AI-Based Advertisement Optimization for Google Ads - The Best automatization AI Platform",
+        "title": "AI Suggests.\nYou Control.",
+        "subtitle": "Get the best results from your Google Ads without the hard work. Our AI finds the best improvements, and you apply them with just one click.",
         "proof1": "Always-on audits",
         "proof2": "Guardian alerts",
         "proof3": "Approval-based AI actions",
-        "cta": "Start Free Trial",
+        "cta": "Start Now",
         "secondaryCta": "See how it works",
         "trustLine": "Connect your Google Ads account"
     },
@@ -186,7 +186,7 @@
     },
     "finalCta": {
         "title": "Start Optimizing Today",
-        "cta": "Start Free Trial",
+        "cta": "Start Now",
         "secondaryCta": "See how it works",
         "trustLine": ""
     },
