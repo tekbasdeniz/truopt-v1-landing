@@ -16,7 +16,7 @@ const Footer = () => {
                 { name: "Pricing", href: "/pricing" },
                 { name: t('security'), href: "/#security" },
                 { name: t('faq'), href: "/#faq" },
-                { name: t('contact'), href: "/contact" }, // İletişim buraya taşındı
+                { name: t('contact'), href: "/contact" },
             ],
         },
         {
