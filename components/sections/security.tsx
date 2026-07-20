@@ -3,40 +3,38 @@
 import { Container } from "@/components/ui/container"
 import { ShieldCheck, Lock, FileText, Database } from "lucide-react"
 import { motion } from "framer-motion"
-import { useTranslations } from "next-intl"
 
 const Security = () => {
-    const t = useTranslations('security')
-
+    // Tasarımdaki tüm animasyon renklerini ve parlamaları koruyarak metinleri sadeleştirdik
     const features = [
         {
             icon: ShieldCheck,
-            title: t('feature1'),
-            description: t('feature1Desc'),
+            title: "Safe Connections",
+            description: "We connect to your accounts safely using official Google verification.",
             gradient: "from-blue-500/20 to-cyan-500/20",
             glowColor: "rgba(59, 130, 246, 0.3)",
             iconColor: "text-blue-400",
         },
         {
             icon: Lock,
-            title: t('feature2'),
-            description: t('feature2Desc'),
+            title: "Full Team Control",
+            description: "Choose exactly who on your team can see metrics or apply new changes.",
             gradient: "from-purple-500/20 to-pink-500/20",
             glowColor: "rgba(168, 85, 247, 0.3)",
             iconColor: "text-purple-400",
         },
         {
             icon: FileText,
-            title: t('feature3'),
-            description: t('feature3Desc'),
+            title: "Track Every Change",
+            description: "Every action is logged clearly. You can review history or undo actions anytime.",
             gradient: "from-amber-500/20 to-orange-500/20",
             glowColor: "rgba(251, 191, 36, 0.3)",
             iconColor: "text-amber-400",
         },
         {
             icon: Database,
-            title: t('feature4'),
-            description: t('feature4Desc'),
+            title: "Cloud Protection",
+            description: "Your data is locked inside secure cloud servers and never shared with others.",
             gradient: "from-green-500/20 to-emerald-500/20",
             glowColor: "rgba(34, 197, 94, 0.3)",
             iconColor: "text-green-400",
@@ -69,10 +67,10 @@ const Security = () => {
                         <span className="text-sm font-medium text-primary tracking-wider">ENTERPRISE SECURITY</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/40 tracking-tight">
-                        {t('title')}
+                        Security & Control
                     </h2>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                        {t('subtitle')}
+                        We keep your ad spend safe and protect your information. You are always in full control.
                     </p>
                 </motion.div>
 
