@@ -131,15 +131,6 @@
             "feature3": "Historical performance baseline creation"
         }
     },
-    "team": {
-        "title": "Team Collaboration",
-        "description": "Invite your team members to manage Google Ads campaigns together.",
-        "cta": "Start using TruOpt",
-        "audience1": "Invite members",
-        "audience2": "Activity logs",
-        "audience3": "Role-based access",
-        "small-description": "Track who took which action on your campaigns."
-    },
     "insights": {
         "title": "Insights & Best Practices",
         "viewAll": "View all articles",
