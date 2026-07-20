@@ -156,22 +156,80 @@
         "feature4Desc": "Your data is locked inside secure cloud servers and never shared with others."
     },
     "faq": {
-    "title": "Frequently Asked Questions",
-    "q1": "How does the AI improve my ads?",
-    "a1": "Our AI constantly scans your Google Ads to find hidden mistakes or new ways to get more sales. It shows you clear suggestions, and you can apply them instantly with just one click.",
-    "q2": "Is my Google Ads data safe?",
-    "a2": "Yes, 100%. We connect securely using standard Google verification. Your data is protected inside safe Google Cloud servers and we never share or use it to train public models.",
-    "q3": "Can I undo a change if I change my mind?",
-    "a3": "Absolutely. Every single optimization you apply is saved in your history panel, meaning you can easily reverse any action and go back to your previous settings at any time.",
-    "q4": "Do I need to be a marketing expert to use this?",
-    "a4": "Not at all! We designed everything to be as simple as possible. The language is clean and the steps are clear, so anyone can grow their business without technical confusion.",
-    "q5": "How is TruOpt.ai different from Google Ads' built-in auto-recommendations?",
-    "a5": "Unlike Google's default auto-apply recommendations which often increase your budget without transparent oversight, TruOpt.ai delivers fully explainable, safety-checked suggestions that require your explicit human approval before any budget is spent.",
-    "q6": "Do I need to install any tracking pixels or code snippets on my website?",
-    "a6": "No website installation or code modification is required. TruOpt.ai connects directly and securely via the official Google Ads API, meaning it analyzes your campaigns instantly without slowing down your landing page.",
-    "q7": "Can digital marketing agencies manage multiple client accounts with TruOpt.ai?",
-    "a7": "Yes, TruOpt.ai is built with native multi-account support. Marketing agencies can manage multiple separate Google Ads client accounts from a single dashboard, track team activity logs, and set custom budget guardrails for each client."
-  },
+        "title": "Frequently Asked Questions",
+        "q1": "How does the AI improve my ads?",
+        "a1": "Our AI constantly scans your Google Ads to find hidden mistakes or new ways to get more sales. It shows you clear suggestions, and you can apply them instantly with just one click.",
+        "q2": "Is my Google Ads data safe?",
+        "a2": "Yes, 100%. We connect securely using standard Google verification. Your data is protected inside safe Google Cloud servers and we never share or use it to train public models.",
+        "q3": "Can I undo a change if I change my mind?",
+        "a3": "Absolutely. Every single optimization you apply is saved in your history panel, meaning you can easily reverse any action and go back to your previous settings at any time.",
+        "q4": "Do I need to be a marketing expert to use this?",
+        "a4": "Not at all! We designed everything to be as simple as possible. The language is clean and the steps are clear, so anyone can grow their business without technical confusion.",
+        "q5": "How is TruOpt.ai different from Google Ads' built-in auto-recommendations?",
+        "a5": "Unlike Google's default auto-apply recommendations which often increase your budget without transparent oversight, TruOpt.ai delivers fully explainable, safety-checked suggestions that require your explicit human approval before any budget is spent.",
+        "q6": "Do I need to install any tracking pixels or code snippets on my website?",
+        "a6": "No website installation or code modification is required. TruOpt.ai connects directly and securely via the official Google Ads API, meaning it analyzes your campaigns instantly without slowing down your landing page.",
+        "q7": "Can digital marketing agencies manage multiple client accounts with TruOpt.ai?",
+        "a7": "Yes, TruOpt.ai is built with native multi-account support. Marketing agencies can manage multiple separate Google Ads client accounts from a single dashboard, track team activity logs, and set custom budget guardrails for each client."
+    },
+    "pricing": {
+        "title": "Flexible & Transparent Pricing",
+        "subtitle": "Choose the perfect plan to safeguard and optimize your ad spend with AI.",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "save": "Save 20%",
+        "cta": "Start Now",
+        "plans": {
+            "basic": {
+                "name": "Basic",
+                "price": "$23",
+                "description": "Essential optimization tailored for individual ad accounts and beginners.",
+                "features": [
+                    "✓ Google Ads Account Capacity (Up to 3 Accounts)",
+                    "✓ AI-Powered Optimization Engine",
+                    "✓ Smart Recommendation & Health Score",
+                    "✓ Budget Protection & Performance Diagnostics",
+                    "✕ Rule-Based Automation & Alerts",
+                    "✕ Data-Secured AI Logs (Transparency)",
+                    "✕ Advanced Team & Role Management",
+                    "✓ Customer Support Level (Email Support)",
+                    "✕ Enterprise Scaling (SLA & API)"
+                ]
+            },
+            "pro": {
+                "name": "Pro",
+                "price": "$55",
+                "description": "Advanced AI designed for growing agencies and brands.",
+                "features": [
+                    "✓ Google Ads Account Capacity (Up to 10 Accounts)",
+                    "✓ AI-Powered Optimization Engine",
+                    "✓ Smart Recommendation & Health Score",
+                    "✓ Budget Protection & Performance Diagnostics",
+                    "✓ Rule-Based Automation & Alerts",
+                    "✓ Data-Secured AI Logs (Transparency)",
+                    "✓ Advanced Team & Role Management (Up to 3 Users)",
+                    "✓ Customer Support Level (Priority Support)",
+                    "✕ Enterprise Scaling (SLA & API)"
+                ]
+            },
+            "enterprise": {
+                "name": "Enterprise",
+                "price": "Custom",
+                "description": "Full control for large-scale, high-volume operations.",
+                "features": [
+                    "✓ Google Ads Account Capacity (Unlimited)",
+                    "✓ AI-Powered Optimization Engine",
+                    "✓ Smart Recommendation & Health Score",
+                    "✓ Budget Protection & Performance Diagnostics",
+                    "✓ Rule-Based Automation & Alerts",
+                    "✓ Data-Secured AI Logs (Transparency)",
+                    "✓ Advanced Team & Role Management (Unlimited)",
+                    "✓ Customer Support Level (Dedicated Account Manager)",
+                    "✓ Enterprise Scaling (SLA & API)"
+                ]
+            }
+        }
+    },
     "finalCta": {
         "title": "Start Optimizing Today",
         "trustLine": "Connect your Google Ads account to get started immediately.",
