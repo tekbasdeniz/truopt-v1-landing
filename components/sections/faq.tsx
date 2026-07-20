@@ -3,28 +3,30 @@
 import { Container } from "@/components/ui/container"
 import { Plus, Minus } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTranslations } from "next-intl"
 import { useState } from "react"
 
 const FAQ = () => {
+    const t = useTranslations('faq')
     const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-    // Herkesin rahatça anlayabileceği şekilde sadeleştirilmiş soru ve cevaplar
+    // Metinleri doğrudan en.json içerisindeki anahtarlardan çekiyoruz
     const faqs = [
         {
-            question: "How does the AI improve my ads?",
-            answer: "Our AI constantly scans your Google Ads to find hidden mistakes or new ways to get more sales. It shows you clear suggestions, and you can apply them instantly with just one click.",
+            question: t('q1'),
+            answer: t('a1'),
         },
         {
-            question: "Is my Google Ads data safe?",
-            answer: "Yes, 100%. We connect securely using standard Google verification. Your data is protected inside safe Google Cloud servers and we never share or use it to train public models.",
+            question: t('q2'),
+            answer: t('a2'),
         },
         {
-            question: "Can I undo a change if I change my mind?",
-            answer: "Absolutely. Every single optimization you apply is saved in your history panel, meaning you can easily reverse any action and go back to your previous settings at any time.",
+            question: t('q3'),
+            answer: t('a3'),
         },
         {
-            question: "Do I need to be a marketing expert to use this?",
-            answer: "Not at all! We designed everything to be as simple as possible. The language is clean and the steps are clear, so anyone can grow their business without technical confusion.",
+            question: t('q4'),
+            answer: t('a4'),
         },
     ]
 
@@ -32,7 +34,7 @@ const FAQ = () => {
         <section id="faq" className="py-20 md:py-32">
             <Container>
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
+                    <h2 className="text-3xl font-bold tracking-tight">{t('title')}</h2>
                 </div>
 
                 <div className="max-w-3xl mx-auto space-y-4">
