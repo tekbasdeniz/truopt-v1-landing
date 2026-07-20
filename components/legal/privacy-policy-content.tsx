@@ -4,7 +4,7 @@ export const PrivacyPolicyContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
             <h1 className="text-3xl font-bold text-foreground mb-2">TruOpt.ai Privacy Policy</h1>
-            <p className="mb-8 font-medium text-foreground">Last updated: March 2026</p>
+            <p className="mb-8 font-medium text-foreground">Last updated: July 2026</p>
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">1. Introduction</h2>
             <p className="mb-4">
