@@ -2,42 +2,49 @@
 
 import { Container } from "@/components/ui/container"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { AlertTriangle, Clock, RefreshCw } from "lucide-react"
+import { TrendingUp, Users, Clock, EyeOff, CheckCircle2 } from "lucide-react"
 import { motion } from "framer-motion"
-
 import { useTranslations } from "next-intl"
 
 const Problem = () => {
     const t = useTranslations('problem')
 
+    // 4 Yeni probleme özel anlamlı ikon eşleşmeleri
     const problems = [
         {
-            icon: AlertTriangle,
+            icon: TrendingUp,
             title: t('card1Title'),
             description: t('card1Desc'),
         },
         {
-            icon: Clock,
+            icon: Users,
             title: t('card2Title'),
             description: t('card2Desc'),
         },
         {
-            icon: RefreshCw,
+            icon: Clock,
             title: t('card3Title'),
             description: t('card3Desc'),
+        },
+        {
+            icon: EyeOff,
+            title: t('card4Title'),
+            description: t('card4Desc'),
         },
     ]
 
     return (
-        <section className="py-20 md:py-32">
+        <section id="problem" className="py-20 md:py-32">
             <Container>
+                {/* Başlık Alanı */}
                 <div className="mb-12 md:mb-20 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
                         {t('title')}
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* 4'lü Grid Düzeni */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 md:mb-16">
                     {problems.map((problem, i) => (
                         <motion.div
                             key={i}
@@ -60,6 +67,22 @@ const Problem = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Çözüm Vurgu Kutusu */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="p-6 md:p-8 rounded-2xl border border-primary/20 bg-primary/5 backdrop-blur-sm max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4"
+                >
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary">
+                        <CheckCircle2 className="w-5 h-5" />
+                    </div>
+                    <p className="text-base md:text-lg font-medium text-foreground leading-relaxed">
+                        {t('solution')}
+                    </p>
+                </motion.div>
             </Container>
         </section>
     )
