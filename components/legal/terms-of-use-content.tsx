@@ -4,7 +4,7 @@ export const TermsOfUseContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
             <h1 className="text-3xl font-bold text-foreground mb-2">Terms of Use – TruOpt.ai</h1>
-            <p className="mb-8 font-medium text-foreground">Last updated: January 2026</p>
+            <p className="mb-8 font-medium text-foreground">Last updated: July 2026</p>
 
             <p className="mb-6">
                 Welcome to TruOpt.ai, a subscription-based AI-powered digital platform developed and operated by ThumbsAd – Deniz Tekbaş (“TruOpt.ai”, “we”, “us”, or “our”). By accessing or using <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a> (the “Website”) and the TruOpt.ai software platform (the “Service”), you agree to be legally bound by these Terms of Use.
