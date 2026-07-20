@@ -14,7 +14,7 @@ export function PricingSection() {
     const plans = [
         {
             name: "Basic",
-            price: { monthly: 23, annual: 220 }, // Fiyat $23 olarak güncellendi (Yıllık %20 indirimle ~220)
+            price: { monthly: 29, annual: 276 }, // Fiyat $23 olarak güncellendi (Yıllık %20 indirimle ~220)
             description: "Essential tools for small teams.",
             bonusSeats: false, // Bonus koltuk ibaresi kaldırıldı
             features: [
@@ -34,7 +34,7 @@ export function PricingSection() {
         },
         {
             name: "Pro",
-            price: { monthly: 55, annual: 528 }, // Fiyat $55 olarak güncellendi (Yıllık %20 indirimle 528)
+            price: { monthly: 69, annual: 660 }, // Fiyat $55 olarak güncellendi (Yıllık %20 indirimle 528)
             description: "Advanced AI designed for growing agencies and brands.",
             bonusSeats: false, // Bonus koltuk ibaresi kaldırıldı
             features: [
