@@ -4,7 +4,7 @@ export const KvkkContent = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
             <h1 className="text-3xl font-bold text-foreground mb-2">KVKK / GDPR Privacy Notice – TruOpt.ai</h1>
-            <p className="mb-8 font-medium text-foreground">Last Updated: January 2026</p>
+            <p className="mb-8 font-medium text-foreground">Last Updated: July 2026</p>
 
             <p className="mb-6">
                 This Privacy Notice has been prepared by ThumbsAd – Deniz Tekbaş (“Data Controller”) in accordance with the Turkish Personal Data Protection Law No. 6698 (“KVKK”) and the EU General Data Protection Regulation (“GDPR”) to inform you about the processing of your personal data on ThumbsAd.com and TruOpt.ai platforms.
