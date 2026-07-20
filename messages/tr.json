@@ -86,17 +86,17 @@
         "trust3": "Denetim için hazır tasarım"
     },
     "problem": {
-        "title": "Manuel optimizasyon sorunu",
-        "card1Title": "Statik Kararlar",
-        "card1Desc": "Reklam bütçeleri büyüyor ancak karar kalitesi artmıyor.",
-        "card2Title": "Manuel Bağımlılık",
-        "card2Desc": "Optimizasyon hâlâ büyük ölçüde manuel uzman çalışmasına bağlı.",
-        "card3Title": "Maliyetli Gecikmeler",
-        "card3Desc": "Eylemler çok geç gerçekleştiği için ekipler para kaybediyor.",
-        "card4Title": "Kara Kutu Engeli",
-        "card4Desc": "Kurumlar, kara kutu yapay zeka sistemlerine güvenmedikleri için tam otomasyondan kaçınıyorlar.",
-        "solution": "TruOpt.ai'da bunu, önerilerin şeffaf, açıklanabilir ve yürütülebilir olduğu kontrollü bir yapay zeka karar ortamı yaratarak çözüyoruz."
-    },
+    "title": "Manuel optimizasyon sorunu",
+    "card1Title": "Statik Kararlar",
+    "card1Desc": "Reklam bütçeleri büyüyor ancak karar kalitesi artmıyor.",
+    "card2Title": "Manuel Bağımlılık",
+    "card2Desc": "Optimizasyon hâlâ büyük ölçüde manuel optimizasyona bağlı.",
+    "card3Title": "Maliyetli Gecikmeler",
+    "card3Desc": "Eylemler çok geç gerçekleşiyor ve para kaybediyorsunuz.",
+    "card4Title": "Kara Kutu Engeli",
+    "card4Desc": "Tam otomasyon sistemleri güvenilir değil.",
+    "solution": "TruOpt.ai'da bunu, önerilerin şeffaf, açıklanabilir ve yürütülebilir olduğu kontrollü bir yapay zeka karar ortamı yaratarak çözüyoruz."
+  },
     "howItWorks": {
         "title": "Nasıl çalışır",
         "subtitle": "Kampanyalarınızı manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
