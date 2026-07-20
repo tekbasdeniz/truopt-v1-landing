@@ -2,7 +2,6 @@
     "nav": {
         "product": "Product",
         "howItWorks": "How it Works",
-        "agents": "Agents",
         "insights": "Insights",
         "security": "Security",
         "faq": "FAQ",
@@ -110,16 +109,6 @@
         "cta-title": "Ready to experience the AI magic?",
         "cta-description": "110+ marketers already using AI-powered optimization"
     },
-    "agents": {
-        "title": "Meet Your AI Agents",
-        "subtitle": "Four specialized AI agents working together to optimize, protect, and scale your ad campaigns.",
-        "guardian": {
-            "title": "Guardian Agent",
-            "description": "Real-time anomaly detection and campaign protection",
-            "feature1": "24/7 performance monitoring and alerts",
-            "feature2": "CPA spike detection and budget protection",
-            "feature3": "Automatic risk flagging before damage occurs"
-        },
         "optimization": {
             "title": "Optimization Agent",
             "description": "AI-powered recommendations for campaign improvement",
@@ -215,7 +204,6 @@
         "tagline": "Approval-based AI optimization for performance marketers.",
         "product": "Product",
         "howItWorks": "How it Works",
-        "agents": "Agents",
         "security": "Security",
         "faq": "FAQ",
         "company": "Company",
