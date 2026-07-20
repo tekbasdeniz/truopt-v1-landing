@@ -92,7 +92,7 @@
         "card2Title": "Manual Dependency",
         "card2Desc": "Optimization still depends heavily on manual specialist work.",
         "card3Title": "Costly Delays",
-        "card3Desc": "Teams lose money because actions happen too late."
+        "card3Desc": "Teams lose money because actions happen too late.",
         "card4Title": "The Black-Box Barrier",
         "card4Desc": "Enterprises avoid full automation because they do not trust black-box AI systems.",
         "solution": "At TruOpt.ai, we solve this by creating a controlled AI decision environment where recommendations are transparent, explainable, and executable."
