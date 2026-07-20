@@ -2,21 +2,20 @@
     "nav": {
         "product": "Ürün",
         "howItWorks": "Nasıl Çalışır",
-        "agents": "Ajanlar",
         "insights": "İçgörüler",
         "security": "Güvenlik",
         "faq": "SSS",
-        "login": "Ücretsiz Denemeye Başla",
+        "login": "Start Now",
         "contact": "İletişim"
     },
     "hero": {
         "badge": "Şimdi Yayında",
-        "title": "Optimize etmek, korumak ve entegre etmek için tasarlanmış çok-ajanlı bir sistem.",
-        "subtitle": "Google Ads ve Meta Ads için onay tabanlı yapay zeka optimizasyonu—kontrol gerektiren performans pazarlamacıları için tasarlandı.",
+        "title": "AI Suggests.\nYou Control.",
+        "subtitle": "Google Ads bütçenizden en iyi sonuçları yorulmadan alın. Yapay zekamız en iyi iyileştirmeleri bulur, siz de tek tıkla uygularsınız.",
         "proof1": "Kesintisiz denetimler",
         "proof2": "Koruyucu uyarılar",
         "proof3": "Onay tabanlı eylemler",
-        "cta": "Ücretsiz Denemeye Başla",
+        "cta": "Start Now",
         "secondaryCta": "Nasıl çalıştığını gör",
         "trustLine": "Google Ads hesabınızı bağlayın"
     },
@@ -65,8 +64,7 @@
             "other": "Diğer"
         },
         "platformOptions": {
-            "googleAds": "Google Ads",
-            "metaAds": "Meta Ads"
+            "googleAds": "Google Ads"
         },
         "submit": "Bekleme Listesine Katıl",
         "submitting": "Katılıyor...",
@@ -79,7 +77,7 @@
             "spend": "Lütfen aylık reklam harcamanızı seçin.",
             "platforms": "Lütfen en az bir platform seçin.",
             "role": "Lütfen rolünüzü seçin.",
-            "submissionFailed": "Hata! Bir şeyler ters gitti. Lütfen tekrar deneyin veya bize hello@truopt.ai adresinden e-posta gönderin"
+            "submissionFailed": "Hata! Bir şeyler ters gitti. Lütfen tekrar deneyin veya bize info@thumbsad.com adresinden e-posta gönderin"
         }
     },
     "credibility": {
@@ -89,12 +87,15 @@
     },
     "problem": {
         "title": "Manuel optimizasyon sorunu",
-        "card1Title": "Sessiz performans düşüşü",
-        "card1Desc": "Kampanyalar sapıyor. Bütçeler eriyor. Çok geç fark ediyorsunuz.",
-        "card2Title": "Geç tepkiler pahalıya mal oluyor",
-        "card2Desc": "Manuel kontroller ölçeklenemiyor. Sorunu gördüğünüzde, fazla harcama yapmış oluyorsunuz.",
-        "card3Title": "Tekrarlanabilir bir sistem",
-        "card3Desc": "TruOpt.ai sürekli denetler, riskleri erken işaretler ve hasar oluşmadan önce eylemleri önerir."
+        "card1Title": "Statik Kararlar",
+        "card1Desc": "Reklam bütçeleri büyüyor ancak karar kalitesi artmıyor.",
+        "card2Title": "Manuel Bağımlılık",
+        "card2Desc": "Optimizasyon hâlâ büyük ölçüde manuel uzman çalışmasına bağlı.",
+        "card3Title": "Maliyetli Gecikmeler",
+        "card3Desc": "Eylemler çok geç gerçekleştiği için ekipler para kaybediyor.",
+        "card4Title": "Kara Kutu Engeli",
+        "card4Desc": "Kurumlar, kara kutu yapay zeka sistemlerine güvenmedikleri için tam otomasyondan kaçınıyorlar.",
+        "solution": "TruOpt.ai'da bunu, önerilerin şeffaf, açıklanabilir ve yürütülebilir olduğu kontrollü bir yapay zeka karar ortamı yaratarak çözüyoruz."
     },
     "howItWorks": {
         "title": "Nasıl çalışır",
@@ -109,48 +110,28 @@
         "step4Desc": "Anında optimizasyon için yapay zeka önerilerini onaylayın",
         "step4Badge": "yayında",
         "cta-title": "Yapay zekanın büyüsünü deneyimlemeye hazır mısınız?",
-        "cta-description": "Yapay zeka destekli optimizasyonu kullanan binlerce pazarlamacıya katılın"
+        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor"
     },
-    "agents": {
-        "title": "AI Ajanlarınızla Tanışın",
-        "subtitle": "Reklam kampanyalarınızı optimize etmek, korumak ve ölçeklendirmek için birlikte çalışan dört özel AI ajanı.",
-        "guardian": {
-            "title": "Koruyucu Ajan",
-            "description": "Gerçek zamanlı anormallik tespiti ve kampanya koruması",
-            "feature1": "7/24 performans izleme ve uyarılar",
-            "feature2": "CPA artışı tespiti ve bütçe koruması",
-            "feature3": "Hasar oluşmadan önce otomatik risk işaretleme"
-        },
-        "optimization": {
-            "title": "Optimizasyon Ajanı",
-            "description": "Kampanya iyileştirme için AI destekli öneriler",
-            "feature1": "Akıllı teklif ayarlamaları ve bütçe tahsisi",
-            "feature2": "Negatif anahtar kelime keşfi ve yönetimi",
-            "feature3": "Reklam metni ve kreatif performans analizi"
-        },
-        "scaling": {
-            "title": "Ölçeklendirme Ajanı",
-            "description": "Akıllı kampanya ölçeklendirme ve büyüme stratejileri",
-            "feature1": "Performansa dayalı otomatik bütçe ölçeklendirme",
-            "feature2": "Yeni kitle keşfi ve genişletme",
-            "feature3": "Platformlar arası optimizasyon fırsatları"
-        },
-        "onboarding": {
-            "title": "Entegrasyon Ajanı",
-            "description": "Kolaylaştırılmış kurulum ve temel yapılandırma",
-            "feature1": "Otomatik hesap yapısı analizi",
-            "feature2": "Kurulum için en iyi uygulama önerileri",
-            "feature3": "Geçmiş performans temel oluşturma"
-        }
+    "optimization": {
+        "title": "Optimizasyon Ajanı",
+        "description": "Kampanya iyileştirme için AI destekli öneriler",
+        "feature1": "Akıllı teklif ayarlamaları ve bütçe tahsisi",
+        "feature2": "Negatif anahtar kelime keşfi ve yönetimi",
+        "feature3": "Reklam metni ve kreatif performans analizi"
     },
-    "team": {
-        "title": "Ekip Çalışması",
-        "description": "Ekip arkadaşlarınızı davet edin ve Google Ads kampanyalarınızı birlikte yönetin.",
-        "cta": "Ücretsiz Denemeye Başla",
-        "audience1": "Üyeleri davet et",
-        "audience2": "Aktivite kayıtları",
-        "audience3": "Rol bazlı erişim",
-        "small-description": "Kampanyalarınızda kimin hangi eylemi aldığını izleyin."
+    "scaling": {
+        "title": "Ölçeklendirme Ajanı",
+        "description": "Akıllı kampanya ölçeklendirme ve büyüme stratejileri",
+        "feature1": "Performansa dayalı otomatik bütçe ölçeklendirme",
+        "feature2": "Yeni kitle keşfi ve genişletme",
+        "feature3": "Platformlar arası optimizasyon fırsatları"
+    },
+    "onboarding": {
+        "title": "Entegrasyon Ajanı",
+        "description": "Kolaylaştırılmış kurulum ve temel yapılandırma",
+        "feature1": "Otomatik hesap yapısı analizi",
+        "feature2": "Kurulum için en iyi uygulama önerileri",
+        "feature3": "Geçmiş performans temel oluşturma"
     },
     "insights": {
         "title": "İçgörüler ve En İyi Uygulamalar",
@@ -163,33 +144,33 @@
         "article3Desc": "AI optimizasyonunda insan gözetiminin önemi"
     },
     "security": {
-        "title": "AI Güvenlik ve Kontrol",
-        "subtitle": "Akıllı gözetim ile kurumsal düzeyde koruma",
-        "feature1": "Otonom Onay",
-        "feature1Desc": "AI destekli iş akışları yürütülmeden önce açık yetkilendirme gerektirir.",
-        "feature2": "Akıllı İzinlendirme",
-        "feature2Desc": "Ayrıntılı ekip kontrolleri ile akıllı rol tabanlı erişim.",
-        "feature3": "Tam İzlenebilirlik",
-        "feature3Desc": "Her AI önerisi ve eylemin makine kaydıyla denetim izi.",
-        "feature4": "Gizlilik Öncelikli Erişim",
-        "feature4Desc": "Tasarım gereği minimal veri maruziyeti ile sıfır güven mimarisi."
+        "title": "Güvenlik ve Kontrol",
+        "subtitle": "Reklam harcamalarınızı güvende tutuyor ve bilgilerinizi koruyoruz. Kontrol her zaman tamamen sizde.",
+        "feature1": "Güvenli Bağlantılar",
+        "feature1Desc": "Resmi Google doğrulaması kullanarak hesaplarınıza güvenli bir şekilde bağlanıyoruz.",
+        "feature2": "Tam Ekip Kontrolü",
+        "feature2Desc": "Ekibinizde kimlerin metrikleri görebileceğini veya yeni değişiklikleri uygulayabileceğini tam olarak seçin.",
+        "feature3": "Her Değişikliği Takip Edin",
+        "feature3Desc": "Her eylem net bir şekilde günlüğe kaydedilir. İstediğiniz zaman geçmişi inceleyebilir veya eylemleri geri alabilirsiniz.",
+        "feature4": "Bulut Koruması",
+        "feature4Desc": "Verileriniz güvenli bulut sunucularında kilitli tutulur ve asla başkalarıyla paylaşılmaz."
     },
     "faq": {
         "title": "Sıkça Sorulan Sorular",
-        "q1": "Onay sistemi nasıl çalışır?",
-        "a1": "Her eylem açık onayınızı gerektirir. Önerileri incelersiniz, ardından uygulamayı veya reddetmeyi seçersiniz.",
-        "q2": "Hangi platformları destekliyorsunuz?",
-        "a2": "Şu anda Google Ads ve Meta Ads. Daha fazla platform yakında geliyor.",
-        "q3": "Verilerim güvende mi?",
-        "a3": "Evet. Mümkün olduğunda salt okunur API erişimi kullanıyoruz ve tüm veriler aktarım sırasında ve depolamada şifrelenir.",
-        "q4": "Nasıl kullanmaya başlayabilirim?",
-        "a4": "Hemen app.truopt.ai üzerinden kayıt olup kullanmaya başlayabilirsiniz. Sistem Google Ads hesabınızı bağladığınız anda çalışmaya başlar."
+        "q1": "Yapay zeka reklamlarımı nasıl geliştirir?",
+        "a1": "Yapay zekamız, gizli hataları veya daha fazla satış elde etmenin yeni yollarını bulmak için Google Reklamlarınızı sürekli tarar. Size net öneriler gösterir ve bunları tek bir tıklamayla anında uygulayabilirsiniz.",
+        "q2": "Google Ads verilerim güvende mi?",
+        "a2": "Evet, %100. Standart Google doğrulamasını kullanarak güvenli bir şekilde bağlanıyoruz. Verileriniz güvenli Google Bulut sunucularında korunur ve bunları asla paylaşmayız veya genel modelleri eğitmek için kullanmayız.",
+        "q3": "Fikrimi değiştirirsem bir değişikliği geri alabilir miyim?",
+        "a3": "Kesinlikle. Uyguladığınız her bir optimizasyon geçmiş panelinize kaydedilir, yani istediğiniz zaman herhangi bir eylemi kolayca tersine çevirebilir ve önceki ayarlarınıza dönebilirsiniz.",
+        "q4": "Bunu kullanmak için pazarlama uzmanı olmam gerekiyor mu?",
+        "a4": "Kesinlikle hayır! Her şeyi mümkün olduğunca basit olacak şekilde tasarladık. Dil sade ve adımlar net, böylece herkes teknik kafa confusion yaşamadan işini büyütebilir."
     },
     "finalCta": {
         "title": "Optimizasyona Bugün Başlayın",
-        "cta": "Ücretsiz Denemeye Başla",
-        "secondaryCta": "Nasıl çalıştığını gör",
-        "trustLine": ""
+        "trustLine": "Hemen başlamak için Google Ads hesabınızı bağlayın.",
+        "cta": "Start Now",
+        "secondaryCta": "Nasıl çalıştığını gör"
     },
     "contactForm": {
         "title": "İletişime Geçin",
@@ -216,7 +197,6 @@
         "tagline": "Performans pazarlamacıları için onay tabanlı yapay zeka optimizasyonu.",
         "product": "Ürün",
         "howItWorks": "Nasıl Çalışır",
-        "agents": "Ajanlar",
         "security": "Güvenlik",
         "faq": "SSS",
         "company": "Şirket",
