@@ -8,7 +8,7 @@ export const RefundPolicyContent = () => {
             <p className="text-sm mb-8">(A ThumbsAd Product)</p>
 
             <p className="mb-6">
-                <strong>Effective Date:</strong> January 2026
+                <strong>Last Updated:</strong> July 2026
             </p>
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Merchant of Record</h2>
