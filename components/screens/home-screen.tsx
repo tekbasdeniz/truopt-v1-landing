@@ -18,7 +18,6 @@ const HomeScreen = () => {
                 <Credibility />
                 <Problem />
                 <HowItWorks />
-                <Team />
                 <Security />
                 <FAQ />
                 <FinalCTA />
