@@ -99,7 +99,7 @@
     },
     "howItWorks": {
         "title": "Nasıl çalışır",
-        "subtitle": "Kampanyalarınızı manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
+        "subtitle": "Kampanyalarinizi manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
         "step1Title": "Bağlan",
         "step1Desc": "Google Hesaplarınızı bağlayın ve Reklam Hesaplarınızı seçin",
         "step2Title": "Panel",
@@ -170,7 +170,65 @@
         "q6": "Web siteme herhangi bir izleme pikseli veya kod eklemem gerekiyor mu?",
         "a6": "Hayır, web sitesi kurulumu veya kod değişikliği gerekmez. TruOpt.ai doğrudan resmi Google Ads API'si üzerinden güvenli bir şekilde bağlanır; yani açılış sayfanızı yavaşlatmadan kampanyalarınızı anında analiz etmeye başlar.",
         "q7": "Dijital pazarlama ajansları TruOpt.ai ile birden fazla müşteri hesabını yönetebilir mi?",
-        "a7": "Evet, TruOpt.ai yerleşik çoklu hesap desteğiyle geliştirilmiştir. Pazarlama ajansları, tek bir panelden birden fazla farklı Google Ads müşteri hesabını yönetebilir, ekip aktivite günlüklerini takip edebilir i ve her müşteri için özel bütçe korumaları ayarlayabilir."
+        "a7": "Evet, TruOpt.ai yerleşik çoklu hesap desteğiyle geliştirilmiştir. Pazarlama ajansları, tek bir panelden birden fazla farklı Google Ads müşteri hesabını yönetebilir, ekip aktivite günlüklerini takip edebilir ve her müşteri için özel bütçe korumaları ayarlayabilir."
+    },
+    "pricing": {
+        "title": "Esnek ve Şeffaf Fiyatlandırma",
+        "subtitle": "İhtiyacınıza uygun planı seçin, reklam bütçenizi yapay zeka ile koruyun.",
+        "monthly": "Aylık",
+        "yearly": "Yıllık",
+        "save": "%20 Tasarruf Et",
+        "cta": "Hemen Başla",
+        "plans": {
+            "basic": {
+                "name": "Basic",
+                "price": "$23",
+                "description": "Tekil reklam hesapları ve yeni başlayanlar için ideal temel optimizasyon.",
+                "features": [
+                    "✓ Google Ads Hesap Kapasitesi (3 Hesaba Kadar)",
+                    "✓ YZ Destekli Optimizasyon Motoru",
+                    "✓ Akıllı Öneri ve Sağlık Skoru (Health Score)",
+                    "✓ Bütçe Koruması ve Performans Teşhisi",
+                    "✕ Kural Tabanlı Otomasyon ve Uyarılar",
+                    "✕ Veri Güvenlikli Yapay Zeka Logları (Şeffaflık)",
+                    "✕ Gelişmiş Ekip ve Rol Yönetimi",
+                    "✓ Müşteri Destek Seviyesi (E-posta Destekli)",
+                    "✕ Kurumsal Ölçekleme (SLA & API)"
+                ]
+            },
+            "pro": {
+                "name": "Pro",
+                "price": "$55",
+                "description": "Büyüyen ajanslar ve markalar için gelişmiş yapay zeka.",
+                "features": [
+                    "✓ Google Ads Hesap Kapasitesi (10 Hesaba Kadar)",
+                    "✓ YZ Destekli Optimizasyon Motoru",
+                    "✓ Akıllı Öneri ve Sağlık Skoru (Health Score)",
+                    "✓ Bütçe Koruması ve Performans Teşhisi",
+                    "✓ Kural Tabanlı Otomasyon ve Uyarılar",
+                    "✓ Veri Güvenlikli Yapay Zeka Logları (Şeffaflık)",
+                    "✓ Gelişmiş Ekip ve Rol Yönetimi (3 Kullanıcıya Kadar)",
+                    "✓ Müşteri Destek Seviyesi (Öncelikli Destek)",
+                    "✕ Kurumsal Ölçekleme (SLA & API)"
+                ]
+            },
+            "enterprise": {
+                "name": "Enterprise",
+                "price": "Özel",
+                "description": "Büyük ölçekli yüksek hacimli operasyonlar için tam kontrol.",
+                "features": [
+                    "✓ Google Ads Hesap Kapasitesi (Limitsiz)",
+                    "✓ YZ Destekli Optimizasyon Motoru",
+                    "✓ Akıllı Öneri ve Sağlık Skoru (Health Score)",
+                    "✓ Bütçe Koruması ve Performans Teşhisi",
+                    "✓ Kural Tabanlı Otomasyon ve Uyarılar",
+                    "✓ Veri Güvenlikli Yapay Zeka Logları (Şeffaflık)",
+                    "✓ Gelişmiş Ekip ve Rol Yönetimi (Limitsiz)",
+                    "✓ Müşteri Destek Seviyesi (Özel Atanmış Müşteri Yöneticisi)",
+                    "✓ Kurumsal Ölçekleme (SLA & API)"
+                ]
+            }
+        }
     },
     "finalCta": {
         "title": "Optimizasyona Bugün Başlayın",
