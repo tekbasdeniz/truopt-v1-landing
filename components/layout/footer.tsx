@@ -14,7 +14,6 @@ const Footer = () => {
             links: [
                 { name: t('howItWorks'), href: "/#how-it-works" },
                 { name: "Pricing", href: "/pricing" },
-                { name: t('agents'), href: "/#agents" },
                 { name: t('security'), href: "/#security" },
                 { name: t('faq'), href: "/#faq" },
             ],
