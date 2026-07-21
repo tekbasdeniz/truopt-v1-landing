@@ -299,10 +299,12 @@ const Hero = () => {
                         className="py-4 leading-[1.2] text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 relative"
                     >
                         <span className="relative inline-block">
-                            {t('title')}
+                            <span className="block">{t('titleLine1')}</span>
+                            <span className="block">{t('titleLine2')}</span>
                             {/* Subtle Glitch Effect */}
                             <span className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-accent to-primary">
-                                {t('title')}
+                                <span className="block">{t('titleLine1')}</span>
+                                <span className="block">{t('titleLine2')}</span>
                             </span>
                         </span>
                     </motion.h1>
