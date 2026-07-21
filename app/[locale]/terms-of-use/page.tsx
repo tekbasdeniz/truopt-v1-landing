@@ -20,7 +20,7 @@ export default async function TermsOfUsePage({ params }: { params: Promise<{ loc
             <Header />
             <main className="flex-grow pt-24 pb-16">
                 <Container>
-                    <TermsOfUseContent />
+                    <TermsOfUseContent locale={locale} />
                 </Container>
             </main>
             <Footer />
