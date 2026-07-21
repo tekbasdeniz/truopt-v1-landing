@@ -51,7 +51,6 @@ const HowItWorks = () => {
         },
     ]
 
-    // Floating particles for neural network effect
     const particles = mounted ? Array.from({ length: 15 }, (_, i) => ({
         id: i,
         x: Math.random() * 100,
@@ -63,20 +62,13 @@ const HowItWorks = () => {
 
     return (
         <section id="how-it-works" className="py-32 relative overflow-hidden bg-secondary/20">
-            {/* Cleaner Background Effects */}
             <div className="absolute inset-0 -z-10">
-                {/* Subtle Grid Pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-
-                {/* Radial Gradient Overlays */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-
-                {/* Soft Corner Glows */}
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" />
 
-                {/* Minimal Floating Particles */}
                 {mounted && particles.slice(0, 8).map((particle) => (
                     <motion.div
                         key={particle.id}
@@ -102,7 +94,6 @@ const HowItWorks = () => {
             </div>
 
             <Container>
-                {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +103,7 @@ const HowItWorks = () => {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
                         <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-                        <span className="text-sm font-medium text-primary">AI-Powered Process</span>
+                        <span className="text-sm font-medium text-primary">{t('badge')}</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/40">
                         {t('title')}
@@ -122,9 +113,7 @@ const HowItWorks = () => {
                     </p>
                 </motion.div>
 
-                {/* Steps Grid */}
                 <div className="relative max-w-7xl mx-auto">
-                    {/* Connection Flow Lines */}
                     <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px -translate-y-1/2 pointer-events-none">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
                         <motion.div
@@ -146,14 +135,11 @@ const HowItWorks = () => {
                                 transition={{ duration: 0.5, delay: index * 0.15 }}
                                 className="relative group"
                             >
-                                {/* Step Number Badge */}
                                 <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-xl border border-primary/30 flex items-center justify-center z-10">
                                     <span className="text-sm font-bold text-primary">{index + 1}</span>
                                 </div>
 
-                                {/* Glassmorphic Card */}
                                 <div className={`relative h-full p-8 rounded-2xl bg-gradient-to-br ${step.gradient} backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all duration-500 ${step.glowColor} hover:scale-105`}>
-                                    {/* AI Spark Animation */}
                                     <motion.div
                                         className="absolute top-4 right-4 w-2 h-2 rounded-full bg-primary"
                                         animate={{
@@ -167,16 +153,13 @@ const HowItWorks = () => {
                                         }}
                                     />
 
-                                    {/* Icon Container */}
                                     <div className="relative mb-6">
                                         <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-background/50 to-background/30 backdrop-blur-sm border border-border/50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                                             <step.icon className={`w-8 h-8 ${step.iconColor}`} />
                                         </div>
-                                        {/* Icon Glow */}
                                         <div className={`absolute inset-0 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 ${step.iconColor.replace('text-', 'bg-')}`} />
                                     </div>
 
-                                    {/* Content */}
                                     <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
                                         {step.title}
                                     </h3>
@@ -184,7 +167,6 @@ const HowItWorks = () => {
                                         {step.description}
                                     </p>
 
-                                    {/* Thinking Pulse Indicator */}
                                     <div className="mt-6 flex items-center gap-2">
                                         <div className="flex gap-1">
                                             {[0, 1, 2].map((i) => (
@@ -206,7 +188,6 @@ const HowItWorks = () => {
                                     </div>
                                 </div>
 
-                                {/* Arrow Connector (Mobile/Tablet) */}
                                 {index < steps.length - 1 && (
                                     <div className="lg:hidden flex justify-center my-4">
                                         <motion.div
@@ -224,7 +205,7 @@ const HowItWorks = () => {
                         ))}
                     </div>
                 </div>
-                {/* CTA Section */}
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -233,22 +214,13 @@ const HowItWorks = () => {
                     className="text-center mt-20"
                 >
                     <div className="inline-flex flex-col items-center gap-6 p-8 rounded-3xl bg-card/20 backdrop-blur-2xl border border-primary/20 shadow-xl relative overflow-hidden">
-                        {/* Glass Reflection Layer */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent rounded-3xl" />
-
-                        {/* Ambient Glow Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl" />
 
                         <div className="flex items-center gap-3 relative z-10">
                             <motion.div
-                                animate={{
-                                    rotate: [0, 360],
-                                }}
-                                transition={{
-                                    duration: 20,
-                                    repeat: Infinity,
-                                    ease: "linear",
-                                }}
+                                animate={{ rotate: [0, 360] }}
+                                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                             >
                                 <Sparkles className="w-6 h-6 text-primary" />
                             </motion.div>
