@@ -2,8 +2,7 @@ import React from 'react'
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { Container } from "@/components/ui/container"
-import { CookiePolicyContentEN } from "@/components/legal/en/cookie-policy-content"
-import { CookiePolicyContentTR } from "@/components/legal/tr/cookie-policy-content"
+import { CookiePolicyContent } from "@/components/legal/cookie-policy-content"
 
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
@@ -21,7 +20,7 @@ export default async function CookiePolicyPage({ params }: { params: Promise<{ l
             <Header />
             <main className="flex-grow pt-24 pb-16">
                 <Container>
-                    {locale === 'tr' ? <CookiePolicyContentTR /> : <CookiePolicyContentEN />}
+                    <CookiePolicyContent locale={locale} />
                 </Container>
             </main>
             <Footer />
