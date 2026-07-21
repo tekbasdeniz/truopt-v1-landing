@@ -19,7 +19,7 @@ export default async function CopyrightNoticePage({ params }: { params: Promise<
             <Header />
             <main className="flex-grow pt-24 pb-16">
                 <Container>
-                    <CopyrightNoticeContent />
+                    <CopyrightNoticeContent locale={locale} />
                 </Container>
             </main>
             <Footer />
