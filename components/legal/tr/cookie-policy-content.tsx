@@ -4,91 +4,91 @@ export const CookiePolicyContentTR = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
             <h1 className="text-3xl font-bold text-foreground mb-2">Çerez Politikası – TruOpt.ai</h1>
-            <p className="mb-8 font-medium text-foreground">Son güncelleme: Temmuz 2026</p>
+            <p className="mb-8 font-medium text-foreground">Son güncelleme tarihi: Temmuz 2026</p>
 
             <p className="mb-6">
-                Bu Çerez Politikası, ThumbsAd – Deniz Tekbaş (“biz”, “bizim”) tarafından geliştirilen ve işletilen abonelik tabanlı dijital platform TruOpt.ai'nin <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a> üzerinde çerezleri ve benzeri takip teknolojilerini nasıl kullandığını açıklamaktadır.
+                Bu Çerez Politikası, ThumbsAd – Deniz Tekbaş (“biz”, “bize”, “bizim”) tarafından geliştirilen ve işletilen abonelik tabanlı bir dijital platform olan TruOpt.ai’nin, <a href="https://truopt.ai" className="text-primary hover:underline">https://truopt.ai</a> adresinde çerezleri ve benzer izleme teknolojilerini nasıl kullandığını açıklamaktadır.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">1. Çerez Nedir?</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">1. Çerezler Nedir?</h2>
             <p className="mb-4">
-                Çerezler, bir web sitesini ziyaret ettiğinizde cihazınıza depolanan küçük veri dosyalarıdır.
+                Çerezler, bir web sitesini ziyaret ettiğinizde cihazınızda depolanan küçük veri dosyalarıdır.
                 <br />
-                Güvenli çalışma, kişiselleştirme, analitik ve pazarlama ölçümleri sağlamak amacıyla kullanılırlar.
+                Çerezler, güvenli çalışma, kişiselleştirme, analiz ve pazarlama ölçümlerini sağlamak için kullanılır.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. Çerez Kullanımının Hukuki Sebepleri</h2>
-            <p className="mb-4">Çerezler aşağıdaki hukuki sebeplere dayanarak işlenmektedir:</p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>Açık rızanız (analitik ve pazarlama çerezleri için)</li>
-                <li>Meşru menfaat (zorunlu çerezler için)</li>
-                <li>Sözleşmenin ifası (platform işlevselliği için)</li>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. Çerez Kullanımının Yasal Dayanağı</h2>
+            <p className="mb-4">Çerezler aşağıdaki dayanaklara göre işlenmektedir:</p>
+            <ul className="list-disc pl-6 mb-6 space-y-2">
+                <li>Açık rızanız (analitik ve pazarlama amaçlı çerezler için)</li>
+                <li>Meşru menfaat (kesinlikle gerekli çerezler için)</li>
+                <li>Sözleşmesel gereklilik (platform işlevselliği için)</li>
             </ul>
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">3. Çerez Kategorileri</h2>
-            <div className="overflow-x-auto">
-                <table className="min-w-full text-left text-sm mb-6">
-                    <thead className="border-b border-border">
-                        <tr>
-                            <th className="py-2 px-4 font-semibold text-foreground">Kategori</th>
-                            <th className="py-2 px-4 font-semibold text-foreground">Kullanım Amacı</th>
+            <div className="overflow-x-auto my-6">
+                <table className="min-w-full text-left text-sm border-collapse border border-border">
+                    <thead className="bg-secondary/30">
+                        <tr className="border-b border-border">
+                            <th className="py-3 px-4 font-semibold text-foreground border-r border-border">Kategori</th>
+                            <th className="py-3 px-4 font-semibold text-foreground">Amaç</th>
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-border/50">
+                    <tbody className="divide-y divide-border">
                         <tr>
-                            <td className="py-2 px-4 font-medium text-foreground">Zorunlu Çerezler</td>
-                            <td className="py-2 px-4">Kimlik doğrulama, oturum güvenliği ve sistem kararlılığı</td>
+                            <td className="py-3 px-4 font-medium text-foreground border-r border-border">Kesinlikle Gerekli Çerezler</td>
+                            <td className="py-3 px-4">Kimlik doğrulama, oturum güvenliği, sistem istikrarı</td>
                         </tr>
                         <tr>
-                            <td className="py-2 px-4 font-medium text-foreground">Performans ve Analitik Çerezleri</td>
-                            <td className="py-2 px-4">Kullanım ölçümü ve hizmet kalitesini artırma</td>
+                            <td className="py-3 px-4 font-medium text-foreground border-r border-border">Performans ve Analitik Çerezleri</td>
+                            <td className="py-3 px-4">Kullanımı ölçmek, hizmet kalitesini artırmak</td>
                         </tr>
                         <tr>
-                            <td className="py-2 px-4 font-medium text-foreground">Pazarlama ve Reklam Çerezleri</td>
-                            <td className="py-2 px-4">Kampanya performans ölçümü ve yeniden hedefleme</td>
+                            <td className="py-3 px-4 font-medium text-foreground border-r border-border">Pazarlama ve Reklam Çerezleri</td>
+                            <td className="py-3 px-4">Kampanya performansını ölçmek, yeniden hedefleme</td>
                         </tr>
                         <tr>
-                            <td className="py-2 px-4 font-medium text-foreground">Tercih Çerezleri</td>
-                            <td className="py-2 px-4">Kullanıcı tercihlerini ve arayüz ayarlarını saklama</td>
+                            <td className="py-3 px-4 font-medium text-foreground border-r border-border">Tercih Çerezleri</td>
+                            <td className="py-3 px-4">Kullanıcı seçimlerini ve kullanıcı arayüzü ayarlarını kaydetmek</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Üçüncü Taraf Çerezleri</h2>
-            <p className="mb-4">TruOpt.ai aşağıdaki gibi üçüncü taraf araçları kullanmaktadır:</p>
+            <p className="mb-4">TruOpt.ai, aşağıdakiler gibi üçüncü taraf araçları kullanmaktadır:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>Google Analytics</li>
                 <li>Meta Pixel</li>
-                <li>Diğer yetkili analitik ve reklam platformları</li>
+                <li>Diğer yetkili analiz ve reklam platformları</li>
             </ul>
             <p className="mb-6">
-                Bu sağlayıcılar, kendi gizlilik politikalarına tabi olarak cihazınıza çerez yerleştirebilir.
+                Bu sağlayıcılar, kendi gizlilik politikalarına tabi olarak çerezler yerleştirebilir.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Çerez Tercihlerinin Yönetimi</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Çerez Onayı Yönetimi</h2>
             <p className="mb-4">Çerez tercihlerinizi şu yollarla yönetebilirsiniz:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>Çerez rıza bildirim çubuğumuz (banner) üzerinden</li>
-                <li>Tarayıcı çerez ayarlarınız üzerinden</li>
+                <li>Çerez onayı başlığımız</li>
+                <li>Tarayıcı düzeyindeki çerez ayarları</li>
             </ul>
             <p className="mb-6">
-                Rızanızı dilediğiniz zaman geri çekebilirsiniz.
+                Onayınızı istediğiniz zaman geri çekebilirsiniz.
             </p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">6. Çerezlerin Devre Dışı Bırakılmasının Etkileri</h2>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">6. Çerezlerin Devre Dışı Bırakılmasının Etkisi</h2>
             <p className="mb-6">
-                Belirli çerezlerin devre dışı bırakılması, platformun bazı bölümlerinin düzgün çalışmasını engelleyebilir.
+                Bazı çerezlerin devre dışı bırakılması, platformun bazı bölümlerinin düzgün çalışmamasına neden olabilir.
             </p>
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">7. Güncellemeler</h2>
             <p className="mb-6">
-                Yasal veya teknik değişiklikleri yansıtmak amacıyla bu politikayı zaman zaman güncelleyebiliriz.
+                Yasal veya teknik değişiklikleri yansıtmak amacıyla bu politikayı güncelleyebiliriz.
             </p>
 
             <div className="border-t border-border pt-8 mt-12">
-                <h2 className="text-xl font-semibold text-foreground mb-4">Yasal Mülkiyet ve İletişim</h2>
-                <p className="mb-6">TruOpt.ai işleticisi:</p>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Yasal Sahiplik ve İletişim</h2>
+                <p className="mb-4">TruOpt.ai, aşağıdaki kuruluş tarafından işletilmektedir:</p>
                 <p className="font-semibold text-foreground mb-1">ThumbsAd – Deniz Tekbaş</p>
                 <p className="mb-1">Adres: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201 / 40 Şişli, İstanbul, Türkiye</p>
                 <p className="mb-1">E-posta: <a href="mailto:info@thumbsad.com" className="text-primary hover:underline">info@thumbsad.com</a></p>
