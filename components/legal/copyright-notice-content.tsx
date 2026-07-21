@@ -1,6 +1,6 @@
 import React from 'react'
-import { CopyrightNoticeContentEN } from './en/copyright-notice-content'
-import { CopyrightNoticeContentTR } from './tr/copyright-notice-content'
+import { CopyrightNoticeContentEN } from '@/components/legal/en/copyright-notice-content'
+import { CopyrightNoticeContentTR } from '@/components/legal/tr/copyright-notice-content'
 
 interface CopyrightNoticeContentProps {
     locale: string
