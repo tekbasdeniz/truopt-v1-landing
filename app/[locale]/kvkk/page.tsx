@@ -20,7 +20,7 @@ export default async function KvkkPage({ params }: { params: Promise<{ locale: s
             <Header />
             <main className="flex-grow pt-24 pb-16">
                 <Container>
-                    <KvkkContent />
+                    <KvkkContent locale={locale} />
                 </Container>
             </main>
             <Footer />
