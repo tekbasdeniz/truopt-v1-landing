@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle2, ShieldAlert, Zap } from "lucide-react"
@@ -11,9 +12,11 @@ import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 import HowItWorksButton from "../ui/how-it-works-button"
 
+// WebP Görseli Entegre Edildi
+import HeroImage from "@/app/assets/images/truopt.ai-hero.webp"
+
 const Hero = () => {
     const t = useTranslations('hero')
-    const tDash = useTranslations('dashboard')
     const [mounted, setMounted] = useState(false)
     const particles = useMemo(
         () =>
@@ -354,7 +357,7 @@ const Hero = () => {
                     </motion.p>
                 </div>
 
-                {/* Dashboard Preview - Live Metrics & AI Agents */}
+                {/* Dashboard Preview - WebP Entegre Edilen Yeni Temiz Alan */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -362,112 +365,15 @@ const Hero = () => {
                     className="mt-20 relative mx-auto max-w-5xl"
                     id="product"
                 >
-                    <div className="relative rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm overflow-hidden shadow-2xl">
-                        {/* Dashboard Header */}
-                        <div className="border-b border-border/50 p-4 flex items-center justify-between bg-secondary/20">
-                            <div className="flex items-center space-x-2">
-                                <div className="flex space-x-1">
-                                    <div className="w-2 h-2 rounded-full bg-red-500/50" />
-                                    <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
-                                    <div className="w-2 h-2 rounded-full bg-green-500/50" />
-                                </div>
-                                <span className="text-xs text-muted-foreground ml-4">{tDash('title')}</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                <span className="text-xs text-muted-foreground">{tDash('live')}</span>
-                            </div>
-                        </div>
-
-                        {/* Dashboard Content */}
-                        <div className="p-6 space-y-6">
-                            {/* Key Metrics Row */}
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                                {[
-                                    { label: tDash('roas'), value: "+42%", trend: "up", color: "text-green-400" },
-                                    { label: tDash('cpa'), value: "-28%", trend: "down", color: "text-green-400" },
-                                    { label: tDash('activeAudits'), value: "12", trend: "neutral", color: "text-primary" },
-                                    { label: tDash('alerts'), value: "3", trend: "alert", color: "text-yellow-400" },
-                                ].map((metric, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.8 + i * 0.1 }}
-                                        className="bg-background/50 rounded-lg p-4 border border-border/30"
-                                    >
-                                        <div className="text-xs text-muted-foreground mb-1">{metric.label}</div>
-                                        <div className={`text-2xl font-bold ${metric.color}`}>{metric.value}</div>
-                                    </motion.div>
-                                ))}
-                            </div>
-
-                            {/* AI Agents Activity */}
-                            <div className="bg-background/50 rounded-lg p-4 border border-border/30">
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-sm font-semibold text-foreground">{tDash('agentsActivity')}</h3>
-                                    <span className="text-xs text-muted-foreground">{tDash('lastMinutes')}</span>
-                                </div>
-                                <div className="space-y-3">
-                                    {[
-                                        {
-                                            agent: tDash('optimizationAgent'),
-                                            action: tDash('action1'),
-                                            time: "2m ago",
-                                            icon: "🎯",
-                                        },
-                                        {
-                                            agent: tDash('guardianAgent'),
-                                            action: tDash('action2'),
-                                            time: "4m ago",
-                                            icon: "🛡️",
-                                        },
-                                        {
-                                            agent: tDash('onboardingAgent'),
-                                            action: tDash('action3'),
-                                            time: "5m ago",
-                                            icon: "📊",
-                                        },
-                                    ].map((activity, i) => (
-                                        <motion.div
-                                            key={i}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: 1.0 + i * 0.15 }}
-                                            className="flex items-start space-x-3 p-3 rounded-lg bg-secondary/20 hover:bg-secondary/30 transition-colors"
-                                        >
-                                            <span className="text-lg shrink-0">{activity.icon}</span>
-                                            <div className="flex-1 min-w-0">
-                                                <div className="text-xs font-medium text-foreground">{activity.agent}</div>
-                                                <div className="text-xs text-muted-foreground truncate">{activity.action}</div>
-                                            </div>
-                                            <span className="text-xs text-muted-foreground/50 shrink-0">{activity.time}</span>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Quick Action Suggestion */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 1.5 }}
-                                className="bg-primary/5 border border-primary/20 rounded-lg p-4 flex items-start space-x-3"
-                            >
-                                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                                    <Zap className="w-4 h-4 text-primary" />
-                                </div>
-                                <div className="flex-1">
-                                    <div className="text-sm font-medium text-foreground mb-1">{tDash('recommendedAction')}</div>
-                                    <div className="text-xs text-muted-foreground">
-                                        {tDash('actionDesc')}
-                                    </div>
-                                </div>
-                                <button className="px-3 py-1.5 text-xs font-medium bg-primary/10 hover:bg-primary/20 text-primary rounded transition-colors shrink-0">
-                                    {tDash('review')}
-                                </button>
-                            </motion.div>
-                        </div>
+                    <div className="relative rounded-2xl border border-border/50 bg-card/30 p-2 backdrop-blur-sm overflow-hidden shadow-2xl">
+                        <Image
+                            src={HeroImage}
+                            alt="TruOpt.ai Dashboard Preview"
+                            width={1200}
+                            height={675}
+                            className="w-full h-auto rounded-xl border border-border/40"
+                            priority
+                        />
                     </div>
                 </motion.div>
             </Container>
