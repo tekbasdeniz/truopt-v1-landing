@@ -305,20 +305,19 @@ const Hero = () => {
                         {t('subtitle')}
                     </motion.p>
 
-                    {/* Güncellenen Ortalı Kutu Bölümü */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 w-full max-w-3xl"
+                        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 w-full max-w-3xl mx-auto"
                     >
                         {[
                             { icon: Zap, text: t('proof1') },
                             { icon: ShieldAlert, text: t('proof2') },
                             { icon: CheckCircle2, text: t('proof3') },
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center justify-center text-center gap-2.5 p-4 bg-card/50 border border-border/50 backdrop-blur-md rounded-full">
-                                <item.icon className="w-5 h-5 text-primary shrink-0" />
+                            <div key={i} className="flex items-center justify-center text-center gap-2.5 px-5 py-3 bg-card/50 border border-border/50 backdrop-blur-md rounded-full whitespace-nowrap shadow-sm hover:border-primary/40 transition-colors">
+                                <item.icon className="w-4.5 h-4.5 text-primary shrink-0" />
                                 <span className="text-sm text-white/80 font-medium">{item.text}</span>
                             </div>
                         ))}
