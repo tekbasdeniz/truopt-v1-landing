@@ -181,8 +181,6 @@ const Hero = () => {
                     </svg>
                 )}
 
-                {/* Eski bağımsız yatay çizgiler buradan TAMAMEN SİLİNDİ */}
-
                 {/* Shimmering Energy Waves Behind Text Area */}
                 <motion.div
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px]"
@@ -307,20 +305,21 @@ const Hero = () => {
                         {t('subtitle')}
                     </motion.p>
 
+                    {/* Güncellenen Ortalı Kutu Bölümü */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 text-left w-full max-w-3xl"
+                        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 w-full max-w-3xl"
                     >
                         {[
                             { icon: Zap, text: t('proof1') },
                             { icon: ShieldAlert, text: t('proof2') },
                             { icon: CheckCircle2, text: t('proof3') },
                         ].map((item, i) => (
-                            <div key={i} className="flex items-start space-x-3 p-4 bg-card/50 border border-border/50 backdrop-blur-md rounded-full">
-                                <item.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                <span className="text-sm text-white/60">{item.text}</span>
+                            <div key={i} className="flex items-center justify-center text-center gap-2.5 p-4 bg-card/50 border border-border/50 backdrop-blur-md rounded-full">
+                                <item.icon className="w-5 h-5 text-primary shrink-0" />
+                                <span className="text-sm text-white/80 font-medium">{item.text}</span>
                             </div>
                         ))}
                     </motion.div>
