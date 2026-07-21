@@ -12,6 +12,9 @@ import HowItWorksButton from "../ui/how-it-works-button"
 import Image from "next/image"
 import Logo from "@/app/assets/images/logo.webp"
 
+// Dil Seçici Bileşeni Aktif Edildi
+import { LanguageSelector } from "@/components/language-selector"
+
 const Header = () => {
     const t = useTranslations('nav')
     const [isOpen, setIsOpen] = useState(false)
@@ -65,7 +68,7 @@ const Header = () => {
 
                     {/* Desktop CTAs */}
                     <div className="hidden md:flex items-center space-x-4">
-                        {/* <LanguageSelector /> */}
+                        <LanguageSelector />
                         <Link href={"/#how-it-works" as any} className="text-sm font-medium hover:text-primary transition-colors hover:!text-white">
                             {t('howItWorks')}
                         </Link>
@@ -76,7 +79,7 @@ const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <div className="flex items-center space-x-4 md:hidden">
-                        {/* <LanguageSelector /> */}
+                        <LanguageSelector />
                         <button
                             className="p-2 text-muted-foreground hover:text-foreground"
                             onClick={() => setIsOpen(!isOpen)}
@@ -101,7 +104,6 @@ const Header = () => {
                         </Link>
                     ))}
                     <div className="pt-4 flex flex-col space-y-3">
-
                         <HowItWorksButton onClick={() => setIsOpen(false)} />
                         <WaitlistButton wrapperClassName="!w-full sm:w-fit" onClick={() => setIsOpen(false)}>
                             {t('login')}
