@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 import HowItWorksButton from "../ui/how-it-works-button"
 
-// WebP Görseli Entegre Edildi
+// WebP Görseli
 import HeroImage from "@/app/assets/images/truopt.ai-hero.webp"
 
 const Hero = () => {
@@ -76,12 +76,12 @@ const Hero = () => {
                 <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#8a73ff] rounded-full blur-[140px] opacity-[0.06] mix-blend-screen" />
                 <div className="absolute bottom-0 left-1/2 w-[700px] h-[700px] bg-[#4f5dff] rounded-full blur-[160px] opacity-[0.07] mix-blend-screen" />
 
-                {/* Floating Neural Network Particles - Medium Count, Slow Motion */}
+                {/* Floating Neural Network Particles */}
                 {mounted && Array.from({ length: 25 }, (_, i) => {
                     const x = Math.random() * 100;
                     const y = Math.random() * 100;
                     const size = Math.random() * 3 + 1;
-                    const duration = Math.random() * 40 + 40; // 40-80s for very slow motion
+                    const duration = Math.random() * 40 + 40; 
                     const delay = Math.random() * 8;
 
                     return (
@@ -181,32 +181,7 @@ const Hero = () => {
                     </svg>
                 )}
 
-                {/* Flowing Data Streams - Pulsing Lines */}
-                <motion.div
-                    className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#6b4cff] to-transparent"
-                    animate={{
-                        opacity: [0, 0.4, 0],
-                        scaleX: [0.5, 1, 0.5],
-                    }}
-                    transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
-                />
-                <motion.div
-                    className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8a73ff] to-transparent"
-                    animate={{
-                        opacity: [0, 0.3, 0],
-                        scaleX: [0.5, 1, 0.5],
-                    }}
-                    transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        delay: 4,
-                        ease: "easeInOut",
-                    }}
-                />
+                {/* Eski bağımsız yatay çizgiler buradan TAMAMEN SİLİNDİ */}
 
                 {/* Shimmering Energy Waves Behind Text Area */}
                 <motion.div
@@ -292,22 +267,36 @@ const Hero = () => {
                         </Badge>
                     </motion.div>
 
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className="py-4 leading-[1.2] text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 relative"
-                    >
-                        <span className="relative inline-block">
-                            <span className="block">{t('titleLine1')}</span>
-                            <span className="block">{t('titleLine2')}</span>
-                            {/* Subtle Glitch Effect */}
-                            <span className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-accent to-primary">
+                    <div className="relative w-full mb-6">
+                        <motion.div
+                            className="absolute top-0 left-1/2 -translate-x-1/2 w-[150vw] h-px bg-gradient-to-r from-transparent via-[#6b4cff] to-transparent pointer-events-none"
+                            animate={{ opacity: [0, 0.3, 0], scaleX: [0.5, 1, 0.5] }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                        />
+
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className="py-4 leading-[1.2] text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 relative"
+                        >
+                            <span className="relative inline-block">
                                 <span className="block">{t('titleLine1')}</span>
                                 <span className="block">{t('titleLine2')}</span>
+                                {/* Subtle Glitch Effect */}
+                                <span className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-accent to-primary">
+                                    <span className="block">{t('titleLine1')}</span>
+                                    <span className="block">{t('titleLine2')}</span>
+                                </span>
                             </span>
-                        </span>
-                    </motion.h1>
+                        </motion.h1>
+
+                        <motion.div
+                            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[150vw] h-px bg-gradient-to-r from-transparent via-[#8a73ff] to-transparent pointer-events-none"
+                            animate={{ opacity: [0, 0.3, 0], scaleX: [0.5, 1, 0.5] }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                    </div>
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -359,7 +348,6 @@ const Hero = () => {
                     </motion.p>
                 </div>
 
-                {/* Dashboard Preview - WebP Entegre Edilen Yeni Temiz Alan */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
