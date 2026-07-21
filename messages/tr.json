@@ -2,7 +2,6 @@
     "nav": {
         "product": "Ürün",
         "howItWorks": "Nasıl Çalışır",
-        "pricing": "Fiyatlandırma",
         "insights": "İçgörüler",
         "security": "Güvenlik",
         "faq": "SSS",
@@ -101,7 +100,7 @@
     "howItWorks": {
         "badge": "Yapay Zeka Destekli Süreç",
         "title": "Nasıl çalışır",
-        "subtitle": "Kampanyalarınızı manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
+        "subtitle": "Kampanyalarinizi manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
         "step1Title": "Bağlan",
         "step1Desc": "Google Hesaplarınızı bağlayın ve Reklam Hesaplarınızı seçin",
         "step2Title": "Panel",
@@ -112,8 +111,7 @@
         "step4Desc": "Anında yapay zeka optimizasyonları için yapay zeka eylemlerini onaylayın",
         "step4Badge": "yayında",
         "cta-title": "Yapay zekanın büyüsünü deneyimlemeye hazır mısınız?",
-        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor",
-        "cta": "Hemen Başla"
+        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor"
     },
     "optimization": {
         "title": "Optimizasyon Ajanı",
