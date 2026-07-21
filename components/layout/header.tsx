@@ -12,8 +12,8 @@ import HowItWorksButton from "../ui/how-it-works-button"
 import Image from "next/image"
 import Logo from "@/app/assets/images/logo.webp"
 
-// Dil Seçici Bileşeni Aktif Edildi
-import { LanguageSelector } from "@/components/language-selector"
+// Default import olarak düzeltildi (Süslü parantez kaldırıldı)
+import LanguageSelector from "@/components/language-selector"
 
 const Header = () => {
     const t = useTranslations('nav')
