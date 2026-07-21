@@ -20,7 +20,7 @@ export default async function RefundPolicyPage({ params }: { params: Promise<{ l
             <Header />
             <main className="flex-grow pt-24 pb-16">
                 <Container>
-                    <RefundPolicyContent />
+                    <RefundPolicyContent locale={locale} />
                 </Container>
             </main>
             <Footer />
