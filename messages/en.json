@@ -2,7 +2,6 @@
     "nav": {
         "product": "Product",
         "howItWorks": "How it Works",
-        "pricing": "Pricing",
         "insights": "Insights",
         "security": "Security",
         "faq": "FAQ",
@@ -112,8 +111,7 @@
         "step4Desc": "Approve AI actions for instant AI optimizations",
         "step4Badge": "live",
         "cta-title": "Ready to experience the AI magic?",
-        "cta-description": "110+ marketers already using AI-powered optimization",
-        "cta": "Start Now"
+        "cta-description": "110+ marketers already using AI-powered optimization"
     },
     "optimization": {
         "title": "Optimization Agent",
