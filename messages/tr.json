@@ -2,20 +2,21 @@
     "nav": {
         "product": "Ürün",
         "howItWorks": "Nasıl Çalışır",
+        "pricing": "Fiyatlandırma",
         "insights": "İçgörüler",
         "security": "Güvenlik",
         "faq": "SSS",
-        "login": "Start Now",
+        "login": "Hemen Başla",
         "contact": "İletişim"
     },
     "hero": {
         "badge": "Şimdi Yayında",
-        "title": "AI Suggests.\nYou Control.",
+        "title": "Yapay Zeka Önerir.\nKontrol Sizde.",
         "subtitle": "Google Ads bütçenizden en iyi sonuçları yorulmadan alın. Yapay zekamız en iyi iyileştirmeleri bulur, siz de tek tıkla uygularsınız.",
         "proof1": "Kesintisiz denetimler",
         "proof2": "Koruyucu uyarılar",
         "proof3": "Onay tabanlı eylemler",
-        "cta": "Start Now",
+        "cta": "Hemen Başla",
         "secondaryCta": "Nasıl çalıştığını gör",
         "trustLine": "Google Ads hesabınızı bağlayın"
     },
@@ -98,8 +99,9 @@
         "solution": "TruOpt.ai ile bunu, önerilerin şeffaf, açıklanabilir ve yürütülebilir olduğu kontrollü bir yapay zeka karar sistemi yaratarak çözüyoruz. Reklamlarınızı tek tıkla kontrol edin."
     },
     "howItWorks": {
+        "badge": "Yapay Zeka Destekli Süreç",
         "title": "Nasıl çalışır",
-        "subtitle": "Kampanyalarinizi manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
+        "subtitle": "Kampanyalarınızı manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
         "step1Title": "Bağlan",
         "step1Desc": "Google Hesaplarınızı bağlayın ve Reklam Hesaplarınızı seçin",
         "step2Title": "Panel",
@@ -110,7 +112,8 @@
         "step4Desc": "Anında yapay zeka optimizasyonları için yapay zeka eylemlerini onaylayın",
         "step4Badge": "yayında",
         "cta-title": "Yapay zekanın büyüsünü deneyimlemeye hazır mısınız?",
-        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor"
+        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor",
+        "cta": "Hemen Başla"
     },
     "optimization": {
         "title": "Optimizasyon Ajanı",
@@ -144,6 +147,7 @@
         "article3Desc": "AI optimizasyonunda insan gözetiminin önemi"
     },
     "security": {
+        "badge": "KURUMSAL GÜVENLİK",
         "title": "Güvenlik ve Kontrol",
         "subtitle": "Reklam harcamalarınızı güvende tutuyor ve bilgilerinizi koruyoruz. Kontrol her zaman tamamen sizde.",
         "feature1": "Güvenli Bağlantılar",
@@ -233,7 +237,7 @@
     "finalCta": {
         "title": "Optimizasyona Bugün Başlayın",
         "trustLine": "Hemen başlamak için Google Ads hesabınızı bağlayın.",
-        "cta": "Start Now",
+        "cta": "Hemen Başla",
         "secondaryCta": "Nasıl çalıştığını gör"
     },
     "contactForm": {
