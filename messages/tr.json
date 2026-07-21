@@ -2,6 +2,7 @@
     "nav": {
         "product": "Ürün",
         "howItWorks": "Nasıl Çalışır",
+        "pricing": "Fiyatlandırma",
         "insights": "İçgörüler",
         "security": "Güvenlik",
         "faq": "SSS",
@@ -111,7 +112,8 @@
         "step4Desc": "Anında yapay zeka optimizasyonları için yapay zeka eylemlerini onaylayın",
         "step4Badge": "yayında",
         "cta-title": "Yapay zekanın büyüsünü deneyimlemeye hazır mısınız?",
-        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor"
+        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor",
+        "cta": "Hemen Başla"
     },
     "optimization": {
         "title": "Optimizasyon Ajanı",
