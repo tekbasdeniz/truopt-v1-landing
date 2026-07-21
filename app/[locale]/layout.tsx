@@ -9,8 +9,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "TruOpt.ai | AI Ad Optimization Waitlist",
-  description: "Join the TruOpt.ai waitlist—an approval-based multi-agent system for Google Ads and Meta Ads optimization.",
+  title: "TruOpt.ai | AI Ad Optimization",
+  description: "Approval-based AI optimization for performance marketers.",
 };
 
 import { NextIntlClientProvider } from 'next-intl';
