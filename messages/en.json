@@ -1,60 +1,291 @@
-"pricing": {
-        "badge": "PRICING",
-        "titleMain": "Phase-1: Google Ads AI Growth ",
-        "titleHighlight": "Architecture™",
-        "subtitle": "TruOpt.ai Phase-1 provides AI-powered automation, risk-controlled scaling and decision-level transparency exclusively for Google Ads.",
-        "monthly": "Monthly",
-        "annual": "Annual",
-        "save20": "Save 20%",
-        "customPrice": "Custom",
-        "perMonth": "/ month",
-        "billedYearlyPrefix": "Billed $",
-        "billedYearlySuffix": " yearly",
-        "bestValue": "Best Value",
-        "getStarted": "Get Started",
-        "contactSales": "Contact Sales",
-        "plans": {
-            "basic": {
-                "name": "Basic",
-                "description": "Essential tools for small teams."
-            },
-            "pro": {
-                "name": "Pro",
-                "description": "Advanced AI designed for growing agencies and brands."
-            },
-            "enterprise": {
-                "name": "Enterprise",
-                "description": "Full control for large scale operations."
-            }
-        },
-        "features": {
-            "accountCapacity": "Google Ads Account Capacity",
-            "upTo3Accounts": "Up to 3 Accounts",
-            "upTo10Accounts": "Up to 10 Accounts",
-            "unlimited": "Unlimited",
-            "aiOptimizationEngine": "AI-Powered Optimization Engine",
-            "smartRecommendation": "Smart Recommendation & Health Score",
-            "budgetProtection": "Budget Protection & Performance Diagnostics",
-            "ruleBasedAutomation": "Rule-Based Automation & Alerts",
-            "dataSecuredLogs": "Data-Secured AI Logs (Transparency)",
-            "teamManagement": "Advanced Team & Role Management",
-            "upTo3Users": "Up to 3 Users",
-            "supportLevel": "Customer Support Level",
-            "emailSupport": "Email Support",
-            "prioritySupport": "Priority Support",
-            "dedicatedManager": "Dedicated Account Manager",
-            "enterpriseScaling": "Enterprise Scaling (SLA & API)"
-        },
-        "billingTerms": {
-            "title": "Billing Terms",
-            "flexibleTitle": "Flexible Billing",
-            "flexibleDesc": "Billed monthly or annually in advance",
-            "cancelTitle": "Cancel Anytime",
-            "cancelDesc": "Future renewals stop immediately",
-            "taxTitle": "Global Tax Handling",
-            "taxDesc": "VAT and tax handled automatically via Paddle",
-            "refundTitle": "Refund Policy",
-            "refundDesc": "No refunds for active billing periods",
-            "legalNote": "TruOpt.ai is a ThumbsAd product. All subscriptions are sold and invoiced by ThumbsAd via Paddle."
-        }
+{
+  "nav": {
+    "product": "Product",
+    "howItWorks": "How it Works",
+    "pricing": "Pricing",
+    "insights": "Insights",
+    "security": "Security",
+    "faq": "FAQ",
+    "login": "Start Now",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Live Now",
+    "title": "AI Suggests. You Control.",
+    "subtitle": "Get the best results from your Google Ads without the hard work. Our AI finds the best improvements, and you apply them with just one click.",
+    "proof1": "Always-on audits",
+    "proof2": "Guardian alerts",
+    "proof3": "Approval-based AI actions",
+    "cta": "Start Now",
+    "secondaryCta": "See how it works",
+    "trustLine": "Connect your Google Ads account"
+  },
+  "dashboard": {
+    "title": "TruOpt.ai Dashboard",
+    "live": "Live",
+    "roas": "ROAS",
+    "cpa": "CPA",
+    "activeAudits": "Active Audits",
+    "alerts": "Alerts",
+    "agentsActivity": "AI Agents Activity",
+    "lastMinutes": "Last 5 minutes",
+    "optimizationAgent": "Optimization Agent",
+    "guardianAgent": "Guardian Agent",
+    "onboardingAgent": "Onboarding Agent",
+    "action1": "Found 3 negative keywords to exclude",
+    "action2": "CPA spike detected in Campaign A",
+    "action3": "Baseline audit completed",
+    "recommendedAction": "Recommended Action",
+    "actionDesc": "Pause 2 underperforming ad groups to save $340/day",
+    "review": "Review"
+  },
+  "waitlist": {
+    "title": "Get early access to Phase 1",
+    "description": "Join the waitlist for approval-based AI optimization.",
+    "email": "Work Email",
+    "company": "Company",
+    "spend": "Monthly Ad Spend",
+    "platforms": "Platforms",
+    "role": "Role",
+    "otherRole": "Please specify your role",
+    "required": "*",
+    "spendOptions": {
+      "select": "Select range",
+      "lessThan5k": "<$5k",
+      "5to25k": "$5–25k",
+      "25to100k": "$25–100k",
+      "100kPlus": "$100k+"
+    },
+    "roleOptions": {
+      "select": "Select role",
+      "founder": "Founder",
+      "marketer": "Performance Marketer",
+      "agency": "Agency",
+      "growth": "Corporate Company",
+      "other": "Other"
+    },
+    "platformOptions": {
+      "googleAds": "Google Ads"
+    },
+    "submit": "Join Waitlist",
+    "submitting": "Joining...",
+    "microcopy": "No spam. We'll email you when your invite is ready.",
+    "successTitle": "You're on the list.",
+    "successMessage": "We'll reach out when your invite is ready.",
+    "errors": {
+      "email": "Please enter a valid work email.",
+      "company": "Company name is required.",
+      "spend": "Please select your monthly ad spend.",
+      "platforms": "Please select at least one platform.",
+      "role": "Please select your role.",
+      "submissionFailed": "Oops! Something went wrong. Please try again or email us at info@thumbsad.com"
     }
+  },
+  "credibility": {
+    "trust1": "Built by performance marketers",
+    "trust2": "Designed for multi-account teams",
+    "trust3": "Audit-ready by design"
+  },
+  "problem": {
+    "title": "The problem with manual optimization",
+    "card1Title": "Static Decisions",
+    "card1Desc": "Ad budgets are growing, but decision quality is not.",
+    "card2Title": "Manual Dependency",
+    "card2Desc": "Optimization still depends heavily on manual optimization.",
+    "card3Title": "Costly Delays",
+    "card3Desc": "Actions happen too late and you lose money.",
+    "card4Title": "The Black-Box Barrier",
+    "card4Desc": "Full automation systems are not trustworthy.",
+    "solution": "With TruOpt.ai, we solve this by creating a controlled AI decision system where recommendations are transparent, explainable, and executable. Control your advertisements via one-click."
+  },
+  "howItWorks": {
+    "badge": "AI-Powered Process",
+    "title": "How it works",
+    "subtitle": "A 4-step system designed to keep your campaigns healthy—without manual monitoring.",
+    "step1Title": "Connect",
+    "step1Desc": "Connect your Google Accounts & Select Ad Accounts",
+    "step2Title": "Dashboard",
+    "step2Desc": "View Health Score & Analytics",
+    "step3Title": "Recommend",
+    "step3Desc": "Review your personalized suggestions in AI optimization center",
+    "step4Title": "Apply",
+    "step4Desc": "Approve AI actions for instant AI optimizations",
+    "step4Badge": "live",
+    "cta-title": "Ready to experience the AI magic?",
+    "cta-description": "110+ marketers already using AI-powered optimization",
+    "cta": "Start Now"
+  },
+  "optimization": {
+    "title": "Optimization Agent",
+    "description": "AI-powered recommendations for campaign improvement",
+    "feature1": "Smart bid adjustments and budget allocation",
+    "feature2": "Negative keyword discovery and management",
+    "feature3": "Ad copy and creative performance analysis"
+  },
+  "scaling": {
+    "title": "Scaling Agent",
+    "description": "Intelligent campaign scaling and growth strategies",
+    "feature1": "Automated budget scaling based on performance",
+    "feature2": "New audience discovery and expansion",
+    "feature3": "Cross-platform optimization opportunities"
+  },
+  "onboarding": {
+    "title": "Onboarding Agent",
+    "description": "Streamlined setup and baseline configuration",
+    "feature1": "Automated account structure analysis",
+    "feature2": "Best practice recommendations for setup",
+    "feature3": "Historical performance baseline creation"
+  },
+  "insights": {
+    "title": "Insights & Best Practices",
+    "viewAll": "View all articles",
+    "article1Title": "Google Ads Optimization Checklist",
+    "article1Desc": "A comprehensive guide to auditing campaign structure",
+    "article2Title": "Meta Ads ROAS Optimization",
+    "article2Desc": "Strategies to improve return on ad spend",
+    "article3Title": "Approval-Based Automation",
+    "article3Desc": "Why human oversight matters in AI optimization"
+  },
+  "security": {
+    "badge": "ENTERPRISE SECURITY",
+    "title": "Security & Control",
+    "subtitle": "We keep your ad spend safe and protect your information. You are always in full control.",
+    "feature1": "Safe Connections",
+    "feature1Desc": "We connect to your accounts safely using official Google verification.",
+    "feature2": "Full Team Control",
+    "feature2Desc": "Choose exactly who on your team can see metrics or apply new changes.",
+    "feature3": "Track Every Change",
+    "feature3Desc": "Every action is logged clearly. You can review history or undo actions anytime.",
+    "feature4": "Cloud Protection",
+    "feature4Desc": "Your data is locked inside secure cloud servers and never shared with others."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How does the AI improve my ads?",
+    "a1": "Our AI constantly scans your Google Ads to find hidden mistakes or new ways to get more sales. It shows you clear suggestions, and you can apply them instantly with just one click.",
+    "q2": "Is my Google Ads data safe?",
+    "a2": "Yes, 100%. We connect securely using standard Google verification. Your data is protected inside safe Google Cloud servers and we never share or use it to train public models.",
+    "q3": "Can I undo a change if I change my mind?",
+    "a3": "Absolutely. Every single optimization you apply is saved in your history panel, meaning you can easily reverse any action and go back to your previous settings at any time.",
+    "q4": "Do I need to be a marketing expert to use this?",
+    "a4": "Not at all! We designed everything to be as simple as possible. The language is clean and the steps are clear, so anyone can grow their business without technical confusion.",
+    "q5": "How is TruOpt.ai different from Google Ads' built-in auto-recommendations?",
+    "a5": "Unlike Google's default auto-apply recommendations which often increase your budget without transparent oversight, TruOpt.ai delivers fully explainable, safety-checked suggestions that require your explicit human approval before any budget is spent.",
+    "q6": "Do I need to install any tracking pixels or code snippets on my website?",
+    "a6": "No website installation or code modification is required. TruOpt.ai connects directly and securely via the official Google Ads API, meaning it analyzes your campaigns instantly without slowing down your landing page.",
+    "q7": "Can digital marketing agencies manage multiple client accounts with TruOpt.ai?",
+    "a7": "Yes, TruOpt.ai is built with native multi-account support. Marketing agencies can manage multiple separate Google Ads client accounts from a single dashboard, track team activity logs, and set custom budget guardrails for each client."
+  },
+  "pricing": {
+    "badge": "PRICING",
+    "titleMain": "Phase-1: Google Ads AI Growth ",
+    "titleHighlight": "Architecture™",
+    "subtitle": "TruOpt.ai Phase-1 provides AI-powered automation, risk-controlled scaling and decision-level transparency exclusively for Google Ads.",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save20": "Save 20%",
+    "customPrice": "Custom",
+    "perMonth": "/ month",
+    "billedYearlyPrefix": "Billed $",
+    "billedYearlySuffix": " yearly",
+    "bestValue": "Best Value",
+    "getStarted": "Get Started",
+    "contactSales": "Contact Sales",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "description": "Essential tools for small teams."
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Advanced AI designed for growing agencies and brands."
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Full control for large scale operations."
+      }
+    },
+    "features": {
+      "accountCapacity": "Google Ads Account Capacity",
+      "upTo3Accounts": "Up to 3 Accounts",
+      "upTo10Accounts": "Up to 10 Accounts",
+      "unlimited": "Unlimited",
+      "aiOptimizationEngine": "AI-Powered Optimization Engine",
+      "smartRecommendation": "Smart Recommendation & Health Score",
+      "budgetProtection": "Budget Protection & Performance Diagnostics",
+      "ruleBasedAutomation": "Rule-Based Automation & Alerts",
+      "dataSecuredLogs": "Data-Secured AI Logs (Transparency)",
+      "teamManagement": "Advanced Team & Role Management",
+      "upTo3Users": "Up to 3 Users",
+      "supportLevel": "Customer Support Level",
+      "emailSupport": "Email Support",
+      "prioritySupport": "Priority Support",
+      "dedicatedManager": "Dedicated Account Manager",
+      "enterpriseScaling": "Enterprise Scaling (SLA & API)"
+    },
+    "billingTerms": {
+      "title": "Billing Terms",
+      "flexibleTitle": "Flexible Billing",
+      "flexibleDesc": "Billed monthly or annually in advance",
+      "cancelTitle": "Cancel Anytime",
+      "cancelDesc": "Future renewals stop immediately",
+      "taxTitle": "Global Tax Handling",
+      "taxDesc": "VAT and tax handled automatically via Paddle",
+      "refundTitle": "Refund Policy",
+      "refundDesc": "No refunds for active billing periods",
+      "legalNote": "TruOpt.ai is a ThumbsAd product. All subscriptions are sold and invoiced by ThumbsAd via Paddle."
+    }
+  },
+  "finalCta": {
+    "title": "Start Optimizing Today",
+    "trustLine": "Connect your Google Ads account to get started immediately.",
+    "cta": "Start Now",
+    "secondaryCta": "See how it works"
+  },
+  "contactForm": {
+    "title": "Let's Talk",
+    "subtitle": "Have a question or want to learn more? Send us a message.",
+    "name": "Full Name",
+    "email": "Business Email",
+    "subject": "Subject",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "submitting": "Opening Mail Client...",
+    "success": "Mail client opened successfully!",
+    "errors": {
+      "nameRequired": "Full name is required",
+      "nameMin": "Name must be at least 2 characters",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email",
+      "subjectRequired": "Subject is required",
+      "subjectMin": "Subject must be at least 2 characters",
+      "messageRequired": "Message is required",
+      "messageMin": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "tagline": "Approval-based AI optimization for performance marketers.",
+    "product": "Product",
+    "howItWorks": "How it Works",
+    "pricing": "Pricing",
+    "security": "Security",
+    "faq": "FAQ",
+    "company": "Company",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "legal": "Legal",
+    "termsOfUse": "Terms of Use",
+    "terms": "Terms",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "copyrightNotice": "Copyright and Trademark Notice",
+    "disclaimer": "Disclaimer",
+    "kvkk": "KVKK/GDPR",
+    "subscription": "Subscription Terms",
+    "refund": "Refund Policy",
+    "brandNote": "TruOpt.ai is a product developed and operated by ThumbsAd.",
+    "copyright": "© 2025 TruOpt.ai. All rights reserved."
+  }
+}
