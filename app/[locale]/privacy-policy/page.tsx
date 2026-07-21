@@ -20,7 +20,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
             <Header />
             <main className="flex-grow pt-24 pb-16">
                 <Container>
-                    <PrivacyPolicyContent />
+                    <PrivacyPolicyContent locale={locale} />
                 </Container>
             </main>
             <Footer />
