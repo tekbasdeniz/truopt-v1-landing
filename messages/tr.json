@@ -1,289 +1,60 @@
-{
-    "nav": {
-        "product": "Ürün",
-        "howItWorks": "Nasıl Çalışır",
-        "pricing": "Fiyatlandırma",
-        "insights": "İçgörüler",
-        "security": "Güvenlik",
-        "faq": "SSS",
-        "login": "Hemen Başla",
-        "contact": "İletişim"
-    },
-    "hero": {
-        "badge": "Şimdi Yayında",
-        "title": "Akıllı Öneriler,\n Tam Kontrol.",
-        "subtitle": "Google Ads bütçenizden en iyi sonuçları yorulmadan alın. Yapay zekamız en iyi iyileştirmeleri bulur, siz de tek tıkla uygularsınız.",
-        "proof1": "Kesintisiz denetimler",
-        "proof2": "Koruyucu uyarılar",
-        "proof3": "Onay tabanlı yapay zeka aksiyonları",
-        "cta": "Hemen Başla",
-        "secondaryCta": "Nasıl çalıştığını gör",
-        "trustLine": "Google Ads hesabınızı bağlayın"
-    },
-    "dashboard": {
-        "title": "TruOpt.ai Kontrol Paneli",
-        "live": "Canlı",
-        "roas": "ROAS",
-        "cpa": "CPA",
-        "activeAudits": "Aktif Denetimler",
-        "alerts": "Uyarılar",
-        "agentsActivity": "AI Ajanları Aktivitesi",
-        "lastMinutes": "Son 5 dakika",
-        "optimizationAgent": "Optimizasyon Ajanı",
-        "guardianAgent": "Koruyucu Ajan",
-        "onboardingAgent": "Entegrasyon Ajanı",
-        "action1": "Hariç tutulacak 3 negatif anahtar kelime bulundu",
-        "action2": "Kampanya A'da CPA artışı tespit edildi",
-        "action3": "Temel denetim tamamlandı",
-        "recommendedAction": "Önerilen Eylem",
-        "actionDesc": "Günde 340$ tasarruf etmek için 2 düşük performanslı reklam grubunu duraklat",
-        "review": "İncele"
-    },
-    "waitlist": {
-        "title": "Faz 1'e erken erişim sağlayın",
-        "description": "Onay tabanlı yapay zeka optimizasyonu için bekleme listesine katılın.",
-        "email": "İş E-postası",
-        "company": "Şirket",
-        "spend": "Aylık Reklam Harcaması",
-        "platforms": "Platformlar",
-        "role": "Rol",
-        "otherRole": "Lütfen rolünüzü belirtin",
-        "required": "*",
-        "spendOptions": {
-            "select": "Aralık seçin",
-            "lessThan5k": "<$5k",
-            "5to25k": "$5–25k",
-            "25to100k": "$25–100k",
-            "100kPlus": "$100k+"
-        },
-        "roleOptions": {
-            "select": "Rol seçin",
-            "founder": "Kurucu",
-            "marketer": "Performans Pazarlamacısı",
-            "agency": "Ajans",
-            "growth": "Büyüme",
-            "other": "Diğer"
-        },
-        "platformOptions": {
-            "googleAds": "Google Ads"
-        },
-        "submit": "Bekleme Listesine Katıl",
-        "submitting": "Katılıyor...",
-        "microcopy": "Spam yok. Davetiniz hazır olduğunda size e-posta göndereceğiz.",
-        "successTitle": "Listedesiniz.",
-        "successMessage": "Davetiniz hazır olduğunda size ulaşacağız.",
-        "errors": {
-            "email": "Lütfen geçerli bir iş e-postası girin.",
-            "company": "Şirket adı gereklidir.",
-            "spend": "Lütfen aylık reklam harcamanızı seçin.",
-            "platforms": "Lütfen en az bir platform seçin.",
-            "role": "Lütfen rolünüzü seçin.",
-            "submissionFailed": "Hata! Bir şeyler ters gitti. Lütfen tekrar deneyin veya bize info@thumbsad.com adresinden e-posta gönderin"
-        }
-    },
-    "credibility": {
-        "trust1": "Performans pazarlamacılarıyla geliştirildi",
-        "trust2": "Çok hesaplı ekipler için tasarlandı",
-        "trust3": "Denetim için hazır tasarım"
-    },
-    "problem": {
-        "title": "Manuel optimizasyon sorunu",
-        "card1Title": "Statik Kararlar",
-        "card1Desc": "Reklam bütçeleri büyüyor ancak karar kalitesi artmıyor.",
-        "card2Title": "Manuel Bağımlılık",
-        "card2Desc": "Optimizasyon hâlâ büyük ölçüde manuel optimizasyona bağlı.",
-        "card3Title": "Maliyetli Gecikmeler",
-        "card3Desc": "Eylemler çok geç gerçekleşiyor ve para kaybediyorsunuz.",
-        "card4Title": "Black-Box Engeli",
-        "card4Desc": "Tam otomasyon sistemleri güvenilir değil.",
-        "solution": "TruOpt.ai ile bunu, önerilerin şeffaf, açıklanabilir ve yürütülebilir olduğu kontrollü bir yapay zeka karar sistemi yaratarak çözüyoruz. Reklamlarınızı tek tıkla kontrol edin."
-    },
-    "howItWorks": {
-        "badge": "Yapay Zeka Destekli Süreç",
-        "title": "Nasıl çalışır",
-        "subtitle": "Kampanyalarınızı manuel izleme olmadan sağlıklı tutmak için tasarlanmış 4 adımlı bir sistem.",
-        "step1Title": "Bağlan",
-        "step1Desc": "Google Hesaplarınızı bağlayın ve Reklam Hesaplarınızı seçin",
-        "step2Title": "Panel",
-        "step2Desc": "Sağlık skorunu ve analizleri görün",
-        "step3Title": "Öneri",
-        "step3Desc": "Yapay zeka optimizasyon merkezindeki size özel önerileri inceleyin",
-        "step4Title": "Uygula",
-        "step4Desc": "Yapay zeka optimizasyonları için yapay zeka aksiyonlarını anında onaylayın",
-        "step4Badge": "yayında",
-        "cta-title": "Yapay zekanın büyüsünü deneyimlemeye hazır mısınız?",
-        "cta-description": "110+ pazarlamacı zaten yapay zeka destekli optimizasyon kullanıyor",
-        "cta": "Hemen Başla"
-    },
-    "optimization": {
-        "title": "Optimizasyon Ajanı",
-        "description": "Kampanya iyileştirme için AI destekli öneriler",
-        "feature1": "Akıllı teklif ayarlamaları ve bütçe tahsisi",
-        "feature2": "Negatif anahtar kelime keşfi ve yönetimi",
-        "feature3": "Reklam metni ve kreatif performans analizi"
-    },
-    "scaling": {
-        "title": "Ölçeklendirme Ajanı",
-        "description": "Akıllı kampanya ölçeklendirme ve büyüme stratejileri",
-        "feature1": "Performansa dayalı otomatik bütçe ölçeklendirme",
-        "feature2": "Yeni kitle keşfi ve genişletme",
-        "feature3": "Platformlar arası optimizasyon fırsatları"
-    },
-    "onboarding": {
-        "title": "Entegrasyon Ajanı",
-        "description": "Kolaylaştırılmış kurulum ve temel yapılandırma",
-        "feature1": "Otomatik hesap yapısı analizi",
-        "feature2": "Kurulum için en iyi uygulama önerileri",
-        "feature3": "Geçmiş performans temel oluşturma"
-    },
-    "insights": {
-        "title": "İçgörüler ve En İyi Uygulamalar",
-        "viewAll": "Tüm makaleleri görüntüle",
-        "article1Title": "Google Ads Optimizasyon Kontrol Listesi",
-        "article1Desc": "Kampanya yapısını denetlemek için kapsamlı bir kılavuz",
-        "article2Title": "Meta Ads ROAS Optimizasyonu",
-        "article2Desc": "Reklam harcamasından geri dönüşü artırmak için stratejiler",
-        "article3Title": "Onay Tabanlı Otomasyon",
-        "article3Desc": "AI optimizasyonunda insan gözetiminin önemi"
-    },
-    "security": {
-        "badge": "KURUMSAL GÜVENLİK",
-        "title": "Güvenlik ve Kontrol",
-        "subtitle": "Reklam harcamalarınızı güvende tutuyor ve bilgilerinizi koruyoruz. Kontrol her zaman tamamen sizde.",
-        "feature1": "Güvenli Bağlantılar",
-        "feature1Desc": "Resmi Google doğrulaması kullanarak hesaplarınıza güvenli bir şekilde bağlanıyoruz.",
-        "feature2": "Tam Ekip Kontrolü",
-        "feature2Desc": "Ekibinizde kimlerin metrikleri görebileceğini veya yeni değişiklikleri uygulayabileceğini tam olarak seçin.",
-        "feature3": "Her Değişikliği Takip Edin",
-        "feature3Desc": "Her aksiyon net bir şekilde kaydedilir. İstediğiniz zaman geçmişi inceleyebilir veya aksiyonları geri alabilirsiniz.",
-        "feature4": "Bulut Koruması",
-        "feature4Desc": "Verileriniz güvenli bulut sunucularında kilitli tutulur ve asla başkalarıyla paylaşılmaz."
-    },
-    "faq": {
-        "title": "Sıkça Sorulan Sorular",
-        "q1": "Yapay zeka reklamlarımı nasıl geliştirir?",
-        "a1": "Yapay zekamız, gizli hataları veya daha fazla satış elde etmenin yeni yollarını bulmak için Google Reklamlarınızı sürekli tarar. Size net öneriler gösterir ve bunları tek bir tıklamayla anında uygulayabilirsiniz.",
-        "q2": "Google Ads verilerim güvende mi?",
-        "a2": "Evet, %100. Standart Google doğrulamasını kullanarak güvenli bir şekilde bağlanıyoruz. Verileriniz güvenli Google Bulut sunucularında korunur ve bunları asla paylaşmayız veya genel modelleri eğitmek için kullanmayız.",
-        "q3": "Fikrimi değiştirirsem bir değişikliği geri alabilir miyim?",
-        "a3": "Kesinlikle. Uyguladığınız her bir optimizasyon geçmiş panelinize kaydedilir, yani istediğiniz zaman herhangi bir eylemi kolayca tersine çevirebilir ve önceki ayarlarınıza dönebilirsiniz.",
-        "q4": "Bunu kullanmak için pazarlama uzmanı olmam gerekiyor mu?",
-        "a4": "Kesinlikle hayır! Her şeyi mümkün olduğunca basit olacak şekilde tasarladık. Dil sade ve adımlar net, böylece herkes teknik kafa karışıklığı yaşamadan işini büyütebilir.",
-        "q5": "TruOpt.ai'ın Google Ads'in kendi otomatik önerilerinden farkı nedir?",
-        "a5": "Google'ın bütçenizi şeffaf bir denetim olmadan artırabilen varsayılan otomatik uygulama önerilerinin aksine, TruOpt.ai, herhangi bir bütçe harcanmadan önce sizin açık onayınızı gerektiren, tamamen açıklanabilir ve güvenlik kontrolünden geçmiş öneriler sunar.",
-        "q6": "Web siteme herhangi bir izleme pikseli veya kod eklemem gerekiyor mu?",
-        "a6": "Hayır, web sitesi kurulumu veya kod değişikliği gerekmez. TruOpt.ai doğrudan resmi Google Ads API'si üzerinden güvenli bir şekilde bağlanır; yani açılış sayfanızı yavaşlatmadan kampanyalarınızı anında analiz etmeye başlar.",
-        "q7": "Dijital pazarlama ajansları TruOpt.ai ile birden fazla müşteri hesabını yönetebilir mi?",
-        "a7": "Evet, TruOpt.ai yerleşik çoklu hesap desteğiyle geliştirilmiştir. Pazarlama ajansları, tek bir panelden birden fazla farklı Google Ads müşteri hesabını yönetebilir, ekip aktivite günlüklerini takip edebilir ve her müşteri için özel bütçe korumaları ayarlayabilir."
-    },
-    "pricing": {
-        "title": "Esnek ve Şeffaf Fiyatlandırma",
-        "subtitle": "İhtiyacınıza uygun planı seçin, reklam bütçenizi yapay zeka ile koruyun.",
+"pricing": {
+        "badge": "FİYATLANDIRMA",
+        "titleMain": "Faz-1: Google Ads YZ Büyüme ",
+        "titleHighlight": "Mimarisi™",
+        "subtitle": "TruOpt.ai Faz-1, yalnızca Google Ads'e özel yapay zeka destekli otomasyon, risk kontrollü ölçeklendirme ve karar düzeyinde şeffaflık sunar.",
         "monthly": "Aylık",
-        "yearly": "Yıllık",
-        "save": "%20 Tasarruf Et",
-        "cta": "Hemen Başla",
+        "annual": "Yıllık",
+        "save20": "%20 Tasarruf Et",
+        "customPrice": "Özel",
+        "perMonth": "/ ay",
+        "billedYearlyPrefix": "Yıllık $",
+        "billedYearlySuffix": " faturalandırılır",
+        "bestValue": "En Popüler",
+        "getStarted": "Hemen Başla",
+        "contactSales": "Satış Ekibiyle İletişime Geç",
         "plans": {
             "basic": {
                 "name": "Basic",
-                "price": "$23",
-                "description": "Tekil reklam hesapları ve yeni başlayanlar için ideal temel optimizasyon.",
-                "features": [
-                    "✓ Google Ads Hesap Kapasitesi (3 Hesaba Kadar)",
-                    "✓ YZ Destekli Optimizasyon Motoru",
-                    "✓ Akıllı Öneri ve Sağlık Skoru (Health Score)",
-                    "✓ Bütçe Koruması ve Performans Teşhisi",
-                    "✕ Kural Tabanlı Otomasyon ve Uyarılar",
-                    "✕ Veri Güvenlikli Yapay Zeka Logları (Şeffaflık)",
-                    "✕ Gelişmiş Ekip ve Rol Yönetimi",
-                    "✓ Müşteri Destek Seviyesi (E-posta Destekli)",
-                    "✕ Kurumsal Ölçekleme (SLA & API)"
-                ]
+                "description": "Küçük ekipler için temel araçlar."
             },
             "pro": {
                 "name": "Pro",
-                "price": "$55",
-                "description": "Büyüyen ajanslar ve markalar için gelişmiş yapay zeka.",
-                "features": [
-                    "✓ Google Ads Hesap Kapasitesi (10 Hesaba Kadar)",
-                    "✓ YZ Destekli Optimizasyon Motoru",
-                    "✓ Akıllı Öneri ve Sağlık Skoru (Health Score)",
-                    "✓ Bütçe Koruması ve Performans Teşhisi",
-                    "✓ Kural Tabanlı Otomasyon ve Uyarılar",
-                    "✓ Veri Güvenlikli Yapay Zeka Logları (Şeffaflık)",
-                    "✓ Gelişmiş Ekip ve Rol Yönetimi (3 Kullanıcıya Kadar)",
-                    "✓ Müşteri Destek Seviyesi (Öncelikli Destek)",
-                    "✕ Kurumsal Ölçekleme (SLA & API)"
-                ]
+                "description": "Büyüyen ajanslar ve markalar için gelişmiş yapay zeka."
             },
             "enterprise": {
                 "name": "Enterprise",
-                "price": "Özel",
-                "description": "Büyük ölçekli yüksek hacimli operasyonlar için tam kontrol.",
-                "features": [
-                    "✓ Google Ads Hesap Kapasitesi (Limitsiz)",
-                    "✓ YZ Destekli Optimizasyon Motoru",
-                    "✓ Akıllı Öneri ve Sağlık Skoru (Health Score)",
-                    "✓ Bütçe Koruması ve Performans Teşhisi",
-                    "✓ Kural Tabanlı Otomasyon ve Uyarılar",
-                    "✓ Veri Güvenlikli Yapay Zeka Logları (Şeffaflık)",
-                    "✓ Gelişmiş Ekip ve Rol Yönetimi (Limitsiz)",
-                    "✓ Müşteri Destek Seviyesi (Özel Atanmış Müşteri Yöneticisi)",
-                    "✓ Kurumsal Ölçekleme (SLA & API)"
-                ]
+                "description": "Büyük ölçekli operasyonlar için tam kontrol."
             }
+        },
+        "features": {
+            "accountCapacity": "Google Ads Hesap Kapasitesi",
+            "upTo3Accounts": "3 Hesaba Kadar",
+            "upTo10Accounts": "10 Hesaba Kadar",
+            "unlimited": "Sınırsız",
+            "aiOptimizationEngine": "YZ Destekli Optimizasyon Motoru",
+            "smartRecommendation": "Akıllı Öneri ve Sağlık Skoru",
+            "budgetProtection": "Bütçe Koruması ve Performans Teşhisi",
+            "ruleBasedAutomation": "Kural Tabanlı Otomasyon ve Uyarılar",
+            "dataSecuredLogs": "Veri Güvenlikli Yapay Zeka Logları (Şeffaflık)",
+            "teamManagement": "Gelişmiş Ekip ve Rol Yönetimi",
+            "upTo3Users": "3 Kullanıcıya Kadar",
+            "supportLevel": "Müşteri Destek Seviyesi",
+            "emailSupport": "E-posta Destekli",
+            "prioritySupport": "Öncelikli Destek",
+            "dedicatedManager": "Özel Atanmış Müşteri Yöneticisi",
+            "enterpriseScaling": "Kurumsal Ölçekleme (SLA & API)"
+        },
+        "billingTerms": {
+            "title": "Faturalandırma Koşulları",
+            "flexibleTitle": "Esnek Faturalandırma",
+            "flexibleDesc": "Peşin olarak aylık veya yıllık faturalandırılır",
+            "cancelTitle": "İstediğiniz Zaman İptal Edin",
+            "cancelDesc": "Gelecek yenilemeler anında durdurulur",
+            "taxTitle": "Küresel Vergi Yönetimi",
+            "taxDesc": "KDV ve vergiler Paddle aracılığıyla otomatik yönetilir",
+            "refundTitle": "İade Politikası",
+            "refundDesc": "Aktif faturalandırma dönemleri için iade yapılmaz",
+            "legalNote": "TruOpt.ai bir ThumbsAd ürünüdür. Tüm abonelikler ThumbsAd tarafından Paddle aracılığıyla satılır ve faturalandırılır."
         }
-    },
-    "finalCta": {
-        "title": "Optimizasyona Bugün Başlayın",
-        "trustLine": "Hemen başlamak için Google Ads hesabınızı bağlayın.",
-        "cta": "Hemen Başla",
-        "secondaryCta": "Nasıl çalıştığını gör"
-    },
-    "contactForm": {
-        "title": "İletişime Geçin",
-        "subtitle": "Bir sorunuz mu var veya daha fazlasını öğrenmek mi istiyorsunuz? Bize mesaj gönderin.",
-        "name": "Ad Soyad",
-        "email": "İş E-postası",
-        "subject": "Konu",
-        "message": "Mesajınız",
-        "submit": "Mesaj Gönder",
-        "submitting": "E-posta İstemcisi Açılıyor...",
-        "success": "E-posta istemcisi başarıyla açıldı!",
-        "errors": {
-            "nameRequired": "Ad soyad gereklidir",
-            "nameMin": "Ad soyad en az 2 karakter olmalıdır",
-            "emailRequired": "E-posta adresi gereklidir",
-            "emailInvalid": "Geçerli bir e-posta girin",
-            "subjectRequired": "Konu gereklidir",
-            "subjectMin": "Konu en az 2 karakter olmalıdır",
-            "messageRequired": "Mesaj gereklidir",
-            "messageMin": "Mesaj en az 10 karakter olmalıdır"
-        }
-    },
-    "footer": {
-        "tagline": "Performans pazarlamacıları için onay tabanlı yapay zeka optimizasyonu.",
-        "product": "Ürün",
-        "howItWorks": "Nasıl Çalışır",
-        "pricing": "Fiyatlandırma",
-        "security": "Güvenlik",
-        "faq": "SSS",
-        "company": "Şirket",
-        "about": "Hakkında",
-        "blog": "Blog",
-        "careers": "Kariyer",
-        "contact": "İletişim",
-        "legal": "Yasal",
-        "termsOfUse": "Kullanım Koşulları",
-        "terms": "Şartlar",
-        "privacy": "Gizlilik",
-        "cookie": "Çerez Bildirimi",
-        "copyrightNotice": "Telif Hakkı ve Ticari Marka Bildirimi",
-        "disclaimer": "Sorumluluk Reddi",
-        "kvkk": "KVKK/GDPR",
-        "subscription": "Abonelik Şartları",
-        "refund": "İade Politikası",
-        "brandNote": "TruOpt.ai, ThumbsAd tarafından geliştirilen ve işletilen bir üründür.",
-        "copyright": "© 2025 TruOpt.ai. Tüm hakları saklıdır."
     }
-}
