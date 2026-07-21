@@ -1,6 +1,6 @@
 import React from 'react'
-import { CookiePolicyContentEN } from './en/cookie-policy-content'
-import { CookiePolicyContentTR } from './tr/cookie-policy-content'
+import { CookiePolicyContentEN } from '@/components/legal/en/cookie-policy-content'
+import { CookiePolicyContentTR } from '@/components/legal/tr/cookie-policy-content'
 
 interface CookiePolicyContentProps {
     locale: string
