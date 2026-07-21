@@ -12,7 +12,6 @@ import HowItWorksButton from "../ui/how-it-works-button"
 import Image from "next/image"
 import Logo from "@/app/assets/images/logo.webp"
 
-// Default import olarak düzeltildi (Süslü parantez kaldırıldı)
 import LanguageSelector from "@/components/language-selector"
 
 const Header = () => {
@@ -31,7 +30,7 @@ const Header = () => {
     const navItems = [
         { name: t('product'), href: "/#product" },
         { name: t('howItWorks'), href: "/#how-it-works" },
-        { name: "Pricing", href: "/pricing" },
+        { name: t('pricing'), href: "/pricing" }, // ✨ Dinamik çeviriye bağlandı (Eski hali: "Pricing")
         { name: t('security'), href: "/#security" },
         { name: t('faq'), href: "/#faq" },
         { name: t('contact'), href: "/contact" },
