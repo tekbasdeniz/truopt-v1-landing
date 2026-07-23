@@ -3,7 +3,7 @@ import React from 'react'
 export const DisclaimerContentTR = () => {
     return (
         <div className="prose prose-invert max-w-none text-muted-foreground">
-            <h1 className="text-3xl font-bold text-foreground mb-2">Yasal Uyarı – TruOpt.ai</h1>
+            <h1 className="text-3xl font-bold text-foreground mb-2">Sorumluluk Reddi – TruOpt.ai</h1>
             <p className="mb-8 font-medium text-foreground">Son güncelleme tarihi: Temmuz 2026</p>
 
             <p className="mb-6">
