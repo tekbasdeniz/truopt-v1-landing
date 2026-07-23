@@ -90,9 +90,9 @@ export const CookiePolicyContentEN = () => {
                 <h2 className="text-xl font-semibold text-foreground mb-4">Legal Ownership & Contact</h2>
                 <p className="mb-6">TruOpt.ai is operated by:</p>
                 <p className="font-semibold text-foreground mb-1">ThumbsAd – Deniz Tekbaş</p>
-                <p className="mb-1">Address: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201 / 40 Şişli, İstanbul, Türkiye</p>
+                <p className="mb-1">Address: Esentepe Mah. Büyükdere Cad. No: 193 / 2 , 34394 Şişli, İstanbul, Türkiye</p>
                 <p className="mb-1">Email: <a href="mailto:info@thumbsad.com" className="text-primary hover:underline">info@thumbsad.com</a></p>
-                <p className="mb-4">Phone: <a href="tel:+908503035772" className="text-primary hover:underline">+90 850 303 57 72</a></p>
+                <p className="mb-4">Phone: <a href="tel:+908503035772" className="text-primary hover:underline">+90 212 955 00 63</a></p>
             </div>
         </div>
     )
