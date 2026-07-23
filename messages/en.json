@@ -253,6 +253,10 @@
     "submit": "Send Message",
     "submitting": "Opening Mail Client...",
     "success": "Mail client opened successfully!",
+    "bookMeetingTitle": "Book a 1-on-1 Call",
+    "bookMeetingDesc": "Select a suitable time on our calendar to discuss your questions about TruOpt.ai and explore how we can support your needs.",
+    "bookMeetingButton": "Schedule a Meeting",
+    "calendarUrl": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0kyVmmzRJ12lokrGv-F6_YmKctNZtc2wCOXDCTGuGbBWcR0oEtv6LbIzuThqM_huhd5cNrfn2_",
     "errors": {
       "nameRequired": "Full name is required",
       "nameMin": "Name must be at least 2 characters",
