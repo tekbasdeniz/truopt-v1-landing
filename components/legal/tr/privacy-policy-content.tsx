@@ -99,9 +99,9 @@ export const PrivacyPolicyContentTR = () => {
                 </p>
                 
                 <p className="font-semibold text-foreground mb-1">ThumbsAd – Deniz Tekbaş</p>
-                <p className="mb-1">Adres: Esentepe Mah. Büyükdere Cad. Loft Residence No: 201 / 40 Şişli, İstanbul, Türkiye</p>
+                <p className="mb-1">Adres: Esentepe Mah. Büyükdere Cad. No: 193 / 2 , 34394 Şişli, İstanbul, Türkiye</p>
                 <p className="mb-1">E-posta: <a href="mailto:info@thumbsad.com" className="text-primary hover:underline">info@thumbsad.com</a></p>
-                <p className="mb-4">Telefon: <a href="tel:+908503035772" className="text-primary hover:underline">+90 850 303 57 72</a></p>
+                <p className="mb-4">Telefon: <a href="tel:+908503035772" className="text-primary hover:underline">+90 212 955 00 63</a></p>
             </div>
         </div>
     )
