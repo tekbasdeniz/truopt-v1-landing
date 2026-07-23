@@ -245,7 +245,7 @@
   },
   "contactForm": {
     "title": "İletişime Geçin",
-    "subtitle": "Bir sorunuz mu var veya daha fazlasını öğrenmik mi istiyorsunuz? Bize mesaj gönderin.",
+    "subtitle": "Bir sorunuz mu var veya daha fazlasını öğrenmek mi istiyorsunuz? Bize mesaj gönderin.",
     "name": "Ad Soyad",
     "email": "İş E-postası",
     "subject": "Konu",
@@ -254,7 +254,7 @@
     "submitting": "E-posta İstemcisi Açılıyor...",
     "success": "E-posta istemcisi başarıyla açıldı!",
     "bookMeetingTitle": "Birebir Görüşme Planlayın",
-    "bookMeetingDesc": "TruOpt.ai hakkında merak ettiklerinizi sormak ve ihtiyacınıza uygun çözümleri değerlendirmek için takvimimizden size uygun bir zamanı seçebilirsiniz.",
+    "bookMeetingBannerSub": "Google Ads süreçlerinizi nasıl kolaylaştırabileceğimizi ve yapay zeka otomasyonunun hesabınıza katacağı değeri birebir değerlendirelim.",
     "bookMeetingButton": "Takvimden Randevu Al",
     "calendarUrl": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0kyVmmzRJ12lokrGv-F6_YmKctNZtc2wCOXDCTGuGbBWcR0oEtv6LbIzuThqM_huhd5cNrfn2_",
     "errors": {
