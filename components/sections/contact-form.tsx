@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { motion } from "framer-motion";
-import { Send, ArrowRight, Mail, User, MessageSquare } from "lucide-react";
+import { Send, ArrowRight, Mail, User, MessageSquare, Calendar, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 
@@ -210,6 +210,39 @@ export default function ContactForm() {
               </form>
             </div>
           </motion.div>
+
+          {/* Independent Book Meeting Card (Formun Altındaki Bağımsız Randevu Alanı) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-10 p-8 rounded-2xl bg-card/40 border border-border/50 backdrop-blur-xl text-center shadow-xl relative overflow-hidden group"
+          >
+            <div className="absolute -top-12 -right-12 w-32 h-32 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all pointer-events-none" />
+
+            <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-4 text-primary shrink-0">
+              <Calendar className="w-6 h-6" />
+            </div>
+
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+              {t("bookMeetingTitle")}
+            </h3>
+
+            <p className="text-muted-foreground text-sm md:text-base mb-6 max-w-md mx-auto leading-relaxed">
+              {t("bookMeetingDesc")}
+            </p>
+
+            <a
+              href={t("calendarUrl")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:opacity-95 transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
+            >
+              <span>{t("bookMeetingButton")}</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </motion.div>
+
         </div>
       </Container>
     </section>
