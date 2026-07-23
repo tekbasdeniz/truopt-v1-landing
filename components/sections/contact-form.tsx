@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { motion } from "framer-motion";
 import { Send, Mail, User, MessageSquare, Calendar, ArrowUpRight, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
@@ -98,8 +97,8 @@ export default function ContactForm() {
                     <span>{t("bookMeetingTitle")}</span>
                     <Sparkles className="w-3.5 h-3.5 text-primary" />
                   </h4>
-                  <p className="text-xs text-muted-foreground">
-                    Form doldurmak yerine doğrudan takvimimizden randevu alın.
+                  <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">
+                    {t("bookMeetingBannerSub")}
                   </p>
                 </div>
               </div>
@@ -160,7 +159,7 @@ export default function ContactForm() {
                   {...register("subject")}
                   type="text"
                   className="w-full bg-background/60 border border-border/60 focus:border-primary/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
-                  placeholder="Nasıl yardımcı olabiliriz?"
+                  placeholder="How can we help?"
                 />
                 {errors.subject && <span className="text-xs text-red-400">{errors.subject.message}</span>}
               </div>
@@ -174,7 +173,7 @@ export default function ContactForm() {
                   {...register("message")}
                   rows={4}
                   className="w-full bg-background/60 border border-border/60 focus:border-primary/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none placeholder:text-white/20"
-                  placeholder="Mesajınızın detaylarını buraya yazabilirsiniz..."
+                  placeholder="Tell us more about your inquiry..."
                 />
                 {errors.message && <span className="text-xs text-red-400">{errors.message.message}</span>}
               </div>
