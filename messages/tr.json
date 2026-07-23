@@ -257,6 +257,15 @@
     "bookMeetingBannerSub": "Google Ads süreçlerinizi nasıl kolaylaştırabileceğimizi ve yapay zeka otomasyonunun hesabınıza katacağı değeri birebir değerlendirelim.",
     "bookMeetingButton": "Takvimden Randevu Al",
     "calendarUrl": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0kyVmmzRJ12lokrGv-F6_YmKctNZtc2wCOXDCTGuGbBWcR0oEtv6LbIzuThqM_huhd5cNrfn2_",
+    "availableSlots": "Müsait Randevu Saatleri Var",
+    "feature1": "Yapay Zeka Otomasyon Sunumu",
+    "feature2": "15–30 Dakikalık Birebir Görüşme",
+    "placeholders": {
+      "name": "Ad Soyad",
+      "email": "ornek@sirket.com",
+      "subject": "Hangi konuda yardımcı olabiliriz?",
+      "message": "Mesajınızın detaylarını buraya yazabilirsiniz..."
+    },
     "errors": {
       "nameRequired": "Ad soyad gereklidir",
       "nameMin": "Ad soyad en az 2 karakter olmalıdır",
