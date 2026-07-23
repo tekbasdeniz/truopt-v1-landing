@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Send, Mail, User, MessageSquare, Calendar, ArrowUpRight, Sparkles, Clock, CheckCircle2 } from "lucide-react";
+import { Send, Mail, User, MessageSquare, Calendar, ArrowUpRight, Clock, CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 
@@ -73,14 +73,8 @@ export default function ContactForm() {
 
       <Container className="relative z-10">
         
-        {/* HEADER SECTION (Title Fix Included) */}
+        {/* HEADER SECTION */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/25 backdrop-blur-md text-primary text-xs font-semibold tracking-wide">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>7/21 Destek & Danışmanlık</span>
-          </div>
-
-          {/* Düzeltilen Kırpılmasız Başlık */}
           <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-[1.15] py-1 bg-clip-text text-transparent bg-gradient-to-b from-white via-white/90 to-white/40">
             {t("title")}
           </h2>
@@ -93,7 +87,7 @@ export default function ContactForm() {
         {/* MAIN SPLIT CONTENT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
           
-          {/* LEFT: CALENDAR HIGHLIGHT CARD (4 Columns) */}
+          {/* LEFT: CALENDAR HIGHLIGHT CARD */}
           <div className="lg:col-span-5 relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-indigo-500 to-purple-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500" />
             
@@ -107,7 +101,7 @@ export default function ContactForm() {
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                   </span>
                   <span className="text-xs font-semibold text-emerald-400 tracking-wider uppercase">
-                    Müsait Randevu Saatleri Var
+                    {t("availableSlots")}
                   </span>
                 </div>
 
@@ -126,11 +120,11 @@ export default function ContactForm() {
                 <div className="space-y-3 pt-2 border-t border-white/5 text-xs text-foreground/80">
                   <div className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                    <span>Yapay Zeka Otomasyon Sunumu</span>
+                    <span>{t("feature1")}</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <Clock className="w-4 h-4 text-primary shrink-0" />
-                    <span>15–30 Dakikalık Birebir Görüşme</span>
+                    <span>{t("feature2")}</span>
                   </div>
                 </div>
               </div>
@@ -148,7 +142,7 @@ export default function ContactForm() {
             </div>
           </div>
 
-          {/* RIGHT: CONTACT FORM (7 Columns) */}
+          {/* RIGHT: CONTACT FORM */}
           <div className="lg:col-span-7 rounded-3xl bg-[#0d0d15]/80 border border-white/10 backdrop-blur-2xl p-7 md:p-9 shadow-2xl">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               
@@ -163,7 +157,7 @@ export default function ContactForm() {
                     {...register("name")}
                     type="text"
                     className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
-                    placeholder="Ad Soyad"
+                    placeholder={t("placeholders.name")}
                   />
                   {errors.name && <span className="text-xs text-red-400">{errors.name.message}</span>}
                 </div>
@@ -178,7 +172,7 @@ export default function ContactForm() {
                     {...register("email")}
                     type="email"
                     className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
-                    placeholder="ornek@sirket.com"
+                    placeholder={t("placeholders.email")}
                   />
                   {errors.email && <span className="text-xs text-red-400">{errors.email.message}</span>}
                 </div>
@@ -194,7 +188,7 @@ export default function ContactForm() {
                   {...register("subject")}
                   type="text"
                   className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
-                  placeholder="Hangi konuda yardımcı olabiliriz?"
+                  placeholder={t("placeholders.subject")}
                 />
                 {errors.subject && <span className="text-xs text-red-400">{errors.subject.message}</span>}
               </div>
@@ -208,7 +202,7 @@ export default function ContactForm() {
                   {...register("message")}
                   rows={4}
                   className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none placeholder:text-white/20"
-                  placeholder="Mesajınızın detaylarını buraya yazabilirsiniz..."
+                  placeholder={t("placeholders.message")}
                 />
                 {errors.message && <span className="text-xs text-red-400">{errors.message.message}</span>}
               </div>
