@@ -245,7 +245,7 @@
   },
   "contactForm": {
     "title": "İletişime Geçin",
-    "subtitle": "Bir sorunuz mu var veya daha fazlasını öğrenmek mi istiyorsunuz? Bize mesaj gönderin.",
+    "subtitle": "Bir sorunuz mu var veya daha fazlasını öğrenmik mi istiyorsunuz? Bize mesaj gönderin.",
     "name": "Ad Soyad",
     "email": "İş E-postası",
     "subject": "Konu",
@@ -253,6 +253,10 @@
     "submit": "Mesaj Gönder",
     "submitting": "E-posta İstemcisi Açılıyor...",
     "success": "E-posta istemcisi başarıyla açıldı!",
+    "bookMeetingTitle": "Birebir Görüşme Planlayın",
+    "bookMeetingDesc": "TruOpt.ai hakkında merak ettiklerinizi sormak ve ihtiyacınıza uygun çözümleri değerlendirmek için takvimimizden size uygun bir zamanı seçebilirsiniz.",
+    "bookMeetingButton": "Takvimden Randevu Al",
+    "calendarUrl": "https://calendar.google.com",
     "errors": {
       "nameRequired": "Ad soyad gereklidir",
       "nameMin": "Ad soyad en az 2 karakter olmalıdır",
