@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Send, Mail, User, MessageSquare, Calendar, ArrowUpRight, Sparkles } from "lucide-react";
+import { Send, Mail, User, MessageSquare, Calendar, ArrowUpRight, Sparkles, Clock, CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 
@@ -63,43 +63,75 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
-      {/* Dynamic Background Glows */}
-      <div className="absolute inset-0 -z-10 bg-black">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1a] to-background opacity-95" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#6b4cff0d_1px,transparent_1px),linear-gradient(to_bottom,#6b4cff0d_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
+    <section className="relative py-24 md:py-32 overflow-hidden bg-black">
+      {/* BACKGROUND GLOWS & GRID */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[500px] bg-primary/20 blur-[140px] rounded-full opacity-60" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px] opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
       </div>
 
       <Container className="relative z-10">
-        <div className="max-w-2xl mx-auto">
-          
-          {/* Header */}
-          <div className="text-center mb-10">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/60">
-              {t("title")}
-            </h2>
-            <p className="text-muted-foreground text-base">
-              {t("subtitle")}
-            </p>
+        
+        {/* HEADER SECTION (Title Fix Included) */}
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/25 backdrop-blur-md text-primary text-xs font-semibold tracking-wide">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>7/21 Destek & Danışmanlık</span>
           </div>
 
-          {/* MAIN CARD CONTAINER */}
-          <div className="rounded-3xl bg-card/40 border border-border/50 backdrop-blur-2xl shadow-2xl overflow-hidden">
+          {/* Düzeltilen Kırpılmasız Başlık */}
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-[1.15] py-1 bg-clip-text text-transparent bg-gradient-to-b from-white via-white/90 to-white/40">
+            {t("title")}
+          </h2>
+
+          <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+            {t("subtitle")}
+          </p>
+        </div>
+
+        {/* MAIN SPLIT CONTENT */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
+          
+          {/* LEFT: CALENDAR HIGHLIGHT CARD (4 Columns) */}
+          <div className="lg:col-span-5 relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-indigo-500 to-purple-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500" />
             
-            {/* TOP EMBEDDED BANNER (Takvim Çağrısı) */}
-            <div className="p-6 bg-gradient-to-r from-primary/20 via-indigo-600/15 to-primary/10 border-b border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3.5 text-left">
-                <div className="w-10 h-10 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center text-primary shrink-0 shadow-inner">
-                  <Calendar className="w-5 h-5" />
+            <div className="relative p-7 md:p-8 rounded-3xl bg-[#0d0d15]/90 border border-white/10 backdrop-blur-2xl flex flex-col justify-between h-full space-y-6">
+              
+              <div>
+                {/* Status Indicator */}
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                  </span>
+                  <span className="text-xs font-semibold text-emerald-400 tracking-wider uppercase">
+                    Müsait Randevu Saatleri Var
+                  </span>
                 </div>
-                <div>
-                  <h4 className="text-sm font-bold text-white flex items-center gap-1.5">
-                    <span>{t("bookMeetingTitle")}</span>
-                    <Sparkles className="w-3.5 h-3.5 text-primary" />
-                  </h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">
-                    {t("bookMeetingBannerSub")}
-                  </p>
+
+                <div className="w-12 h-12 rounded-2xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary mb-5 shadow-inner">
+                  <Calendar className="w-6 h-6" />
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {t("bookMeetingTitle")}
+                </h3>
+
+                <p className="text-xs md:text-sm text-foreground/70 leading-relaxed mb-6">
+                  {t("bookMeetingBannerSub")}
+                </p>
+
+                <div className="space-y-3 pt-2 border-t border-white/5 text-xs text-foreground/80">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>Yapay Zeka Otomasyon Sunumu</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <Clock className="w-4 h-4 text-primary shrink-0" />
+                    <span>15–30 Dakikalık Birebir Görüşme</span>
+                  </div>
                 </div>
               </div>
 
@@ -107,19 +139,22 @@ export default function ContactForm() {
                 href={t("calendarUrl")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xs transition-all shadow-md hover:shadow-primary/25"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary hover:bg-primary/90 text-white font-semibold text-sm transition-all shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5"
               >
                 <span>{t("bookMeetingButton")}</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-4 h-4" />
               </a>
-            </div>
 
-            {/* FORM BODY */}
-            <form onSubmit={handleSubmit(onSubmit)} className="p-6 md:p-8 space-y-5">
+            </div>
+          </div>
+
+          {/* RIGHT: CONTACT FORM (7 Columns) */}
+          <div className="lg:col-span-7 rounded-3xl bg-[#0d0d15]/80 border border-white/10 backdrop-blur-2xl p-7 md:p-9 shadow-2xl">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {/* Name Input */}
-                <div className="space-y-1.5">
+                {/* Name */}
+                <div className="space-y-2">
                   <label className="text-xs font-semibold text-foreground/80 flex items-center gap-1.5">
                     <User className="w-3.5 h-3.5 text-primary" />
                     {t("name")}
@@ -127,14 +162,14 @@ export default function ContactForm() {
                   <input
                     {...register("name")}
                     type="text"
-                    className="w-full bg-background/60 border border-border/60 focus:border-primary/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
-                    placeholder="John Doe"
+                    className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
+                    placeholder="Ad Soyad"
                   />
                   {errors.name && <span className="text-xs text-red-400">{errors.name.message}</span>}
                 </div>
 
-                {/* Email Input */}
-                <div className="space-y-1.5">
+                {/* Email */}
+                <div className="space-y-2">
                   <label className="text-xs font-semibold text-foreground/80 flex items-center gap-1.5">
                     <Mail className="w-3.5 h-3.5 text-primary" />
                     {t("email")}
@@ -142,15 +177,15 @@ export default function ContactForm() {
                   <input
                     {...register("email")}
                     type="email"
-                    className="w-full bg-background/60 border border-border/60 focus:border-primary/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
-                    placeholder="john@example.com"
+                    className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
+                    placeholder="ornek@sirket.com"
                   />
                   {errors.email && <span className="text-xs text-red-400">{errors.email.message}</span>}
                 </div>
               </div>
 
-              {/* Subject Input */}
-              <div className="space-y-1.5">
+              {/* Subject */}
+              <div className="space-y-2">
                 <label className="text-xs font-semibold text-foreground/80 flex items-center gap-1.5">
                   <MessageSquare className="w-3.5 h-3.5 text-primary" />
                   {t("subject")}
@@ -158,31 +193,31 @@ export default function ContactForm() {
                 <input
                   {...register("subject")}
                   type="text"
-                  className="w-full bg-background/60 border border-border/60 focus:border-primary/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
-                  placeholder="How can we help?"
+                  className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-white/20"
+                  placeholder="Hangi konuda yardımcı olabiliriz?"
                 />
                 {errors.subject && <span className="text-xs text-red-400">{errors.subject.message}</span>}
               </div>
 
-              {/* Message Input */}
-              <div className="space-y-1.5">
+              {/* Message */}
+              <div className="space-y-2">
                 <label className="text-xs font-semibold text-foreground/80">
                   {t("message")}
                 </label>
                 <textarea
                   {...register("message")}
                   rows={4}
-                  className="w-full bg-background/60 border border-border/60 focus:border-primary/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none placeholder:text-white/20"
-                  placeholder="Tell us more about your inquiry..."
+                  className="w-full bg-black/50 border border-white/10 focus:border-primary/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none placeholder:text-white/20"
+                  placeholder="Mesajınızın detaylarını buraya yazabilirsiniz..."
                 />
                 {errors.message && <span className="text-xs text-red-400">{errors.message.message}</span>}
               </div>
 
-              {/* Submit Button */}
+              {/* Submit */}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-indigo-600 hover:opacity-90 text-white font-semibold text-sm transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 mt-2"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-primary via-indigo-600 to-purple-600 hover:opacity-95 text-white font-semibold text-sm transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2 mt-2"
               >
                 {isSubmitting ? (
                   <span>{t("submitting")}</span>
@@ -198,6 +233,7 @@ export default function ContactForm() {
           </div>
 
         </div>
+
       </Container>
     </section>
   );
