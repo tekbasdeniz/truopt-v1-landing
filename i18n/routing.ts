@@ -1,0 +1,44 @@
+
+import { defineRouting } from 'next-intl/routing';
+
+export const routing = defineRouting({
+    // A list of all locales that are supported
+    locales: ['en', 'tr'],
+
+    // Used when no locale matches
+    defaultLocale: 'en',
+    localeDetection: false,
+    localePrefix: 'as-needed',
+    pathnames: {
+        // If all locales use the same pathname, a single
+        // external path can be used for all locales
+        '/': '/',
+
+        // If some locales use different paths, you can
+        // specify the relevant external pathnames
+        '/about': {
+            tr: '/hakkimizda',
+        },
+        '/tr': '/tr',
+        '/cookie-policy': {
+            en: '/cookie-policy',
+            tr: '/cerez-politikasi'
+        },
+        '/copyright-notice': {
+            en: '/copyright-notice',
+            tr: '/telif-hakki-bildirimi'
+        },
+        '/disclaimer': {
+            en: '/disclaimer',
+            tr: '/sorumluluk-reddi'
+        },
+        '/kvkk': {
+            en: '/kvkk',
+            tr: '/kvkk'
+        },
+        '/terms-of-use': {
+            en: '/terms-of-use',
+            tr: '/kullanim-kosullari'
+        }
+    },
+});

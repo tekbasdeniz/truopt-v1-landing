@@ -1,0 +1,136 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { Link } from "@/i18n/navigation"
+import { Menu, X, Play } from "lucide-react"
+import { Container } from "@/components/ui/container"
+import { cn } from "@/lib/utils"
+
+import { useTranslations } from "next-intl"
+import WaitlistButton from "../ui/waitlist-button"
+import LanguageSelector from "@/components/language-selector"
+import Image from "next/image"
+import Logo from "@/app/assets/images/logo.webp"
+
+const Header = () => {
+    const t = useTranslations('nav')
+    const [isOpen, setIsOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10)
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    const navItems = [
+        { name: t('product'), href: "/#product" },
+        { name: t('howItWorks'), href: "/#how-it-works" },
+        { name: "Pricing", href: "/pricing" },
+        { name: t('security'), href: "/#security" },
+        { name: t('faq'), href: "/#faq" },
+        { name: t('contact'), href: "/contact" },
+    ]
+
+    const scrollToDemo = (e: React.MouseEvent) => {
+        e.preventDefault()
+        const demoElement = document.getElementById("demo-video") || document.getElementById("how-it-works")
+        if (demoElement) {
+            demoElement.scrollIntoView({ behavior: "smooth" })
+        }
+        if (isOpen) setIsOpen(false)
+    }
+
+    return (
+        <header
+            className={cn(
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
+                isScrolled
+                    ? "bg-background/80 backdrop-blur-md border-b border-border/50 shadow-xl"
+                    : "bg-transparent border-b border-transparent"
+            )}
+        >
+            <Container>
+                <div className="flex items-center justify-between h-16 md:h-20">
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center space-x-2">
+                        <Image src={Logo} alt="TruOpt.ai" width={100} height={100} className="mt-2" />
+                    </Link>
+
+                    {/* Desktop Nav */}
+                    <nav className="hidden md:flex items-center space-x-8">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href as any}
+                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </nav>
+
+                    {/* Desktop CTAs & Original Language Selector */}
+                    <div className="hidden md:flex items-center space-x-4">
+                        <LanguageSelector />
+                        <a 
+                            href="#how-it-works" 
+                            onClick={scrollToDemo}
+                            className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-white transition-colors cursor-pointer"
+                        >
+                            <Play className="w-4 h-4" />
+                            {t('watchDemo')}
+                        </a>
+                        <WaitlistButton wrapperClassName="!min-w-0 !h-10">
+                            {t('login')}
+                        </WaitlistButton>
+                    </div>
+
+                    {/* Mobile Menu Button & Mobile Language Selector */}
+                    <div className="flex items-center space-x-3 md:hidden">
+                        <LanguageSelector />
+                        <button
+                            className="p-2 text-muted-foreground hover:text-foreground"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        </button>
+                    </div>
+                </div>
+            </Container>
+
+            {/* Mobile Menu */}
+            {isOpen && (
+                <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border p-4 flex flex-col space-y-4 animate-in slide-in-from-top-5">
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href as any}
+                            className="text-base font-medium text-foreground/80 hover:text-primary py-2"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+                    <div className="pt-4 flex flex-col space-y-3">
+                        <a 
+                            href="#how-it-works" 
+                            onClick={scrollToDemo}
+                            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-colors cursor-pointer"
+                        >
+                            <Play className="w-4 h-4" />
+                            {t('watchDemo')}
+                        </a>
+                        <WaitlistButton wrapperClassName="!w-full sm:w-fit" onClick={() => setIsOpen(false)}>
+                            {t('login')}
+                        </WaitlistButton>
+                    </div>
+                </div>
+            )}
+        </header>
+    )
+}
+
+export default Header
