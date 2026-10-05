@@ -1,24 +1,131 @@
 "use client"
 
 import * as React from "react"
-import { Check, X, CreditCard, Calendar, FileText, Ban } from "lucide-react"
+import { Check, X, CreditCard, Calendar, FileText, Ban, Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Container } from "@/components/ui/container"
 import { Switch } from "@/components/ui/switch"
 import { Badge } from "@/components/ui/badge"
 import { motion, AnimatePresence } from "framer-motion"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
+
+// Paddle Dashboard > Developer Settings > Client-side Tokens altından alınan token olmalı (live_... veya test_...)
+const PADDLE_CLIENT_TOKEN = "live_d07dab1f3b6546c32d933219e53"
+
+const PADDLE_PRICE_IDS = {
+    basicMonthly: "pri_01kq4t5x0nasj98ec0nywatnh1",
+    basicAnnual: "pri_01kq4t7539pjd2st493ygcfhcb",
+    proMonthly: "pri_01kq4t34nn9dmy4gctmjnevtzw",
+    proAnnual: "pri_01kq4sydd48v6dm3sksk3hkn5e",
+}
+
+interface PriceData {
+    rawTotal: number
+    rawSubtotal: number
+    currencyCode: string
+}
 
 export function PricingSection() {
     const t = useTranslations('pricing')
+    const locale = useLocale()
     const [isAnnual, setIsAnnual] = React.useState(true)
+
+    const [paddlePrices, setPaddlePrices] = React.useState<Record<string, PriceData>>({})
+    const [loadingPrices, setLoadingPrices] = React.useState(true)
+
+    React.useEffect(() => {
+        if (typeof window === "undefined" || !window.Paddle) {
+            setLoadingPrices(false)
+            return
+        }
+
+        try {
+            window.Paddle.Initialize({
+                token: PADDLE_CLIENT_TOKEN,
+                environment: "production",
+            })
+        } catch (e) {
+            console.log("Paddle init note:", e)
+        }
+
+        const fetchPrices = async () => {
+            if (!window.Paddle) return
+
+            setLoadingPrices(true)
+            try {
+                const countryCode = locale === "tr" ? "TR" : "US"
+
+                const result = await window.Paddle.PricePreview({
+                    items: [
+                        { priceId: PADDLE_PRICE_IDS.basicMonthly, quantity: 1 },
+                        { priceId: PADDLE_PRICE_IDS.basicAnnual, quantity: 1 },
+                        { priceId: PADDLE_PRICE_IDS.proMonthly, quantity: 1 },
+                        { priceId: PADDLE_PRICE_IDS.proAnnual, quantity: 1 },
+                    ],
+                    address: {
+                        countryCode: countryCode,
+                    },
+                })
+
+                console.log("Paddle PricePreview Response:", result) // Konsoldan kontrol için
+
+                if (result?.data?.details?.lineItems) {
+                    const fetchedPrices: Record<string, PriceData> = {}
+                    
+                    result.data.details.lineItems.forEach((item: any) => {
+                        const priceId = item.price.id
+                        
+                        // Paddle totals alanından güvenli raw değer çekme
+                        const total = Number(item.totals?.total || item.unitPrice?.amount || 0)
+                        const subtotal = Number(item.totals?.subtotal || item.unitPrice?.amount || 0)
+                        const currency = item.unitPrice?.currencyCode || (locale === "tr" ? "TRY" : "USD")
+
+                        fetchedPrices[priceId] = {
+                            rawTotal: total,
+                            rawSubtotal: subtotal,
+                            currencyCode: currency,
+                        }
+                    })
+                    
+                    setPaddlePrices(fetchedPrices)
+                }
+            } catch (err: any) {
+                console.warn("Paddle PricePreview hatası:", err)
+            } finally {
+                setLoadingPrices(false)
+            }
+        }
+
+        fetchPrices()
+    }, [locale])
+
+    const handleCheckout = (priceId: string) => {
+        if (!priceId) return
+
+        if (typeof window !== "undefined" && window.Paddle?.Checkout) {
+            window.Paddle.Checkout.open({
+                items: [{ priceId: priceId, quantity: 1 }],
+                settings: {
+                    displayMode: "overlay",
+                    theme: "dark",
+                    locale: locale === "tr" ? "tr" : "en",
+                }
+            })
+        } else {
+            window.location.href = "https://app.truopt.ai"
+        }
+    }
 
     const plans = [
         {
             name: t('plans.basic.name'),
-            price: { monthly: 29, annual: 276 },
+            isCustom: false,
+            monthlyPriceId: PADDLE_PRICE_IDS.basicMonthly,
+            annualPriceId: PADDLE_PRICE_IDS.basicAnnual,
+            usdPrice: 29,
+            fallbackMonthly: locale === "tr" ? "₺990" : "$29",
+            fallbackAnnual: locale === "tr" ? "₺790" : "$24",
             description: t('plans.basic.description'),
-            bonusSeats: false,
             features: [
                 { name: t('features.accountCapacity'), value: t('features.upTo3Accounts') },
                 { name: t('features.aiOptimizationEngine'), value: true },
@@ -31,14 +138,17 @@ export function PricingSection() {
                 { name: t('features.enterpriseScaling'), value: false },
             ],
             cta: t('getStarted'),
-            href: "https://app.truopt.ai",
             popular: false,
         },
         {
             name: t('plans.pro.name'),
-            price: { monthly: 69, annual: 660 },
+            isCustom: false,
+            monthlyPriceId: PADDLE_PRICE_IDS.proMonthly,
+            annualPriceId: PADDLE_PRICE_IDS.proAnnual,
+            usdPrice: 69,
+            fallbackMonthly: locale === "tr" ? "₺2.350" : "$69",
+            fallbackAnnual: locale === "tr" ? "₺1.875" : "$57",
             description: t('plans.pro.description'),
-            bonusSeats: false,
             features: [
                 { name: t('features.accountCapacity'), value: t('features.upTo10Accounts') },
                 { name: t('features.aiOptimizationEngine'), value: true },
@@ -51,15 +161,18 @@ export function PricingSection() {
                 { name: t('features.enterpriseScaling'), value: false },
             ],
             cta: t('getStarted'),
-            href: "https://app.truopt.ai",
             popular: true,
             badge: t('bestValue'),
         },
         {
             name: t('plans.enterprise.name'),
-            price: { monthly: t('customPrice'), annual: t('customPrice') },
+            isCustom: true,
+            monthlyPriceId: undefined as string | undefined,
+            annualPriceId: undefined as string | undefined,
+            usdPrice: undefined as number | undefined,
+            fallbackMonthly: "",
+            fallbackAnnual: "",
             description: t('plans.enterprise.description'),
-            bonusSeats: false,
             features: [
                 { name: t('features.accountCapacity'), value: t('features.unlimited') },
                 { name: t('features.aiOptimizationEngine'), value: true },
@@ -72,10 +185,41 @@ export function PricingSection() {
                 { name: t('features.enterpriseScaling'), value: true },
             ],
             cta: t('contactSales'),
-            href: "mailto:info@thumbsad.com?subject=Enterprise%20Paketi%20Hakkında%20Toplantı%20Talebi&body=Merhaba%2C%0D%0A%0D%0AEnterprise%20paketi%20ile%20ilgileniyorum%20ve%20detaylı%20bilgi%20almak%20için%20bir%20toplantı%20talep%20ediyorum.%0D%0A%0D%0ATeşekkürler.",
+            href: "mailto:info@thumbsad.com?subject=Enterprise%20Paketi%20Hakkında%20Toplantı%20Talebi",
             popular: false,
         },
     ]
+
+    const getFormattedPriceInfo = (
+        priceData: PriceData | undefined, 
+        fallbackPrice: string, 
+        isAnnualPlan: boolean, 
+        usdPrice?: number
+    ) => {
+        if (!priceData || !priceData.rawTotal) {
+            return {
+                formattedPrice: fallbackPrice,
+                taxNote: locale === "tr" ? `(${usdPrice || 29}$ + tax)` : "+TAX",
+            }
+        }
+
+        const isTr = locale === "tr"
+        // TR için vergi dahil (total), EN/Global için vergi hariç (subtotal)
+        const baseRawAmount = isTr ? priceData.rawTotal : priceData.rawSubtotal
+        
+        // SADECE Yıllık planda iken Paddle'ın toplam yıllık fiyatını 12'ye bölüyoruz.
+        const monthlyAmount = isAnnualPlan ? (baseRawAmount / 12) : baseRawAmount
+
+        const formattedPrice = new Intl.NumberFormat(isTr ? "tr-TR" : "en-US", {
+            style: "currency",
+            currency: priceData.currencyCode,
+            maximumFractionDigits: 0,
+        }).format(monthlyAmount / 100)
+
+        const taxNote = isTr ? `(${usdPrice || 29}$ + tax)` : "+TAX"
+
+        return { formattedPrice, taxNote }
+    }
 
     return (
         <section className="py-24 relative overflow-hidden bg-background">
@@ -137,103 +281,113 @@ export function PricingSection() {
                         transition={{ duration: 0.3 }}
                         className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"
                     >
-                        {plans.map((plan, index) => (
-                            <motion.div
-                                key={plan.name}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{
-                                    duration: 0.4,
-                                    delay: index * 0.1,
-                                    ease: "easeOut"
-                                }}
-                                className={cn(
-                                    "relative rounded-2xl border bg-card p-8 shadow-sm flex flex-col transition-all duration-200 hover:shadow-md",
-                                    plan.popular ? "border-primary shadow-lg scale-105 z-10" : "border-border"
-                                )}
-                            >
-                                {plan.popular && (
-                                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                                        <Badge className="bg-primary text-primary-foreground px-4 py-1 text-sm shadow-sm">
-                                            {plan.badge}
-                                        </Badge>
-                                    </div>
-                                )}
+                        {plans.map((plan, index) => {
+                            const activePriceId = isAnnual ? plan.annualPriceId : plan.monthlyPriceId
+                            const paddlePriceData = activePriceId ? paddlePrices[activePriceId] : undefined
+                            const fallbackPrice = isAnnual ? plan.fallbackAnnual : plan.fallbackMonthly
 
-                                <div className="mb-8">
-                                    <h3 className="text-2xl font-bold">{plan.name}</h3>
-                                    <p className="text-sm text-muted-foreground mt-2 min-h-[40px]">{plan.description}</p>
-                                    <AnimatePresence mode="wait">
-                                        {isAnnual && typeof plan.price.annual === "number" && (
-                                            <motion.p
-                                                key="billed-yearly"
-                                                initial={{ opacity: 0, y: 5 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 5 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="text-xs text-muted-foreground/60 mt-1"
-                                            >
-                                                {t('billedYearlyPrefix')}{plan.price.annual}{t('billedYearlySuffix')}
-                                            </motion.p>
-                                        )}
-                                    </AnimatePresence>
-                                </div>
+                            const { formattedPrice, taxNote } = getFormattedPriceInfo(
+                                paddlePriceData,
+                                fallbackPrice || "",
+                                isAnnual,
+                                plan.usdPrice
+                            )
 
-                                <div className="mb-8 h-[60px] flex items-end">
-                                    <div className="flex items-baseline overflow-hidden">
-                                        <AnimatePresence mode="wait">
-                                            <motion.span
-                                                key={isAnnual ? "annual" : "monthly"}
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -20 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="text-4xl font-bold block"
-                                            >
-                                                {typeof plan.price.monthly === "string"
-                                                    ? plan.price.monthly
-                                                    : `$${isAnnual ? Math.round((plan.price.annual as number) / 12) : plan.price.monthly}`}
-                                            </motion.span>
-                                        </AnimatePresence>
-                                        {typeof plan.price.monthly !== "string" && (
-                                            <span className="text-muted-foreground ml-2">{t('perMonth')}</span>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <div className="flex-1 space-y-4 mb-8">
-                                    {plan.features.map((feature, index) => (
-                                        <div key={index} className="flex items-start text-sm">
-                                            {feature.value === false ? (
-                                                <X className="h-4 w-4 text-muted-foreground/50 mr-3 mt-0.5 shrink-0" />
-                                            ) : (
-                                                <Check className="h-4 w-4 text-primary mr-3 mt-0.5 shrink-0" />
-                                            )}
-                                            <span className={cn(feature.value === false ? "text-muted-foreground/50" : "text-foreground")}>
-                                                <span className="font-medium">{feature.name}</span>
-                                                {typeof feature.value === "string" && (
-                                                    <span className="block text-xs text-muted-foreground mt-0.5">
-                                                        {feature.value}
-                                                    </span>
-                                                )}
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <a
-                                    href={plan.href}
+                            return (
+                                <motion.div
+                                    key={plan.name}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                        duration: 0.4,
+                                        delay: index * 0.1,
+                                        ease: "easeOut"
+                                    }}
                                     className={cn(
-                                        "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer h-10 px-4 py-2 w-full",
-                                        plan.popular
-                                            ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_-5px_var(--color-primary)]"
-                                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                                        "relative rounded-2xl border bg-card p-8 shadow-sm flex flex-col transition-all duration-200 hover:shadow-md",
+                                        plan.popular ? "border-primary shadow-lg scale-105 z-10" : "border-border"
                                     )}
                                 >
-                                    {plan.cta}
-                                </a>
-                            </motion.div>
-                        ))}
+                                    {plan.popular && (
+                                        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                                            <Badge className="bg-primary text-primary-foreground px-4 py-1 text-sm shadow-sm">
+                                                {plan.badge}
+                                            </Badge>
+                                        </div>
+                                    )}
+
+                                    <div className="mb-4">
+                                        <h3 className="text-2xl font-bold">{plan.name}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 min-h-[40px]">{plan.description}</p>
+                                    </div>
+
+                                    <div className="mb-8 min-h-[90px] flex flex-col justify-end">
+                                        {plan.isCustom ? (
+                                            <div className="text-4xl font-bold">{t('customPrice')}</div>
+                                        ) : (
+                                            <div>
+                                                <div className="flex items-baseline gap-1.5 flex-wrap">
+                                                    <span className="text-4xl font-bold">
+                                                        {formattedPrice}
+                                                    </span>
+                                                    <span className="text-muted-foreground text-sm font-medium">
+                                                        /{locale === "tr" ? "ay" : "mo"}
+                                                    </span>
+                                                    <span className="text-sm font-medium text-muted-foreground ml-1">
+                                                        {taxNote}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <div className="flex-1 space-y-4 mb-8">
+                                        {plan.features.map((feature, idx) => (
+                                            <div key={idx} className="flex items-start text-sm">
+                                                {feature.value === false ? (
+                                                    <X className="h-4 w-4 text-muted-foreground/50 mr-3 mt-0.5 shrink-0" />
+                                                ) : (
+                                                    <Check className="h-4 w-4 text-primary mr-3 mt-0.5 shrink-0" />
+                                                )}
+                                                <span className={cn(feature.value === false ? "text-muted-foreground/50" : "text-foreground")}>
+                                                    <span className="font-medium">{feature.name}</span>
+                                                    {typeof feature.value === "string" && (
+                                                        <span className="block text-xs text-muted-foreground mt-0.5">
+                                                            {feature.value}
+                                                        </span>
+                                                    )}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {plan.isCustom ? (
+                                        <a
+                                            href={plan.href}
+                                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 w-full"
+                                        >
+                                            {plan.cta}
+                                        </a>
+                                    ) : (
+                                        <button
+                                            onClick={() => {
+                                                if (activePriceId) {
+                                                    handleCheckout(activePriceId)
+                                                }
+                                            }}
+                                            className={cn(
+                                                "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors cursor-pointer h-10 px-4 py-2 w-full",
+                                                plan.popular
+                                                    ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_-5px_var(--color-primary)]"
+                                                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                                            )}
+                                        >
+                                            {plan.cta}
+                                        </button>
+                                    )}
+                                </motion.div>
+                            )
+                        })}
                     </motion.div>
                 </AnimatePresence>
 

@@ -19,8 +19,6 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Toaster } from 'sonner';
 
-
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -46,6 +44,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="dark">
       <head>
+        {/* Paddle v2 SDK */}
+        <Script 
+          src="https://cdn.paddle.com/paddle/v2/paddle.js" 
+          strategy="afterInteractive" 
+        />
         <Script
           id="gtm"
           strategy="afterInteractive"

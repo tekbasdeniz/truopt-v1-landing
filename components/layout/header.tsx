@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Link } from "@/i18n/navigation"
+import { Link, useRouter, usePathname } from "@/i18n/navigation"
 import { Menu, X, Play } from "lucide-react"
 import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
@@ -16,6 +16,8 @@ const Header = () => {
     const t = useTranslations('nav')
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
+    const router = useRouter()
+    const pathname = usePathname()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -36,10 +38,19 @@ const Header = () => {
 
     const scrollToDemo = (e: React.MouseEvent) => {
         e.preventDefault()
-        const demoElement = document.getElementById("demo-video") || document.getElementById("how-it-works")
-        if (demoElement) {
-            demoElement.scrollIntoView({ behavior: "smooth" })
+        
+        // TypeScript tip uyarısını aşmak için 'as string' kullanıyoruz
+        const currentPath = pathname as string
+
+        if (currentPath === "/" || currentPath === "") {
+            const demoElement = document.getElementById("demo-video") || document.getElementById("how-it-works")
+            if (demoElement) {
+                demoElement.scrollIntoView({ behavior: "smooth" })
+            }
+        } else {
+            router.push("/#how-it-works" as any)
         }
+
         if (isOpen) setIsOpen(false)
     }
 
@@ -76,7 +87,7 @@ const Header = () => {
                     <div className="hidden md:flex items-center space-x-4">
                         <LanguageSelector />
                         <a 
-                            href="#how-it-works" 
+                            href="/#how-it-works" 
                             onClick={scrollToDemo}
                             className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-white transition-colors cursor-pointer"
                         >
@@ -116,7 +127,7 @@ const Header = () => {
                     ))}
                     <div className="pt-4 flex flex-col space-y-3">
                         <a 
-                            href="#how-it-works" 
+                            href="/#how-it-works" 
                             onClick={scrollToDemo}
                             className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-colors cursor-pointer"
                         >
