@@ -8,6 +8,7 @@ import { Switch } from "@/components/ui/switch"
 import { Badge } from "@/components/ui/badge"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations, useLocale } from "next-intl"
+import WaitlistButton from "@/components/ui/waitlist-button"
 
 const PADDLE_CLIENT_TOKEN = "live_d07dab1f3b6546c32d933219e53"
 
@@ -93,23 +94,6 @@ export function PricingSection() {
 
         fetchPrices()
     }, [locale])
-
-    const handleCheckout = (priceId: string) => {
-        if (!priceId) return
-
-        if (typeof window !== "undefined" && window.Paddle?.Checkout) {
-            window.Paddle.Checkout.open({
-                items: [{ priceId: priceId, quantity: 1 }],
-                settings: {
-                    displayMode: "overlay",
-                    theme: "dark",
-                    locale: locale === "tr" ? "tr" : "en",
-                }
-            })
-        } else {
-            window.location.href = "https://app.truopt.ai"
-        }
-    }
 
     const plans = [
         {
@@ -363,21 +347,16 @@ export function PricingSection() {
                                             {plan.cta}
                                         </a>
                                     ) : (
-                                        <button
-                                            onClick={() => {
-                                                if (activePriceId) {
-                                                    handleCheckout(activePriceId)
-                                                }
-                                            }}
-                                            className={cn(
-                                                "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors cursor-pointer h-10 px-4 py-2 w-full",
-                                                plan.popular
-                                                    ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_-5px_var(--color-primary)]"
-                                                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                                            )}
-                                        >
-                                            {plan.cta}
-                                        </button>
+                                        <WaitlistButton 
+                                             wrapperClassName={cn(
+                                            "!w-full h-10 text-sm font-medium rounded-md transition-colors cursor-pointer flex items-center justify-center",
+                                            plan.popular
+                                                ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_-5px_var(--color-primary)]"
+                                                : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                                        )}
+                                    >
+                                        {plan.cta}
+                                    </WaitlistButton>
                                     )}
                                 </motion.div>
                             )
