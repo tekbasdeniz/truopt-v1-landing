@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Check, X, CreditCard, Calendar, FileText, Ban, Loader2 } from "lucide-react"
+import { Check, X, CreditCard, Calendar, FileText, Ban } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Container } from "@/components/ui/container"
 import { Switch } from "@/components/ui/switch"
@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations, useLocale } from "next-intl"
 
-// Paddle Dashboard > Developer Settings > Client-side Tokens altından alınan token olmalı (live_... veya test_...)
 const PADDLE_CLIENT_TOKEN = "live_d07dab1f3b6546c32d933219e53"
 
 const PADDLE_PRICE_IDS = {
@@ -31,7 +30,7 @@ export function PricingSection() {
     const [isAnnual, setIsAnnual] = React.useState(true)
 
     const [paddlePrices, setPaddlePrices] = React.useState<Record<string, PriceData>>({})
-    const [loadingPrices, setLoadingPrices] = React.useState(true)
+    const [, setLoadingPrices] = React.useState(true)
 
     React.useEffect(() => {
         if (typeof window === "undefined" || !window.Paddle) {
@@ -67,15 +66,11 @@ export function PricingSection() {
                     },
                 })
 
-                console.log("Paddle PricePreview Response:", result) // Konsoldan kontrol için
-
                 if (result?.data?.details?.lineItems) {
                     const fetchedPrices: Record<string, PriceData> = {}
                     
                     result.data.details.lineItems.forEach((item: any) => {
                         const priceId = item.price.id
-                        
-                        // Paddle totals alanından güvenli raw değer çekme
                         const total = Number(item.totals?.total || item.unitPrice?.amount || 0)
                         const subtotal = Number(item.totals?.subtotal || item.unitPrice?.amount || 0)
                         const currency = item.unitPrice?.currencyCode || (locale === "tr" ? "TRY" : "USD")
@@ -196,18 +191,16 @@ export function PricingSection() {
         isAnnualPlan: boolean, 
         usdPrice?: number
     ) => {
+        const isTr = locale === "tr"
+
         if (!priceData || !priceData.rawTotal) {
             return {
                 formattedPrice: fallbackPrice,
-                taxNote: locale === "tr" ? `(${usdPrice || 29}$ + tax)` : "+TAX",
+                taxNote: isTr ? `(${usdPrice || 29}$ + tax)` : "(+ tax)",
             }
         }
 
-        const isTr = locale === "tr"
-        // TR için vergi dahil (total), EN/Global için vergi hariç (subtotal)
         const baseRawAmount = isTr ? priceData.rawTotal : priceData.rawSubtotal
-        
-        // SADECE Yıllık planda iken Paddle'ın toplam yıllık fiyatını 12'ye bölüyoruz.
         const monthlyAmount = isAnnualPlan ? (baseRawAmount / 12) : baseRawAmount
 
         const formattedPrice = new Intl.NumberFormat(isTr ? "tr-TR" : "en-US", {
@@ -216,7 +209,7 @@ export function PricingSection() {
             maximumFractionDigits: 0,
         }).format(monthlyAmount / 100)
 
-        const taxNote = isTr ? `(${usdPrice || 29}$ + tax)` : "+TAX"
+        const taxNote = isTr ? `(${usdPrice || 29}$ + tax)` : "(+ tax)"
 
         return { formattedPrice, taxNote }
     }
@@ -321,22 +314,23 @@ export function PricingSection() {
                                         <p className="text-sm text-muted-foreground mt-2 min-h-[40px]">{plan.description}</p>
                                     </div>
 
+                                    {/* Fiyat ve Alt Satırındaki Vergi Notu Kurgusu */}
                                     <div className="mb-8 min-h-[90px] flex flex-col justify-end">
                                         {plan.isCustom ? (
                                             <div className="text-4xl font-bold">{t('customPrice')}</div>
                                         ) : (
-                                            <div>
-                                                <div className="flex items-baseline gap-1.5 flex-wrap">
+                                            <div className="flex flex-col items-start gap-1">
+                                                <div className="flex items-baseline gap-1.5">
                                                     <span className="text-4xl font-bold">
                                                         {formattedPrice}
                                                     </span>
                                                     <span className="text-muted-foreground text-sm font-medium">
                                                         /{locale === "tr" ? "ay" : "mo"}
                                                     </span>
-                                                    <span className="text-sm font-medium text-muted-foreground ml-1">
-                                                        {taxNote}
-                                                    </span>
                                                 </div>
+                                                <span className="text-xs font-medium text-muted-foreground">
+                                                    {taxNote}
+                                                </span>
                                             </div>
                                         )}
                                     </div>
