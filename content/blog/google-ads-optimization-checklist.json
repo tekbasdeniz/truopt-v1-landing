@@ -1,0 +1,113 @@
+{
+  "slug": "google-ads-optimization-checklist",
+  "status": "published",
+  "title": "Google Ads Optimization Checklist: A Practical Weekly Audit",
+  "description": "A practical Google Ads optimization checklist for auditing conversions, search terms, budgets, change history and AI recommendations with human oversight.",
+  "summary": "A repeatable weekly Google Ads audit that puts conversion quality, wasted spend and safer automation decisions first.",
+  "category": "Google Ads Optimization",
+  "datePublished": "2026-10-16",
+  "readingTimeMinutes": 7,
+  "intro": "A good Google Ads audit is not a race to accept every recommendation. It is a repeatable decision process: check whether the account measures the right outcomes, investigate where spend goes, identify meaningful changes, and only then decide what to adjust. This checklist is designed for advertisers and agencies that want a useful weekly routine without turning optimization into guesswork.",
+  "takeaways": [
+    "Start with conversion reliability before you judge campaign efficiency.",
+    "Review search terms and traffic quality before changing budgets.",
+    "Explain the reason, expected benefit and potential downside of every optimization.",
+    "Use automation to spot issues faster, but keep consequential changes reviewable."
+  ],
+  "sections": [
+    {
+      "heading": "1. Confirm that conversion data reflects real business outcomes",
+      "paragraphs": [
+        "Check which actions are counted as primary conversions and which are secondary observations. A form submission and a qualified sales opportunity are not interchangeable outcomes. Compare your campaign conversion totals with your CRM or ecommerce records where those systems are available.",
+        "Look for sudden shifts in reported conversion volume, conversion value or attribution configuration. If tracking changed recently, comparing cost per acquisition across periods may mislead you. Document tracking changes before interpreting performance."
+      ],
+      "bullets": [
+        "Inspect primary and secondary conversion actions.",
+        "Check whether duplicate or low-quality leads inflate totals.",
+        "Record any recent tagging, attribution or import changes."
+      ]
+    },
+    {
+      "heading": "2. Find irrelevant demand in the search terms report",
+      "paragraphs": [
+        "Review the search terms that generated impressions, clicks and spend. Separate relevant searches with weak performance from searches that do not match the offer at all. The second group may justify negative keywords; the first group may require a different landing page or bidding assessment.",
+        "Google notes that the search terms report can surface negative keyword ideas. Use care with match types and do not exclude a term solely because it has not converted in a short period. Search-term coverage is not necessarily complete for every query."
+      ],
+      "bullets": [
+        "Flag unrelated queries and assess negative keyword candidates.",
+        "Check whether keyword intent matches ad copy and landing page promise.",
+        "Compare search terms by meaningful periods rather than isolated days."
+      ]
+    },
+    {
+      "heading": "3. Diagnose wasted spend before reallocating budgets",
+      "paragraphs": [
+        "Segment campaigns by objective, device, geography and other relevant dimensions. Identify spend concentrations that lack convincing business outcomes, but distinguish low volume from statistically meaningful underperformance. A campaign with one expensive click should not automatically be paused.",
+        "Check budget constraints alongside return, marginal performance and seasonality. Moving more money toward last week's highest ROAS campaign may not improve total returns if that campaign is already saturated. Frame budget changes as experiments with a review date."
+      ],
+      "bullets": [
+        "Identify campaigns with sustained spend and weak qualified outcomes.",
+        "Investigate landing page or offer issues before blaming bidding.",
+        "Record the expected outcome and guardrail for each proposed change."
+      ]
+    },
+    {
+      "heading": "4. Review anomalies and recent account changes",
+      "paragraphs": [
+        "A spike in cost per acquisition might come from conversion tracking, traffic quality, an external promotion ending, or a recent bidding change. Look at change history before attributing every deviation to the market or the algorithm.",
+        "Define simple alerts for unusually high spend, conversion drops or sharp CPA changes, with thresholds suited to account size. Alerts should prompt investigation, not automatically trigger risky edits. Low-volume accounts require wider tolerance to avoid constant false alarms."
+      ],
+      "bullets": [
+        "Inspect change history around large performance shifts.",
+        "Differentiate tracking outages from genuine campaign deterioration.",
+        "Assign an owner and a response plan to important alerts."
+      ]
+    },
+    {
+      "heading": "5. Treat AI recommendations as proposals, not commands",
+      "paragraphs": [
+        "Google Ads offers personalized recommendations and an option to automatically apply selected recommendation types. That can reduce repetitive work, but each recommendation still needs to fit the account's business goals and risk tolerance. The impact of automated adjustments deserves ongoing review.",
+        "For every proposed action, ask: what evidence supports this change, what could go wrong, how much spend could it affect, and how would we reverse course? The value of AI-assisted optimization is not only speed. It is helping marketers prioritize decisions while retaining accountability."
+      ],
+      "bullets": [
+        "Require an explanation and estimate of impact.",
+        "Keep consequential adjustments behind an approval step.",
+        "Review outcomes after the change rather than assuming the suggestion worked."
+      ]
+    },
+    {
+      "heading": "6. Build a 30-minute weekly audit cadence",
+      "paragraphs": [
+        "Allocate the first five minutes to conversion reliability and unusual account changes. Use the next ten minutes to inspect search intent and spend distribution. Spend ten minutes evaluating the most promising adjustments. Finish by assigning owners, deadlines and a small set of follow-up metrics.",
+        "This is a workflow, not a universal benchmark. A mature high-spend account may require deeper investigation and a newer account may need longer learning windows. The principle is consistent: fewer well-supported actions are more useful than a long list of unchecked optimizations."
+      ],
+      "bullets": [
+        "0–5 min: Validate data and investigate alerts.",
+        "5–15 min: Review search terms, spend and conversion quality.",
+        "15–25 min: Decide which changes merit a controlled test.",
+        "25–30 min: Log decisions, owners and measurement dates."
+      ]
+    },
+    {
+      "heading": "Where TruOpt.ai fits",
+      "paragraphs": [
+        "TruOpt.ai focuses on Google Ads account review, Guardian-style anomaly alerts and explainable optimization suggestions that marketers can approve before application. The intended role of the product is to surface potential issues and support accountable decisions, not to promise that every suggested change will produce a performance gain.",
+        "If you manage multiple accounts, the objective is a more consistent review process: notice problems, understand why an action is recommended, and keep the final decision with the responsible marketer."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — About recommendations",
+      "url": "https://support.google.com/google-ads/answer/3448398?hl=en"
+    },
+    {
+      "label": "Google Ads Help — About applying recommendations automatically",
+      "url": "https://support.google.com/google-ads/answer/10279006?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Get negative keyword ideas from search terms",
+      "url": "https://support.google.com/google-ads/answer/7102466?hl=en"
+    }
+  ]
+}
