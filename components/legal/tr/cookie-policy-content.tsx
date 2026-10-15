@@ -66,6 +66,14 @@ export const CookiePolicyContentTR = () => {
                 Bu sağlayıcılar, kendi gizlilik politikalarına tabi olarak çerezler yerleştirebilir.
             </p>
 
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Çerez Tercihleri ve Yönetimi</h2>
+            <p className="mb-4">
+                TruOpt.ai, sitenin çalışması ve güvenliği için kesinlikle gerekli çerezleri kullanabilir. Analitik, reklam ve pazarlama amaçlı olup açık rıza gerektiren çerezler, kullanıcının önceden verdiği geçerli rıza olmadan çalıştırılmaz. Kullanıcılar bu çerezleri kabul edebilir, reddedebilir veya kategorilere göre yönetebilir; verdikleri rızayı daha sonra geri çekebilir.
+            </p>
+            <p className="mb-6">
+                Çerez envanterinde her çerezin adı, sağlayıcısı, amacı, türü ve saklama süresi açıklanır.
+            </p>
+
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Çerez Onayı Yönetimi</h2>
             <p className="mb-4">Çerez tercihlerinizi şu yollarla yönetebilirsiniz:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">

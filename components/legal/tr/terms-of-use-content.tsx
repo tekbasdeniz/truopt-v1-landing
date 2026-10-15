@@ -49,6 +49,11 @@ export const TermsOfUseContentTR = () => {
                 <li>TruOpt.ai, kar kaybı, iş kesintisi, reklam platformu cezaları, hesap askıya alınmaları veya kampanya sonuçlarından sorumlu değildir</li>
             </ul>
 
+            <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">Yapay Zekâ Önerileri ve İşlem Yetkileri</h3>
+            <p className="mb-6">
+                TruOpt.ai reklam performans verilerinden öneriler oluşturur. İşlemler, ürünün sunduğu özelliklere göre kullanıcı tarafından tek tek onaylanabilir veya kullanıcı tarafından önceden etkinleştirilmiş otomasyon kuralları kapsamında yürütülebilir. Bu işlemler bağlı reklam hesaplarında kampanya, teklif veya bütçe değişikliklerine neden olabilir. Belirli bir reklam performansı veya yatırım getirisi garanti edilmez. Yürürlükteki emredici hukuk hükümlerinden doğan hak ve sorumluluklar saklıdır.
+            </p>
+
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Kabul Edilebilir Kullanım</h2>
             <p className="mb-4">Aşağıdakileri yapmayacağınızı kabul edersiniz:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">

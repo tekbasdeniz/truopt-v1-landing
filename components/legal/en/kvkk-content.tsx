@@ -42,16 +42,12 @@ export const KvkkContentEN = () => {
                 <li>Legitimate interests of the Data Controller</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Transfer of Personal Data</h2>
-            <p className="mb-4">Your personal data may be transferred to:</p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>Paddle (payment and billing services)</li>
-                <li>Cloud hosting and infrastructure providers</li>
-                <li>Email, CRM and customer support providers</li>
-                <li>Authorized public institutions and authorities</li>
-            </ul>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Sharing and International Transfers of Personal Data</h2>
+            <p className="mb-4">
+                Personal data necessary to deliver TruOpt.ai may be shared with authorized service providers for payment and subscription management, cloud hosting, authentication, email delivery, technical support, advertising-account integrations and security. Actual recipients and providers must reflect the current technical inventory.
+            </p>
             <p className="mb-6">
-                Your data may be transferred abroad in accordance with GDPR and KVKK.
+                International transfers take place only where appropriate legal transfer mechanisms and safeguards required by Article 9 of the Turkish KVKK and, where applicable, the GDPR have been implemented. Data subjects may request details at info@thumbsad.com.
             </p>
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Your Rights</h2>

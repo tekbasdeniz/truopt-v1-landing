@@ -66,6 +66,14 @@ export const CookiePolicyContentEN = () => {
                 These providers may place cookies subject to their own privacy policies.
             </p>
 
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Cookie Preferences and Management</h2>
+            <p className="mb-4">
+                TruOpt.ai may use strictly necessary cookies to operate and secure the website. Analytics, advertising and marketing cookies requiring consent are not activated without valid prior consent. Users may accept, reject or manage these categories and withdraw consent later.
+            </p>
+            <p className="mb-6">
+                The cookie inventory identifies each cookie’s name, provider, purpose, category and retention period.
+            </p>
+
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Cookie Consent Management</h2>
             <p className="mb-4">You can manage your cookie preferences via:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">

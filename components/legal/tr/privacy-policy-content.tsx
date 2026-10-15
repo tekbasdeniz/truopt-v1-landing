@@ -11,6 +11,14 @@ export const PrivacyPolicyContentTR = () => {
                 TruOpt.ai, kullanıcıların gizliliğini korumaya ve kullanıcı verilerine erişim, işleme ve depolama süreçlerinde şeffaflığı sağlamaya önem vermektedir. Bu gizlilik politikası, TruOpt.ai’nin Google Ads gibi Google hizmetleriyle bağlantı kurarken kullanıcı verilerini nasıl topladığını, kullandığını, depoladığını ve koruduğunu açıklamaktadır.
             </p>
 
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Google Ads Entegrasyonu ve Otomasyon Verileri</h2>
+            <p className="mb-4">
+                TruOpt.ai, kullanıcının yetkilendirdiği Google Ads hesaplarına Google OAuth ve Google Ads API aracılığıyla erişebilir. Erişim; performans analizi, kampanya sağlık kontrolü, öneri oluşturma ve kullanıcının onayladığı veya etkinleştirdiği otomasyon işlemlerini yürütme amaçlarıyla sınırlıdır. Google Ads verileri, bu amaçlar için otomatik iş akışlarında işlenebilir. Yetki kapsamı ve veri işleme, Google API Services User Data Policy ile uyumlu tutulur.
+            </p>
+            <p className="mb-6">
+                Kullanıcılar Google hesabındaki üçüncü taraf erişim ayarlarından yetkiyi kaldırabilir; veri erişimi ve silme taleplerini info@thumbsad.com adresine gönderebilir.
+            </p>
+
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. Erişilen Veriler</h2>
             <p className="mb-4">
                 Kullanıcılar Google hesaplarını TruOpt.ai’ye bağladıklarında, uygulama aşağıdaki Google kullanıcı verilerine erişebilir:

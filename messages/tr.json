@@ -234,7 +234,7 @@
       "taxTitle": "Küresel Vergi Yönetimi",
       "taxDesc": "KDV ve vergiler Paddle aracılığıyla otomatik yönetilir",
       "refundTitle": "İade Politikası",
-      "refundDesc": "Aktif faturalandırma dönemleri için iade yapılmaz",
+      "refundDesc": "İade talepleri Paddle Satın Alıcı Koşulları, yürürlükteki zorunlu tüketici mevzuatı ve TruOpt.ai İade Politikası uyarınca değerlendirilir. Aboneliğin iptali, aksi belirtilmedikçe mevcut faturalandırma dönemi sonunda geçerli olur; sonraki yenileme durdurulur. Ayrıntılar: /tr/refund-policy",
       "legalNote": "TruOpt.ai bir ThumbsAd ürünüdür. Tüm abonelikler ThumbsAd tarafından Paddle aracılığıyla satılır ve faturalandırılır."
     }
   },

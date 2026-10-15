@@ -12,6 +12,14 @@ export const PrivacyPolicyContentEN = () => {
                 This privacy policy explains how TruOpt.ai collects, uses, stores, and protects user data when connecting with Google services such as Google Ads.
             </p>
 
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Google Ads Integration and Automation Data</h2>
+            <p className="mb-4">
+                TruOpt.ai may access Google Ads accounts authorized by users through Google OAuth and the Google Ads API. Access is limited to performance analysis, campaign health checks, recommendations and automation actions approved or enabled by the user. Google Ads data may be processed through automated workflows for these purposes. Access scopes and data processing are maintained in accordance with the Google API Services User Data Policy.
+            </p>
+            <p className="mb-6">
+                Users may revoke access through their Google account’s third-party access settings and submit access or deletion requests to info@thumbsad.com.
+            </p>
+
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. Data Accessed</h2>
             <p className="mb-4">When users connect their Google account to TruOpt.ai, the application may access the following Google user data:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">

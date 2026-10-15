@@ -49,6 +49,11 @@ export const TermsOfUseContentEN = () => {
                 <li>TruOpt.ai is not liable for lost profits, business interruption, ad platform penalties, account suspensions or campaign outcomes</li>
             </ul>
 
+            <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">AI Recommendations and Action Permissions</h3>
+            <p className="mb-6">
+                TruOpt.ai generates recommendations from advertising performance data. Depending on the available product features, actions may be approved individually by users or executed under automation rules previously enabled by them. Such actions may change campaigns, bids or budgets in connected advertising accounts. No specific advertising outcome or return on investment is guaranteed. Rights and liabilities under mandatory applicable law remain unaffected.
+            </p>
+
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Acceptable Use</h2>
             <p className="mb-4">You agree not to:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2">

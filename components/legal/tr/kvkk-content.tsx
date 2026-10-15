@@ -42,16 +42,12 @@ export const KvkkContentTR = () => {
                 <li>Veri Sorumlusunun meşru menfaatleri</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Kişisel Verilerin Aktarımı</h2>
-            <p className="mb-4">Kişisel verileriniz aşağıdaki kurumlara aktarılabilir:</p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>Paddle (ödeme ve faturalandırma hizmetleri)</li>
-                <li>Bulut barındırma ve altyapı sağlayıcıları</li>
-                <li>E-posta, CRM ve müşteri desteği sağlayıcıları</li>
-                <li>Yetkili kamu kurumları ve makamları</li>
-            </ul>
+            <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">4. Kişisel Verilerin Paylaşılması ve Yurt Dışına Aktarımı</h2>
+            <p className="mb-4">
+                TruOpt.ai hizmetinin sağlanması için gerekli kişisel veriler; ödeme ve abonelik yönetimi, bulut barındırma, kimlik doğrulama, e-posta gönderimi, teknik destek, reklam hesabı entegrasyonu ve güvenlik amaçlarıyla yetkili hizmet sağlayıcılarla paylaşılabilir. Veri alıcıları ve kullanılan sağlayıcılar, güncel teknik envantere göre belirlenir.
+            </p>
             <p className="mb-6">
-                Verileriniz, GDPR ve KVKK hükümlerine uygun olarak yurt dışına aktarılabilir.
+                Yurt dışına kişisel veri aktarımı yalnızca KVKK madde 9 ve uygulanabilir GDPR kurallarının gerektirdiği hukuki mekanizmalar ve güvenceler sağlandığında gerçekleştirilir. İlgili kişiler veri işleme ve aktarım hakkında info@thumbsad.com adresinden bilgi talep edebilir.
             </p>
 
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Haklarınız</h2>

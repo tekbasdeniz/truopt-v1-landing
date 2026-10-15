@@ -234,7 +234,7 @@
       "taxTitle": "Global Tax Handling",
       "taxDesc": "VAT and tax handled automatically via Paddle",
       "refundTitle": "Refund Policy",
-      "refundDesc": "No refunds for active billing periods",
+      "refundDesc": "Refund requests are assessed under Paddle’s Buyer Terms, applicable mandatory consumer laws, and the TruOpt.ai Refund Policy. Unless otherwise stated, cancellation takes effect at the end of the current billing period and stops subsequent renewals. Details: /refund-policy.",
       "legalNote": "TruOpt.ai is a ThumbsAd product. All subscriptions are sold and invoiced by ThumbsAd via Paddle."
     }
   },
