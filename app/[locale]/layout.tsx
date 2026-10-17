@@ -42,6 +42,23 @@ export default async function RootLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": "https://truopt.ai/#organization", name: "TruOpt.ai", url: "https://truopt.ai/" },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://truopt.ai/#software",
+        name: "TruOpt.ai",
+        url: "https://truopt.ai/",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        description: "AI-powered Google Ads analysis, anomaly monitoring and human-approved optimization recommendations.",
+        publisher: { "@id": "https://truopt.ai/#organization" }
+      }
+    ]
+  };
+
   return (
     <html lang={locale} className="dark">
       <head>
