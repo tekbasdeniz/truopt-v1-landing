@@ -1,0 +1,116 @@
+{
+  "slug": "google-ads-conversions-dropped-tracking-or-performance",
+  "status": "published",
+  "title": "Google Ads Conversions Dropped? Diagnose Tracking vs. Performance Before Changing Bids",
+  "description": "Google Ads conversions suddenly dropped? Diagnose tracking errors, attribution delays and genuine performance changes before editing bids.",
+  "summary": "A practical diagnostic workflow for Google Ads conversion drops, including tracking tests, change-history checks and human-approved responses.",
+  "category": "Google Ads Anomaly Detection",
+  "datePublished": "2026-10-17",
+  "readingTimeMinutes": 7,
+  "intro": "When Google Ads conversions suddenly drop, first determine whether customers stopped converting or your reporting stopped recognizing them. These are different problems requiring different responses. Start with business records, test the conversion journey and check reporting maturity before touching bidding.",
+  "takeaways": [
+    "Compare Google Ads conversions with independently recorded leads or orders.",
+    "Test conversion events end to end, including consent and confirmation pages.",
+    "Check attribution delays, low volume and change history.",
+    "Require human review before consequential optimization changes."
+  ],
+  "sections": [
+    {
+      "heading": "1. Separate a tracking failure from a real decline",
+      "paragraphs": [
+        "Compare actual leads or purchases recorded by your CRM or ecommerce platform with the corresponding Google Ads conversions for equivalent periods. A CRM contact, qualified opportunity and Google Ads conversion may be defined differently, so reconcile definitions first. If business outcomes remain steady while reported conversions collapse, investigate measurement or attribution. If both fall, investigate demand, traffic and the customer journey.",
+        "If reported conversions remain steady but qualified sales opportunities fall, your primary conversion goal may reward low-quality submissions. A discrepancy is a clue, not proof of the cause. Document when the divergence began and which systems disagree."
+      ],
+      "bullets": [
+        "Identify the first abnormal date.",
+        "Compare independent business outcomes and Ads reporting.",
+        "Verify that conversion definitions match."
+      ]
+    },
+    {
+      "heading": "2. Inspect conversion actions and test the full journey",
+      "paragraphs": [
+        "In Google Ads, open Goals > Conversions > Summary. Review affected conversion actions, Primary versus Secondary settings, and tracking status. Warnings can reflect configuration problems or simply a lack of recent conversion activity. Do not interpret every warning as a broken tag.",
+        "Use Google's Tag Assistant to reproduce a real conversion, from landing page through consent selection, form submission or checkout, and confirmation. Confirm the intended conversion event fires in the correct context. A generic pageview tag is not evidence that your lead or purchase conversion is captured correctly. Check website deployments, consent banners, redirects and CRM imports that changed near the incident."
+      ],
+      "bullets": [
+        "Inspect affected conversion actions and their status.",
+        "Test the actual user journey with Tag Assistant.",
+        "Review recent form, consent and confirmation-page changes."
+      ]
+    },
+    {
+      "heading": "3. Account for conversion lag and small samples",
+      "paragraphs": [
+        "Recent Google Ads reports may be incomplete because conversion processing and attribution take time. Google Ads commonly reports conversions against the ad-click date, which can differ from the date a lead appears in your CRM. Comparing yesterday's incomplete figures with a fully matured historical period can produce a false alarm.",
+        "Use comparable date ranges with sufficient time for conversions to accrue. Annotate recent days still accumulating results. For niche B2B campaigns with very few monthly conversions, several zero-conversion days may be normal variation. Investigate business context and longer periods before declaring a measurement outage or changing a bid strategy."
+      ],
+      "bullets": [
+        "Avoid comparing immature and mature reporting windows.",
+        "Distinguish click-date and conversion-date views.",
+        "Use longer observation windows for low-volume accounts."
+      ]
+    },
+    {
+      "heading": "4. Check change history and segment the decline",
+      "paragraphs": [
+        "Google Ads Change history can reveal changes to budgets, bidding, targeting, keywords and conversion goals around the first abnormal day. Cross-reference this with website releases and CRM changes, which may not appear in Google Ads. An apparent conversion drop following a goal configuration change requires a different response from one following a landing-page outage.",
+        "Break down impressions, clicks, cost per click, conversion rate and conversion actions by campaign and device. Falling impressions may indicate delivery or demand issues. Stable clicks with falling conversions suggest a closer look at measurement, landing-page friction or traffic quality. Rising spend with weaker outcomes merits review, but automatic pausing is not always the safest response."
+      ],
+      "bullets": [
+        "Inspect account changes near the incident date.",
+        "Segment by campaign, device and conversion action.",
+        "Test landing pages and forms on real devices."
+      ]
+    },
+    {
+      "heading": "5. Use alerts as prompts for investigation",
+      "paragraphs": [
+        "A useful anomaly alert should specify what changed, when it changed, why it matters and what to verify next. For example, a team might flag a sustained conversion decline despite relatively stable clicks, but only where historical volume supports the comparison. That is an illustrative internal policy, not a universal statistical threshold.",
+        "Separate measurement incidents from performance incidents. A broken conversion action needs tracking diagnosis; a verified rise in acquisition cost needs an optimization review. Consolidate duplicate alerts, assign an owner and record evidence and decisions. Preserve human approval for changes affecting bids, budgets or campaign eligibility."
+      ],
+      "bullets": [
+        "Set severity using evidence quality and business exposure.",
+        "Attach a next diagnostic step and owner.",
+        "Require approval before consequential account edits."
+      ]
+    },
+    {
+      "heading": "6. First-response decision tree",
+      "paragraphs": [
+        "Case A: CRM outcomes remain steady but Ads conversions fall. Prioritize tracking status, Tag Assistant and attribution. Case B: both business outcomes and Ads conversions fall while clicks remain steady. Test landing pages, search intent and offer fit. Case C: impressions and clicks fall too. Inspect eligibility, targeting, budget, demand and recent edits.",
+        "Case D: only the newest days look weak or conversion volume is very low. Check reporting delays and wait for a meaningful sample. Case E: Ads conversions look normal but sales quality declines. Revisit Primary conversion goals and lead qualification. In every case, document a hypothesis, a verification method, an owner and the conditions under which an approved change should be reversed."
+      ],
+      "bullets": [
+        "Do not repeatedly switch bidding strategies without diagnosis.",
+        "Choose one focused test and observation period.",
+        "Record approval and rollback criteria."
+      ]
+    },
+    {
+      "heading": "7. Where TruOpt.ai fits",
+      "paragraphs": [
+        "TruOpt.ai supports Google Ads account reviews, Guardian anomaly alerts and explainable optimization suggestions. Its role in this workflow is to surface potential problems and help marketers organize decisions, not to promise that every change has a certain cause or guaranteed outcome.",
+        "Agencies managing multiple accounts can apply a consistent review process: inspect the alert, verify the underlying evidence and approve or reject a proposed optimization. Explore TruOpt.ai for a human-approved approach to Google Ads optimization decisions."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — Troubleshoot conversion tracking status",
+      "url": "https://support.google.com/google-ads/answer/12674892?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Tag Assistant",
+      "url": "https://support.google.com/google-ads/answer/10989978?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Change history",
+      "url": "https://support.google.com/google-ads/answer/19888?hl=en"
+    },
+    {
+      "label": "Google Ads API — Conversion troubleshooting",
+      "url": "https://developers.google.com/google-ads/api/docs/conversions/troubleshooting"
+    }
+  ]
+}
