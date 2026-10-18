@@ -1,0 +1,121 @@
+{
+  "slug": "google-ads-auto-apply-agency-audit",
+  "status": "published",
+  "title": "Google Ads Auto-Apply Recommendations: An Agency Audit and Approval Workflow",
+  "description": "Learn how agencies can audit Google Ads auto-apply recommendations, investigate changes and build a human-approved optimization workflow.",
+  "summary": "A practical account-by-account process for reviewing auto-apply settings, investigating past edits and controlling consequential changes.",
+  "category": "Google Ads Automation",
+  "datePublished": "2026-10-18",
+  "readingTimeMinutes": 7,
+  "intro": "To audit Google Ads auto-apply recommendations, inspect which recommendation types are enabled, review their application history, and compare relevant edits with Change history. Disable types that lack authorization, then document a human approval policy for future changes. Agencies should repeat this process for each client account rather than assume that one configuration suits everyone. Auto-apply can be useful, but it does not replace campaign-specific business judgment.",
+  "takeaways": [
+    "Check active auto-apply settings and historical applications separately.",
+    "Use Change history to investigate what changed and avoid guessing who made an edit.",
+    "Treat recommendations as proposals evaluated against client goals.",
+    "Keep material changes behind an explicit human approval process."
+  ],
+  "sections": [
+    {
+      "heading": "1. Understand what auto-apply does—and does not do",
+      "paragraphs": [
+        "Google Ads provides recommendations across bidding, keywords, ads, measurement and other account settings. Advertisers can opt into automatically applying selected recommendation types. These settings are distinct from manually accepting a recommendation and from Smart Bidding strategies that optimize auctions according to their configured goals.",
+        "An enabled recommendation type is not proof that Google has applied a change. Eligibility and timing vary. Equally, a recommendation's projected benefit is not a guarantee of improved business performance. Before changing settings, identify the client's primary conversion goals, acceptable risks and any active experiments."
+      ],
+      "bullets": [
+        "Identify the difference between recommendations, auto-apply and bidding automation.",
+        "Record the business objective behind each allowed recommendation type.",
+        "Do not treat optimization score as a profitability metric."
+      ]
+    },
+    {
+      "heading": "2. Inventory enabled recommendation types by account",
+      "paragraphs": [
+        "In the relevant Google Ads account, open Recommendations and find Auto-apply settings. Review the available recommendation categories and which ones are selected. Google Ads navigation can change, so consult the current Help documentation if labels differ. Record the date, account identifier, responsible person and whether each enabled category has documented client authorization.",
+        "Do this individually for every linked client account. A keyword expansion that is acceptable for a broad prospecting campaign may be inappropriate for a regulated product, a tightly scoped service or an account with strict brand restrictions. A shared manager account simplifies access; it does not make client policies interchangeable."
+      ],
+      "bullets": [
+        "Export or record the enabled categories for each account.",
+        "Flag categories with unclear ownership or missing approval.",
+        "Prioritize high-spend and recently inherited accounts."
+      ]
+    },
+    {
+      "heading": "3. Investigate historical changes before assigning blame",
+      "paragraphs": [
+        "Review the auto-apply History area to understand what recommendations were applied. Then examine Google Ads Change history for the same time window. Compare timestamps, affected campaigns, keywords and bidding settings. An unfamiliar change may have come from an auto-applied recommendation, a team member, a rule or another authorized integration.",
+        "Avoid assuming that every performance movement resulted from a recommendation. Conversion tracking changes, seasonal demand and auction conditions can create similar symptoms. Preserve the evidence before reverting anything, and note when the available history does not conclusively identify the source."
+      ],
+      "bullets": [
+        "Compare recommendation application records with account edits.",
+        "Inspect conversion tracking and campaign context around the change.",
+        "Document confirmed causes separately from hypotheses."
+      ]
+    },
+    {
+      "heading": "4. Disable unwanted auto-apply types carefully",
+      "paragraphs": [
+        "If a recommendation category is not authorized, deselect it in Auto-apply settings and save. Verify that the change persisted. Disabling a category controls future applications; it does not automatically reverse edits already made to campaigns. Review previous applications individually instead of issuing a blanket rollback.",
+        "Before reversing a material change, write down the intended outcome, likely downside, review window and rollback criteria. For example, removing a recently added keyword might protect relevance, but it might also interrupt a valid experiment. Check with the account owner or client before making consequential corrections."
+      ],
+      "bullets": [
+        "Disable only the categories that conflict with the agreed policy.",
+        "Confirm saved settings and note the reviewer.",
+        "Evaluate earlier campaign edits on their own evidence."
+      ]
+    },
+    {
+      "heading": "5. Create a risk-based approval policy",
+      "paragraphs": [
+        "A useful agency policy separates informational findings from low-risk reversible edits and material changes to bidding, targeting or campaign eligibility. The categories are internal governance choices, not built-in Google Ads approval levels. Define who can approve each category and when the client must be consulted.",
+        "For each proposed optimization, provide a short explanation: the observed issue, supporting data, proposed action, possible downside and measurement plan. A recommendation to broaden targeting may be appropriate when qualified demand is constrained, but risky when conversion quality is uncertain. The right decision depends on the account, not on the availability of an automation button."
+      ],
+      "bullets": [
+        "Require a named approver for material edits.",
+        "Specify a review date and outcome metric.",
+        "Record rejected recommendations and why they were rejected."
+      ]
+    },
+    {
+      "heading": "6. Make multi-account reviews manageable",
+      "paragraphs": [
+        "Agencies can maintain a lightweight review register across client accounts: account name, last audit date, enabled auto-apply categories, unexplained changes, current alerts, recommended actions and approval status. Sort first by business impact and uncertainty rather than by the number of recommendations displayed.",
+        "A repeatable weekly workflow is detect, verify, decide and measure. Detect meaningful deviations, verify tracking and recent changes, decide whether an intervention is justified, and measure the result after approval. Anomaly alerts should initiate investigation, not trigger automatic emergency edits. Smaller accounts may require longer observation windows to avoid overreacting to ordinary volatility."
+      ],
+      "bullets": [
+        "Prioritize unexplained high-impact changes.",
+        "Keep each client's permissions and policies separate.",
+        "Review outcomes instead of equating action volume with progress."
+      ]
+    },
+    {
+      "heading": "7. Where TruOpt.ai can help",
+      "paragraphs": [
+        "TruOpt.ai focuses on Google Ads account audits, Guardian anomaly alerts and explainable optimization recommendations with human review. This approach can help marketers identify issues, understand suggested actions and keep accountable decision-making at the center of optimization.",
+        "TruOpt.ai is not a replacement for Google Ads Auto-apply settings or Change history. If your agency manages multiple accounts and wants a more structured review process, explore TruOpt.ai to evaluate optimization suggestions before deciding what to implement. No tool can guarantee that every accepted recommendation will improve results."
+      ],
+      "bullets": [
+        "Use account context to assess suggestions.",
+        "Approve changes according to the client's risk policy.",
+        "Check outcomes after implementation."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — About applying recommendations automatically",
+      "url": "https://support.google.com/google-ads/answer/10279006?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Manage auto-apply recommendations",
+      "url": "https://support.google.com/google-ads/answer/10276359?hl=en"
+    },
+    {
+      "label": "Google Ads Help — About change history",
+      "url": "https://support.google.com/google-ads/answer/19888?hl=en"
+    },
+    {
+      "label": "Google Ads — Manager accounts",
+      "url": "https://business.google.com/en-all/ad-tools/manage-accounts/"
+    }
+  ]
+}
