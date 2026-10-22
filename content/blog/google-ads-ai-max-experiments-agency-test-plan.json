@@ -54,11 +54,11 @@
     {
       "heading": "4. Set traffic allocation, timing and guardrails",
       "paragraphs": [
-        "Use the supported experiment configuration to choose the control and treatment allocation. Google's experiment guidance describes traffic splitting, but the available choices and controls depend on the workflow. Do not assume a particular percentage is optimal for every account. A smaller test may reduce immediate exposure while also taking longer to collect useful evidence.",
+        "For the Google Ads API ADOPT_AI_MAX intra-campaign experiment, Google specifies a 50/50 control and treatment traffic split. Do not suggest a smaller treatment allocation for that experiment type. Check the current Google Ads interface, account eligibility and documentation before launch; other experiment workflows may have different allocation rules. Record the configured split and avoid changing unrelated settings during the test.",
         "Define a review date and a decision date. The appropriate duration depends on traffic volume, conversion delay and business cycles; a universal seven-day or thirty-day rule is not defensible. Set escalation conditions for measurement outages, material cost deviations or severe lead-quality deterioration. Guardrails should prompt a documented human review, not an unexplained automatic pause."
       ],
       "bullets": [
-        "Record start and planned end dates, traffic split and owner.",
+        "Record start and planned end dates, the required 50/50 split for ADOPT_AI_MAX, and the accountable owner.",
         "Agree spend and lead-quality escalation conditions with the client.",
         "Avoid changing experiment settings mid-test without documenting why."
       ]
