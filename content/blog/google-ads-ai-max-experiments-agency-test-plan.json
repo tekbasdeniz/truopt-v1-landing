@@ -1,0 +1,133 @@
+{
+  "slug": "google-ads-ai-max-experiments-agency-test-plan",
+  "status": "published",
+  "title": "Google Ads AI Max Experiments: How to Test Before an Agency-Wide Rollout",
+  "description": "Learn how to test AI Max for Search with Google Ads experiments, define control and treatment, check conversion quality, and approve rollout decisions safely.",
+  "summary": "A practical agency test plan for AI Max for Search: experiment eligibility, hypothesis, metrics, guardrails, review windows and human approval.",
+  "category": "Google Ads AI Experiments",
+  "datePublished": "2026-10-22",
+  "readingTimeMinutes": 8,
+  "intro": "To test AI Max for Search before a broader rollout, start with an eligible Search campaign, define one business question, use the relevant Google Ads experiment workflow, and compare control and treatment on qualified outcomes—not just clicks or Google's recommendations. Set guardrails and an end date before launching. An experiment reduces guesswork, but it does not guarantee a lift or remove the need to review conversion quality, traffic changes and client approval.",
+  "takeaways": [
+    "Choose an AI Max-specific experiment when available instead of changing multiple campaign settings at once.",
+    "Document control, treatment, conversion goals and risk limits before traffic is allocated.",
+    "Judge qualified business outcomes and uncertainty, not a short-lived improvement in clicks.",
+    "Review findings with the account owner before applying changes to other client accounts."
+  ],
+  "sections": [
+    {
+      "heading": "1. Decide what the AI Max experiment must answer",
+      "paragraphs": [
+        "An AI feature is not a business objective. Write a falsifiable question, such as: does enabling AI Max for Search improve the volume of qualified enquiries at an acceptable acquisition cost for this specific campaign? Specify the primary conversion action and the quality checks you can actually observe. If form submissions include spam or unqualified leads, an apparent increase in conversions may not represent better commercial performance.",
+        "Google Ads supports experiment workflows for testing campaign changes. Its API documentation identifies an intra-campaign experiment type for adopting AI Max on Search campaigns. Availability and setup options can differ by account, campaign eligibility and interface version, so confirm what the account currently offers before committing to a test."
+      ],
+      "bullets": [
+        "Write one hypothesis and a measurable success condition.",
+        "Identify the eligible Search campaign and existing conversion goals.",
+        "Record what would make the experiment inconclusive or unsafe."
+      ]
+    },
+    {
+      "heading": "2. Select the correct experiment rather than an uncontrolled before-and-after comparison",
+      "paragraphs": [
+        "A simple comparison between last month and this month can be distorted by seasonality, promotions, competitors and conversion delays. A properly configured experiment compares control and treatment traffic during an overlapping period. Google's documentation distinguishes system-managed experiments, which use control and treatment campaigns, from intra-campaign experiments that split exposure to a specific feature inside one campaign.",
+        "Where AI Max-specific experimentation is supported, use that dedicated path instead of copying a campaign and manually changing several settings. A custom experiment may be appropriate for other eligible tests, but it is not interchangeable with every dedicated feature experiment. Confirm the actual traffic-split method in the Google Ads interface and avoid asserting that the setup is identical across all campaign types."
+      ],
+      "bullets": [
+        "Check Experiments in the relevant Google Ads account.",
+        "Choose the supported experiment type for the feature being tested.",
+        "Avoid simultaneous unrelated targeting, budget and landing-page edits."
+      ]
+    },
+    {
+      "heading": "3. Establish a clean baseline and conversion-quality checks",
+      "paragraphs": [
+        "Before launching, document recent spend, impressions, qualified conversions, cost per qualified conversion and any value signals used for bidding. Include the account time zone, date range and important promotions. Check whether primary conversion actions match the client's real objective; otherwise both test arms can optimize toward a misleading proxy.",
+        "Ask the sales or operations team whether lead quality can be reviewed during the experiment. If the sales cycle is long, document the expected lag and avoid declaring a winner from immature data. Not every business can import offline outcomes immediately, so state which quality measures are available and which are not."
+      ],
+      "bullets": [
+        "Verify conversion actions and obvious duplicate or low-quality signals.",
+        "Record recent major edits and campaign constraints.",
+        "Agree how delayed qualified outcomes will be evaluated."
+      ]
+    },
+    {
+      "heading": "4. Set traffic allocation, timing and guardrails",
+      "paragraphs": [
+        "For the Google Ads API ADOPT_AI_MAX intra-campaign experiment, Google specifies a 50/50 control and treatment traffic split. Do not suggest a smaller treatment allocation for that experiment type. Check the current Google Ads interface, account eligibility and documentation before launch; other experiment workflows may have different allocation rules. Record the configured split and avoid changing unrelated settings during the test.",
+        "Define a review date and a decision date. The appropriate duration depends on traffic volume, conversion delay and business cycles; a universal seven-day or thirty-day rule is not defensible. Set escalation conditions for measurement outages, material cost deviations or severe lead-quality deterioration. Guardrails should prompt a documented human review, not an unexplained automatic pause."
+      ],
+      "bullets": [
+        "Record start and planned end dates, the required 50/50 split for ADOPT_AI_MAX, and the accountable owner.",
+        "Agree spend and lead-quality escalation conditions with the client.",
+        "Avoid changing experiment settings mid-test without documenting why."
+      ]
+    },
+    {
+      "heading": "5. Monitor changes without contaminating the test",
+      "paragraphs": [
+        "During the experiment, check both arms for delivery, conversion measurement and material differences in the type of traffic attracted. Google's Experiments product describes a synchronization option for updates made to the original campaign. That can help keep comparable settings aligned, but teams should understand the chosen sync behavior and document any changes that could affect interpretation.",
+        "If an unrelated landing-page redesign, promotion or tracking update occurs during the test, record the timing and assess whether the comparison remains useful. Anomaly alerts are investigation prompts, not proof that the treatment failed. Likewise, a short-lived conversion spike may reflect reporting delay or ordinary variance rather than a durable improvement."
+      ],
+      "bullets": [
+        "Review experiment status and relevant Change history.",
+        "Log promotions, tracking edits and significant campaign adjustments.",
+        "Escalate material anomalies to the named account owner."
+      ]
+    },
+    {
+      "heading": "6. Read the outcome before choosing to graduate or stop",
+      "paragraphs": [
+        "Compare the predefined business metric first. Then inspect secondary measures such as traffic volume, search intent, cost and lead quality. Google's experiments workflow provides performance comparisons, but a displayed directional lift is not automatically a statistically reliable or commercially useful result. Evaluate uncertainty and sample size in context, and avoid presenting an inconclusive outcome as a success.",
+        "Possible decisions include adopting the treatment, extending observation when appropriate, or ending the test without a rollout. State the rationale in plain language: what changed, what evidence supports the decision, what downside remains and what follow-up is required. If the result is mixed, consider whether the original hypothesis or measurement system needs revision before running another experiment."
+      ],
+      "bullets": [
+        "Separate observed lift from a verified business benefit.",
+        "Document uncertainty, conversion lag and possible confounders.",
+        "Require explicit approval before adopting consequential changes."
+      ]
+    },
+    {
+      "heading": "7. Scale learning across agency accounts without copying decisions blindly",
+      "paragraphs": [
+        "Agencies need a consistent decision register, not a universal instruction to enable AI Max everywhere. Track the tested account, hypothesis, experiment type, dates, outcome, reviewer and decision. A result in one geography or product category does not establish that the same feature will work in another account with different conversion volume, restrictions or lead quality.",
+        "Cross-account experiment dashboards are a recognized agency workflow: Optmyzr, for example, documents tools for reviewing Google Ads experiments across linked accounts. That competitive context reinforces the value of centralized review, but it does not make any vendor's recommendations a substitute for independent assessment of the original experiment evidence."
+      ],
+      "bullets": [
+        "Store findings separately for each client and campaign.",
+        "Recheck eligibility and conversion quality before repeating a test.",
+        "Avoid promising a repeatable performance lift from one result."
+      ]
+    },
+    {
+      "heading": "8. Where TruOpt.ai fits in a human-approved testing workflow",
+      "paragraphs": [
+        "TruOpt.ai focuses on Google Ads account audits, Guardian anomaly alerts and explainable optimization recommendations with human review across agency operations. It can support the surrounding discipline of identifying accounts that merit attention and reviewing proposed changes. It should not be described as creating or running Google Ads experiments unless that capability has been independently verified.",
+        "If your team is considering AI Max or other Google Ads changes, explore TruOpt.ai for an audit-and-review approach: examine the account, investigate alerts, assess the rationale for proposed actions and keep rollout decisions with the responsible marketer. The experiment itself and its reported results remain in Google Ads."
+      ],
+      "bullets": [
+        "Use explainable suggestions as inputs to review, not proof of causality.",
+        "Keep material optimization decisions human-approved.",
+        "Revisit outcomes after any approved rollout."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads — Experiments product overview",
+      "url": "https://business.google.com/en-all/ad-tools/google-ad-experiments/"
+    },
+    {
+      "label": "Google Ads API — Experiments overview",
+      "url": "https://developers.google.com/google-ads/api/docs/experiments/overview"
+    },
+    {
+      "label": "Google Ads API — Intra-campaign experiments and AI Max",
+      "url": "https://developers.google.com/google-ads/api/docs/experiments/intra-campaign"
+    },
+    {
+      "label": "Optmyzr — Campaign Experiments User Guide",
+      "url": "https://help.optmyzr.com/en/articles/5496962-campaign-experiments-user-guide"
+    }
+  ]
+}
