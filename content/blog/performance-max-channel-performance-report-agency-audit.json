@@ -1,0 +1,121 @@
+{
+  "slug": "performance-max-channel-performance-report-agency-audit",
+  "status": "published",
+  "title": "Performance Max Channel Performance Report: A 2026 Agency Audit Checklist",
+  "description": "Learn how to audit Google Ads Performance Max channel performance reports in 2026, reconcile Search, YouTube and Display spend, and avoid misleading decisions.",
+  "summary": "An agency-focused checklist for reading Performance Max channel reporting, reconciling totals, checking conversion quality and reviewing changes with human approval.",
+  "category": "Performance Max Reporting",
+  "datePublished": "2026-10-23",
+  "readingTimeMinutes": 8,
+  "intro": "To audit a Performance Max campaign by channel, open the campaign in Google Ads, select Insights and reports, then Channel performance. Compare Search, YouTube, Display, Discover, Gmail, Maps and Search partners using the same date range and conversion goals. Reconcile channel totals with campaign-level reporting, investigate diagnostics and check conversion quality before recommending changes. New channel-level visibility is useful, but it does not turn Performance Max into seven separately controlled campaigns or prove that a channel caused incremental sales.",
+  "takeaways": [
+    "Use the Channel performance report to inspect where Performance Max serves and how results are distributed.",
+    "Compare cost and qualified outcomes, not just clicks or an isolated channel ROAS.",
+    "Google Ads API v23 introduced channel breakdowns; audit dashboards that still assume a single MIXED or Cross-network value.",
+    "Treat diagnostics as investigation prompts and require human approval for consequential changes."
+  ],
+  "sections": [
+    {
+      "heading": "1. Find the channel performance report and establish scope",
+      "paragraphs": [
+        "Open a Performance Max campaign and navigate to Insights and reports > Channel performance. Google's guidance describes a performance summary, a channel-to-goals visualization and a channel distribution table. The table can show clicks, conversions, cost and diagnostics. Use the same reporting window, time zone and conversion settings as the main campaign view so the comparison is meaningful.",
+        "Before reading individual channels, confirm the campaign objective and the conversion actions included in reporting. A lead-generation account counting all form submissions should not be compared casually with a sales account reporting qualified revenue. Record any recent changes to attribution, tracking, feed eligibility or campaign structure that could affect the period."
+      ],
+      "bullets": [
+        "Select one campaign and one consistent date range.",
+        "Record campaign totals and primary conversion actions first.",
+        "Check whether the report has enough activity to support a decision."
+      ]
+    },
+    {
+      "heading": "2. Understand what a Performance Max channel means",
+      "paragraphs": [
+        "Google defines a Performance Max channel by the surface where an ad served, not simply by the creative format. A YouTube channel result can involve more than a video ad, and Shopping inventory is identified using the Ads using product data segmentation rather than a separate Shopping channel. Google lists Search, Search partners, YouTube, Display, Discover, Gmail and Maps among the reporting channels.",
+        "That distinction matters when an agency sees high YouTube impressions or a rising Display share. It may reflect format, reach, audience or attribution differences rather than poor quality by itself. Use available video and product-data segmentation to understand what was delivered. Do not label every non-Search impression wasted spend without checking the campaign's objective and downstream outcomes."
+      ],
+      "bullets": [
+        "Separate serving surface from ad format.",
+        "Use product-data and video segmentation where available.",
+        "Do not assume each channel has independent budget controls."
+      ]
+    },
+    {
+      "heading": "3. Reconcile cost and conversions before diagnosing a channel shift",
+      "paragraphs": [
+        "Start with total campaign spend, conversions and conversion value for the chosen period. Then inspect the channel distribution table for where those metrics appear. If an exported report or agency dashboard disagrees with Google Ads, first check filters, attribution settings, conversion-action segmentation, date boundaries and whether a total is being added more than once.",
+        "Google expanded the interface to include channel cost, ROI-related columns and conversion-action segmentation. These help explain the mix, but a single channel's reported return is not the same as its incremental contribution. Cross-channel journeys and conversion delays complicate interpretation. If a channel has little volume, a dramatic percentage change may represent only a handful of events."
+      ],
+      "bullets": [
+        "Compare channel cost against the campaign's reported cost.",
+        "Segment by conversion action when lead quality differs.",
+        "Document discrepancies before changing bids or campaign settings."
+      ]
+    },
+    {
+      "heading": "4. Check whether API and dashboard changes explain missing Cross-network rows",
+      "paragraphs": [
+        "In January 2026, Google announced channel-level Performance Max reporting in Google Ads API v23. Previously, the ad_network_type segment often returned MIXED for Performance Max; v23 can return the specific serving channel. Reporting integrations that hard-code MIXED or a Cross-network label may therefore omit Performance Max activity, misgroup it or display unexpected additional rows after an API upgrade.",
+        "Google states that channel-level performance data is available for dates on or after June 1, 2025. Asset-group channel breakdowns are available through the API, not the Google Ads web interface. For an agency maintaining Looker Studio or warehouse reports, inspect the API version and transformation logic before treating a sudden chart change as a real traffic shift. A reporting migration is not evidence that campaign delivery changed."
+      ],
+      "bullets": [
+        "Audit filters that require MIXED or Cross-network values.",
+        "Check for duplicated campaign totals after channel segmentation.",
+        "Limit historical channel comparisons to supported dates and compatible report definitions."
+      ]
+    },
+    {
+      "heading": "5. Investigate channel diagnostics without overreacting",
+      "paragraphs": [
+        "The Channel performance report includes diagnostics that may point to limited serving or configuration issues. Google's troubleshooting guidance covers missing inventory, feed eligibility and conversion measurement issues. These are useful leads for an audit, not proof that every suggested remedy is appropriate for the advertiser.",
+        "Open the relevant diagnostic, verify the underlying setting and check recent Change history. If a landing-page or final URL expansion change is proposed, assess brand, compliance, tracking and conversion-quality risks. If a channel shows more cost but fewer qualified outcomes, look for a persistent pattern and consider external factors such as promotions or seasonal demand before recommending an intervention."
+      ],
+      "bullets": [
+        "Record the diagnostic and evidence supporting it.",
+        "Assess the business risk of the proposed remedy.",
+        "Escalate material changes for client or account-owner approval."
+      ]
+    },
+    {
+      "heading": "6. Build a repeatable multi-account agency audit",
+      "paragraphs": [
+        "For each client, keep a compact review record: campaign, objective, date range, spend, channel mix, conversion quality, reporting anomalies, recent edits, proposed action and approver. Review the largest or most consequential changes first rather than trying to optimize every channel on every account. A consistent record helps distinguish a measurement problem from a genuine commercial concern.",
+        "Set thresholds relative to each account's scale. A small account may generate too few conversions for stable channel-level conclusions, while a larger account may warrant faster investigation of tracking outages or abrupt spend shifts. Assign an owner to validate the finding, then decide whether to observe, investigate further or propose a reversible change. Never infer causality from a channel report alone."
+      ],
+      "bullets": [
+        "Prioritize material deviations from agreed business outcomes.",
+        "Keep a decision log with evidence, owner and review date.",
+        "Use human approval before changes affecting spend, reach or landing pages."
+      ]
+    },
+    {
+      "heading": "7. Where TruOpt.ai fits—and what it does not claim",
+      "paragraphs": [
+        "TruOpt.ai focuses on Google Ads account audits, Guardian anomaly alerts and explainable optimization recommendations with human review, including agency workflows across multiple accounts. That positioning aligns with the surrounding audit discipline: flag changes worth investigating, explain why a review matters and keep important decisions accountable.",
+        "This article does not claim TruOpt.ai generates Performance Max channel reports, connects to every reporting warehouse or automatically controls individual Performance Max channels. Use Google's own reporting interface and documented API capabilities for channel evidence. Explore TruOpt.ai for a human-reviewed Google Ads optimization workflow that complements, rather than replaces, platform reporting."
+      ],
+      "bullets": [
+        "Use verified Google Ads data as the evidence source.",
+        "Evaluate explanations and risks before accepting recommendations.",
+        "Review the outcome of approved changes instead of assuming improvement."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — Evaluate Performance Max results",
+      "url": "https://support.google.com/google-ads/answer/16279166?hl=en-GB"
+    },
+    {
+      "label": "Google Ads Help — Definition: Performance Max channel",
+      "url": "https://support.google.com/google-ads/answer/16260129?hl=en-nl"
+    },
+    {
+      "label": "Google Ads Developer Blog — Channel-level reporting for Performance Max",
+      "url": "https://ads-developers.googleblog.com/2026/01/introducing-channel-level-reporting-for.html"
+    },
+    {
+      "label": "Google Ads API — Performance Max campaign-level reporting",
+      "url": "https://developers.google.com/google-ads/api/performance-max/campaign-reporting"
+    }
+  ]
+}
