@@ -1,0 +1,121 @@
+{
+  "slug": "google-ads-offline-conversion-imports-data-manager-api-migration-checklist",
+  "status": "published",
+  "title": "Google Ads Offline Conversion Imports in 2026: Data Manager API Migration Checklist",
+  "description": "Google Ads offline conversion imports failing in 2026? Audit the Data Manager API migration, OAuth scope, conversion actions, batch errors and lead-quality reporting.",
+  "summary": "An agency-ready checklist for the June 2026 Google Ads offline conversion import change, with Data Manager API migration checks, diagnostics and human-approved rollout.",
+  "category": "Google Ads Conversion Tracking",
+  "datePublished": "2026-10-24",
+  "readingTimeMinutes": 8,
+  "intro": "If a new Google Ads offline conversion import integration is failing in 2026, check the API route before changing your lead data. Since June 15, 2026, Google has restricted new adopters of offline conversion imports—including enhanced conversions for leads—through the Google Ads API. The Data Manager API is the recommended route for new integrations. Audit your access, conversion-action ownership, credentials, payload mapping and ingestion results before concluding that your CRM data is broken. Existing eligible Google Ads API integrations may still work, so do not replace a functioning pipeline without a migration plan.",
+  "takeaways": [
+    "Separate a Google Ads API eligibility rejection from a malformed conversion event.",
+    "New integrations should plan around Data Manager API, while eligible legacy integrations can be assessed individually.",
+    "Data Manager API requires its own OAuth scope and uses a different error-handling model.",
+    "Verify accepted events, attribution and lead quality separately before approving bidding changes."
+  ],
+  "sections": [
+    {
+      "heading": "1. Confirm whether the June 2026 restriction applies",
+      "paragraphs": [
+        "On May 15, 2026, Google announced that starting June 15 the Google Ads API would stop accepting new adopters of offline conversion imports and enhanced conversions for leads. The legacy UploadClickConversions method can return CUSTOMER_NOT_ALLOWLISTED_FOR_THIS_FEATURE for affected integrations. The restriction concerns offline conversion uploading, not every Google Ads API function. Google's documentation also describes continuing access for eligible established integrations while they transition.",
+        "Start with the exact method, error code and integration history. A newly created workflow using an old Google Ads API tutorial may fail even when its payload looks valid. Conversely, an established connection still uploading successfully should not be declared broken merely because the cutoff date has passed. Confirm current eligibility with official documentation and your technical owner."
+      ],
+      "bullets": [
+        "Identify whether uploads use Google Ads API UploadClickConversions, Data Manager API or a supported Data Manager connection.",
+        "Record the first successful import date and the exact rejection response.",
+        "Classify the issue as API eligibility, authentication, configuration or event-data quality."
+      ]
+    },
+    {
+      "heading": "2. Map the conversion owner and the business event",
+      "paragraphs": [
+        "Before migrating endpoints, identify which Google Ads account owns the conversion action. Data Manager API's offline event destination uses an operatingAccount, a loginAccount and a productDestinationId for the conversion action. The operating account must own that action, and the conversion action must have the appropriate upload-clicks type. Agencies managing several clients should not assume that their manager account owns every conversion action.",
+        "Document what the event represents: submitted lead, qualified lead, booked meeting or completed sale. Do not silently switch the primary optimization goal during an infrastructure migration. A successful import of low-quality form submissions can still produce a poor bidding signal. Keep the CRM event definition, conversion action and reporting owner aligned."
+      ],
+      "bullets": [
+        "Verify conversion-action ID, type and owning customer account.",
+        "Map each CRM lifecycle event to its intended Google Ads conversion action.",
+        "Confirm the primary versus secondary goal decision with the account owner."
+      ]
+    },
+    {
+      "heading": "3. Reauthorize access for Data Manager API",
+      "paragraphs": [
+        "Google's migration instructions specify that Data Manager API uses a different OAuth scope from Google Ads API. Existing credentials with only the old scope are not sufficient. Your engineering team may need to enable the Data Manager API, request the required permissions and obtain new credentials or authorization before event ingestion succeeds. For multi-account agencies, access should be tested separately for each client configuration.",
+        "Keep the permission review focused. Do not paste refresh tokens, raw lead identifiers or private customer data into support tickets or general-purpose logs. Use the smallest appropriate access and an approved credential store. Treat a missing permission as an authentication issue, not evidence that Google's matching logic rejected a lead."
+      ],
+      "bullets": [
+        "Check the Data Manager API project setup and required OAuth scope.",
+        "Verify access to the conversion-owning account and each intended destination.",
+        "Test with a controlled, authorized event before scheduling recurring uploads."
+      ]
+    },
+    {
+      "heading": "4. Translate the payload and update error handling",
+      "paragraphs": [
+        "The Data Manager API uses its own event and destination schema rather than accepting an unchanged UploadClickConversions request. Google's send-events guide walks through destination configuration, event preparation and ingestion. Map conversion timestamps, event source, identifiers, conversion value and transaction references against the new documentation. Validate normalization and consent handling for any first-party customer data according to applicable requirements.",
+        "Migration also changes failure behavior. Google's upgrade guide says Data Manager API uses a fast-fail model: an error in a request can cause all records in that request to fail. That differs from Google Ads API's partial-failure model, where some rows can succeed while others fail. A pipeline that previously retried only rejected rows needs a new batch-level recovery design. Prevent duplicate events when retrying, and retain enough non-sensitive metadata to trace each batch."
+      ],
+      "bullets": [
+        "Use the official field mapping instead of copying a legacy request body.",
+        "Handle fast-fail responses and make retries safe against duplicate conversions.",
+        "Track request identifiers, event counts and errors without exposing personal data."
+      ]
+    },
+    {
+      "heading": "5. Diagnose acceptance separately from attribution",
+      "paragraphs": [
+        "A successful ingestion response does not guarantee that an event is attributed to a Google Ads interaction or immediately visible in campaign reporting. Check Data Manager ingestion outcomes and Google Ads conversion diagnostics, then reconcile against CRM event counts. Google's Google Ads API guidance notes that imported conversions can appear against the original click's impression date and may take time to surface in reporting.",
+        "Investigate discrepancies in stages: was the event received, was it valid for the destination, could it be matched, and did the reporting window include it? Check the conversion action, identifiers, consent, time zone and upload timing. A sudden apparent conversion decline after a migration may be a reporting or ingestion problem rather than a deterioration in campaign performance. Avoid changing Smart Bidding targets until measurement health is established."
+      ],
+      "bullets": [
+        "Compare CRM source events, accepted uploads and attributed conversions separately.",
+        "Review diagnostics and use consistent click-date and reporting-date assumptions.",
+        "Escalate unexplained drops in qualified events before optimizing bids."
+      ]
+    },
+    {
+      "heading": "6. Roll out account by account with human approval",
+      "paragraphs": [
+        "Build a client-level migration register covering current upload method, legacy eligibility, destination owner, authorization status, mapped events, last successful import, error handling, diagnostics and rollback owner. Test with a controlled sample, observe outcomes, then schedule the broader migration. Preserve the existing functioning route until the replacement has been verified where that is technically and contractually possible.",
+        "Do not claim a percentage improvement in return on ad spend simply because enhanced conversions are enabled. Better signals can support measurement and bidding, but the effect varies by account, implementation and conversion quality. Require approval for any change that affects conversion goals, bidding inputs, retention or access. Document a clear decision: proceed, investigate further or postpone."
+      ],
+      "bullets": [
+        "Assign a technical owner and a marketing approver to each client account.",
+        "Agree acceptance criteria before retiring an existing integration.",
+        "Recheck conversion quality and bidding behavior after the approved change."
+      ]
+    },
+    {
+      "heading": "7. Where TruOpt.ai fits in the review process",
+      "paragraphs": [
+        "TruOpt.ai provides Google Ads account audits, Guardian anomaly alerts and explainable optimization suggestions with human review across agency operations. These capabilities can support the surrounding discipline of spotting accounts that warrant investigation and evaluating consequential changes with accountable oversight. They are not a substitute for the Data Manager API, and this article does not claim TruOpt.ai migrates offline conversion pipelines or imports CRM events.",
+        "If your agency needs a structured way to review Google Ads account issues without automatically accepting every recommendation, explore TruOpt.ai. Use official Google diagnostics for ingestion evidence, your CRM for lead quality and human approval for any optimization decision. The objective is a reliable decision process, not a promise of guaranteed attribution or performance."
+      ],
+      "bullets": [
+        "Treat alerts as prompts to investigate, not proof of the cause.",
+        "Keep technical migration and marketing optimization approvals separate.",
+        "Review the observed outcome before adopting similar changes across clients."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Developer Blog — Changes to Offline Click Conversion Import Support (May 15, 2026)",
+      "url": "https://ads-developers.googleblog.com/2026/05/changes-to-offline-click-conversion.html"
+    },
+    {
+      "label": "Google Data Manager API — Steps to upgrade offline conversions",
+      "url": "https://developers.google.com/data-manager/api/devguides/events/google-ads/offline/upgrade/steps"
+    },
+    {
+      "label": "Google Data Manager API — Send offline conversion events",
+      "url": "https://developers.google.com/data-manager/api/devguides/events/google-ads/offline/send-events"
+    },
+    {
+      "label": "Google Ads API — Manage offline conversions and diagnostics",
+      "url": "https://developers.google.com/google-ads/api/docs/conversions/upload-offline"
+    }
+  ]
+}
