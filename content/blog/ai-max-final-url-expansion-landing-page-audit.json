@@ -1,0 +1,122 @@
+{
+  "slug": "ai-max-final-url-expansion-landing-page-audit",
+  "status": "published",
+  "title": "AI Max Final URL Expansion Audit: Landing Page Exclusions and Pinned Assets",
+  "description": "Audit Google Ads AI Max Final URL expansion, URL exclusions, page feeds and pinned RSA assets before approving changes to Search campaigns.",
+  "summary": "A practical agency audit for AI Max landing-page routing: verify settings, identify risky destinations, understand pinned asset trade-offs, and review evidence before approval.",
+  "category": "AI Max for Search",
+  "datePublished": "2026-10-25",
+  "readingTimeMinutes": 8,
+  "intro": "To audit AI Max Final URL expansion in Google Ads, inspect the Search campaign's AI Max and asset optimization settings, list the pages that must never receive ad traffic, review URL inclusions and exclusions, and verify which search terms, headlines and landing pages actually served. Do not assume that enabling AI Max means every asset setting is enabled or that pinned responsive search ad copy will always serve. Approve any routing change only after checking relevance, tracking, policy and conversion quality.",
+  "takeaways": [
+    "Verify the actual campaign settings: Search term matching, text customization and Final URL expansion are distinct controls.",
+    "Review legal, support, recruitment, expired-offer and low-intent pages before allowing dynamic landing-page selection.",
+    "URL inclusions and Final URL expansion interact; inclusions are not automatically a strict allowlist when expansion is enabled.",
+    "Pinned responsive search ad assets may not be respected when expansion or URL inclusions change landing-page selection.",
+    "Use Google Ads reports for evidence and a human reviewer for consequential decisions."
+  ],
+  "sections": [
+    {
+      "heading": "1. Start with the exact campaign configuration",
+      "paragraphs": [
+        "AI Max is an optimization layer for Search campaigns, not a separate campaign type. It combines search term matching with optional asset optimization capabilities. In the Google Ads interface, open the Search campaign, navigate to Settings, then AI Max, and record the state of search term matching, text customization and Final URL expansion. Capture the date, campaign owner and any recent configuration changes.",
+        "Do not infer settings from a product announcement or from a neighboring account. Google's UI guidance describes text customization and Final URL expansion as enabled by default during some AI Max setup flows, while its API documentation describes opt-out defaults for Search asset automation when enabling AI Max through the API. The reliable audit method is to inspect the live campaign configuration, not assume a universal default."
+      ],
+      "bullets": [
+        "Record campaign and ad-group AI Max settings separately.",
+        "Check Change history before attributing traffic changes to AI Max.",
+        "Confirm the conversion goals used to evaluate destination quality."
+      ]
+    },
+    {
+      "heading": "2. Build a landing-page risk inventory before enabling expansion",
+      "paragraphs": [
+        "Final URL expansion can select a relevant page on the advertiser's domain instead of the URL originally supplied in the ad. That creates an opportunity to match intent, but it also makes the website's content and structure part of the advertising decision. A broad, inconsistent site can expose pages that are technically accessible but unsuitable as paid landing pages.",
+        "Walk through the site with the account owner and identify destinations that should not receive paid traffic: careers, support, legal notices, out-of-stock products, discontinued services, old promotions, inaccessible checkout pages or content with unsupported claims. This is an illustrative review list, not a statement that Google will select those pages. Confirm mobile experience, consent flows, tracking and language or regional relevance for every approved destination category."
+      ],
+      "bullets": [
+        "Document sensitive URL patterns and their business reason.",
+        "Test approved pages on mobile and check conversion tracking.",
+        "Have the brand or compliance owner review restricted claims."
+      ]
+    },
+    {
+      "heading": "3. Distinguish URL exclusions from URL inclusions",
+      "paragraphs": [
+        "Google Ads provides campaign-level URL exclusions for Final URL expansion. In the campaign's AI Max settings, review the exclusions panel and its URL or rule-based entries. A page that should never be selected needs an exclusion strategy appropriate to its URL structure. Check whether a rule is too broad, misses alternate paths or unintentionally blocks valid landing pages.",
+        "URL inclusions serve a different purpose. They can add specific destinations at the ad-group level, but when Final URL expansion is also enabled, Google may use both included URLs and other relevant URLs. Therefore, a list of included pages should not be presented to the client as an absolute allowlist. Google's documentation describes more constrained behavior when expansion is off; verify the relevant configuration and page-feed rules before promising URL-level control."
+      ],
+      "bullets": [
+        "Review exclusions at campaign level and inclusions at ad-group level.",
+        "Test representative allowed and disallowed URL patterns.",
+        "Avoid treating inclusions as a hard limit while expansion is on."
+      ]
+    },
+    {
+      "heading": "4. Check the pinned responsive search ad trade-off",
+      "paragraphs": [
+        "Some advertisers pin responsive search ad headlines because a disclaimer, product qualification or brand statement must appear in a particular position. Google's guidance warns that pinned RSA assets are not respected when a more relevant Final URL is selected under expansion. URL inclusions can also affect pinned asset serving. This is a material compliance and messaging consideration, not merely a creative preference.",
+        "Before changing settings, identify ads whose pinned copy is commercially or legally important. Review whether dynamically generated text could conflict with landing-page claims or mandatory disclosures. If pinned wording must reliably serve, Google's Help Center advises turning off Final URL expansion and URL inclusions. That decision may limit automation flexibility, so document the trade-off and obtain explicit approval."
+      ],
+      "bullets": [
+        "Identify pinned headlines or descriptions with mandatory wording.",
+        "Compare dynamic destination and ad-copy risks with campaign goals.",
+        "Escalate regulated or contractual messaging requirements."
+      ]
+    },
+    {
+      "heading": "5. Audit what served, not just what was configured",
+      "paragraphs": [
+        "Configuration review alone cannot establish whether routing is useful. Google's AI Max reporting documentation identifies the ai_max_search_term_ad_combination_view for combinations of search terms, headlines and landing pages. The expanded_landing_page_view can also show destinations associated with expansion. These are Google Ads API reporting resources; availability in an agency's own dashboards depends on its reporting integration.",
+        "Review the relationship between query intent, the selected landing page and the resulting conversion action. A page may generate cheap leads but attract unqualified inquiries, or it may convert slowly because the sales cycle is longer. Use consistent date ranges and recognize reporting delays. Do not claim that an observed change in conversion rate proves Final URL expansion caused the result without a suitable comparison design."
+      ],
+      "bullets": [
+        "Sample high-spend and high-risk query-to-page combinations.",
+        "Investigate unexpected destinations and misleading headlines.",
+        "Separate qualified outcomes from superficial conversion counts."
+      ]
+    },
+    {
+      "heading": "6. Turn findings into a human-approved decision",
+      "paragraphs": [
+        "An agency review should end with a decision record rather than a blanket instruction to switch automation on or off. For each finding, document the campaign, affected URLs, evidence, likely business impact, proposed remedy, owner and rollback consideration. Possible outcomes include keeping the current setup, adding a justified exclusion, correcting a landing page or scheduling a controlled test.",
+        "Prioritize issues that can harm measurement, customer experience or compliance. Recheck the campaign after any approved change and note unrelated promotions or tracking releases that could distort the interpretation. Multi-account agencies should use a consistent template, but not copy exclusions between clients without checking site structure and commercial intent."
+      ],
+      "bullets": [
+        "Assign one accountable reviewer and approval date.",
+        "Record the reason and risk for each proposed change.",
+        "Recheck destinations and conversion quality after approval."
+      ]
+    },
+    {
+      "heading": "7. Where TruOpt.ai supports the surrounding workflow",
+      "paragraphs": [
+        "TruOpt.ai focuses on Google Ads account audits, Guardian anomaly alerts, explainable optimization recommendations and human-approved optimization across agency operations. These capabilities support a disciplined review process: identify accounts needing attention, investigate anomalies, consider recommendations and keep material decisions with the responsible marketer.",
+        "TruOpt.ai should not be described as automatically generating AI Max landing-page combination reports, configuring URL exclusions or enforcing pinned RSA copy unless those capabilities have been verified separately. Use Google Ads and its documented reporting tools as the evidence source. Explore TruOpt.ai for an audit-and-review workflow that complements the platform's controls rather than replacing them."
+      ],
+      "bullets": [
+        "Use platform data to validate every proposed change.",
+        "Treat alerts as prompts to investigate, not proof of causality.",
+        "Require human approval for changes that affect routing or messaging."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — Set up AI Max for Search campaigns",
+      "url": "https://support.google.com/google-ads/answer/15909989?hl=en-GB"
+    },
+    {
+      "label": "Google Ads Help — About Final URL expansion in Search",
+      "url": "https://support.google.com/google-ads/answer/16230205?hl=en"
+    },
+    {
+      "label": "Google Ads API — Get started with AI Max for Search campaigns",
+      "url": "https://developers.google.com/google-ads/api/docs/campaigns/ai-max-for-search-campaigns/getting-started"
+    },
+    {
+      "label": "Google Ads API — Reports for AI Max for Search campaigns",
+      "url": "https://developers.google.com/google-ads/api/docs/campaigns/ai-max-for-search-campaigns/ai-max-reporting"
+    }
+  ]
+}
