@@ -1,0 +1,121 @@
+{
+  "slug": "ai-max-search-terms-ad-combinations-audit",
+  "status": "published",
+  "title": "AI Max Search Terms and Ad Combinations: An Agency Audit Checklist",
+  "description": "Audit Google Ads AI Max search terms, generated headlines and landing pages together. Use this agency checklist to spot mismatches and review exclusions safely.",
+  "summary": "A practical workflow for reviewing AI Max search term, headline and landing-page combinations without confusing keyword expansion with landing-page matches or overusing negatives.",
+  "category": "Google Ads AI Max",
+  "datePublished": "2026-10-26",
+  "readingTimeMinutes": 8,
+  "intro": "To audit AI Max search traffic, review the Search terms and ad combinations report rather than relying on keywords alone. Check the query, displayed headline and destination URL as one customer journey; then validate conversion quality and decide whether a negative keyword, URL control or no change is justified. Google's reports reveal useful patterns but do not expose every query or prove incrementality. Keep material changes behind human review.",
+  "takeaways": [
+    "Audit query, headline and landing page together.",
+    "Distinguish AI Max expanded matches from landing-page matches.",
+    "Treat missing query detail and conversion lag as limitations.",
+    "Document approval and follow-up for exclusions or creative changes."
+  ],
+  "sections": [
+    {
+      "heading": "1. Start with the right report, not a keyword export",
+      "paragraphs": [
+        "Open the relevant Search campaign in Google Ads and navigate to Insights and reports, then Search terms. Choose the Search terms and ad combinations view where available. Google describes this view as connecting the triggering query with the headline and landing page shown. That combination is more informative than a keyword list alone because AI Max may expand matching beyond the advertiser's original keyword choices.",
+        "Record the campaign, reporting window, conversion actions and recent changes before filtering. Compare like-for-like periods and remember that some low-volume search terms are withheld from detailed reporting. A filtered report is a sample of visible evidence, not a complete ledger of every query."
+      ],
+      "bullets": [
+        "Use one consistent date range and campaign scope.",
+        "Inspect query, headline and landing-page combinations together.",
+        "Note missing or aggregated search-term coverage."
+      ]
+    },
+    {
+      "heading": "2. Separate keyword expansion from landing-page matches",
+      "paragraphs": [
+        "The Keywords report includes aggregate rows for AI Max expanded matches and AI Max landing page matches. Expanded matches reflect broad matching from the keywords you supplied; landing-page matches can reflect queries discovered through landing pages or other assets outside those keywords. These are different mechanisms, so an audit should not label every unexpected query as a broad-match keyword problem.",
+        "Compare those totals with the ordinary keyword and search terms reports, but do not expect every number to reconcile at a single-query level. Reporting views can use different scopes, aggregation and privacy thresholds. Document which report supports each observation instead of mixing incompatible metrics in a slide."
+      ],
+      "bullets": [
+        "Review both AI Max aggregate rows.",
+        "Keep campaign totals separate from visible query samples.",
+        "Flag unexpected themes for investigation, not immediate exclusion."
+      ]
+    },
+    {
+      "heading": "3. Judge the full query-to-ad-to-page journey",
+      "paragraphs": [
+        "For a representative set of high-cost or strategically important queries, read the searcher's likely intent, the headline served and the destination page. Ask whether all three tell a consistent story. A query about enterprise security that reaches a generic introductory article may produce a click without meeting the user's need; conversely, a helpful educational page can be appropriate for an early-stage search.",
+        "Check whether the page contains the offer, location, eligibility and disclosures implied by the ad. If the mismatch is material, inspect Final URL expansion, URL inclusion or exclusion settings and text customization. Do not assume that a headline seen in one report was the only creative variant available."
+      ],
+      "bullets": [
+        "Sample material query–headline–URL combinations.",
+        "Check message consistency and conversion-path quality.",
+        "Escalate legal, brand or regulated-content mismatches."
+      ]
+    },
+    {
+      "heading": "4. Avoid negative-keyword overcorrection",
+      "paragraphs": [
+        "Google's search terms guidance allows advertisers to add negatives for irrelevant demand, but negative match behavior differs from positive keyword matching. Excluding an entire theme based on one unqualified click can block future valuable traffic. Classify findings as clearly irrelevant, possibly relevant but low quality, or relevant with a landing-page problem before proposing a change.",
+        "Google recommends allowing a ramp-up period after enabling AI Max before making routine adjustments. Its reporting guidance currently says to wait at least two weeks, although urgent brand-safety or compliance issues may justify prompt human investigation. Account history, traffic and conversion delay still matter; a calendar rule is not a substitute for evidence."
+      ],
+      "bullets": [
+        "Check negative match type and scope before approval.",
+        "Separate irrelevant intent from weak short-term performance.",
+        "Document urgent exceptions and normal review timing."
+      ]
+    },
+    {
+      "heading": "5. Read conversion quality and uncertainty",
+      "paragraphs": [
+        "Clicks, conversions and cost per conversion can reveal where to look, but they cannot prove that AI Max created incremental customers. Check primary conversion definitions and, where accessible, downstream lead quality or sales outcomes. If tracking was changed during the review period, annotate that change before making comparisons.",
+        "For low-volume segments, avoid treating a large percentage swing as a decisive trend. Consider conversion lag, seasonal events and campaign learning. A useful agency report should include an explicit 'insufficient evidence' outcome, alongside 'investigate' and 'recommend change.' That restraint makes recommendations more defensible."
+      ],
+      "bullets": [
+        "Validate primary conversions and available lead-quality data.",
+        "Record tracking changes and conversion lag.",
+        "State confidence and limitations before recommending action."
+      ]
+    },
+    {
+      "heading": "6. Turn findings into an approval-ready agency decision",
+      "paragraphs": [
+        "Use a consistent issue record across accounts: campaign, query theme, observed ad and URL, business impact, evidence link, proposed remedy, potential downside, approver and follow-up date. Rank issues by commercial or compliance importance rather than raw anomaly count. A brand-safety mismatch may need faster review than a small CPA fluctuation.",
+        "When recommending a negative keyword, URL exclusion or creative change, explain why that particular control addresses the observed problem and what reach it could remove. Confirm the exact Google Ads setting before implementation. Assign a person to review performance afterward; the existence of an automated suggestion does not establish that the action was beneficial."
+      ],
+      "bullets": [
+        "Record evidence, owner and decision for each issue.",
+        "Require approval for consequential targeting or landing-page edits.",
+        "Schedule a post-change quality review."
+      ]
+    },
+    {
+      "heading": "7. Use TruOpt.ai as a review layer, not a substitute for Google Ads",
+      "paragraphs": [
+        "TruOpt.ai supports Google Ads account audits, Guardian anomaly alerts, explainable optimization suggestions and human-approved workflows across agency accounts. These capabilities fit a disciplined review process: identify accounts needing attention, assess evidence and keep the accountable marketer in control.",
+        "TruOpt.ai should not be represented as generating Google's AI Max ad-combinations report, exposing hidden queries or automatically fixing AI Max landing-page choices. Inspect the source evidence inside Google Ads, then explore TruOpt.ai for a structured account-audit and approval workflow. The objective is clearer decisions, not automatic acceptance of every recommendation."
+      ],
+      "bullets": [
+        "Use Google Ads as the source for query and ad-combination evidence.",
+        "Review explainable suggestions with business context.",
+        "Keep final optimization decisions human-approved."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — AI Max reporting",
+      "url": "https://support.google.com/google-ads/answer/16470459?hl=en-en"
+    },
+    {
+      "label": "Google Ads Help — Set up AI Max",
+      "url": "https://support.google.com/google-ads/answer/15909989?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Negative keyword ideas from search terms",
+      "url": "https://support.google.com/google-ads/answer/7102466?hl=en-GB"
+    },
+    {
+      "label": "Search Engine Land — Testing AI Max",
+      "url": "https://searchengineland.com/testing-ai-max-google-ads-when-456464"
+    }
+  ]
+}
