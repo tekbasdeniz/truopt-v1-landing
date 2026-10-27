@@ -1,0 +1,133 @@
+{
+  "slug": "google-ads-primary-secondary-conversion-goals-smart-bidding-agency-audit",
+  "status": "published",
+  "title": "Google Ads Primary vs Secondary Conversions: A Smart Bidding Goal Audit for Agencies",
+  "description": "Audit Google Ads primary and secondary conversions, account-default goals, campaign-specific goals and custom-goal exceptions before changing Smart Bidding.",
+  "summary": "An agency checklist for identifying which Google Ads conversion actions actually inform bids, detecting misleading reporting comparisons and governing goal changes safely.",
+  "category": "Google Ads Conversion Goals",
+  "datePublished": "2026-10-27",
+  "readingTimeMinutes": 8,
+  "intro": "To audit Google Ads conversion goals, identify the actual business outcome, check which goals each campaign uses, then inspect every included conversion action's Primary or Secondary setting. Do not assume that marking an action Primary makes every campaign bid toward it. A campaign must also use its standard goal; custom goals are an important exception. Compare the Conversions and All conversions columns before judging performance, and review goal changes with the account owner before applying them.",
+  "takeaways": [
+    "A Primary action influences bidding only when its standard goal is selected by the campaign; custom goals are an exception.",
+    "Campaign-specific goals can override account defaults, so check the campaign rather than assuming account-wide settings apply.",
+    "The Conversions and All conversions columns answer different reporting questions.",
+    "Changing goals can disrupt Smart Bidding interpretation; use evidence, approval and a follow-up review."
+  ],
+  "sections": [
+    {
+      "heading": "1. Define what a qualified conversion means for this client",
+      "paragraphs": [
+        "Before opening a settings menu, write down the business result the campaign is supposed to create: a purchase, a qualified enquiry, an appointment or another meaningful outcome. Record whether the account also measures micro-conversions such as page views, newsletter signups and form starts. These actions can be useful observations, but counting them as equally valuable outcomes may distort decision-making.",
+        "Ask how a lead is qualified and whether the CRM or sales team can provide independent confirmation. A lead form submission is not automatically a sales opportunity. If the account lacks downstream quality data, document that limitation instead of describing recorded conversions as verified revenue. Different campaigns may have different objectives; the audit should preserve those differences."
+      ],
+      "bullets": [
+        "Identify the one outcome that matters most to the client.",
+        "List supporting and diagnostic events separately.",
+        "Record which quality signals can actually be verified."
+      ]
+    },
+    {
+      "heading": "2. Inspect account-default goals and campaign overrides",
+      "paragraphs": [
+        "In Google Ads, review the goals marked as account-default, then open the Campaigns table and add the Conversion goals column under Attributes. For each important campaign, confirm whether it uses account-default goals or campaign-specific goals. Google explains that campaign-specific selection overrides the default set for that campaign, so an account-level screenshot alone cannot prove what a campaign is optimizing toward.",
+        "Look for exceptions that have a legitimate reason and those that appear accidental, such as a sales campaign still using a lead-generation goal from a previous launch. Google generally recommends consistent account-default goals where business objectives permit shared learning. Do not remove intentional campaign-specific goals just to standardize a spreadsheet."
+      ],
+      "bullets": [
+        "Export or record each campaign's active goal selection.",
+        "Flag overrides with no documented business rationale.",
+        "Check newly created campaigns for inherited defaults."
+      ]
+    },
+    {
+      "heading": "3. Read Primary and Secondary at the action level",
+      "paragraphs": [
+        "Open the conversions summary in the Goals area and inspect the conversion actions inside each selected standard goal. A Primary action is normally eligible for bidding when its standard goal is used by the campaign. Secondary actions are generally observation-only and appear in All conversions rather than the main Conversions column. An action labeled Primary is not necessarily being optimized by a campaign that does not use its goal.",
+        "For example, an account can have a Primary purchase action and a Primary lead-form action while a particular campaign selects only the purchase goal. The lead-form action's label does not make that campaign optimize toward lead forms. Review the goal-action pair, not either setting in isolation."
+      ],
+      "bullets": [
+        "Inspect action name, source, category and optimization status.",
+        "Confirm that the containing goal is selected by the campaign.",
+        "Avoid equating the Primary label with universal bidding eligibility."
+      ]
+    },
+    {
+      "heading": "4. Check the custom-goal exception before making changes",
+      "paragraphs": [
+        "Custom conversion goals require special attention. Google states that a conversion action included in a custom goal is used for reporting and bidding even if that action is labeled Secondary. This means the usual shorthand, 'Secondary never affects bidding,' is incorrect when a custom goal is applied to a campaign.",
+        "Inspect custom goals and the campaigns using them. A custom goal that mixes a purchase with an easy engagement event can create an objective different from what the account owner intended. The correct response is not to delete it immediately; verify why it exists, whether its underlying actions still work, and what reporting and bidding behavior may change if the goal is replaced. Google supports only one custom goal per campaign."
+      ],
+      "bullets": [
+        "List custom goals and their included actions.",
+        "Treat included Secondary actions as potentially biddable.",
+        "Require owner review before adding or removing an action."
+      ]
+    },
+    {
+      "heading": "5. Reconcile Conversions and All conversions without inventing lift",
+      "paragraphs": [
+        "Segment campaign reporting by Conversion action or Conversion category. Compare the main Conversions metric with All conversions, then map the difference back to the goals and actions actually selected. A spike in All conversions alongside flat qualified purchases may reflect additional observation events, not growing sales. Likewise, a goal configuration change can alter the headline conversions metric without proving that customer behavior changed.",
+        "Annotate periods when measurement setup, conversion counting, attribution or source integrations changed. When Google Analytics events are imported, check their status in Google Ads rather than assuming an Analytics key event is automatically a bidding goal. For any discrepancy, verify dates, account time zone, conversion lag and duplicate events before proposing targeting or budget changes."
+      ],
+      "bullets": [
+        "Segment reports by action and goal category.",
+        "Explain which actions appear in each conversion metric.",
+        "Separate tracking changes from genuine commercial performance."
+      ]
+    },
+    {
+      "heading": "6. Treat goal changes as controlled bidding decisions",
+      "paragraphs": [
+        "Before making a Primary/Secondary change or selecting different campaign goals, estimate the practical consequences: which campaigns would change their optimization signals, what volume of usable events would remain, and whether the target CPA or ROAS still describes the same business result. Google's guidance notes that Smart Bidding needs time to adapt to conversion-setting changes and recommends gradual target adjustments rather than abrupt reactions.",
+        "If a campaign-specific goal loses all of its conversion actions, Google says it can revert to account-default goals for bidding and reporting. That fallback makes a post-edit review essential. Document an owner, reason, approval, change date and monitoring window. Do not present a universal adjustment period as a guarantee; conversion delay and campaign volume affect how quickly evidence becomes meaningful."
+      ],
+      "bullets": [
+        "Review affected campaigns and goal fallbacks in advance.",
+        "Seek explicit authorization for consequential changes.",
+        "Recheck reporting and bid-strategy behavior after approval."
+      ]
+    },
+    {
+      "heading": "7. Standardize agency review without handing control to an AI agent",
+      "paragraphs": [
+        "Maintain a compact audit record for each client: objective, selected goals, Primary and Secondary actions, custom-goal exceptions, observed reporting differences, proposed decision and reviewer. Prioritize material mismatches, not simply the highest number of warnings. An account with sparse conversions needs a different review threshold from one with stable purchase volume.",
+        "Agency debates about AI agents increasingly focus on how confidently automated systems can suggest account changes without understanding business constraints. In an August 2026 Optmyzr discussion, PPC practitioners emphasized the risks of unsupervised account control. Use such commentary as a governance prompt rather than evidence that any specific approach guarantees results."
+      ],
+      "bullets": [
+        "Keep a reusable conversion-goal audit register.",
+        "Separate evidence, uncertainty and recommendation.",
+        "Assign a human owner to every approved change."
+      ]
+    },
+    {
+      "heading": "8. Where TruOpt.ai fits into this audit",
+      "paragraphs": [
+        "TruOpt.ai supports Google Ads account audits, Guardian anomaly alerts, explainable optimization recommendations and human-approved workflows for agency operations across multiple accounts. Those capabilities can support disciplined prioritization and review when campaign performance signals merit attention.",
+        "Do not assume TruOpt.ai automatically edits conversion goals, imports offline sales outcomes or exposes a custom-goal diagnostic report; those are not claims made here. Inspect the source conversion-goal settings and campaign reports directly in Google Ads. Explore TruOpt.ai at https://www.truopt.ai for a human-reviewed approach to Google Ads optimization that complements platform evidence rather than replacing it."
+      ],
+      "bullets": [
+        "Validate goal configuration inside Google Ads.",
+        "Use explainable suggestions as review inputs, not commands.",
+        "Keep the marketer accountable for optimization decisions."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — About conversion goals",
+      "url": "https://support.google.com/google-ads/answer/10995103?hl=en"
+    },
+    {
+      "label": "Google Ads Help — About primary and secondary conversion actions",
+      "url": "https://support.google.com/google-ads/answer/11461796?hl=en"
+    },
+    {
+      "label": "Google Ads Help — About campaign-specific conversion goals",
+      "url": "https://support.google.com/google-ads/answer/9143218?hl=en"
+    },
+    {
+      "label": "Optmyzr PPC Town Hall — Can AI Agents Really Manage Google Ads Accounts? (August 3, 2026)",
+      "url": "https://www.optmyzr.com/ppctownhall/can-ai-agents-really-manage-google-ads-accounts/"
+    }
+  ]
+}
