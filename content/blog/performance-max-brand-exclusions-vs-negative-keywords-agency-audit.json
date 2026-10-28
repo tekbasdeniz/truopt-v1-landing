@@ -1,0 +1,121 @@
+{
+  "slug": "performance-max-brand-exclusions-vs-negative-keywords-agency-audit",
+  "status": "published",
+  "title": "Performance Max Brand Exclusions vs Negative Keywords: A 2026 Agency Audit",
+  "description": "Learn when to use Performance Max brand exclusions, campaign and account negatives, and placement controls. A practical 2026 PPC agency audit checklist.",
+  "summary": "An agency-ready decision framework for separating branded-query controls, irrelevant search exclusions and content suitability in Performance Max—with clear limits and human approval.",
+  "category": "Performance Max Optimization",
+  "datePublished": "2026-10-28",
+  "readingTimeMinutes": 8,
+  "intro": "To exclude branded searches from a Google Ads Performance Max campaign, start with a campaign-level brand exclusion list rather than automatically adding your brand as a negative keyword. Use campaign-level negative keywords for specific unwanted Search and Shopping queries, account-level negatives only when the restriction should apply across relevant campaigns, and content-suitability or placement exclusions for unwanted Display and video environments. These are different controls with different scopes. Audit what is already active, assess the possible traffic loss and approve changes deliberately; no exclusion automatically proves incremental growth.",
+  "takeaways": [
+    "Choose a brand exclusion list for branded-query intent; assess its Search and Shopping scope.",
+    "Use campaign negatives for unwanted individual queries and account negatives only for shared restrictions.",
+    "Do not mistake search-query exclusions for YouTube or Display content-suitability controls.",
+    "Check traffic quality, Search overlap and exclusions after any human-approved change."
+  ],
+  "sections": [
+    {
+      "heading": "1. Define the actual exclusion problem first",
+      "paragraphs": [
+        "An agency should distinguish four questions before editing Performance Max: Is the campaign harvesting existing branded demand? Is it matching irrelevant non-brand queries? Is the ad appearing beside unsuitable content? Or is it duplicating traffic that another Search campaign should serve? Each problem needs different evidence and may need a different setting. A branded query is not inherently wasteful: existing customers, retailers and high-intent prospects may still have business value.",
+        "Review the campaign objective, primary conversions, Search campaign coverage and the available Performance Max search terms data. Separate reported conversions from genuinely new customers where reliable business data is available. Do not claim that moving branded traffic out of Performance Max will automatically improve incremental revenue or lower acquisition cost."
+      ],
+      "bullets": [
+        "Record the business objective and the specific unwanted query or placement type.",
+        "Check conversion definitions and whether the concern is reach, attribution, quality or brand safety.",
+        "Identify the campaign and account owner before proposing a restriction."
+      ]
+    },
+    {
+      "heading": "2. Use brand exclusions when the issue is branded intent",
+      "paragraphs": [
+        "Google supports brand exclusion lists for Performance Max. In Google Ads, open the campaign's Settings, find Brand exclusions under Other settings, then select or create the relevant brand list. Include the correct brand entity and check parent brands, sub-brands and alternative names that may require separate entries. A brand list handles recognized variants and multiple languages differently from a conventional negative keyword list.",
+        "Google describes Performance Max brand exclusions as applying to Search and Shopping inventory. Some retail configurations allow branded Shopping traffic to remain available while excluding branded Search text ads, so inspect the exact setting before saving. These exclusions do not create universal campaign-wide brand separation across every surface. If branded traffic is strategically useful, document why it should remain rather than forcing an exclusion as a default."
+      ],
+      "bullets": [
+        "Confirm that the brand list contains the intended brand identities.",
+        "Review the branded Shopping exception where the setting is available.",
+        "Compare affected Search and Performance Max campaigns before changing the list."
+      ]
+    },
+    {
+      "heading": "3. Use negatives for specific queries, with the right scope",
+      "paragraphs": [
+        "Performance Max campaign-level negative keywords apply to Search and Shopping inventory, not every placement. Open Campaigns, Keywords and Negative keywords, select the Performance Max campaign and enter the terms or choose an existing list. Google documents a campaign-level limit of 10,000 negatives and an account-level limit of 1,000. An account-level exclusion can affect relevant Search and Shopping activity beyond the original campaign, making it a materially broader decision.",
+        "Negative keywords do not automatically match close variants in the same way as positive keyword expansion. Exact, phrase and broad negative match types can block different query patterns, so preview the potential loss of relevant traffic wherever the interface supports it. Prefer narrow, clearly justified exclusions to an oversized list assembled from a few days of noisy data."
+      ],
+      "bullets": [
+        "Choose campaign scope for a local issue and account scope only for a shared policy.",
+        "Review negative match types and close-variant limitations.",
+        "Log who approved each material exclusion and why."
+      ]
+    },
+    {
+      "heading": "4. Treat unsuitable placements as a separate brand-safety workflow",
+      "paragraphs": [
+        "A negative keyword intended for a Search query is not a reliable mechanism for avoiding unsuitable videos, apps or websites. Google directs advertisers to Content suitability settings for excluded content keywords, inventory-type choices, sensitive content categories and placement exclusions. Performance Max respects relevant account-level and manager-account placement exclusions. Manager-level placement exclusion lists can support shared governance across client accounts, but they must be applied thoughtfully.",
+        "These settings can reduce unwanted adjacency, but Google explicitly cautions that content exclusions are not guaranteed to remove every related placement. A narrower inventory type can also reduce reach. Agencies should make the trade-off visible to the client and avoid promising absolute protection from the mere presence of a list."
+      ],
+      "bullets": [
+        "Identify whether the issue concerns a search query, content theme or specific placement.",
+        "Check Content suitability and existing account or manager placement exclusions.",
+        "Document residual risk and potential lost reach."
+      ]
+    },
+    {
+      "heading": "5. Audit Search overlap before declaring a brand-leak problem",
+      "paragraphs": [
+        "Performance Max and Search can both be eligible for similar commercial intent. Review which campaigns own important branded queries, whether Search ads are eligible and whether campaign budgets or settings have changed. Optmyzr's September 2026 article highlights the importance of comparing search terms, search categories and Search keywords when evaluating overlap. It also notes that a brand exclusion is the purpose-built option for removing branded demand.",
+        "Overlap alone does not establish cannibalization or an incremental revenue loss. A campaign may report strong branded return because the customer was already close to purchasing, or because an additional ad contributed to the journey; neither explanation is proven by blended ROAS. Treat branded-versus-nonbranded segmentation as a measurement question requiring careful testing, not as proof that Performance Max is failing."
+      ],
+      "bullets": [
+        "Compare branded themes, campaign eligibility and the same reporting dates.",
+        "Keep descriptive overlap separate from causal claims about incremental sales.",
+        "Avoid simultaneously changing exclusions, bidding targets and budgets without a test plan."
+      ]
+    },
+    {
+      "heading": "6. Use a human-approved exclusion change log",
+      "paragraphs": [
+        "For each proposed change, record the affected account and campaign, evidence screenshot or report, excluded brand or query, chosen control, inventory scope, expected downside, approver and follow-up date. A useful decision can also be 'no change': the query may be commercially relevant, evidence may be sparse, or a broad exclusion may block valuable discovery. This approach is especially important for agencies managing several advertisers with different brand and compliance needs.",
+        "After approval, inspect Change history and monitor the next comparable reporting periods. Recheck the actual queries and the quality of conversions rather than declaring success because the excluded term disappeared. Conversion lag, seasonal demand, spend redistribution and restricted search-term visibility can all complicate interpretation."
+      ],
+      "bullets": [
+        "Require a named reviewer for campaign or account-wide restrictions.",
+        "Track both intended exclusions and unintended traffic loss.",
+        "Revisit the decision when enough comparable evidence is available."
+      ]
+    },
+    {
+      "heading": "7. Where TruOpt.ai fits in the review process",
+      "paragraphs": [
+        "TruOpt.ai focuses on Google Ads account audits, Guardian anomaly alerts, explainable optimization recommendations and human-approved decision workflows, including multi-account agency operations. Those capabilities complement a consistent exclusion review: an account can be flagged for investigation while a marketer evaluates the platform evidence and decides what should change.",
+        "This article does not claim TruOpt.ai manages Google Ads brand lists, exposes withheld search queries, measures incrementality, guarantees brand safety or applies Performance Max exclusions automatically. Use Google's native controls for the exclusions themselves. Explore TruOpt.ai at https://www.truopt.ai/ to assess an explainable, human-reviewed Google Ads audit workflow for your team."
+      ],
+      "bullets": [
+        "Use Google Ads reporting and settings as the source of exclusion evidence.",
+        "Evaluate each explanation in the context of the advertiser's objective.",
+        "Keep high-impact optimization decisions accountable to a human approver."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — Brand suitability features in Performance Max",
+      "url": "https://support.google.com/google-ads/answer/13607727?hl=en-GB"
+    },
+    {
+      "label": "Google Ads Help — About brand settings for Search and Performance Max",
+      "url": "https://support.google.com/google-ads/answer/13721847?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Performance Max FAQs, including exclusions and account limits",
+      "url": "https://support.google.com/google-ads/answer/14587068?hl=en"
+    },
+    {
+      "label": "Optmyzr — Search Terms Available Again in Performance Max (September 25, 2026)",
+      "url": "https://www.optmyzr.com/blog/performance-max-search-terms/"
+    }
+  ]
+}
