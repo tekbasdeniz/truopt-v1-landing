@@ -1,0 +1,121 @@
+{
+  "slug": "google-ads-auto-apply-recommendations-agency-audit",
+  "status": "published",
+  "title": "Google Ads Auto-Apply Recommendations Audit: An Agency Control Checklist for 2026",
+  "description": "Audit Google Ads auto-applied recommendations across client accounts. Check opt-ins, change history, risks, approvals, and monitoring limitations.",
+  "summary": "An agency-ready procedure to uncover active Google Ads auto-apply subscriptions, investigate their change history, and approve corrective action without blindly reversing automation.",
+  "category": "Google Ads Account Audits",
+  "datePublished": "2026-10-29",
+  "readingTimeMinutes": 8,
+  "intro": "To audit Google Ads auto-apply recommendations, open Campaigns > Recommendations > Auto-apply settings, record every enabled recommendation type, then inspect the History tab and Campaigns > Change history for actual account changes. Match those changes against business objectives before disabling, reversing, or keeping anything. For agencies, repeat this review for each client account: an account-wide opt-in is not a substitute for an account-specific risk decision. This checklist separates subscriptions, actions, attribution, and approval so that automation remains accountable.",
+  "takeaways": [
+    "Check enabled auto-apply recommendation types, not just the optimization score.",
+    "Separate a subscribed recommendation from a change it actually made.",
+    "Use Google Ads change history to investigate who or what changed an account.",
+    "Require human approval for material targeting, keyword, bidding, or creative changes."
+  ],
+  "sections": [
+    {
+      "heading": "1. Inventory every active auto-apply subscription",
+      "paragraphs": [
+        "In Google Ads, go to the Recommendations page under Campaigns and open Auto-apply settings. Review the individual selections within the available categories rather than relying on a bundle label. Also check Admin > Account settings > Auto-apply to view subscribed recommendations. Google documents both locations. Record the account, date, each enabled type, the business owner, and whether the subscription was deliberately approved.",
+        "Do not assume all accounts have the same options: recommendation availability depends on the account, and Google's recommendation catalog can change. A screenshot or exported checklist gives an agency a baseline for future audits. An enabled recommendation means Google may apply an eligible suggestion automatically; it does not prove that any particular modification occurred."
+      ],
+      "bullets": [
+        "Capture each enabled recommendation type and its intended purpose.",
+        "Note who owns client approval and what risk level is permitted.",
+        "Flag unfamiliar subscriptions for investigation before changing them."
+      ]
+    },
+    {
+      "heading": "2. Reconcile the Auto-apply History tab with Change history",
+      "paragraphs": [
+        "The Auto-apply History tab shows when a recommendation was first enabled, when it last ran, and how many times it was applied in the past week. To find who opted in, Google directs advertisers to the account's Change history and the relevant opt-in date. An opt-in record and a subsequent campaign edit answer different questions; review both.",
+        "Open Campaigns > Change history and filter by date, campaign, or change type. Google's interface retains change history for the past two years and maps changes against performance metrics. Check the User and tool information: an email address can indicate an interface user, while an API label or named tool can indicate a connected service. System labels are not automatically evidence of auto-apply. Check individual records rather than blaming Google automation for every unexplained fluctuation."
+      ],
+      "bullets": [
+        "Match subscribed types to dated, relevant changes.",
+        "Record the affected campaign and the before/after setting where visible.",
+        "Distinguish human edits, automated rules, API tools, and Google systems."
+      ]
+    },
+    {
+      "heading": "3. Rank the business impact of different recommendation types",
+      "paragraphs": [
+        "Not all automatic changes carry equal risk. Routine maintenance suggestions may be compatible with a client's strategy, while keyword, negative keyword, targeting, bidding, or ad-asset decisions can affect intent coverage, brand language, or conversion economics. Prioritize changes that could alter who sees the ad, what promise it makes, or which outcome the bid strategy values.",
+        "For each high-priority change, ask whether it matched the client's acquisition strategy and approved guardrails. Consider a hypothetical lead-generation account that values qualified inquiries: increasing click volume could still be undesirable if the new traffic is irrelevant. This is a decision framework, not evidence that any specific recommendation type performs poorly."
+      ],
+      "bullets": [
+        "Check keyword additions or removals against search intent.",
+        "Review bidding and targeting changes against agreed goals.",
+        "Escalate brand, legal, landing-page, and conversion-quality concerns."
+      ]
+    },
+    {
+      "heading": "4. Test evidence before assigning causation",
+      "paragraphs": [
+        "Place each important change on a timeline with spend, conversions, conversion value, and any available qualified-lead data. Compare suitable periods and annotate promotions, tracking outages, seasonal demand, and other simultaneous edits. A performance decline after an auto-applied recommendation is a reason to investigate, not proof that the recommendation caused it.",
+        "Watch for low-volume accounts where two additional conversions can distort an apparent trend. Check conversion delay and primary conversion definitions before recommending a rollback. Where evidence is inconclusive, mark the issue for monitoring and identify what additional observation would make the decision stronger. This protects teams from replacing one untested automated action with another untested manual action."
+      ],
+      "bullets": [
+        "Use aligned date ranges and consistent conversion definitions.",
+        "Check recent tracking and campaign edits for confounding factors.",
+        "Record confidence as supported, uncertain, or insufficient evidence."
+      ]
+    },
+    {
+      "heading": "5. Decide whether to retain, disable, or reverse a change",
+      "paragraphs": [
+        "Choose between retaining the subscription with monitoring, disabling a particular recommendation type, or evaluating the underlying change for reversal. Google documents disabling a type by unchecking it under Auto-apply settings and saving, or selecting Disable on the History tab. Disabling future automatic application does not itself prove that an earlier campaign modification has been undone.",
+        "Before any reversal, document the original setting, potential side effects, available recovery method, and responsible approver. Changes can interact: removing a keyword or changing a bidding goal may affect other parts of the account. Do not bulk-revert a sequence of edits simply because the last reporting period was weak. Verify the account state after a human-approved adjustment and schedule a follow-up review."
+      ],
+      "bullets": [
+        "Separate stopping future application from correcting past edits.",
+        "Obtain explicit approval for consequential account changes.",
+        "Verify post-change settings and review downstream outcomes."
+      ]
+    },
+    {
+      "heading": "6. Build a cross-account control routine for agencies",
+      "paragraphs": [
+        "Use the same register for every managed account: account ID, subscription inventory, last review, unexplained change, evidence, risk level, owner, client approval, action, and follow-up date. Triage high-impact deviations first. A weekly review may be reasonable for many portfolios, while critical campaigns may need a more frequent process chosen by their managers.",
+        "If you use the Google Ads API to build independent monitoring, understand its limitations. The ChangeEvent resource covers detailed changes from the past 30 days for supported resource types; it is not a replacement for the two-year web-interface history. Optmyzr's July 2026 documentation also notes limitations for API-based change-history rules and describes filtering for auto-applied recommendations. Do not promise exhaustive coverage from a third-party dashboard."
+      ],
+      "bullets": [
+        "Require a named reviewer and escalation path per account.",
+        "Retain a clear approval log for proposed optimizations.",
+        "Audit both monitoring gaps and unexpected changes."
+      ]
+    },
+    {
+      "heading": "7. Where TruOpt.ai fits",
+      "paragraphs": [
+        "TruOpt.ai focuses on Google Ads account audits, Guardian anomaly alerts, explainable optimization recommendations, and human-approved optimization for multi-account agency operations. This approach can complement a documented auto-apply governance process by helping marketers prioritize account reviews and discuss proposed actions with context.",
+        "TruOpt.ai is not presented here as an automatic exporter of Google's Auto-apply History tab, a complete ChangeEvent archive, or a guarantee that every risky setting will be detected. Use Google Ads as the source of truth for subscriptions and change records. Explore TruOpt.ai at https://truopt.ai for an explainable, human-reviewed Google Ads optimization workflow."
+      ],
+      "bullets": [
+        "Validate account evidence in Google Ads.",
+        "Review recommendations and risks before approving action.",
+        "Keep the client and accountable marketer in control."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — Manage auto-apply recommendations",
+      "url": "https://support.google.com/google-ads/answer/10276359?hl=en"
+    },
+    {
+      "label": "Google Ads Help — About change history",
+      "url": "https://support.google.com/google-ads/answer/19888?hl=en"
+    },
+    {
+      "label": "Google Ads API — ChangeEvent field reference",
+      "url": "https://developers.google.com/google-ads/api/fields/v25/change_event"
+    },
+    {
+      "label": "Optmyzr Help Center — Change History Scope in Rule Engine (July 17, 2026)",
+      "url": "https://help.optmyzr.com/en/articles/8185181-change-history-scope-in-rule-engine"
+    }
+  ]
+}
