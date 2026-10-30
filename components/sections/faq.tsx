@@ -10,7 +10,6 @@ const FAQ = () => {
     const t = useTranslations('faq')
     const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-    // ROI sorusu çıkarılmış net 7 soruluk liste
     const faqs = [
         { question: t('q1'), answer: t('a1') },
         { question: t('q2'), answer: t('a2') },
@@ -19,6 +18,7 @@ const FAQ = () => {
         { question: t('q5'), answer: t('a5') },
         { question: t('q6'), answer: t('a6') },
         { question: t('q7'), answer: t('a7') },
+        { question: t('q8'), answer: t('a8') },
     ]
 
     return (
