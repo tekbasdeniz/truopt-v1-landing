@@ -176,7 +176,9 @@
     "q6": "Web siteme herhangi bir izleme pikseli veya kod eklemem gerekiyor mu?",
     "a6": "Hayır, web sitesi kurulumu veya kod değişikliği gerekmez. TruOpt.ai doğrudan resmi Google Ads API'si üzerinden güvenli bir şekilde bağlanır; yani açılış sayfanızı yavaşlatmadan kampanyalarınızı anında analiz etmeye başlar.",
     "q7": "Dijital pazarlama ajansları TruOpt.ai ile birden fazla müşteri hesabını yönetebilir mi?",
-    "a7": "Evet, TruOpt.ai yerleşik çoklu hesap desteğiyle geliştirilmiştir. Pazarlama ajansları, tek bir panelden birden fazla farklı Google Ads müşteri hesabını yönetebilir, ekip aktivite günlüklerini takip edebilir ve her müşteri için özel bütçe korumaları ayarlayabilir."
+    "a7": "Evet, TruOpt.ai yerleşik çoklu hesap desteğiyle geliştirilmiştir. Pazarlama ajansları, tek bir panelden birden fazla farklı Google Ads müşteri hesabını yönetebilir, ekip aktivite günlüklerini takip edebilir ve her müşteri için özel bütçe korumaları ayarlayabilir.",
+    "q8": "Google Ads kampanyamın tıklama oranı yüksekken neden müşteri adayı gelmiyor?",
+    "a8": "Yüksek tıklama oranı, kullanıcıların reklama tıkladığını gösterir; dönüşüm aldığınız anlamına gelmez. Önce tamamlanan formların ve aramaların dönüşüm takibinde doğru kaydedildiğini doğrulayın. Ardından arama terimlerinin niyetini, açılış sayfası uyumunu, mobil kullanılabilirliği ve formun hangi aşamada terk edildiğini inceleyin. Teklifleri veya bütçeyi değiştirmeden önce yeterli veriyi karşılaştırın. AI destekli hesap denetimleri olası sorunları önceliklendirmeye yardımcı olabilir; her öneriyi gerçek iş sonuçlarına göre değerlendirin."
   },
   "pricing": {
     "badge": "FİYATLANDIRMA",

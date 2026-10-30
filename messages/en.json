@@ -176,7 +176,9 @@
     "q6": "Do I need to install any tracking pixels or code snippets on my website?",
     "a6": "No website installation or code modification is required. TruOpt.ai connects directly and securely via the official Google Ads API, meaning it analyzes your campaigns instantly without slowing down your landing page.",
     "q7": "Can digital marketing agencies manage multiple client accounts with TruOpt.ai?",
-    "a7": "Yes, TruOpt.ai is built with native multi-account support. Marketing agencies can manage multiple separate Google Ads client accounts from a single dashboard, track team activity logs, and set custom budget guardrails for each client."
+    "a7": "Yes, TruOpt.ai is built with native multi-account support. Marketing agencies can manage multiple separate Google Ads client accounts from a single dashboard, track team activity logs, and set custom budget guardrails for each client.",
+    "q8": "Why does my Google Ads campaign have a high CTR but no leads?",
+    "a8": "A high CTR means people are clicking your ads, not necessarily converting. First, verify that conversion tracking records completed forms and calls correctly. Then review search-term intent, landing-page relevance, mobile usability, and where visitors abandon the form. Compare results over a meaningful period before changing bids or budgets. AI-assisted account audits can help prioritize potential issues, but review each recommendation against real business outcomes."
   },
   "pricing": {
     "badge": "PRICING",
