@@ -1,0 +1,121 @@
+{
+  "slug": "google-ads-new-customer-acquisition-goals-audit",
+  "status": "published",
+  "title": "Google Ads New Customer Acquisition Goals: A 2026 Agency Audit Checklist",
+  "description": "Audit Google Ads New Customer Value vs New Customer Only, customer lists, purchase goals, and new-versus-returning reporting before changing bids.",
+  "summary": "A practical Google Ads new-customer acquisition audit for agencies: choose the right lifecycle mode, test identity signals, interpret reporting and retain human approval.",
+  "category": "Google Ads Optimization",
+  "datePublished": "2026-10-30",
+  "readingTimeMinutes": 7,
+  "intro": "To audit a Google Ads new customer acquisition goal, confirm which acquisition mode is active, verify the campaign's conversion goals, check how existing customers are identified, and compare new-versus-returning reporting with your own first-party records. Do not assume that selecting 'new customers only' perfectly excludes every repeat buyer or that a higher reported new-customer value means more incremental profit. The following checklist is designed for agency teams managing Search, Performance Max, Shopping or Demand Gen campaigns. It keeps Google's lifecycle settings separate from the business decisions that still require an accountable human.",
+  "takeaways": [
+    "New Customer Value and New Customer Only solve different business problems; audit the selected mode before changing bids.",
+    "A purchase conversion goal is required for New Customer Value, but not for New Customer Only.",
+    "Customer identification can depend on Google auto-detection, customer lists and conversion tags; none is a perfect identity system.",
+    "Lifecycle reporting has purchase-based limitations, so verify new-customer outcomes against trustworthy first-party data."
+  ],
+  "sections": [
+    {
+      "heading": "1. Identify the acquisition mode and its trade-off",
+      "paragraphs": [
+        "Open the campaign's customer acquisition or customer lifecycle settings. In New Customer Value mode, Google can prioritize new buyers by assigning an additional value to acquiring them while still allowing returning customers. This requires a value-based bidding strategy, such as Maximize conversion value or Target ROAS, and at least one Purchase conversion goal. It is not a switch that excludes everyone who has bought before.",
+        "New Customer Only instead directs bidding toward people classified as new customers. Google's documentation includes support for non-purchase goals such as lead generation and cost-based bidding. This mode is a strategic constraint, not an identity guarantee: Google notes that existing customers can occasionally see ads for privacy or technical reasons. An agency should document why acquiring only new customers outweighs potential lost repeat revenue."
+      ],
+      "bullets": [
+        "Record campaign type, acquisition mode, bidding strategy and owner.",
+        "Ask whether the objective is incremental customer value or strict acquisition focus.",
+        "Check whether another campaign intentionally serves returning customers."
+      ]
+    },
+    {
+      "heading": "2. Audit the conversion objective before touching targets",
+      "paragraphs": [
+        "Inspect the conversion goals the campaign actually uses, including any campaign-specific settings. For New Customer Value, verify that the purchase conversion action is configured and that recorded transaction value is credible. Compare primary conversion settings with what the business calls a first purchase. A campaign optimized to low-quality proxy actions can look healthy while doing little to acquire valuable customers.",
+        "For a lead-generation campaign using New Customer Only, do not treat the absence of a Purchase conversion as an error by itself. Google permits that configuration, but its dedicated lifecycle reporting is not available for non-purchase conversions. Keep any lead qualification analysis in an appropriate CRM or first-party measurement workflow rather than inventing a 'new buyer' metric from a form submission."
+      ],
+      "bullets": [
+        "Identify the exact conversion goal used for bidding.",
+        "Check for duplicate purchases, stale values and recent tracking changes.",
+        "Distinguish a measured customer from an estimated lead-quality proxy."
+      ]
+    },
+    {
+      "heading": "3. Verify how the system recognizes existing customers",
+      "paragraphs": [
+        "Google can use its own purchase-based detection, eligible audience lists and customer information collected through the conversion tag to help distinguish new from existing customers. In its documentation, Google says auto-detection can draw on up to 540 days of tracked purchase activity, but it is less comprehensive when people clear cookies or opt out. A 'new' label therefore should not be interpreted as proof that the buyer has never transacted with the company.",
+        "Review the existing-customer lists assigned to the lifecycle goal. Confirm their business definition, freshness, consent basis, upload method and whether they represent all relevant stores or brands. For an agency, a list managed by the wrong business unit can distort classification even when its technical status looks normal. Follow Google's Customer Match and privacy requirements; do not export personal customer records into an unsecured audit spreadsheet."
+      ],
+      "bullets": [
+        "Check list owner, update cadence and customer definition.",
+        "Compare the enabled Google Ads signals with available CRM purchase history.",
+        "Escalate missing data, consent or audience-eligibility questions."
+      ]
+    },
+    {
+      "heading": "4. Read new-versus-returning performance without double counting",
+      "paragraphs": [
+        "For eligible purchase campaigns, use the 'New vs. returning customers' segment in the Google Ads Campaigns table and inspect the available lifecycle columns. Google's measurement guidance distinguishes a count of new customers from purchase conversions: when a conversion action counts every conversion, repeat purchases within its conversion window can remain classified as new-customer conversions. Those figures are not always interchangeable.",
+        "Compare new-customer count, acquisition cost, conversion value and reporting dates with your own order and customer records. Google also cautions that lifecycle reports can be misleading for periods before the goal was enabled. When comparing campaigns, ensure that their attribution windows, tracking definitions and reporting periods align. Record differences explicitly instead of forcing dashboard totals to reconcile."
+      ],
+      "bullets": [
+        "Segment only comparable periods after goal activation.",
+        "Separate customer counts from purchase conversion counts.",
+        "Annotate attribution delays, value adjustments and data gaps."
+      ]
+    },
+    {
+      "heading": "5. Diagnose weak acquisition signals before raising bids",
+      "paragraphs": [
+        "A campaign with weak new-customer performance may have an unhelpful customer definition, incomplete tracking, an unsuitable landing page, unattractive first-purchase terms or simply too little evidence. It does not automatically need a larger new-customer value adjustment or a different Target ROAS. First review the landing-page promise, product economics and which customer segments the campaign can realistically reach.",
+        "Treat the value assigned to a new customer as an explicit business assumption. A plausible number should reflect repeat-purchase expectations, margins and customer retention information where those are available, not an arbitrary premium intended to make one dashboard line increase. Industry discussions of value-based bidding emphasize that automation optimizes the values advertisers supply; it cannot independently verify those values represent real profit."
+      ],
+      "bullets": [
+        "Check tracking health and customer-list relevance before bid changes.",
+        "Document the evidence supporting any new-customer value assumption.",
+        "Choose 'insufficient evidence' when data cannot justify intervention."
+      ]
+    },
+    {
+      "heading": "6. Make changes reviewable across agency accounts",
+      "paragraphs": [
+        "Create one decision record per issue: client and campaign, current mode, source screenshot or report link, conversion goal, customer-list definition, observed problem, proposed action, expected downside, approver and review date. For example, a proposal to switch to New Customer Only should explain how returning customers will remain reachable elsewhere and why the client accepts the possible loss of repeat purchases.",
+        "Use a controlled workflow when modifying the acquisition mode, customer lists, tracking or value assumptions. Check results after enough conversion data has arrived; do not declare success from a single short reporting window. Across multiple accounts, compare governance and evidence quality rather than assuming one universal customer-acquisition setting is right for every advertiser."
+      ],
+      "bullets": [
+        "Require human approval for targeting and bidding changes.",
+        "Keep an auditable rationale and a reversal plan.",
+        "Recheck CRM alignment and reporting after approved changes."
+      ]
+    },
+    {
+      "heading": "Where TruOpt.ai fits",
+      "paragraphs": [
+        "TruOpt.ai supports Google Ads account audits, Guardian alerts, explainable recommendations and human-approved optimization for agencies operating multiple accounts. It can be part of the review and escalation process when a campaign needs attention, with the responsible marketer deciding whether a proposed optimization serves the client's business goals.",
+        "TruOpt.ai should not be represented as a replacement for Google's lifecycle reporting, Customer Match configuration or first-party customer records. Verify those inputs in Google Ads and the appropriate business systems. To explore a more consistent, human-controlled Google Ads review workflow, visit TruOpt.ai and evaluate whether its account-audit and approval approach fits your team."
+      ],
+      "bullets": [
+        "Use Google Ads and first-party systems as the source of lifecycle evidence.",
+        "Prioritize explainable recommendations and accountable review.",
+        "Keep optimization changes behind a human approval step."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — About customer lifecycle goals",
+      "url": "https://support.google.com/google-ads/answer/12080169?hl=en"
+    },
+    {
+      "label": "Google Ads Help — How customer lifecycle goals detect customer segments",
+      "url": "https://support.google.com/google-ads/answer/14005876?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Measure your lifecycle goals campaigns",
+      "url": "https://support.google.com/google-ads/answer/15597581?hl=en"
+    },
+    {
+      "label": "Optmyzr — Value-Based Bidding: How It Works, When to Use It, and Why It Fails (July 16, 2026)",
+      "url": "https://www.optmyzr.com/blog/value-based-bidding-guide/"
+    }
+  ]
+}
