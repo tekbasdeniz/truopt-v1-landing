@@ -1,0 +1,133 @@
+{
+  "slug": "google-ads-data-exclusions-vs-seasonality-adjustments-agency-audit",
+  "status": "published",
+  "title": "Google Ads Data Exclusions vs Seasonality Adjustments: 2026 Agency Audit",
+  "description": "When should agencies use Google Ads data exclusions instead of seasonality adjustments? Audit tracking outages, conversion delay, Smart Bidding scope and approval steps.",
+  "summary": "A decision-first guide to protecting Smart Bidding from corrupted conversion data without confusing tracking incidents with predictable promotions. Includes click-window rules, reporting limits and agency approval checks.",
+  "category": "Google Ads Smart Bidding",
+  "datePublished": "2026-10-31",
+  "readingTimeMinutes": 8,
+  "intro": "Use a Google Ads data exclusion when a confirmed tracking, website or import failure corrupted conversion data used by Smart Bidding. Use a seasonality adjustment for a known, short-lived future conversion-rate change, such as a promotion. Do not use either control merely because CPA rose or ROAS declined. For agencies, the responsible sequence is to verify the incident, select an evidence-based scope, obtain human approval and monitor what happens afterward. This guide distinguishes Google's platform rules from industry commentary and clarifies the limited role of TruOpt.ai.",
+  "takeaways": [
+    "Data exclusions address corrupted conversion data; seasonality adjustments address expected future conversion-rate changes.",
+    "Set exclusion windows from affected clicks and conversion delay, not only outage dates.",
+    "Data exclusions affect bidding learning, not conversion reporting or broken measurement tags.",
+    "Document evidence, downside risk and human approval for every client account."
+  ],
+  "sections": [
+    {
+      "heading": "1. Choose the correct control: damaged data or an expected event?",
+      "paragraphs": [
+        "A data exclusion is intended for a period when reported conversions or conversion values became unreliable, such as a broken tag, website outage or failed conversion import. It tells conversion-based Smart Bidding to disregard affected click data when learning. It is not a way to erase a genuinely weak week or improve the appearance of a client report.",
+        "A seasonality adjustment communicates a predicted temporary conversion-rate change for an upcoming promotion or event. Google says Smart Bidding already handles normal seasonality and recommends this advanced control only for major expected changes, especially short events lasting one to seven days. Neither setting guarantees a performance outcome."
+      ],
+      "bullets": [
+        "Broken measurement or import? Investigate a data exclusion.",
+        "Known short promotion with a large conversion-rate shift? Evaluate seasonality adjustment.",
+        "Real demand weakness, poor landing page or ordinary volatility? Diagnose the business issue instead."
+      ]
+    },
+    {
+      "heading": "2. Verify the measurement incident before touching bids",
+      "paragraphs": [
+        "Begin with Google Ads conversion-action diagnostics and a timeline of tag, consent, website or CRM-import changes. Compare Google Ads reporting with independently available order, lead or call records. A conversion drop may reflect fewer qualified visits, delayed uploads, a removed tag or genuinely lower demand; the right response differs in each case.",
+        "Write down the last known good event, first failed event, restoration time, affected conversion action and impacted campaigns. Confirm whether the conversion value was understated, overstated or simply delayed. If only one device or landing-page journey was broken, document that scope. Make the measurement-quality decision before changing bid targets."
+      ],
+      "bullets": [
+        "Save evidence that establishes the failure window.",
+        "Inspect change history, tag diagnostics and import error messages.",
+        "Check whether normal conversion delay explains an apparent drop."
+      ]
+    },
+    {
+      "heading": "3. Set data exclusion dates from affected clicks, not just outage days",
+      "paragraphs": [
+        "Google's critical distinction is that data exclusions apply to clicks whose eventual conversions may have been affected. An upload problem on one date can damage the learning signal from clicks made earlier. Review typical click-to-conversion delay before selecting a start time. Google provides an example where an October 15–18 import problem and a five-day delay imply an October 10–18 click exclusion window.",
+        "Avoid applying that example mechanically. Too broad an exclusion discards valid training examples; too narrow a window leaves corrupted examples. Google recommends trying to cover at least 90% of clicks linked to affected conversions. Record the reasoning and account time zone so another person can reproduce your decision."
+      ],
+      "bullets": [
+        "Identify the outage start and end in account-local time.",
+        "Review the conversion-delay distribution for the affected action.",
+        "Approve a defensible click-date range, device filter and campaign scope."
+      ]
+    },
+    {
+      "heading": "4. Create a narrowly scoped exclusion in Google Ads",
+      "paragraphs": [
+        "In the Google Ads interface, choose Tools, then Adjustments, open the Exclusions tab and create a data exclusion. Supply an incident-specific name, description, dates, campaigns and devices. Google documents support for Search, Display, Shopping and Performance Max campaigns on conversion- or conversion-value-based Smart Bidding; Hotel and Travel campaigns are not supported.",
+        "For implementation teams, the Google Ads API offers BiddingDataExclusion with CAMPAIGN or CHANNEL scope, optional device filters and times in the account's time zone. Note a relevant distinction: the Help Center describes manager-account application through the interface, but API documentation says this resource must be created in the client account, not a manager account. Never assume the interface and API expose identical setup options."
+      ],
+      "bullets": [
+        "Verify the campaign and strategy are eligible.",
+        "Preview coverage and time zone before saving.",
+        "Record the approving owner, incident ticket and resulting setting."
+      ]
+    },
+    {
+      "heading": "5. Use seasonality adjustments for a genuinely predictable short promotion",
+      "paragraphs": [
+        "Consider a retailer expecting a clearly defined flash promotion to change conversion rate materially. A seasonality adjustment can communicate that anticipated change during the event. It cannot repair inaccurate tracking history. Do not use it to raise bids for every holiday, because Google's bidding system already models routine seasonal patterns.",
+        "Google considers one-to-seven-day events a strong fit and warns that events longer than fourteen days may not work as well. Eligibility varies by campaign type and bidding strategy, so inspect the current help page before creating one. Estimate the expected conversion-rate change using evidence rather than inventing a percentage because a sale seems important."
+      ],
+      "bullets": [
+        "Confirm the event is future-facing and time-limited.",
+        "Check campaign eligibility and the conversion-rate hypothesis.",
+        "Schedule a human review of outcomes against the hypothesis."
+      ]
+    },
+    {
+      "heading": "6. Understand reporting, backfills and recovery limits",
+      "paragraphs": [
+        "A data exclusion changes the data Smart Bidding learns from; it does not delete conversions from the reporting interface or repair a faulty tag. Restore and test the original conversion source separately. Explain the incident in client reports so measurement gaps are not mistaken for a commercial collapse. Google discourages frequent or prolonged exclusions and does not promise immediate recovery.",
+        "Google generally recommends against backfilling missing conversions. Where an exclusion is already applied, it allows a reporting backfill after waiting at least five days, and advises against removing the exclusion afterward. If at least a week of clicks was affected, bidding volatility can continue for one or two conversion cycles. Budget and target changes are separate decisions that also need approval."
+      ],
+      "bullets": [
+        "Fix and test the underlying conversion signal.",
+        "Annotate reports without hiding corrupted periods.",
+        "Monitor recovery without making a guaranteed timeline claim."
+      ]
+    },
+    {
+      "heading": "7. Establish an approval-first multi-account response",
+      "paragraphs": [
+        "For each client incident, keep a reusable decision record: account identifier, suspected failure, evidence, affected click window, eligible campaigns, proposed setting, risk if wrong, approver and follow-up date. Prioritize widespread tracking outages over routine daily fluctuations. Alerts should trigger investigation, not automatically trigger a data exclusion.",
+        "A February 2026 Bigeye article illustrates why advanced bidding controls still interest PPC managers. Treat industry commentary as context, not as a replacement for Google's current rules. When a client wants an immediate change, show both the supported intervention and its limits. Record 'no exclusion recommended' when the evidence points to genuine demand changes or remains inconclusive."
+      ],
+      "bullets": [
+        "Require named approval before high-impact changes.",
+        "Separate measurement evidence from performance forecasts.",
+        "Explain when no change is the more responsible choice."
+      ]
+    },
+    {
+      "heading": "Where TruOpt.ai fits",
+      "paragraphs": [
+        "TruOpt.ai's Google Ads account audits, Guardian alerts, explainable suggestions and human-approved optimization workflows support consistent review across agency accounts. A Guardian alert can prompt an investigation; it does not establish that tracking failed or that a data exclusion is warranted.",
+        "Use Google's diagnostics and controls to verify and execute the decision. TruOpt.ai should not be described as automatically creating data exclusions, repairing tags or forecasting the recovery of Smart Bidding. Explore https://truopt.ai for an accountable account-audit and approval process that keeps consequential choices with the marketer."
+      ],
+      "bullets": [
+        "Investigate anomalies with first-party Google Ads evidence.",
+        "Assess explanations and downside before approving changes.",
+        "Document a human follow-up for every material decision."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — About data exclusions",
+      "url": "https://support.google.com/google-ads/answer/10370710?hl=en"
+    },
+    {
+      "label": "Google Ads Help — About seasonality adjustments",
+      "url": "https://support.google.com/google-ads/answer/10369906?hl=en"
+    },
+    {
+      "label": "Google Ads API — Create data exclusions",
+      "url": "https://developers.google.com/google-ads/api/docs/campaigns/bidding/data-exclusions"
+    },
+    {
+      "label": "Bigeye — Google Ads Bid Adjustments in 2026 (February 6, 2026)",
+      "url": "https://www.bigeyeagency.com/insights/google-ads-bid-adjustments-in-2026-what-still-works-whats-changed-and-where-most-campaign-managers-get-it-wrong"
+    }
+  ]
+}
