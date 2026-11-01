@@ -1,0 +1,121 @@
+{
+  "slug": "google-ads-presence-vs-interest-location-targeting-audit",
+  "status": "published",
+  "title": "Google Ads Presence vs. Presence or Interest: A 2026 Location Targeting Audit",
+  "description": "Audit Google Ads Presence vs. Presence or Interest, compare user and matched locations, and review geographic targeting changes safely across agency accounts.",
+  "summary": "A practical agency checklist for deciding when Google Ads location interest adds useful demand, when it creates ineligible reach, and how to review changes with human approval.",
+  "category": "Google Ads Optimization",
+  "datePublished": "2026-11-01",
+  "readingTimeMinutes": 8,
+  "intro": "To audit Google Ads location targeting, check whether a campaign uses Presence or Presence or Interest, then compare geographic reports with the areas the advertiser can actually serve. Presence or Interest can reach users outside a target area who have shown interest in it. Presence focuses on people likely located or regularly located there. Neither guarantees perfect geographic accuracy. Do not automatically switch every campaign to Presence: travel, education and relocation offers can legitimately convert people researching from elsewhere. The goal is to establish business relevance and choose a justified, human-approved change.",
+  "takeaways": [
+    "Presence or Interest is the broader default; Presence is narrower, not universally better.",
+    "Matched location and physical user location answer different questions.",
+    "Check lead eligibility and conversion quality before treating remote clicks as waste.",
+    "Record the evidence, trade-offs, approver and follow-up date for changes."
+  ],
+  "sections": [
+    {
+      "heading": "1. Define the serviceable geography before touching settings",
+      "paragraphs": [
+        "Write down the advertiser's actual boundaries: eligible delivery regions, licensed service areas, store catchments or markets with approved sales coverage. A map target is not evidence that the business can fulfil every resulting lead. Ask whether a buyer outside the destination can still purchase legitimately.",
+        "An emergency repair company may require customers nearby. Hotels, universities and relocation services often serve people researching a destination from elsewhere. Those businesses can advertise the same city but need different targeting decisions."
+      ],
+      "bullets": [
+        "Document service areas and legal restrictions.",
+        "Confirm whether remote buyers are eligible.",
+        "Differentiate local services from destination research."
+      ]
+    },
+    {
+      "heading": "2. Verify Presence, Presence or Interest and exclusions",
+      "paragraphs": [
+        "In Google Ads, inspect campaign Settings, Locations and Location options where available. Google's default Presence or Interest option includes people likely in, regularly in, or interested in the targeted area. Presence limits positive targeting to people likely in or regularly in that area; it does not require verified residency.",
+        "Review included and excluded areas separately. Location exclusions generally use likely physical presence, not interest. Do not assume a campaign's exclusions block everyone outside the desired market, or that every campaign type exposes identical controls. Record the setting before suggesting changes."
+      ],
+      "bullets": [
+        "Capture current included and excluded areas.",
+        "Check supported options campaign by campaign.",
+        "Flag mismatches with service eligibility."
+      ]
+    },
+    {
+      "heading": "3. Compare matched locations with user-location evidence",
+      "paragraphs": [
+        "Under Campaigns, Insights and reports, review When and where ads showed and Matched locations. Google's matched-location data can reflect a user's physical location or a location of interest. It is not a clean map of where every clicker was physically located.",
+        "Use Report editor's user-location and geographic dimensions where available to assess physical presence separately. Compare consistent periods, meaningful conversion actions and geographic segments. Some details are aggregated or unavailable, and Google's geographic inference is not perfectly accurate. Do not claim that all matched-location totals should reconcile with a detailed user-location table."
+      ],
+      "bullets": [
+        "Label targeted, matched and user locations correctly.",
+        "Compare cost, clicks and qualified outcomes.",
+        "Flag privacy, aggregation and attribution limits."
+      ]
+    },
+    {
+      "heading": "4. Diagnose remote clicks before calling them wasted",
+      "paragraphs": [
+        "Investigate unfamiliar regions through search intent, the ad promise, landing page and lead eligibility. A distant user might be buying for someone else, planning a visit or researching a service they cannot use. Their location alone does not identify which case applies.",
+        "Check CRM or fulfilment records where available, and separate clearly ineligible leads from valuable remote buyers. Look for sustained patterns rather than one costly click. Low-volume results, conversion lag and tracking changes make short-term comparisons unreliable."
+      ],
+      "bullets": [
+        "Check search terms and landing-page fit.",
+        "Review qualified leads, not just form fills.",
+        "Allow an 'insufficient evidence' decision."
+      ]
+    },
+    {
+      "heading": "5. Choose Presence only when the narrower audience makes sense",
+      "paragraphs": [
+        "Presence is reasonable to test where the offer truly requires customers in or regularly in a service area. Presence or Interest may suit hospitality, education or other markets with legitimate out-of-area research. Google's guidance warns that moving away from broader targeting commonly reduces impressions; that reduction alone is not proof of improvement.",
+        "If repeated evidence shows non-serviceable demand, evaluate the precise targeting mode, exclusions and geographic language in the ad. Avoid blanket exclusions that may block buyers. Treat location targeting as a best-effort system, not a perfect geographical fence."
+      ],
+      "bullets": [
+        "State the commercial rationale for narrowing reach.",
+        "Identify remote demand that could be lost.",
+        "Review location exclusions and ad-copy qualification."
+      ]
+    },
+    {
+      "heading": "6. Require approval and measure after the change",
+      "paragraphs": [
+        "Record the campaign, current setting, observed issue, evidence period, proposed adjustment, trade-offs, approver and review date. An agency should not silently reinterpret where a client can sell. For material changes, keep enough detail to restore the prior configuration if the decision proves inappropriate.",
+        "After approval, use change history and consistent reporting windows to review qualified lead volume, geographic mix and acquisition outcomes. Annotate promotions, seasonal demand and conversion-tracking changes. Avoid promising lower cost or higher conversion rates before the change is observed."
+      ],
+      "bullets": [
+        "Require a named human approver.",
+        "Keep a record of the previous setting.",
+        "Recheck qualified outcomes after implementation."
+      ]
+    },
+    {
+      "heading": "7. Make geographic audits repeatable across agency accounts",
+      "paragraphs": [
+        "Group accounts by actual service eligibility, current location mode and campaign objective. Prioritize consequential compliance or fulfilment mismatches before minor performance fluctuations. Capture a concise explanation for each suggested action so account owners can accept, defer or reject it deliberately.",
+        "TruOpt.ai supports Google Ads account audits, Guardian alerts, explainable recommendations, human-approved optimization and multi-account agency workflows. Google Ads remains the source for geographic reporting and settings; TruOpt.ai does not claim to verify a user's physical location or automatically correct geography. Explore the review-first approach at https://www.truopt.ai/."
+      ],
+      "bullets": [
+        "Apply consistent review criteria across clients.",
+        "Escalate issues with clear supporting evidence.",
+        "Keep the final decision with the responsible marketer."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — About advanced location options",
+      "url": "https://support.google.com/google-ads/answer/1722038?hl=en"
+    },
+    {
+      "label": "Google Ads Help — About measuring geographic performance",
+      "url": "https://support.google.com/google-ads/answer/2453994?hl=en"
+    },
+    {
+      "label": "Google Ads Help — Prevent clicks outside geo-targeted locations",
+      "url": "https://support.google.com/google-ads/answer/9376662?hl=en"
+    },
+    {
+      "label": "Doctor Ads — Presence or Interest study (12 October 2026)",
+      "url": "https://thedoctorads.com/blog/google-ads-location-presence-vs-interest"
+    }
+  ]
+}
