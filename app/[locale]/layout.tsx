@@ -10,7 +10,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "TruOpt.ai | AI Ad Optimization",
-  description: "Approval-based AI optimization for performance marketers.",
+  description: "Review AI-powered Google Ads optimization recommendations, monitor performance anomalies, and keep human approval in control.",
+  metadataBase: new URL("https://truopt.ai"),
 };
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -41,9 +42,27 @@ export default async function RootLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": "https://truopt.ai/#organization", name: "TruOpt.ai", url: "https://truopt.ai/" },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://truopt.ai/#software",
+        name: "TruOpt.ai",
+        url: "https://truopt.ai/",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        description: "AI-powered Google Ads analysis, anomaly monitoring and human-approved optimization recommendations.",
+        publisher: { "@id": "https://truopt.ai/#organization" }
+      }
+    ]
+  };
+
   return (
     <html lang={locale} className="dark">
       <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
         {/* Paddle v2 SDK */}
         <Script 
           src="https://cdn.paddle.com/paddle/v2/paddle.js" 
