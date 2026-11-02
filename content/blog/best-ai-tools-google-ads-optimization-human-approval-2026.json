@@ -105,7 +105,9 @@
         "Is Smart Bidding enough? It automates bids but does not remove the need to check conversion goals, anomalies and business context. A third-party tool is optional.",
         "Should AI apply every recommendation? No. A recommendation may be useful, but a marketer should evaluate risk and client authorization. Auto-apply settings require deliberate review."
       ],
-      "bullets": "What matters for multi-account agencies? Account separation, monitoring priorities, permissions and an auditable approval process. Shared access should not mean shared client policies."
+      "bullets": [
+        "What matters for multi-account agencies? Account separation, monitoring priorities, permissions and an auditable approval process. Shared access should not mean shared client policies."
+      ]
     }
   ],
   "references": [
