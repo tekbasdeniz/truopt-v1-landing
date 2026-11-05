@@ -31,6 +31,7 @@ const Header = () => {
         { name: t('product'), href: "/#product" },
         { name: t('howItWorks'), href: "/#how-it-works" },
         { name: t('pricing'), href: "/pricing" },
+        { name: "Blog", href: "/blog" },
         { name: t('security'), href: "/#security" },
         { name: t('faq'), href: "/#faq" },
         { name: t('contact'), href: "/contact" },
