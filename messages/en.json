@@ -178,7 +178,9 @@
     "q7": "Can digital marketing agencies manage multiple client accounts with TruOpt.ai?",
     "a7": "Yes, TruOpt.ai is built with native multi-account support. Marketing agencies can manage multiple separate Google Ads client accounts from a single dashboard, track team activity logs, and set custom budget guardrails for each client.",
     "q8": "Why does my Google Ads campaign have a high CTR but no leads?",
-    "a8": "A high CTR means people are clicking your ads, not necessarily converting. First, verify that conversion tracking records completed forms and calls correctly. Then review search-term intent, landing-page relevance, mobile usability, and where visitors abandon the form. Compare results over a meaningful period before changing bids or budgets. AI-assisted account audits can help prioritize potential issues, but review each recommendation against real business outcomes."
+    "a8": "A high CTR means people are clicking your ads, not necessarily converting. First, verify that conversion tracking records completed forms and calls correctly. Then review search-term intent, landing-page relevance, mobile usability, and where visitors abandon the form. Compare results over a meaningful period before changing bids or budgets. AI-assisted account audits can help prioritize potential issues, but review each recommendation against real business outcomes.",
+    "q9": "Can I use TruOpt.ai as a Google Ads audit tool?",
+    "a9": "Yes. TruOpt.ai combines AI-powered Google Ads account audits, Guardian anomaly alerts, and explainable optimization recommendations. Marketers and agencies can review suggested changes, approve one-click actions, and manage multiple accounts while retaining control over optimization decisions."
   },
   "pricing": {
     "badge": "PRICING",
