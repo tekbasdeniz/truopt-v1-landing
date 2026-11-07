@@ -5,6 +5,42 @@ import { PricingSection } from "@/components/sections/pricing-section"
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 
+import type { Metadata } from "next";
+
+const pricingSeo = {
+    en: {
+        title: "Google Ads Optimization Software Pricing | TruOpt.ai",
+        description: "Explore TruOpt.ai pricing for AI-powered Google Ads audits, Guardian alerts, explainable recommendations, and human-approved optimization.",
+        url: "https://www.truopt.ai/pricing",
+    },
+    tr: {
+        title: "Google Ads Optimizasyon Yazılımı Fiyatları | TruOpt.ai",
+        description: "TruOpt.ai fiyatlandırmasını keşfedin: yapay zekâ destekli Google Ads denetimleri, Guardian uyarıları, açıklanabilir öneriler ve insan onaylı optimizasyon.",
+        url: "https://www.truopt.ai/tr/pricing",
+    },
+} as const;
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    const seo = locale === "tr" ? pricingSeo.tr : pricingSeo.en;
+    return {
+        title: seo.title,
+        description: seo.description,
+        alternates: {
+            canonical: seo.url,
+            languages: { en: pricingSeo.en.url, tr: pricingSeo.tr.url, "x-default": pricingSeo.en.url },
+        },
+        openGraph: {
+            title: seo.title,
+            description: seo.description,
+            url: seo.url,
+            siteName: "TruOpt.ai",
+            locale: locale === "tr" ? "tr_TR" : "en_US",
+            type: "website",
+        },
+    };
+}
+
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
