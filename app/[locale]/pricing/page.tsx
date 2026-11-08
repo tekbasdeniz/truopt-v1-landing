@@ -54,6 +54,12 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <Header />
             <main className="flex-grow pt-24">
                 <PricingSection />
+                {locale === "tr" && (
+                    <section className="mx-auto max-w-4xl px-6 pb-12 text-center">
+                        <p className="text-muted-foreground mb-3">Google Ads denetim araçlarını karşılaştırıyor musunuz? Ajanslar için denetim, uyarı ve insan onayı iş akışlarını inceleyin.</p>
+                        <a href="/blog/google-ads-ai-audit-tools-comparison-agencies-2026/" className="text-accent font-semibold underline underline-offset-4">Google Ads AI denetim araçları karşılaştırması (İngilizce)</a>
+                    </section>
+                )}
             </main>
             <Footer />
         </div>
