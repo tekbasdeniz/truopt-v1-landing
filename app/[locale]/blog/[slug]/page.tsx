@@ -76,6 +76,12 @@ export default async function BlogArticle({ params }: Props) {
                 <h2 id="takeaways" className="text-xl font-semibold mb-4">Key takeaways</h2>
                 <ul className="list-disc pl-6 space-y-3 text-foreground/90">{post.takeaways.map((item, i) => <li key={i}>{item}</li>)}</ul>
               </section>
+              {post.slug === "google-ads-ai-audit-tools-comparison-agencies-2026" && (
+                <div className="mb-12 rounded-xl border border-primary/30 p-6">
+                  <p className="text-foreground/90 leading-7 mb-3">Considering a human-approved Google Ads audit tool for your agency? Explore TruOpt.ai plans and approval-based optimization features before making a decision.</p>
+                  <Link href="/pricing" className="text-accent font-semibold underline underline-offset-4">Explore TruOpt.ai plans</Link>
+                </div>
+              )}
               {post.sections.map((section, i) => (
                 <section key={i} className="mb-12">
                   <h2 className="text-2xl sm:text-3xl font-semibold leading-snug mb-5">{section.heading}</h2>
