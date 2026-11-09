@@ -12,7 +12,7 @@ const homeSeo = {
   tr: {
     title: "TruOpt.ai | Yapay Zekâ Destekli Google Ads Optimizasyonu",
     description: "TruOpt.ai ile Google Ads hesaplarınızı yapay zekâ destekli denetleyin. Guardian uyarılarını ve açıklanabilir önerileri inceleyip değişiklikleri tek tıkla onaylayın.",
-    url: "https://www.truopt.ai/tr/",
+    url: "https://www.truopt.ai/tr",
   },
 } as const;
 
