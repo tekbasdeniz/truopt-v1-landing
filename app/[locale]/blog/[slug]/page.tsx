@@ -82,6 +82,12 @@ export default async function BlogArticle({ params }: Props) {
                   <Link href="/pricing" className="text-accent font-semibold underline underline-offset-4">Explore TruOpt.ai plans</Link>
                 </div>
               )}
+              {post.slug === "google-ads-optimization-software-agencies-2026" && (
+                <div className="mb-12 rounded-xl border border-primary/30 p-6">
+                  <p className="text-foreground/90 leading-7 mb-3">Evaluating Google Ads optimization software for your agency? TruOpt.ai combines AI-powered account audits, Guardian alerts, and explainable recommendations with human-approved optimization. Explore the available plans and account limits to evaluate whether it fits your team's workflow.</p>
+                  <Link href="/pricing" className="text-accent font-semibold underline underline-offset-4">Explore TruOpt.ai plans</Link>
+                </div>
+              )}
               {post.sections.map((section, i) => (
                 <section key={i} className="mb-12">
                   <h2 className="text-2xl sm:text-3xl font-semibold leading-snug mb-5">{section.heading}</h2>
