@@ -10,19 +10,19 @@ import { getPublishedPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Google Ads Optimization Insights and Guides | TruOpt.ai",
   description: "Practical Google Ads optimization guides, PPC audit checklists, anomaly detection and responsible AI automation.",
-  alternates: { canonical: "https://truopt.ai/blog/" },
+  alternates: { canonical: "https://www.truopt.ai/blog" },
   openGraph: {
     title: "Google Ads Optimization Insights | TruOpt.ai",
     description: "Practical guides for clearer, safer Google Ads decisions.",
     type: "website",
-    url: "https://truopt.ai/blog/",
+    url: "https://www.truopt.ai/blog",
     siteName: "TruOpt.ai"
   }
 };
 
 export default async function BlogIndex({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  if (locale !== "en") redirect("/blog/");
+  if (locale !== "en") redirect("/blog");
   setRequestLocale("en");
   const posts = getPublishedPosts();
 
@@ -46,14 +46,14 @@ export default async function BlogIndex({ params }: { params: Promise<{ locale: 
                 <article key={post.slug} className="border border-border/80 rounded-2xl bg-card/80 p-7 flex flex-col hover:border-primary/60 transition-colors">
                   <p className="text-xs font-semibold text-accent uppercase tracking-widest mb-4">{post.category}</p>
                   <h2 className="text-xl font-semibold leading-snug mb-4">
-                    <Link href={"/blog/" + post.slug + "/"} className="hover:text-accent transition-colors">{post.title}</Link>
+                    <Link href={"/blog/" + post.slug} className="hover:text-accent transition-colors">{post.title}</Link>
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-7 flex-grow">{post.summary}</p>
                   <div className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
                     <time dateTime={post.datePublished}>{new Date(post.datePublished + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" })}</time>
                     <span>{post.readingTimeMinutes} min read</span>
                   </div>
-                  <Link href={"/blog/" + post.slug + "/"} className="text-sm font-semibold text-accent mt-6 hover:underline">Read guide →</Link>
+                  <Link href={"/blog/" + post.slug} className="text-sm font-semibold text-accent mt-6 hover:underline">Read guide →</Link>
                 </article>
               ))}
             </div>
