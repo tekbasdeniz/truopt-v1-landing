@@ -8,13 +8,13 @@ import { Container } from "@/components/ui/container";
 import { getPublishedPost } from "@/lib/blog";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
-const site = "https://truopt.ai";
+const site = "https://www.truopt.ai";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const post = locale === "en" ? getPublishedPost(slug) : undefined;
   if (!post) return { robots: { index: false, follow: false } };
-  const url = site + "/blog/" + post.slug + "/";
+  const url = site + "/blog/" + post.slug;
   return {
     title: post.title + " | TruOpt.ai",
     description: post.description,
@@ -35,11 +35,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogArticle({ params }: Props) {
   const { locale, slug } = await params;
-  if (locale !== "en") redirect("/blog/" + slug + "/");
+  if (locale !== "en") redirect("/blog/" + slug);
   setRequestLocale("en");
   const post = getPublishedPost(slug);
   if (!post) notFound();
-  const url = site + "/blog/" + post.slug + "/";
+  const url = site + "/blog/" + post.slug;
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -59,7 +59,7 @@ export default async function BlogArticle({ params }: Props) {
       <main className="flex-grow pt-28 pb-24">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <Link href="/blog/" className="text-sm text-accent font-medium hover:underline">← All insights</Link>
+            <Link href="/blog" className="text-sm text-accent font-medium hover:underline">← All insights</Link>
             <article className="mt-10">
               <header className="mb-12 pb-10 border-b border-border">
                 <p className="text-sm uppercase tracking-widest text-accent font-semibold mb-5">{post.category}</p>
@@ -84,7 +84,7 @@ export default async function BlogArticle({ params }: Props) {
               )}
               {post.slug === "google-ads-optimization-software-agencies-2026" && (
                 <div className="mb-12 rounded-xl border border-primary/30 p-6">
-                  <p className="text-foreground/90 leading-7 mb-3">Evaluating Google Ads optimization software for your agency? TruOpt.ai combines AI-powered account audits, Guardian alerts, and explainable recommendations with human-approved optimization. Explore the available plans and account limits to evaluate whether it fits your team's workflow.</p>
+                  <p className="text-foreground/90 leading-7 mb-3">Evaluating Google Ads optimization software for your agency? TruOpt.ai combines AI-powered account audits, Guardian alerts, and explainable recommendations with human-approved optimization. Explore the available plans and account limits to evaluate whether it fits your team&apos;s workflow.</p>
                   <Link href="/pricing" className="text-accent font-semibold underline underline-offset-4">Explore TruOpt.ai plans</Link>
                 </div>
               )}
