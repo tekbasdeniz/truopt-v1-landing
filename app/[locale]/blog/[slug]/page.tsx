@@ -91,7 +91,7 @@ export default async function BlogArticle({ params }: Props) {
               {post.sections.map((section, i) => (
                 <section key={i} className="mb-12">
                   <h2 className="text-2xl sm:text-3xl font-semibold leading-snug mb-5">{section.heading}</h2>
-                  {section.paragraphs.map((paragraph, j) => <p key={j} className="text-base sm:text-lg text-foreground/85 leading-8 mb-5">{paragraph}</p>)}
+                  {(section.paragraphs ?? []).map((paragraph, j) => <p key={j} className="text-base sm:text-lg text-foreground/85 leading-8 mb-5">{paragraph}</p>)}
                   {section.bullets && <ul className="list-disc pl-6 space-y-3 text-foreground/85 leading-7">{section.bullets.map((bullet, j) => <li key={j}>{bullet}</li>)}</ul>}
                 </section>
               ))}
