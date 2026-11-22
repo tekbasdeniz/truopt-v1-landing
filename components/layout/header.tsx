@@ -1,12 +1,12 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Link, useRouter, usePathname } from "@/i18n/navigation"
+import { Link, useRouter, usePathname, getPathname } from "@/i18n/navigation"
 import { Menu, X, Play } from "lucide-react"
 import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
 
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import WaitlistButton from "../ui/waitlist-button"
 import LanguageSelector from "@/components/language-selector"
 import Image from "next/image"
@@ -14,6 +14,8 @@ import Logo from "@/app/assets/images/logo.webp"
 
 const Header = () => {
     const t = useTranslations('nav')
+    const locale = useLocale()
+    const demoHref = getPathname({ locale, href: '/' }) + '#how-it-works'
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
     const router = useRouter()
@@ -88,7 +90,7 @@ const Header = () => {
                     <div className="hidden md:flex items-center space-x-4">
                         <LanguageSelector />
                         <a 
-                            href="/#how-it-works" 
+                            href={demoHref}
                             onClick={scrollToDemo}
                             className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-white transition-colors cursor-pointer"
                         >
@@ -128,7 +130,7 @@ const Header = () => {
                     ))}
                     <div className="pt-4 flex flex-col space-y-3">
                         <a 
-                            href="/#how-it-works" 
+                            href={demoHref}
                             onClick={scrollToDemo}
                             className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-colors cursor-pointer"
                         >
