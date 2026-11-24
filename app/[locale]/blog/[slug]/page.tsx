@@ -95,6 +95,12 @@ export default async function BlogArticle({ params }: Props) {
                   {section.bullets && <ul className="list-disc pl-6 space-y-3 text-foreground/85 leading-7">{section.bullets.map((bullet, j) => <li key={j}>{bullet}</li>)}</ul>}
                 </section>
               ))}
+              {post.slug === "google-ads-primary-secondary-conversion-goals-smart-bidding-agency-audit" && (
+                <div className="mb-12 rounded-xl border border-primary/30 p-6">
+                  <p className="text-foreground/90 leading-7 mb-3">Evaluating a Google Ads audit tool beyond this conversion-goal checklist? Compare audit coverage, explainability and approval workflows before choosing software for your agency.</p>
+                  <Link href="/blog/google-ads-ai-audit-tools-comparison-agencies-2026" className="text-accent font-semibold underline underline-offset-4">Compare Google Ads audit tools</Link>
+                </div>
+              )}
               {post.references.length > 0 && (
                 <section className="border-t border-border pt-8 mt-16">
                   <h2 className="text-xl font-semibold mb-4">Further reading and sources</h2>
