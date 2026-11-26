@@ -1,0 +1,120 @@
+{
+  "slug": "google-ads-shopping-campaign-audit-tools-product-groups-2026",
+  "status": "published",
+  "title": "Google Ads Shopping Campaign Audit Tools in 2026: Product Groups and Feed Checks",
+  "description": "Compare Google Ads, Merchant Center, Optmyzr, Opteo and TruOpt.ai for Shopping audits, product-group checks and human-approved optimization.",
+  "summary": "A buyer's guide to choosing Shopping campaign audit software that separates catalog eligibility, product-group coverage and account-level decisions.",
+  "category": "Google Ads Audit Software",
+  "datePublished": "2026-11-26",
+  "readingTimeMinutes": 6,
+  "intro": "The right Google Ads Shopping campaign audit tool depends on where your agency loses visibility. Use Google Ads and Merchant Center to investigate product eligibility and targeting, Optmyzr when you need documented feed and product-group checks, and Opteo when a reviewable optimization queue fits your team. Consider TruOpt.ai for account-wide audits, Guardian alerts and human-approved optimization across clients. Do not buy a general account audit tool expecting it to replace a specialist feed-management system.",
+  "takeaways": [
+    "Match the software to the layer where your investigation starts: catalog, campaign structure or account performance.",
+    "Check which eligible products are actually included before changing bids or budgets.",
+    "Require a demonstration using your own product-group structure and an accountable approval process.",
+    "Evaluate tools on documented coverage, not a promised improvement in ROAS."
+  ],
+  "sections": [
+    {
+      "heading": "What should Shopping campaign audit software actually check?",
+      "paragraphs": [
+        "Standard Shopping is not a keyword-led Search campaign. Google documents product groups as inventory subsets, built from Merchant Center attributes such as product type and custom labels. An approved item can still be absent from the campaign's active groups. Diagnose that gap before assuming weak demand or poor bidding.",
+        "Start by reconciling three lists: the catalog you intend to advertise, products that are eligible, and products included in active campaign groups. A fourth list, items receiving spend, helps determine whether the issue is coverage or performance. The reconciliation is a proposed audit method, not a feature claimed for every tool."
+      ]
+    },
+    {
+      "heading": "Shopping audit tools compared: which one should you shortlist?",
+      "paragraphs": [
+        "Each option below serves a different buying need. Read the following rows as a comparison matrix: workflow, strongest fit and what to verify in a demonstration."
+      ],
+      "bullets": [
+        "Google Ads + Merchant Center | Native investigation of product groups and item issues | Best for a specialist who can own manual cross-checks | Test how much recurring reconciliation your team must do.",
+        "Optmyzr | Published Shopping Feed Audit covering catalog and campaign checks | Best for agencies with recurring inventory QA | Verify linked account access and audit availability in the proposed plan.",
+        "Opteo | Reviewable Improvements for campaign optimization, including target and budget suggestions in its current overview | Best for teams prioritizing a queue of proposed actions | Ask to see current Standard Shopping support and product-group capabilities before buying.",
+        "TruOpt.ai | Account audit, Guardian alerts, explainable recommendations and human-approved optimization | Best for agencies coordinating account-level decisions across clients | Use separate feed diagnostics; verify Shopping campaign coverage in a demo."
+      ]
+    },
+    {
+      "heading": "Test 1: distinguish an excluded item from a disapproved item",
+      "paragraphs": [
+        "Imagine a retailer launches a new range on Monday, but the agency sees little traffic from it. First ask whether the feed reached Merchant Center and whether the products are eligible. Merchant Center's Needs attention area is the place to investigate item issues and applicable reviews. Then check whether the intended Shopping campaign includes the new range.",
+        "A good demonstration should show the evidence behind the diagnosis, the affected item identifiers and who owns the next action. A catalog problem may belong to the merchant or feed team, while a targeting problem belongs to the PPC specialist. Reject a workflow that recommends a bid increase before clarifying which layer failed."
+      ]
+    },
+    {
+      "heading": "Test 2: audit the product-group structure against commercial goals",
+      "paragraphs": [
+        "A furniture merchant could have different contribution margins across chairs and desks, even when both categories show similar revenue-based ROAS. Ask the client for its approved margin bands, stock priorities and target categories. Compare that policy against the product-group tree rather than assuming more subdivisions will always improve performance.",
+        "Google notes that data-source attribute changes may require corresponding product-group updates. Ask a vendor to demonstrate how it identifies mismatches after a catalog update. Optmyzr's documentation describes checks for missing attributes, overlapping products and unusually large groups. That makes its feed-audit workflow relevant to this test, without establishing superior detection accuracy."
+      ]
+    },
+    {
+      "heading": "Test 3: protect account decisions during seasonal changes",
+      "paragraphs": [
+        "Suppose a sale ends and campaign revenue falls while spend stays elevated. Compare promotional timing, stock changes and purchase reporting before approving any adjustment. Ask the platform to explain the affected campaigns, the observation period and the proposed action. Do not assume that a change in revenue proves a problem with bids.",
+        "If your agency already has a feed specialist, TruOpt.ai may be a complementary account-review layer rather than a replacement. Evaluate Guardian alerts and the human approval experience separately from Merchant Center diagnosis. Define who can authorize an adjustment and what evidence must be collected first."
+      ]
+    },
+    {
+      "heading": "Seven questions to ask before signing a software contract",
+      "paragraphs": [
+        "Use the same permissioned account and anonymized product examples for each vendor. Mark answers as demonstrated, documented only or unverified."
+      ],
+      "bullets": [
+        "Does the tool distinguish Standard Shopping from retail Performance Max?",
+        "Can it show the intended and actual product-group coverage, or must we reconcile those manually?",
+        "What Merchant Center permissions and catalog connections are required?",
+        "Can a finding be traced to specific items or campaigns and a meaningful date range?",
+        "Which changes can the tool propose, and what must a person approve?",
+        "Can our team handle multiple client accounts without confusing ownership?",
+        "What are the subscription limits, onboarding work and current commercial terms?"
+      ]
+    },
+    {
+      "heading": "A practical evaluation plan: measure workflow quality, not promised uplift",
+      "paragraphs": [
+        "Select one account with a stable catalog and one with frequent inventory changes. Establish an independently checked baseline using the native interfaces. Record how many findings are confirmed, how many require further investigation, and how long it takes to assign an owner. These are suggested pilot metrics, not measured product results.",
+        "Keep the pilot read-only unless the client separately approves a specific change. Compare the quality of explanations and the effort required to reach an appropriate decision. A short evaluation can reveal operational fit; it cannot establish long-term incremental revenue or profitability."
+      ]
+    },
+    {
+      "heading": "Methodology and limitations",
+      "paragraphs": [
+        "This buyer's guide uses public Google, Optmyzr and Opteo documentation reviewed on November 26, 2026. Practitioner discussions about Shopping segmentation informed the hypothetical scenarios but are not performance evidence. TruOpt.ai is the publisher, and its description is limited to its stated account-review capabilities.",
+        "No live vendor trials, comparative scores or pricing verification were performed. Catalog size, permissions, reporting delays and bidding strategy can affect the workflow. Verify current features and supported actions directly with each vendor."
+      ]
+    },
+    {
+      "heading": "FAQ: buying Shopping campaign audit software",
+      "paragraphs": [
+        "Do I need a dedicated feed audit tool? If missing product attributes, disapprovals or catalog coverage dominate your workload, a specialist feed audit deserves priority.",
+        "Can AI replace Merchant Center diagnostics? No. Use the native item and policy information to verify eligibility; an account recommendation is not proof that a catalog issue is resolved.",
+        "Should every low-ROAS product group be excluded? No. Consider conversion lag, volume, margin, stock and the client's objective before deciding."
+      ]
+    },
+    {
+      "heading": "Evaluate TruOpt.ai alongside your Shopping stack",
+      "paragraphs": [
+        "If your team already manages catalog quality but needs consistent Google Ads account reviews across clients, include TruOpt.ai on your shortlist. Ask to see an account audit, a Guardian alert and an explainable recommendation that requires human approval. Explore the current offering at https://www.truopt.ai/pricing and compare the workflow with your existing tools before purchasing."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Google Ads Help — Manage a Shopping campaign with product groups",
+      "url": "https://support.google.com/google-ads/answer/6275317?hl=en"
+    },
+    {
+      "label": "Google Merchant Center Help — Request a review of your issues",
+      "url": "https://support.google.com/merchants/answer/13585221"
+    },
+    {
+      "label": "Optmyzr Help Center — Shopping Feed Audits",
+      "url": "https://help.optmyzr.com/en/articles/6601281-shopping-feed-audits-about-user-guide"
+    },
+    {
+      "label": "Opteo — Improvements",
+      "url": "https://opteo.com/features/improvements"
+    }
+  ]
+}
